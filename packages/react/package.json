@@ -7,10 +7,10 @@
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "homepage": "https://github.com/minwoo129/fetoolkit-mono-test1",
+  "homepage": "https://github.com/minwoo129/fetoolkit",
   "repository": {
     "type": "git",
-    "url": "https://github.com/minwoo129/fetoolkit-mono-test1.git"
+    "url": "https://github.com/minwoo129/fetoolkit.git"
   },
   "files": [
     "dist"
