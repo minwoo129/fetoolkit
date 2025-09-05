@@ -17,7 +17,7 @@ jobs:
           node-version: lts/*
       - name: Install dependencies
         run: npm install -g yarn && yarn
-        - name: Install Playwright Browsers
+      - name: Install Playwright Browsers
         run: yarn playwright install --with-deps
       - name: Run Playwright tests
         run: yarn apps:react playwright test
