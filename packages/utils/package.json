@@ -2,7 +2,6 @@
   "name": "@fetoolkit/utils",
   "version": "1.2.0",
   "type": "module",
-  "private": false,
   "author": "minwoo129 <key0129mw@naver.com>",
   "license": "MIT",
   "main": "./dist/index.mjs",
@@ -23,6 +22,7 @@
   ],
   "exports": "./dist/index.mjs",
   "scripts": {
-    "build": "tsc && vite build"
+    "build": "tsc && vite build",
+    "test:unit": "vitest"
   }
 }

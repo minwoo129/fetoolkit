@@ -9,7 +9,8 @@
   "scripts": {
     "prepare": "husky",
     "apps:react": "yarn workspace react-example",
-    "packages:react": "yarn workspace @fetoolkit/react"
+    "packages:react": "yarn workspace @fetoolkit/react",
+    "packages:utils": "yarn workspace @fetoolkit/utils"
   },
   "devDependencies": {
     "@eslint/js": "^9.34.0",

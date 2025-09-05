@@ -614,6 +614,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@fetoolkit/utils@workspace:packages/utils":
+  version: 0.0.0-use.local
+  resolution: "@fetoolkit/utils@workspace:packages/utils"
+  languageName: unknown
+  linkType: soft
+
 "@humanfs/core@npm:^0.19.1":
   version: 0.19.1
   resolution: "@humanfs/core@npm:0.19.1"
