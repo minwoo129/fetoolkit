@@ -4,8 +4,8 @@
   "type": "module",
   "author": "minwoo129 <key0129mw@naver.com>",
   "license": "MIT",
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "homepage": "https://github.com/minwoo129/fetoolkit",
   "repository": {
@@ -20,7 +20,7 @@
     "toolkit",
     "utils-toolkit"
   ],
-  "exports": "./dist/index.mjs",
+  "exports": "./dist/index.js",
   "scripts": {
     "build": "tsc && vite build",
     "test:unit": "vitest"
