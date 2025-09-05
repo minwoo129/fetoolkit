@@ -5,8 +5,18 @@
     "packages/*"
   ],
   "devDependencies": {
+    "@eslint/js": "^9.34.0",
+    "@faker-js/faker": "^10.0.0",
+    "@types/node": "^24.3.1",
+    "eslint": "^9.34.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
     "lerna": "^8.2.3",
-    "typescript": "^5.9.2"
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.42.0"
   },
   "packageManager": "yarn@4.9.4"
 }
