@@ -1,11 +1,15 @@
 {
   "name": "root",
   "private": true,
+  "type": "module",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "examples/*"
   ],
   "scripts": {
-    "prepare": "husky"
+    "prepare": "husky",
+    "apps:react": "yarn workspace react-example",
+    "packages:react": "yarn workspace @fetoolkit/react"
   },
   "devDependencies": {
     "@eslint/js": "^9.34.0",
@@ -17,11 +21,15 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "husky": "^9.1.7",
+    "jsdom": "^26.1.0",
     "lerna": "^8.2.3",
     "lint-staged": "^16.1.6",
     "prettier": "^3.6.2",
     "typescript": "^5.9.2",
-    "typescript-eslint": "^8.42.0"
+    "typescript-eslint": "^8.42.0",
+    "vite": "^7.1.4",
+    "vite-plugin-dts": "^4.5.4",
+    "vitest": "^3.2.4"
   },
   "packageManager": "yarn@4.9.4",
   "lint-staged": {
