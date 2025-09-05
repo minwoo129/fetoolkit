@@ -1,0 +1,21 @@
+{
+  "name": "@fetoolkit/react",
+  "version": "1.2.0",
+  "private": false,
+  "author": "minwoo129 <key0129mw@naver.com>",
+  "license": "MIT",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "homepage": "https://github.com/minwoo129/fetoolkit-mono-test1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/minwoo129/fetoolkit-mono-test1.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -b && vite build"
+  }
+}
