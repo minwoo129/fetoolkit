@@ -6,7 +6,8 @@
     "eslint.config.mjs", // (있다면)
     "packages/*/src/**/*.ts",
     "packages/*/src/**/*.tsx",
-    "packages/*/vite.config.ts" // 패키지별 vite 설정도 검사하려면
+    "packages/*/vite.config.ts", // 패키지별 vite 설정도 검사하려면
+    "packages/*/vitest.config.ts"
   ],
   "exclude": ["node_modules", "dist", "build"]
 }
