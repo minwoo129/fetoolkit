@@ -5,7 +5,8 @@
     "packages/*"
   ],
   "scripts": {
-    "prepare": "husky"
+    "prepare": "husky",
+    "packages:react": "yarn workspace @fetoolkit/react"
   },
   "devDependencies": {
     "@eslint/js": "^9.34.0",
