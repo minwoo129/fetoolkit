@@ -23,5 +23,9 @@
     "types": ["vite/client"],
     "jsx": "react"
   },
-  "include": ["packages/*/vite.config.ts", "packages/*/src"]
+  "include": [
+    "packages/*/vite.config.ts",
+    "packages/*/src",
+    "packages/*/index.ts"
+  ]
 }

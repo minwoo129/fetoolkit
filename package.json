@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "prepare": "husky",
+    "build": "lerna run build",
     "apps:react": "yarn workspace react-example",
     "packages:react": "yarn workspace @fetoolkit/react",
     "packages:utils": "yarn workspace @fetoolkit/utils"

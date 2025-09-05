@@ -11,7 +11,10 @@
     "packages/*/vite.config.ts", // 패키지별 vite 설정도 검사하려면
     "packages/*/vitest.config.ts",
     "packages/*/__test__/**/*.ts",
-    "packages/*/__test__/**/*.tsx"
+    "packages/*/__test__/**/*.tsx",
+    "packages/*/index.ts",
+    "packages/*/**/*.ts",
+    "packages/*/**/*.tsx"
   ],
   "exclude": ["node_modules", "dist", "build"]
 }

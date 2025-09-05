@@ -1,4 +1,4 @@
-import { ContextMenuProvider, FEToolkitProvider } from '@fetoolkit/react/src';
+import { ContextMenuProvider, FEToolkitProvider } from '@fetoolkit/react';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.tsx';

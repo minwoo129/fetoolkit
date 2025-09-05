@@ -13,7 +13,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: {
-        index: path.resolve(__dirname, 'src/index.ts'),
+        index: path.resolve(__dirname, 'index.ts'),
       },
       name: '@fetoolkit/utils',
       fileName: 'index',
