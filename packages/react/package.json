@@ -16,5 +16,18 @@
   ],
   "scripts": {
     "build": "tsc -b && vite build"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.0",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "@types/throttle-debounce": "^5",
+    "@vitejs/plugin-react": "^5.0.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "user-agent-data-types": "^0.4.2"
+  },
+  "dependencies": {
+    "throttle-debounce": "^5.0.2"
   }
 }
