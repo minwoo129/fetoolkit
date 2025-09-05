@@ -3,10 +3,12 @@
   "private": true,
   "type": "module",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "examples/*"
   ],
   "scripts": {
     "prepare": "husky",
+    "apps:react": "yarn workspace react-example",
     "packages:react": "yarn workspace @fetoolkit/react"
   },
   "devDependencies": {

@@ -564,7 +564,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:9.34.0, @eslint/js@npm:^9.34.0":
+"@eslint/js@npm:9.34.0, @eslint/js@npm:^9.33.0, @eslint/js@npm:^9.34.0":
   version: 9.34.0
   resolution: "@eslint/js@npm:9.34.0"
   checksum: 10c0/53f1bfd2a374683d9382a6850354555f6e89a88416c34a5d34e9fbbaf717e97c2b06300e8f93e5eddba8bda8951ccab7f93a680e56ded1a3d21d526019e69bab
@@ -1869,7 +1869,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^19.1.9":
+"@types/react-dom@npm:^19.1.7, @types/react-dom@npm:^19.1.9":
   version: 19.1.9
   resolution: "@types/react-dom@npm:19.1.9"
   peerDependencies:
@@ -1878,7 +1878,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^19.1.12":
+"@types/react@npm:^19.1.10, @types/react@npm:^19.1.12":
   version: 19.1.12
   resolution: "@types/react@npm:19.1.12"
   dependencies:
@@ -2031,7 +2031,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitejs/plugin-react@npm:^5.0.2":
+"@vitejs/plugin-react@npm:^5.0.0, @vitejs/plugin-react@npm:^5.0.2":
   version: 5.0.2
   resolution: "@vitejs/plugin-react@npm:5.0.2"
   dependencies:
@@ -4106,7 +4106,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^9.34.0":
+"eslint@npm:^9.33.0, eslint@npm:^9.34.0":
   version: 9.34.0
   resolution: "eslint@npm:9.34.0"
   dependencies:
@@ -4786,6 +4786,13 @@ __metadata:
   version: 14.0.0
   resolution: "globals@npm:14.0.0"
   checksum: 10c0/b96ff42620c9231ad468d4c58ff42afee7777ee1c963013ff8aabe095a451d0ceeb8dcd8ef4cbd64d2538cef45f787a78ba3a9574f4a634438963e334471302d
+  languageName: node
+  linkType: hard
+
+"globals@npm:^16.3.0":
+  version: 16.3.0
+  resolution: "globals@npm:16.3.0"
+  checksum: 10c0/c62dc20357d1c0bf2be4545d6c4141265d1a229bf1c3294955efb5b5ef611145391895e3f2729f8603809e81b30b516c33e6c2597573844449978606aad6eb38
   languageName: node
   linkType: hard
 
@@ -7756,7 +7763,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^19.1.0":
+"react-dom@npm:^19.1.0, react-dom@npm:^19.1.1":
   version: 19.1.1
   resolution: "react-dom@npm:19.1.1"
   dependencies:
@@ -7766,6 +7773,26 @@ __metadata:
   checksum: 10c0/8c91198510521299c56e4e8d5e3a4508b2734fb5e52f29eeac33811de64e76fe586ad32c32182e2e84e070d98df67125da346c3360013357228172dbcd20bcdd
   languageName: node
   linkType: hard
+
+"react-example@workspace:examples/react-example":
+  version: 0.0.0-use.local
+  resolution: "react-example@workspace:examples/react-example"
+  dependencies:
+    "@eslint/js": "npm:^9.33.0"
+    "@types/react": "npm:^19.1.10"
+    "@types/react-dom": "npm:^19.1.7"
+    "@vitejs/plugin-react": "npm:^5.0.0"
+    eslint: "npm:^9.33.0"
+    eslint-plugin-react-hooks: "npm:^5.2.0"
+    eslint-plugin-react-refresh: "npm:^0.4.20"
+    globals: "npm:^16.3.0"
+    react: "npm:^19.1.1"
+    react-dom: "npm:^19.1.1"
+    typescript: "npm:~5.8.3"
+    typescript-eslint: "npm:^8.39.1"
+    vite: "npm:^7.1.2"
+  languageName: unknown
+  linkType: soft
 
 "react-is@npm:^16.13.1":
   version: 16.13.1
@@ -7795,7 +7822,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^19.1.0":
+"react@npm:^19.1.0, react@npm:^19.1.1":
   version: 19.1.1
   resolution: "react@npm:19.1.1"
   checksum: 10c0/8c9769a2dfd02e603af6445058325e6c8a24b47b185d0e461f66a6454765ddcaecb3f0a90184836c68bb509f3c38248359edbc42f0d07c23eb500a5c30c87b4e
@@ -9242,7 +9269,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript-eslint@npm:^8.42.0":
+"typescript-eslint@npm:^8.39.1, typescript-eslint@npm:^8.42.0":
   version: 8.42.0
   resolution: "typescript-eslint@npm:8.42.0"
   dependencies:
@@ -9277,6 +9304,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"typescript@npm:~5.8.3":
+  version: 5.8.3
+  resolution: "typescript@npm:5.8.3"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 10c0/5f8bb01196e542e64d44db3d16ee0e4063ce4f3e3966df6005f2588e86d91c03e1fb131c2581baf0fb65ee79669eea6e161cd448178986587e9f6844446dbb48
+  languageName: node
+  linkType: hard
+
 "typescript@patch:typescript@npm%3A5.8.2#optional!builtin<compat/typescript>":
   version: 5.8.2
   resolution: "typescript@patch:typescript@npm%3A5.8.2#optional!builtin<compat/typescript>::version=5.8.2&hash=5786d5"
@@ -9294,6 +9331,16 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 10c0/34d2a8e23eb8e0d1875072064d5e1d9c102e0bdce56a10a25c0b917b8aa9001a9cf5c225df12497e99da107dc379360bc138163c66b55b95f5b105b50578067e
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@npm%3A~5.8.3#optional!builtin<compat/typescript>":
+  version: 5.8.3
+  resolution: "typescript@patch:typescript@npm%3A5.8.3#optional!builtin<compat/typescript>::version=5.8.3&hash=5786d5"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 10c0/39117e346ff8ebd87ae1510b3a77d5d92dae5a89bde588c747d25da5c146603a99c8ee588c7ef80faaf123d89ed46f6dbd918d534d641083177d5fac38b8a1cb
   languageName: node
   linkType: hard
 
@@ -9490,7 +9537,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^5.0.0 || ^6.0.0 || ^7.0.0-0, vite@npm:^7.1.4":
+"vite@npm:^5.0.0 || ^6.0.0 || ^7.0.0-0, vite@npm:^7.1.2, vite@npm:^7.1.4":
   version: 7.1.4
   resolution: "vite@npm:7.1.4"
   dependencies:
