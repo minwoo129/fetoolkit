@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "eslint.config.mjs", // (있다면)
+    "packages/*/src/**/*.ts",
+    "packages/*/src/**/*.tsx",
+    "packages/*/vite.config.ts" // 패키지별 vite 설정도 검사하려면
+  ],
+  "exclude": ["node_modules", "dist", "build"]
+}
