@@ -1,4 +1,4 @@
-name: Unit Test(Vitest) - fetoolkit/react
+name: E2E Test(Playwright) - fetoolkit/react
 on:
   pull_request:
     branches:
