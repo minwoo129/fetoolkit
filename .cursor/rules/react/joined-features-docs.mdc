@@ -1,0 +1,26 @@
+---
+globs: packages/react/src/docs/joinedFeatures/*.md
+alwaysApply: false
+---
+
+# Template(KOR)
+
+- Create document files in the following format
+
+  ```md
+  # {FileName(camel type)}
+
+  - {description} // don't write
+
+  ## 1. 제공 기능
+
+  ### 1-1. {FeatureName} // don't write
+
+  ## 2. 사전 연결 방법
+
+  ## 2-1. {Procedure} // don't write
+
+  ## 3. 사용법
+
+  ### 3-1. {usage} // don't write
+  ```
