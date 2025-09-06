@@ -1,0 +1,59 @@
+---
+globs: packages/utils/src/docs/**/*.md
+alwaysApply: false
+---
+
+## template(KOR)
+
+- Create function's document files in the following format
+  ex) function's file route = `src/utils/array/countOf.ts`
+
+  ````md
+  # Array(countOf)
+
+  - 배열에 속해있는 요소 중에서 predicate 메서드 결과에 만족하는 요소들의 개수를 반환합니다.
+
+  ```tsx
+  countOf(array, predicate);
+  ```
+
+  ## 기본 사용 예시
+
+  ```tsx
+  import { countOf } from '@fetoolkit/utils';
+
+  const testArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const num1 = countOf(testArr, (item) => item % 2 === 0); // 5
+  ```
+
+  ## API 문서
+
+  - 입력 인자
+    |name|type|required|description|
+    |:---:|:---|:---|:---:|
+    |array|T[]|true|탐색할 배열|
+    |predicate|(item: T, index: number) => boolean|true|요소가 조건에 만족하는지를 검사할 메서드|
+  - 반환 타입: number
+  ````
+
+- template detail description
+  - title
+    - template: `#{Directory Name}(function's name)`
+  - description
+    - Add One line of brief Description
+    - write by Korean
+  - example Code1
+    - language: Typescript
+    - Just like how user write a function
+    - Argument: as it is by referring to the function creation file
+  - example Code2
+    - TOC(Table of Contents): `## 기본 사용 예시`
+    - language: Typescript
+    - Refer to the test case of the function and write the result value of one of the corresponding test data in inline annotation
+      - ex)
+        - function's file route = `src/utils/array/countOf`
+        - test file = `__test__/array/countOf.test.ts`
+  - API References
+    - TOC(Table of Contents): `## API 문서`
+    - Table the arguments and types of the function, whether it is required, a brief description, etc
+    - write by Korean
