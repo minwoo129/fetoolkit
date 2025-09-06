@@ -1,0 +1,61 @@
+name: Close issue and delete branch on PR close
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - 'dev-v**'
+
+jobs:
+  close-issue-and-delete-branch:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GIT_ACCESS_TOKEN }}
+          fetch-depth: 0
+
+      - name: Close linked issue
+        run: |
+          # PR 제목이나 본문에서 이슈 번호 추출 (예: #123, closes #123, fixes #123 등)
+          PR_BODY="${{ github.event.pull_request.body }}"
+          PR_TITLE="${{ github.event.pull_request.title }}"
+
+          # 이슈 번호 패턴 매칭
+          ISSUE_NUMBERS=$(echo "$PR_BODY $PR_TITLE" | grep -oE '#[0-9]+' | sed 's/#//g' | sort -u)
+
+          if [ -n "$ISSUE_NUMBERS" ]; then
+            for issue_num in $ISSUE_NUMBERS; do
+              echo "Closing issue #$issue_num"
+              gh issue close $issue_num --repo ${{ github.repository }} --comment "이 PR이 dev-v** 브랜치에 머지되어 이슈를 닫습니다."
+            done
+          else
+            echo "No linked issues found in PR title or body"
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GIT_ACCESS_TOKEN }}
+
+      - name: Delete head branch
+        run: |
+          HEAD_BRANCH="${{ github.event.pull_request.head.ref }}"
+          echo "Deleting branch: $HEAD_BRANCH"
+
+          # 브랜치가 존재하는지 확인
+          if git ls-remote --heads origin "$HEAD_BRANCH" | grep -q "$HEAD_BRANCH"; then
+            git push origin --delete "$HEAD_BRANCH"
+            echo "Successfully deleted branch: $HEAD_BRANCH"
+          else
+            echo "Branch $HEAD_BRANCH does not exist or already deleted"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GIT_ACCESS_TOKEN }}
+
+      - name: Summary
+        run: |
+          echo "## 작업 완료 요약" >> $GITHUB_STEP_SUMMARY
+          echo "- PR이 dev-v** 패턴 브랜치에 머지됨" >> $GITHUB_STEP_SUMMARY
+          echo "- 연결된 이슈 닫기 완료" >> $GITHUB_STEP_SUMMARY
+          echo "- 헤드 브랜치 삭제 완료: ${{ github.event.pull_request.head.ref }}" >> $GITHUB_STEP_SUMMARY

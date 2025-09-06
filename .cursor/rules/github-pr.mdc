@@ -1,0 +1,84 @@
+---
+alwaysApply: false
+---
+
+# Pull Request Rules(to dev)
+
+## basic rules
+
+- refer to issue number
+  - issue number in current branch name
+    - ex1) branch name: feature/issue-32/test-issue  
+       => issue number: 32
+    - ex2) branch name: bug/issue-40/test-issue2  
+       => issue number: 40
+  - in some case, it needs to refer Sub-issue of it
+- Before Pull Request on GitHub
+  - It must be added after checking the contents.
+
+## Template
+
+- title: `{Same as the title of the issue}`
+  - ex) title of issue: `[FEAT] Test Issue title (v1.2.0)`  
+     => title of PR: `[FEAT] Test Issue title (v1.2.0)`
+  - If there is a sub-issue, apply only to the subject of the issue
+    - ex)  
+       title of issue: `[FEAT] Test Issue title (v1.2.0)`  
+       title of sub-issue: `[FEAT] Test Sub Issue title1 (v1.2.0)`, `[FEAT] Test Sub Issue title2`, ... etc  
+       => title of PR: `[FEAT] Test Issue title (v1.2.0)`
+- merge to(branch): `dev-v{target version}`
+  - target version: At the back of the issue title
+    - ex) title of issue: `[FEAT] Test Issue title (v1.2.0)`  
+      => merge to(branch): `dev_v1.2.0`
+- description
+
+  ```md
+  ## 이슈번호
+
+  - {issue number}
+
+  ## Description
+
+  - {changes}
+  ```
+
+  - issue number(with Sub-issue)
+    - ex)  
+       issue number: 20, Sub-issue: 21, 22, 23, ... etc
+
+      => apply as
+
+      ```md
+      - #20
+      - #21
+      - #22
+      - #23
+      - ...
+      ```
+
+  - description
+    - description of the issue(with Sub-issue)
+    - Import the "description" part of the linked issue as it is.
+
+# Pull Request Rules(to master)
+
+## basic rules
+
+- refer to current branch
+
+## Template
+
+- title: `Merge of v{target version}`
+  - ex: current branch name: `dev_v1.2.0`  
+    => title: `Merge of v1.2.0`
+- merge to(branch): `master`
+- description
+  ```md
+  ## Changes(issue)
+
+  - {title of issues}
+  ```
+
+  - title of issues
+    - Bring up all the titles of the issues associated with the branch.
+    - target version: at the end of title of issue.
