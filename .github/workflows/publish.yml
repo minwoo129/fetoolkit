@@ -33,6 +33,6 @@ jobs:
         run: |
           git add .
           git commit -m "temp commit"
-          yarn lerna publish from-package
+          yarn lerna publish from-package --yes
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
