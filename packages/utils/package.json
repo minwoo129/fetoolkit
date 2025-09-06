@@ -1,0 +1,32 @@
+{
+  "name": "@fetoolkit/utils",
+  "version": "1.2.0",
+  "type": "module",
+  "author": "minwoo129 <key0129mw@naver.com>",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "homepage": "https://github.com/minwoo129/fetoolkit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/minwoo129/fetoolkit.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "utils",
+    "toolkit",
+    "utils-toolkit"
+  ],
+  "exports": "./dist/index.js",
+  "scripts": {
+    "build": "tsc && vite build",
+    "test:unit": "vitest"
+  },
+  "devDependencies": {
+    "vite": "^7.1.4",
+    "vite-plugin-dts": "^4.5.4"
+  }
+}
