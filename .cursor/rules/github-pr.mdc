@@ -59,3 +59,26 @@ alwaysApply: false
   - description
     - description of the issue(with Sub-issue)
     - Import the "description" part of the linked issue as it is.
+
+# Pull Request Rules(to master)
+
+## basic rules
+
+- refer to current branch
+
+## Template
+
+- title: `Merge of v{target version}`
+  - ex: current branch name: `dev_v1.2.0`  
+    => title: `Merge of v1.2.0`
+- merge to(branch): `master`
+- description
+  ```md
+  ## Changes(issue)
+
+  - {title of issues}
+  ```
+
+  - title of issues
+    - Bring up all the titles of the issues associated with the branch.
+    - target version: at the end of title of issue.
