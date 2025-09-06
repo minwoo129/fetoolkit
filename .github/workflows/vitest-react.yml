@@ -18,6 +18,6 @@ jobs:
       - name: Install yarn
         run: npm install -g yarn
       - name: Install dependencies
-        run: yarn install && yarn packages:react install
+        run: yarn install
       - name: Run test
         run: yarn packages:react test:unit
