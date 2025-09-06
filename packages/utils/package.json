@@ -1,6 +1,7 @@
 {
   "name": "@fetoolkit/utils",
   "version": "1.2.1",
+  "private": false,
   "type": "module",
   "author": "minwoo129 <key0129mw@naver.com>",
   "license": "MIT",
