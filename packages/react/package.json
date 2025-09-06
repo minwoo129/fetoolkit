@@ -1,13 +1,14 @@
 {
   "name": "@fetoolkit/react",
   "version": "1.2.1",
+  "private": false,
   "type": "module",
   "author": "minwoo129 <key0129mw@naver.com>",
   "license": "MIT",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "homepage": "https://github.com/minwoo129/fetoolkit",
+  "homepage": "https://github.com/minwoo129/fetoolkit/tree/main/packages/react",
   "repository": {
     "type": "git",
     "url": "https://github.com/minwoo129/fetoolkit.git"
