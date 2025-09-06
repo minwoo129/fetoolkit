@@ -12,7 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: 'master'
           fetch-depth: 0
+          token: ${{ secrets.GIT_ACCESS_TOKEN }}
       - uses: actions/setup-node@v4
         with:
           node-version: '20.x'
@@ -21,6 +23,10 @@ jobs:
         run: npm install -g yarn
       - name: Install dependencies
         run: yarn install
+      - name: GIT Setup
+        run: |
+          git config --global user.name "minwoo129"
+          git config --global user.email "key0129mw@naver.com"
       - name: build Projects
         run: yarn build
       - name: publish
