@@ -24,6 +24,6 @@ jobs:
       - name: build Projects
         run: yarn build
       - name: publish
-        run: yarn publish from-package
+        run: yarn lerna publish from-package
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
