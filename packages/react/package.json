@@ -34,8 +34,8 @@
     "@types/throttle-debounce": "^5",
     "@vitejs/plugin-react": "^5.0.2",
     "jsdom": "^26.1.0",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "user-agent-data-types": "^0.4.2",
     "vite": "^7.1.4",
     "vite-plugin-dts": "^4.5.4"
