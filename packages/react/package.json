@@ -42,9 +42,5 @@
   },
   "dependencies": {
     "throttle-debounce": "^5.0.2"
-  },
-  "peerDependencies": {
-    "react": ">=19",
-    "react-dom": ">=19"
   }
 }
