@@ -4,7 +4,93 @@ import {
   DefaultContextMenu,
   type ContextMenuItemType,
 } from '../components/ContextMenu';
-import '../css/ContextMenu.css';
+
+// CSS를 JavaScript에 인라인으로 포함
+const contextMenuStyles = `
+.context-menu-provider {
+  width: 100vw;
+  height: 100vh;
+}
+
+.context-menu-provider-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.context-menu-wrapper {
+  background-color: #ffffff;
+  border-radius: 10px;
+  position: absolute;
+  box-shadow: 0 6px 17px rgba(119, 119, 119, 0.2);
+  padding: 4px;
+}
+
+.context-menu-menu {
+  padding: 1px 2px;
+  margin: 0;
+}
+
+.context-menu-item {
+  list-style: none;
+  font-size: 22px;
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  min-width: 150px;
+  padding: 5px 0px;
+  border-radius: 5px;
+}
+
+.context-menu-item:hover {
+  background-color: #e2e0e0;
+}
+
+.context-menu-span {
+  font-size: medium;
+  margin-left: 8px;
+  color: #343434;
+}
+
+@media (prefers-color-scheme: dark) {
+  .context-menu-wrapper {
+    background-color: #1e1d1d;
+    box-shadow: 0 6px 17px #ffffff00;
+  }
+
+  .context-menu-item:hover {
+    background-color: #ffffff80;
+  }
+
+  .context-menu-span {
+    color: #e2e2e2;
+  }
+}
+`;
+
+// CSS를 DOM에 주입하는 함수
+const injectStyles = () => {
+  if (typeof document !== 'undefined') {
+    const styleId = 'fetoolkit-context-menu-styles';
+    if (!document.getElementById(styleId)) {
+      const style = document.createElement('style');
+      style.id = styleId;
+      style.textContent = contextMenuStyles;
+      document.head.appendChild(style);
+    }
+  }
+};
+
+// 컴포넌트가 마운트될 때 스타일 주입
+if (typeof window !== 'undefined') {
+  injectStyles();
+}
 
 type LastClickedDataType = {
   elementId: string | number | null;

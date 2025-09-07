@@ -35,6 +35,7 @@ export default defineConfig({
     commonjsOptions: {
       esmExternals: ['react'],
     },
+    cssCodeSplit: false, // CSS를 하나의 파일로 번들링
   },
   esbuild: {
     jsx: 'automatic',
