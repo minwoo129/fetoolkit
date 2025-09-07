@@ -87,7 +87,7 @@ createRoot(document.getElementById('root')!).render(
 
 > ### 안내
 >
-> getUserAgent를 제외한 모든 유틸리티 함수는 [`@fetoolkit/utils`](https://github.com/minwoo129/fetoolkit-utils)로 이동하였습니다. 따라서 이동한 함수들은 본 패키지에서 2025년 12월 31일을 끝으로 deprecated 처리할 예정이므로, 이 점 참고해주시기 바랍니다!!!  
+> getUserAgent를 제외한 모든 유틸리티 함수는 [`@fetoolkit/utils`](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils)로 이동하였습니다. 따라서 이동한 함수들은 본 패키지에서 2025년 12월 31일을 끝으로 deprecated 처리할 예정이므로, 이 점 참고해주시기 바랍니다!!!  
 > -> 기능 안정성을 위해 함수는 그대로 제공되지만, 더이상의 업데이트는 이뤄지지 않습니다.
 
 | 이름                          | 설명                                                                                         |                                                         공식문서                                                          |
