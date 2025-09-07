@@ -30,12 +30,12 @@ alwaysApply: false
 
   ## API 문서
 
-  - 입력 인자
+  - input
     |name|type|required|description|
     |:---:|:---|:---|:---:|
     |array|T[]|true|탐색할 배열|
     |predicate|(item: T, index: number) => boolean|true|요소가 조건에 만족하는지를 검사할 메서드|
-  - 반환 타입: number
+  - output(type): number
   ````
 
 ## template(ENG)
