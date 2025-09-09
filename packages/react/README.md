@@ -3,7 +3,7 @@
 ![](https://fejumvuajiwc28287693.gcdn.ntruss.com/fetoolkit/fetoolkit_thumbnail.png)
 (This thumbnail was created by Chat GPT)
 
-English | [한국어](./README_kr.md)
+English | [한국어](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/README_kr.md)
 
 FEToolkit is a toolkit library that provides useful functions for Frontend development. The library is divided according to frameworks such as React and Vue, and functions that can be used in common regardless of the framework will be distributed as separate libraries.
 
