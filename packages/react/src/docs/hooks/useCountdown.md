@@ -1,8 +1,10 @@
 # useCountdown
 
-- 카운트다운 기능을 구현하기 위한 커스텀 훅입니다.
+English | [한국어](./useCountdown_kr.md)
 
-## 기본 사용 예시
+- A Hook to implement countdown feature.
+
+## Example
 
 ```tsx
 import { useCountdown } from '@fetoolkit/react'
@@ -10,9 +12,9 @@ import { useCountdown } from '@fetoolkit/react'
 const {leftTime, isCountdownRunning, handleCountdown} = useCountdown({min: 3})
 ```
 
-## API 설명
+## API Reference
 
-### Input(객체)
+### Input(object)
 
 ```typescript
 {
@@ -23,10 +25,10 @@ const {leftTime, isCountdownRunning, handleCountdown} = useCountdown({min: 3})
 
 | Name   | Type   | Required | default | Description |
 | :----- | :----- | :------- | :------ | :---------- |
-| minute | number | false    | 0       | 분 단위     |
-| second | number | false    | 0       | 초 단위     |
+| minute | number | false    | 0       | Minutes     |
+| second | number | false    | 0       | Seconds     |
 
-### Output(객체)
+### Output(object)
 
 ```typescript
 {
@@ -36,8 +38,8 @@ const {leftTime, isCountdownRunning, handleCountdown} = useCountdown({min: 3})
 }
 ```
 
-| Name               | Type                                                  | Description                                                                                                                                                                             |
-| ------------------ | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| leftTime           | number                                                | 현재 남은 시간(초 단위)                                                                                                                                                                 |
-| isCountdownRunning | boolean                                               | 카운트 다운이 돌아가고 있는지 여부                                                                                                                                                      |
-| handleCountdown    | (mode: 'start' \| 'stop' \| 'pauseOrRestart') => void | 카운트다운 동작 제어 메서드 <br>- mode: start => 카운트다운 시작<br>- mode: stop => 카운트다운 정지(남은시간 0초로 초기화)<br>- mode: pauseOrRestart => 카운트다운 일시정지 또는 재시작 |
+| Name               | Type                                                  | Description                                                                                                                                                                                     |
+| ------------------ | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| leftTime           | number                                                | Current remaining time (in seconds)                                                                                                                                                             |
+| isCountdownRunning | boolean                                               | Whether the countdown is running                                                                                                                                                                |
+| handleCountdown    | (mode: 'start' \| 'stop' \| 'pauseOrRestart') => void | Method to control countdown behavior <br>- mode: start => Start countdown<br>- mode: stop => Stop countdown (reset remaining time to 0)<br>- mode: pauseOrRestart => Pause or restart countdown |
