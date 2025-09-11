@@ -5,8 +5,6 @@ alwaysApply: false
 
 ## Template(KOR)
 
-[English]({absolute URL}) | 한국어
-
 - Create Hook's document files in the following format  
   ex) Hook's file route = `src/hooks/useAsyncLoading.tsx`
 
