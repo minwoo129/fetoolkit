@@ -1,8 +1,10 @@
 # useImageLazyLoading
 
-- 이미지의 Lazy Loading을 처리하기 위한 hook 입니다.
+English | [한국어](./useImageLazyLoading_kr.md)
 
-## 기본 사용 예시
+- A Hook for handling image lazy loading.
+
+## Example
 
 ```tsx
 import { useImageLazyLoading } from '@fetoolkit/react';
@@ -12,9 +14,9 @@ import { useImageLazyLoading } from '@fetoolkit/react';
  return <img ref={imgRef} src={realSrc} alt="Lazy loaded image" />;
 ```
 
-## API 설명
+## API Reference
 
-### Input(객체)
+### Input(object)
 
 ```typescript
 {
@@ -23,18 +25,18 @@ import { useImageLazyLoading } from '@fetoolkit/react';
 }
 ```
 
-| Name    | Type                     | Required | default            | Description                    |
-| :------ | :----------------------- | :------- | :----------------- | :----------------------------- |
-| src     | string                   | true     | -                  | 이미지 URL                     |
-| options | IntersectionObserverInit | false    | `{threshold: 0.1}` | IntersectionObserver 세부 옵션 |
+| Name    | Type                     | Required | default            | Description                           |
+| :------ | :----------------------- | :------- | :----------------- | :------------------------------------ |
+| src     | string                   | true     | -                  | Image URL                             |
+| options | IntersectionObserverInit | false    | `{threshold: 0.1}` | IntersectionObserver detailed options |
 
-### Output(튜플)
+### Output(tuple)
 
 ```typescript
 [imgRef: React.Ref<HTMLImageElement | null>, realSrc: string]
 ```
 
-| Name    | Type                                | Description                                                                                                                                    |
-| ------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| imgRef  | React.Ref<HTMLImageElement \| null> | img 태그에 들어갈 ref <br> - 이 값을 위 예시와 같이 `<img>` 태그의 ref props에 적용해주세요.                                                   |
-| realSrc | string                              | `<img>` 태그에 들어갈 실제 이미지 URL <br> - Lazy Loading 처리가 반영된 URL이기 때문에 `<img>` 태그의 src props에는 이 값을 적용해주면 됩니다. |
+| Name    | Type                                | Description                                                                                                                                              |
+| ------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| imgRef  | React.Ref<HTMLImageElement \| null> | Ref to be used in img tag <br> - Apply this value to the ref props of the `<img>` tag as shown in the example above.                                     |
+| realSrc | string                              | Actual image URL to be used in `<img>` tag <br> - Since this URL reflects lazy loading processing, apply this value to the src props of the `<img>` tag. |
