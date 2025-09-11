@@ -1,8 +1,10 @@
 # useLocalStorage
 
-- 브라우저의 `localStorage`를 사용하여 데이터를 저장하고 관리하기 위한 Hook 입니다.
+English | [한국어](./useLocalStorage_kr.md)
 
-## 기본 사용 예시
+- A Hook for storing and managing data using the browser's `localStorage`.
+
+## Example
 
 ```tsx
 import { useLocalStorage } from '@fetoolkit/react'
@@ -10,13 +12,13 @@ import { useLocalStorage } from '@fetoolkit/react'
 const [get, set, remove, clear] = useLocalStorage()
 ```
 
-## API 설명
+## API Reference
 
-### Input(없음)
+### Input(none)
 
-이 Hook은 매개변수를 받지 않습니다.
+This Hook does not accept parameters.
 
-### Output(튜플)
+### Output(tuple)
 
 ```typescript
 [
@@ -27,9 +29,9 @@ const [get, set, remove, clear] = useLocalStorage()
 ]
 ```
 
-| Name   | Type                                        | Description                                                                                                                           |
-| ------ | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| get    | <T>(key: string) => Promise<T \| null>      | 해당하는 key 값으로 LocalStorage에 저장된 값을 받아오는 메서드입니다.<br> - 각 메서드마다 개별적으로 제네릭 타입을 적용하셔야 합니다. |
-| set    | <T>(key: string, data: T) => Promise\<null> | LocalStorage에 값을 저장하는 메서드입니다.<br> - key 값에 따라 개별적으로 제네릭 타입을 적용하셔야 합니다.                            |
-| remove | <T>(key: string) => Promise\<void>          | 해당하는 key값의 데이터를 삭제하는 메서드입니다.                                                                                      |
-| clear  | <T>() => Promise\<void>                     | LocalStorage 전체를 초기화하는 메서드입니다.                                                                                          |
+| Name   | Type                                        | Description                                                                                                                                 |
+| ------ | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| get    | <T>(key: string) => Promise<T \| null>      | Method to retrieve values stored in LocalStorage by the corresponding key.<br> - Generic types must be applied individually to each method. |
+| set    | <T>(key: string, data: T) => Promise\<null> | Method to store values in LocalStorage.<br> - Generic types must be applied individually according to the key value.                        |
+| remove | <T>(key: string) => Promise\<void>          | Method to delete data with the corresponding key value.                                                                                     |
+| clear  | <T>() => Promise\<void>                     | Method to initialize the entire LocalStorage.                                                                                               |
