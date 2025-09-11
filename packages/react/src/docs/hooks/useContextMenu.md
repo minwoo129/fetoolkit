@@ -76,7 +76,7 @@ This Hook does not accept parameters.
 | contextMenuHandler       | (props: ContextMenuHanderArgs) => void                                | A function that open ContextMenu                                          |
 | onClickedContextMenuItem | (callback: (data: LastClickedDataType \| null) => void) => () => void | A Event listener of ContextMenu.<br>- used to detection of button clicked |
 
-### 기타 타입 설명
+### Types
 
 ```typescript
 interface ContextMenuHanderArgs {
