@@ -1,31 +1,31 @@
 # ContextMenu
 
-English | [한국어](./contextMenu_kr.md)
+[English](./contextMenu.md) | 한국어
 
-- A feature used to create custom ContextMenu instead of browser's built-in ContextMenu in React.
-- You can use the provided ContextMenu component or create a custom component.
-  - When creating and using a custom component, we provide components and custom hooks for data connection, so you can develop using these.
+- React에서 브라우저 자체제공 ContextMenu가 아닌 맞춤형 ContextMenu를 만드는데 사용하는 기능입니다.
+- 자체 제공하는 ContextMenu 컴포넌트를 사용할수도 있고, 커스텀 컴포넌트를 만들어서 사용할 수도 있습니다.
+  - 커스텀 컴포넌트를 만들어 사용하는 경우, 이를 위한 컴포넌트와 데이터 연결을 위한 커스텀 Hook을 제공하니, 이를 사용해 개발하시면 됩니다.
 
-## 1. Features
+## 1. 제공기능
 
-### 1-1. [ContextMenu(Component)](../components/ContextMenu.md)
+### 1-1. [ContextMenu(컴포넌트)](../components/ContextMenu.md)
 
-### 1-2. [ContextMenuProvider(Component)](../components/ContextMenuProvider.md)
+### 1-2. [ContextMenuProvider(컴포넌트)](../components/ContextMenuProvider.md)
 
 ### 1-3. [useContextMenu(Hook)](../hooks/useContextMenu.md)
 
 ### 1-4. [useCustomContextMenu(Hook)](../hooks/useCustomContextMenu.md)
 
-## 2. Getting Started
+## 2. 사전 연결 방법
 
-### 2-1. ContextMenuProvider Component Setup
+### 2-1. ContextMenuProvider 컴포넌트 연결
 
-Based on a React project, you can connect it to the `main.tsx` file as shown below.
+React 프로젝트를 기준으로 `main.tsx` 파일에 아래와 같이 연결하시면 됩니다.
 
-- Must be declared under the `FEToolkitProvider` component.
+- 반드시 `FEToolkitProvider` 컴포넌트 하위에 선언되어야 합니다.
 
 ```tsx
-// Basic example
+// 기본 예시
 // src/main.tsx
 import React, { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
@@ -36,7 +36,7 @@ import './index.css';
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <FEToolkitProvider>
-      {/* Here */}
+      {/* 여기 */}
       <ContextMenuProvider>
         <App />
       </ContextMenuProvider>
@@ -45,26 +45,26 @@ createRoot(document.getElementById('root')!).render(
 );
 ```
 
-## 3. Instructions
+## 3. 사용법
 
-### 3-1. Using the provided ContextMenu component
+### 3-1. 기본 제공하는 ContextMenu 컴포넌트를 사용하는 경우
 
-#### 1) Connect click event to onContextMenu props
+#### 1) onContextMenu props에 클릭 이벤트 연결
 
-React's HTML Element has a props called `onContextMenu`.
-Using this props, you can design the mouse right-click event for that element.  
-When using, import the `useContextMenu` Hook and use the `onContextMenu` props on the element where you want to display the ContextMenu as shown in the example below.
+React의 HTML Element에는 `onContextMenu`라는 props가 있습니다.
+이 props를 사용하면 해당 Element의 마우스 우클릭 이벤트를 설계할 수 있습니다.  
+사용 시 `useContextMenu` Hook을 import하시고 ContextMenu를 띄울 영역에 해당하는 element에 `onContextMenu` props를 사용하여 아래 예시와 같이 사용하십시오.
 
 ```tsx
-// Example page
+// 예시 페이지
 import React, { useEffect, useMemo, useState } from 'react';
 import { useContextMenu } from '@fetoolkit/react';
 
 const ContextMenuTestPage = () => {
-  const { contextMenuHandler, onClickedContextMenuItem } = useContextMenu(); // Here
+  const { contextMenuHandler, onClickedContextMenuItem } = useContextMenu(); // 여기
 
   useEffect(() => {
-    // Here
+    // 여기
     const unsubscribe = onClickedContextMenuItem((data) => {
       console.log('clickedData: ', data);
     });
@@ -95,7 +95,7 @@ const ContextMenuTestPage = () => {
             key={idx}
             style={{ width: '100%', border: '1px solid blue' }}
             onContextMenu={(e) => {
-              // Here
+              // 여기
               contextMenuHandler({
                 elementId: 'test-124',
                 event: e,
@@ -131,15 +131,15 @@ const ContextMenuTestPage = () => {
 export default ContextMenuTestPage;
 ```
 
-As shown above, you can detect which button was clicked in the ContextMenu using the `onClickedContextMenuItem` method of the `useContextMenu` Hook. And you can set which buttons to display when the ContextMenu opens due to a right-click on that element using the `contextMenuHandler` method.
+위와 같이, `useContextMenu` Hook의 `onClickedContextMenuItem` 메서드를 사용하여 ContextMenu에서 어떤 버튼이 클릭됬는지를 감지할 수 있습니다. 그리고 `contextMenuHandler` 메서드를 사용하여 해당 Element에서 우클릭이 발생해서 ContextMenu가 열릴 때 어떤 버튼이 띄워질지를 설정할 수 있습니다.
 
-- The `onClickedContextMenuItem` method is an event listener method, so it should be called inside useEffect and the listener should be deactivated on unmount with a cleanup function as shown above.
+- `onClickedContextMenuItem` 메서드는 이벤트 리스너 메서드로서, useEffect 내부에서 호출하고, 위와 같이 클린업 함수로 언마운트 시 리스너를 비활성화해줘야 합니다.
 
-### 3-2. When developing and using ContextMenu yourself
+### 3-2. ContextMenu를 자체 개발해서 사용하는 경우
 
-#### 1) ContextMenu Component Development
+#### 1) ContextMenu 컴포넌트 개발
 
-Add a new component file in the desired location and write it as follows.
+원하는 위치에 컴포넌트 파일을 새로 추가하시고 아래와 같이 작성합니다.
 
 ```tsx
 import React from 'react';
@@ -172,11 +172,11 @@ const AppContextMenu = () => {
 export default AppContextMenu;
 ```
 
-`ContextMenu.Grid` is a grid component that constitutes the ContextMenu and must be at the top. `ContextMenu.Item` is a component that represents each button. At this time, you can declare the desired style for each area using `styles` or `className` props.
+`ContextMenu.Grid`는 ContextMenu를 구성하는 그리드 컴포넌트로, 최상단에 와야 합니다. `ContextMenu.Item`은 각 버튼을 나타내는 컴포넌트입니다. 이때, 각 영역의 스타일은 `styles` 또는 `className` props를 사용하여 원하는 스타일을 선언하시면 됩니다.
 
-#### 2) Component Connection
+#### 2) 컴포넌트 연결
 
-Connect the developed component to the top-level `ContextMenuProvider` component of the project.
+개발한 컴포넌트를 프로젝트 최상단 `ContextMenuProvider` 컴포넌트에 연결합니다.
 
 ```tsx
 // src/main.tsx
@@ -198,6 +198,6 @@ createRoot(document.getElementById('root')!).render(
 );
 ```
 
-#### 3) Connect click event to onContextMenu props
+#### 3) onContextMenu props에 클릭 이벤트 연결
 
-> Same as above content.
+> 상위 내용과 동일합니다.

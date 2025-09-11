@@ -10,6 +10,8 @@ alwaysApply: false
   ```md
   # {FileName(camel type)}
 
+  [English]({relative URL}) | 한국어
+
   - {description} // don't write
 
   ## 1. 제공 기능
@@ -31,6 +33,8 @@ alwaysApply: false
 
   ```md
   # {FileName(camel type)}
+
+  English | [한국어]({relative URL})
 
   - {description} // don't write
 

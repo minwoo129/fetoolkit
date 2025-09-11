@@ -11,7 +11,7 @@ alwaysApply: false
   ````md
   # ContextMenu
 
-  [English]({absolute URL}) | 한국어
+  [English]({relative URL}) | 한국어
 
   - 커스텀 ContextMenu 컴포넌트를 개발할 때 사용하는 컴포넌트입니다.
   - 커스텀 ContextMenu를 개발한다고 해도, 이를 위해 필요한 요소들이 있어 반드시 이 컴포넌트를 연결해서 사용하셔야 합니다.
@@ -60,7 +60,7 @@ alwaysApply: false
   ````md
   # ContextMenu
 
-  English | [한국어]({absolute URL})
+  English | [한국어]({relative URL})
 
   - This component is created for used to develop custom ContextMenu.
   - You must have use this component when you want to create your own ContextMenu, because there's necessary elements in this component to create your own.
