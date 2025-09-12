@@ -1,14 +1,14 @@
 # Array(isSameArr)
 
-English | [한국어](./isSameArr_kr.md)
+[English](./isSameArr.md) | 한국어
 
-- A function that returns whether the elements in two arrays are identical, including their order.
+- 두 배열에 들어가있는 요소가 순서까지 모두 동일한지 여부를 반환하는 함수입니다.
 
 ```tsx
 isSameArr(arr1, arr2);
 ```
 
-## Example
+## 기본 사용 예시
 
 ```tsx
 import { isSameArr } from '@fetoolkit/utils';
@@ -25,15 +25,15 @@ const arr8 = ['1', '2', '3'];
 isSameArr(arr1, arr2); // true
 isSameArr(arr1, arr3); // false
 isSameArr(arr1, arr4); // false
-isSameArr(arr5, arr6); // false => In JavaScript concept, they are recognized as different objects even if they have the same structure.
+isSameArr(arr5, arr6); // false => javascript 개념상 구조가 같아도 다른 객체로 인식되기 때문입니다.
 isSameArr(arr5, arr7); // true
 ```
 
-## API Reference
+## API 문서
 
-- input
+- 입력 인자
   |name|type|required|description|
   |:---:|:---|:---|:---:|
-  |arr1|unknown[]|true|First array to compare|
-  |arr2|unknown[]|true|Second array to compare|
-- output(type): boolean
+  |arr1|unknown[]|true|탐색할 배열|
+  |arr2|unknown[]|true|탐색할 배열|
+- 반환 타입: boolean

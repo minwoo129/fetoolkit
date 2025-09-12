@@ -1,14 +1,14 @@
 # Array(first)
 
-English | [한국어](./first_kr.md)
+[English](./first.md) | 한국어
 
-- Returns the first element in an Array.
+- Array 내에 첫번째 요소를 반환합니다.
 
 ```tsx
 first(array);
 ```
 
-## Example
+## 기본 사용 예시
 
 ```tsx
 import { first } from '@fetoolkit/utils';
@@ -17,10 +17,10 @@ const testArr = [1, 23, 578, 456, 1234];
 const num1 = first(testArr); // 1
 ```
 
-## API Reference
+## API 문서
 
-- input
+- 입력 인자
   |name|type|required|description|
   |:---:|:---|:---|:---:|
-  |array|T[]|true|Array to search|
-- output(type): T | undefined
+  |array|T[]|true|탐색할 배열|
+- 반환 타입: T | undefined

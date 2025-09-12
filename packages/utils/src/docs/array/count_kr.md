@@ -1,14 +1,14 @@
 # Array(count)
 
-English | [한국어](./count_kr.md)
+[English](./count.md) | 한국어
 
-- A function that returns the length of an array.
+- 배열의 길이를 반환하는 함수입니다.
 
 ```tsx
 count(array);
 ```
 
-## Example
+## 기본 사용 예시
 
 ```tsx
 import { count } from '@fetoolkit/utils';
@@ -17,10 +17,10 @@ const testArr = [1, 23, 578, 456, 1234];
 const num1 = count(testArr); // 5
 ```
 
-## API Reference
+## API 문서
 
-- input
+- 입력 인자
   |name|type|required|description|
   |:---:|:---|:---|:---:|
-  |array|T[]|true|Array to search|
-- output(type): number
+  |array|T[]|true|탐색할 배열|
+- 반환 타입: number
