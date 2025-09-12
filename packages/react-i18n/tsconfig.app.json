@@ -1,0 +1,6 @@
+{
+  "extends": "../../tsconfig.app.json",
+  "compilerOptions": {
+    "types": ["./node_modules/user-agent-data-types"]
+  }
+}
