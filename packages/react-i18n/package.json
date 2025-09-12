@@ -1,5 +1,5 @@
 {
-  "name": "@fetoolkit/utils",
+  "name": "@fetoolkit/react-i18n",
   "version": "1.2.3",
   "type": "module",
   "private": false,
@@ -17,17 +17,7 @@
     "dist"
   ],
   "keywords": [
-    "utils",
-    "toolkit",
-    "utils-toolkit"
-  ],
-  "exports": "./dist/index.js",
-  "scripts": {
-    "build": "tsc && vite build",
-    "test:unit": "vitest"
-  },
-  "devDependencies": {
-    "vite": "^7.1.4",
-    "vite-plugin-dts": "^4.5.4"
-  }
+    "react",
+    "fetoolkit"
+  ]
 }
