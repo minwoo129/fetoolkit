@@ -34,15 +34,19 @@ const {
 
 ```typescript
 {
-  input: [string, (value: string) => void];
-  validation: [ValidationStatusType, React.Dispatch<React.SetStateAction<ValidationStatusType>>];
+  input: [inputValue, handleInputValueChange];
+  validation: [inputValueValidationStatus, setInputValueValidationStatus];
 }
 ```
 
-| Name       | Type                                                                               | Description                                                                                                                    |
-| ---------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| input      | [string, (value: string) => void]                                                  | 입력값과 입력값 변경 핸들러를 담은 튜플 <br> - 첫 번째 요소: 현재 입력값 <br> - 두 번째 요소: 입력값을 변경하는 함수           |
-| validation | [ValidationStatusType, React.Dispatch<React.SetStateAction<ValidationStatusType>>] | 검증 상태와 검증 상태 변경 함수를 담은 튜플 <br> - 첫 번째 요소: 현재 검증 상태 <br> - 두 번째 요소: 검증 상태를 변경하는 함수 |
+| Name                          | Type                                                     | Description                                                                                                                                                                                                                                           |
+| ----------------------------- | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| input                         | tuple                                                    | 입력값과 입력값 변경 핸들러를 담은 튜플                                                                                                                                                                                                               |
+| inputValue                    | string                                                   | 사용자가 현재 입력한 값                                                                                                                                                                                                                               |
+| handleInputValueChange        | (value: string) => void                                  | 사용자의 입력값을 수정하는 메서드                                                                                                                                                                                                                     |
+| validation                    | tuple                                                    | 검증 상태와 검증 상태 변경 함수를 담은 튜플                                                                                                                                                                                                           |
+| inputValueValidationStatus    | ValidationStatusType                                     | 현재 입력값의 유효성 검사 결과                                                                                                                                                                                                                        |
+| setInputValueValidationStatus | Dispatch\<React.SetStateAction\<ValidationStatusType\>\> | 현재 입력값의 유효성검사 결과를 수정할 수 있는 메서드. <br> (이 값은 비동기 유효성검사를 실행할 때 그 결과에 따라 수동으로 검사결과를 수정할 수 있도록 하기 위해 추가하였습니다. 꼭 사용해야 하는 상황이 아니면 가급적 사용을 지양해주시기 바랍니다.) |
 
 ### 추가 타입 설명
 
