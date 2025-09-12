@@ -1,8 +1,10 @@
 # useUserAgent
 
-- UserAgent를 통해 받아온 브라우저 및 사용자 운영체제 정보를 가져오는 Hook 입니다.
+English | [한국어](./useUserAgent_kr.md)
 
-## 기본 사용 예시
+- A Hook that retrieves browser and user operating system information through UserAgent.
+
+## Example
 
 ```tsx
 import { useUserAgent } from '@fetoolkit/react'
@@ -10,13 +12,13 @@ import { useUserAgent } from '@fetoolkit/react'
 const {agent, browser, os, isMobile} = useUserAgent()
 ```
 
-## API 설명
+## API Reference
 
-### Input(없음)
+### Input(none)
 
-이 Hook은 매개변수를 받지 않습니다.
+This Hook does not accept parameters.
 
-### Output(객체)
+### Output(object)
 
 ```typescript
 {
@@ -27,9 +29,9 @@ const {agent, browser, os, isMobile} = useUserAgent()
 }
 ```
 
-| Name     | Type                     | Description                                   |
-| -------- | ------------------------ | --------------------------------------------- |
-| agent    | AgentInfo \| null        | UserAgent로부터 받아온 원본 데이터            |
-| browser  | AgentBrowserInfo \| null | 런타임 브라우저 정보                          |
-| os       | AgentOSInfo \| null      | 런타임 환경 운영체제 정보                     |
-| isMobile | boolean                  | 현재 런타임이 모바일에서 실행되고 있는지 여부 |
+| Name     | Type                     | Description                                      |
+| -------- | ------------------------ | ------------------------------------------------ |
+| agent    | AgentInfo \| null        | Original data retrieved from UserAgent           |
+| browser  | AgentBrowserInfo \| null | Runtime browser information                      |
+| os       | AgentOSInfo \| null      | Runtime environment operating system information |
+| isMobile | boolean                  | Whether the current runtime is running on mobile |

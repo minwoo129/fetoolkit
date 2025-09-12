@@ -1,11 +1,13 @@
 # ErrorBoundary
 
-- React에서 발생하는 에러를 선언적으로 관리하기 위한 컴포넌트 입니다.
-- 에러 감지 후 데이터 처리와 동시에 Fallback UI 선언이 가능합니다.
+English | [한국어](./ErrorBoundary_kr.md)
 
-## 기본 사용 예시
+- A Component which is useful to controll an error declaratively
+- Fallback UI declaration is possible at the same time as data processing after error detection.
 
-### 1. ErrorBoundary(컴포넌트)
+## Example
+
+### 1. ErrorBoundary(Component)
 
 ```tsx
 import { ErrorBoundary } from '@fetoolkit/react';
@@ -26,11 +28,11 @@ export default withErrorBoundary(App, {
 });
 ```
 
-## API(Props) 설명
+## API(Props) Reference
 
-| Name           | Type                                               | Required | Default | Description                                                                                                     |
-| :------------- | :------------------------------------------------- | :------- | :------ | :-------------------------------------------------------------------------------------------------------------- |
-| renderFallback | (error: ErrorType, reset: () => void) => ReactNode | true     | -       | 에러 발생 시 출력할 Fallback UI 컴포넌트                                                                        |
-| onError        | (error: ErrorType, info: ErrorInfo) => void        | false    | -       | 에러 발생시 로그 기록 등 데이터 처리를 위한 함수 <br> - sentry, firebase 등 외부 서비스에 에러를 기록할 때 사용 |
-| onReset        | () => void                                         | false    | -       | 에러가 초기화되면 호출되는 함수                                                                                 |
-| ignoreError    | (error: ErrorType) => boolean                      | false    | -       | 잡힌 에러를 무시하고 다시 throw할지 여부를 판단                                                                 |
+| Name           | Type                                               | Required | Default | Description                                                            |
+| :------------- | :------------------------------------------------- | :------- | :------ | :--------------------------------------------------------------------- |
+| renderFallback | (error: ErrorType, reset: () => void) => ReactNode | true     | -       | declare Fallback UI Component.                                         |
+| onError        | (error: ErrorType, info: ErrorInfo) => void        | false    | -       | processing data such as logging<br>(ex, sentry, firebase creashlytics) |
+| onReset        | () => void                                         | false    | -       | Function called when error is initialized                              |
+| ignoreError    | (error: ErrorType) => boolean                      | false    | -       | Decide whether to ignore the error caught and throw again              |

@@ -1,12 +1,14 @@
 # Object(omit)
 
-- 객체에서 특정 키를 생략한 새로운 객체를 생성하는 함수입니다.
+English | [한국어](./omit_kr.md)
+
+- A function that creates a new object by omitting specific keys from an object.
 
 ```tsx
 omit(object, keys);
 ```
 
-## 기본 사용 예시
+## Example
 
 ```tsx
 import { omit } from '@fetoolkit/utils';
@@ -19,11 +21,11 @@ const testObj = {
 const value = omit(testObj, ['b', 'c']); // { a: 1 }
 ```
 
-## API 문서
+## API Reference
 
-- 입력 인자
+- input
   |name|type|required|description|
   |:---:|:---|:---|:---:|
-  |object| T |true| 탐색할 객체 |
-  |keys| (K extends keyof T)[] |true| 제외할 key값 |
-- 반환 타입: Omit<T, K>
+  |object| T |true| Object to omit keys from |
+  |keys| (K extends keyof T)[] |true| Keys to exclude |
+- output(type): Omit<T, K>

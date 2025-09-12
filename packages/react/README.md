@@ -1,23 +1,21 @@
 # FEToolkit/React
 
 ![](https://fejumvuajiwc28287693.gcdn.ntruss.com/fetoolkit/fetoolkit_thumbnail.png)
-(해당 썸네일은 Chat GPT를 통해 생성한 이미지입니다.)  
-FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 제공하는 툴킷 라이브러리입니다. 라이브러리는 React, Vue 등 프레임워크에 따라서 구분하여 제공되며, 프레임워크와 무관하게 공통적으로 사용할 수 있는 기능은 별도의 라이브러리로 배포될 예정입니다.  
-현재는 제공되고 있는 기능이 많이 없을지 몰라도 지속적인 업데이트를 통해 기능을 추가해나갈 예정입니다.
+(This thumbnail was created by Chat GPT)
 
-> ### 알려드립니다
->
-> 이 패키지는 기존에 배포된 [fetoolkit-react](https://github.com/minwoo129/fetoolkit-react)와 동일한 프로젝트입니다. 관리의 효율화를 위해 작업환경을 이전한 것이오니 이 점 참고 부탁드립니다.
+English | [한국어](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/README_kr.md)
+
+FEToolkit is a toolkit library that provides useful functions for Frontend development. The library is divided according to frameworks such as React and Vue, and functions that can be used in common regardless of the framework will be distributed as separate libraries.
 
 ## Documentation
 
-- 본 라이브러리는 React 전용 라이브러리입니다.
-  - 같은 React 계열의 Next.js와 React Native에서는 사용이 불가능합니다.
-- 이 패키지는 React 19 이상에서만 정상동작이 가능합니다.
+- This library is created for `React`
+  - You can't use it in `Next.js` and `React Native`
+- This library can only operate with React 19 or later
 
-## 초기 설정 절차
+## Getting Started
 
-### 1. 설치 방법
+### 1. Installation
 
 - npm
   ```
@@ -32,9 +30,9 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
   pnpm add @fetoolkit/react
   ```
 
-### 2. Provider 연결
+### 2. Connect Provider
 
-이 툴킷의 안정적인 기능사용을 위해선, 최상단에 FEToolkitProvider 컴포넌트 연결이 필요합니다.
+You need to connect `FEToolkitProvider` Component on root to Stable functional behavior
 
 ```tsx
 import React, { StrictMode } from 'react';
@@ -52,52 +50,52 @@ createRoot(document.getElementById('root')!).render(
 );
 ```
 
-## 제공되는 기능
+## Features
 
-### 3-1. 컴포넌트
+### 3-1. Components
 
-| 이름           | 설명                                                                                                                                              |                                                       공식문서                                                       |
-| :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------: |
-| ErrorBoundary  | React 기본 탑재 기능인 ErrorBoundary를 함수 컴포넌트 및<br> HOC 형태로 제공하는 컴포넌트                                                          |  [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/components/ErrorBoundary.md)  |
-| Flatlist       | 많은 양의 스크롤이 필요한 리스트 아이템을 보여주고자 할 때<br> 사용할 수 있는 컴포넌트 <br> (참고: React Native 개발자라면 이해할 수 있을겁니다!) |    [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/components/Flatlist.md)     |
-| InfiniteScroll | 무한 스크롤 기능 컴포넌트                                                                                                                         | [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/components/InfiniteScroll.md)  |
-| ContextMenu    | 사용자 선언 ContextMenu 구현을 위한 컴포넌트                                                                                                      | [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/joinedFeatures/contextMenu.md) |
+| Name           | Description                                                                                             |                                                         Docs                                                         |
+| :------------- | :------------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------: |
+| ErrorBoundary  | A Component which is useful to controll an error declaratively<br>(with HOC)                            |  [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/components/ErrorBoundary.md)  |
+| Flatlist       | A Component which is useful to render flat list.<br>(p.s. if you're RN developer, you will understand.) |    [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/components/Flatlist.md)     |
+| InfiniteScroll | A Component to create an infinite scrolling.                                                            | [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/components/InfiniteScroll.md)  |
+| ContextMenu    | A Component to create an custom context menu                                                            | [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/joinedFeatures/contextMenu.md) |
 
-### 3-2. Hook
+### 3-2. Hooks
 
-| 이름                  | 설명                                                                                         |                                                         공식문서                                                         |
-| :-------------------- | :------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------: |
-| useAsyncLoading       | 비동기 작업의 로딩 상태를 관리하기 위한 Hook                                                 |     [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useAsyncLoading.md)      |
-| useCountdown          | 카운트다운 기능을 구현하기 위한 Hook                                                         |       [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useCountdown.md)       |
-| useImageLazyLoading   | 이미지의 lazy loading을 구현하기 위한 Hook                                                   |   [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useImageLazyLoading.md)    |
-| useInput              | input 컴포넌트에서의 입력값을 관리하기 위한 Hook                                             |         [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useInput.md)         |
-| useLocalStorage       | LocalStorage 사용을 위한 Hook                                                                |     [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useLocalStorage.md)      |
-| useResizeElement      | 특정 HTML 요소의 크기를 추적하기 위한 Hook                                                   |     [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useResizeElement.md)     |
-| useResizeWindow       | 브라우저 창의 크기를 추적하기 위한 Hook                                                      |     [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useResizeWindow.md)      |
-| useScroll             | 스크롤 위치를 추적하고, 스크롤을 최상단으로 이동시키는<br> 기능을 제공하는 Hook              |        [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useScroll.md)         |
-| useSessionStorage     | SessionStorage 사용을 위한 Hook                                                              |    [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useSessionStorage.md)     |
-| useToggle             | 토글 형태의 input 값 제어를 위한 Hook                                                        |        [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useToggle.md)         |
-| useUserAgent          | UserAgent를 통해 받아온 런타임이 돌아가고 있는 브라우저<br> 및 운영체제 정보를 반환하는 Hook |       [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useUserAgent.md)       |
-| useValidationCheck    | 유효성 검사를 위한 hook 입니다.                                                              | [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/joinedFeatures/validationCheck.md) |
-| useValidateCheckInput | 입력값 상태관리와 유효성 검사기능이 결합된 hook입니다.                                       | [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/joinedFeatures/validationCheck.md) |
-| useContextMenu        | ContextMenu 기능 실행을 위한 hook 입니다.                                                    |      [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useContextMenu.md)      |
-| useCustomContextMenu  | 사용자 선언형 ContextMenu 컴포넌트 구현시 필요한 <br> 값들을 반환하는 hook 입니다.           |   [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useCustomContextMenu.md)   |
+| Name                  | Description                                                                     |                                                         Docs                                                          |
+| :-------------------- | :------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------: |
+| useAsyncLoading       | A Hook to manage the loading status of async <br>process.                       |    [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useAsyncLoading.md)    |
+| useCountdown          | A Hook to implement countdown feature.                                          |     [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useCountdown.md)      |
+| useImageLazyLoading   | A Hook for implementing Image Lazy loading.                                     |  [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useImageLazyLoading.md)  |
+| useInput              | A Hook to manage input value.                                                   |       [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useInput.md)        |
+| useLocalStorage       | A Hook to usage of LocalStorage.                                                |    [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useLocalStorage.md)    |
+| useResizeElement      | A Hook for tracking the size of particular HTML element                         |   [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useResizeElement.md)    |
+| useResizeWindow       | A Hook for tracking the viewport size.                                          |    [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useResizeWindow.md)    |
+| useScroll             | A Hook for tracking the location of scrolling                                   |       [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useScroll.md)       |
+| useSessionStorage     | A Hook to usage of SessionStorage.                                              |   [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useSessionStorage.md)   |
+| useToggle             | A Hook to controll input value(toggle).                                         |       [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useToggle.md)       |
+| useUserAgent          | A Hook that returns UserAgent data from browser. <br>(cached data)              |     [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useUserAgent.md)      |
+| useValidationCheck    | A Hook for validation check                                                     |  [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useValidationCheck.md)   |
+| useValidateCheckInput | A Hook that manage input value with validation check.                           | [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useValidateCheckInput.md) |
+| useContextMenu        | A Hook for controll of ContextMenu feature.                                     |    [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useContextMenu.md)     |
+| useCustomContextMenu  | A Hook than return necessary datas to create <br> custom ContextMenu Component. | [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useCustomContextMenu.md)  |
 
-### 3-3. 유틸리티 함수
+### 3-3. Utility functions
 
 > ### 안내
 >
-> getUserAgent를 제외한 모든 유틸리티 함수는 [`@fetoolkit/utils`](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils)로 이동하였습니다. 따라서 이동한 함수들은 본 패키지에서 2025년 12월 31일을 끝으로 deprecated 처리할 예정이므로, 이 점 참고해주시기 바랍니다!!!  
-> -> 기능 안정성을 위해 함수는 그대로 제공되지만, 더이상의 업데이트는 이뤄지지 않습니다.
+> An utility functions except `getUserAgent` was moved to [`@fetoolkit/utils`](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils) library. therefore, they will be deprecated at Dec 31, 2025  
+> -> The functions would be provided, but they would not be updated anymore.
 
-| 이름                          | 설명                                                                                         |                                                         공식문서                                                          |
-| :---------------------------- | :------------------------------------------------------------------------------------------- | :-----------------------------------------------------------------------------------------------------------------------: |
-| getUserAgent                  | UserAgent를 통해 받아온 런타임이 돌아가고 있는 브라우저<br> 및 운영체제 정보를 반환하는 함수 |       [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/getUserAgent.md)        |
-| formatPhoneNumber<br>(number) | 전화번호를 하이픈(-)이 들어간 형태로 반환하는 함수                                           | [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/numbers_formatPhoneNumber.md) |
-| commaizeNumber<br>(number)    | 숫자 콤마 처리 함수                                                                          |  [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/numbers_commaizeNumber.md)   |
-| decommaizeNumber<br>(number)  | 콤마 처리가 들어간 숫자의 콤마 제거 함수                                                     | [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/numbers_decommaizeNumber.md)  |
-| maskName<br>(mask)            | 이름 마스킹 처리 함수                                                                        |       [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/mask_maskName.md)       |
-| maskPhoneNumber<br>(mask)     | 전화번호 마스킹 처리 함수                                                                    |   [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/mask_maskPhoneNumber.md)    |
-| at<br>(array)                 | 배열에서 특정 인덱스에 있는 요소를 반환하는 함수<br> (파이썬처럼 음수 인덱스도 지원)         |         [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/array_at.md)          |
-| first<br>(array)              | 배열의 첫번째 요소를 꺼내오는 함수                                                           |        [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/array_first.md)        |
-| last<br>(array)               | 배열의 마지막 요소를 꺼내오는 함수                                                           |        [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/array_last.md)         |
+| Name                          | Description                                                                               |                                                           Docs                                                            |
+| :---------------------------- | :---------------------------------------------------------------------------------------- | :-----------------------------------------------------------------------------------------------------------------------: |
+| getUserAgent                  | A function that return UserAgent data from browser.<br>(no-cached data)                   |       [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/getUserAgent.md)        |
+| formatPhoneNumber<br>(number) | Separates the given phone number by hyphen(-).                                            | [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/numbers_formatPhoneNumber.md) |
+| commaizeNumber<br>(number)    | Separates the given value by comma.                                                       |  [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/numbers_commaizeNumber.md)   |
+| decommaizeNumber<br>(number)  | Removed commas from commaized value.                                                      | [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/numbers_decommaizeNumber.md)  |
+| maskName<br>(mask)            | Masks the given name.                                                                     |       [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/mask_maskName.md)       |
+| maskPhoneNumber<br>(mask)     | Masks the given phone number.                                                             |   [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/mask_maskPhoneNumber.md)    |
+| at<br>(array)                 | Return element in a particular index in an array.<br>(include negative index like Python) |         [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/array_at.md)          |
+| first<br>(array)              | Return first element of array.                                                            |        [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/array_first.md)        |
+| last<br>(array)               | Return last element of array.                                                             |        [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/array_last.md)         |

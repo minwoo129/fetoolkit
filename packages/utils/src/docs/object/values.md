@@ -1,12 +1,14 @@
 # Object(values)
 
-- 객체의 열거가능한 프로퍼티 값들을 반환하는 함수입니다.
+English | [한국어](./values_kr.md)
+
+- A function that returns the enumerable property values of an object.
 
 ```tsx
 values(object);
 ```
 
-## 기본 사용 예시
+## Example
 
 ```tsx
 import { values } from '@fetoolkit/utils';
@@ -19,10 +21,10 @@ const testObj = {
 const keyArr = values(testObj); // [1, 2, 3]
 ```
 
-## API 문서
+## API Reference
 
-- 입력 인자
-  |name|type|requried|description|
+- input
+  |name|type|required|description|
   |:---:|:---|:---|:---:|
-  |object| T |true| 탐색할 객체 |
-- 반환 타입: unknown[]
+  |object| T |true| Object to get values from |
+- output(type): unknown[]

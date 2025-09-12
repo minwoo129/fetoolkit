@@ -1,28 +1,30 @@
 # Array(at)
 
-- Array 내에서 특정 인덱스에 존재하는 요소를 반환하는 함수입니다.
-- 음수 인덱스도 지원합니다.
+English | [한국어](./at_kr.md)
+
+- A function that returns the element at a specific index within an Array.
+- Also supports negative indices.
 
 ```tsx
 at(array, at);
 ```
 
-## 기본 사용 예시
+## Example
 
 ```tsx
 import { at } from '@fetoolkit/utils';
 
 const testArr = [1, 23, 578, 456, 1234];
-const num1 = at(testArr, 3); // 578
+const num1 = at(testArr, 3); // 456
 const num2 = at(testArr, -2); // 456
 ```
 
-## API 문서
+## API Reference
 
-- 입력 인자
+- input
   |name|type|required|description|
   |:---:|:---|:---|:---:|
-  |array|T[]|true|탐색할 배열|
-  |at|number|true|원하는 요소의 인덱스|
+  |array|T[]|true|Array to search|
+  |at|number|true|Index of the desired element|
 
-- 반환 타입: T | undefined
+- output(type): T | undefined

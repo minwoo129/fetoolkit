@@ -1,13 +1,15 @@
-# useContextMenu
+# useCustomContextMenu
 
-- 사용자 선언형 ContextMenu 컴포넌트 구현시 필요한 값들을 반환하는 hook 입니다.
-- 이 hook에서 반환하는 값들을 맞춤형 ContextMenu 컴포넌트를 만들때 사용하게 됩니다.
+English | [한국어](./useCustomContextMenu_kr.md)
 
-> ### 안내
+- A Hook that returns values needed for implementing user-declarative ContextMenu components.
+- The values returned by this hook are used when creating custom ContextMenu components.
+
+> ### Notice
 >
-> - [해당 문서](../joinedFeatures/contextMenu.md)를 먼저 확인하시기 바랍니다.
+> - Please check [this document](../joinedFeatures/contextMenu.md) first.
 
-## 기본 사용 예시
+## Example
 
 ```typescript
 import { useCustomContextMenu } from '@fetoolkit/react';
@@ -37,13 +39,13 @@ const AppContextMenu = () => {
 }
 ```
 
-## API 설명
+## API Reference
 
-### Input(없음)
+### Input(none)
 
-이 Hook은 매개변수를 받지 않습니다.
+This Hook does not accept parameters.
 
-### Output(객체)
+### Output(object)
 
 ```typescript
 {
@@ -53,13 +55,13 @@ const AppContextMenu = () => {
 }
 ```
 
-| Name                     | Type                     | Description                                   |
-| :----------------------- | :----------------------- | :-------------------------------------------- |
-| buttonDatas              | ContextMenuItemType[]    | ContextMenu에 들어갈 버튼 정보                |
-| locate                   | { x: string, y: string } | ContextMenu가 띄워질 위치                     |
-| onClickedContextMenuItem | (value: string) => void  | ContextMenu 내 버튼 클릭 이벤트 핸들러 메서드 |
+| Name                     | Type                     | Description                                           |
+| :----------------------- | :----------------------- | :---------------------------------------------------- |
+| buttonDatas              | ContextMenuItemType[]    | Button information to enter the ContextMenu           |
+| locate                   | { x: string, y: string } | Position where the ContextMenu will be displayed      |
+| onClickedContextMenuItem | (value: string) => void  | Event handler method for button clicks in ContextMenu |
 
-### 기타 타입 설명
+### Types
 
 ```typescript
 interface ContextMenuItemType {
@@ -68,8 +70,8 @@ interface ContextMenuItemType {
 }
 ```
 
-| Name                | Type      | Description                 |
-| :------------------ | :-------- | :-------------------------- |
-| ContextMenuItemType | interface | ContextMenu 아이템의 타입   |
-| value               | string    | 버튼의 고유 key값           |
-| label               | string    | 버튼에서 보여질 실제 라벨값 |
+| Name                | Type      | Description                                      |
+| :------------------ | :-------- | :----------------------------------------------- |
+| ContextMenuItemType | interface | Type of ContextMenu item                         |
+| value               | string    | Unique key of the button                         |
+| label               | string    | Actual label value to be displayed on the button |

@@ -1,13 +1,15 @@
 # Object(forIn)
 
-- 객체를 순회하면서 각 속성에 대해 iteratee 함수를 호출하는 함수입니다.
-  - iteratee 함수에 false를 리턴하면 이 함수의 실행이 종료됩니다.
+English | [한국어](./forIn_kr.md)
+
+- A function that iterates through an object and calls an iteratee function for each property.
+  - If the iteratee function returns false, the execution of this function terminates.
 
 ```tsx
 forIn(object, iteratee);
 ```
 
-## 기본 사용 예시
+## Example
 
 ```tsx
 import { forIn } from '@fetoolkit/utils';
@@ -26,11 +28,11 @@ forIn(testObj, (value, key) => {
 });
 ```
 
-## API 문서
+## API Reference
 
-- 입력 인자
+- input
   |name|type|required|description|
   |:---:|:---|:---|:---:|
-  |object| T |true| 탐색할 객체 |
-  |iteratee| (value: T[keyof T], key: keyof T, collection: T) => any |true| iteratee 함수 |
-- 반환 타입: void
+  |object| T |true| Object to iterate over |
+  |iteratee| (value: T[keyof T], key: keyof T, collection: T) => any |true| Iteratee function |
+- output(type): void
