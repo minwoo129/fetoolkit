@@ -1,14 +1,14 @@
 # Numbers(decommaizeNumber)
 
-English | [한국어](./decommaizeNumber_kr.md)
+[English](./decommaizeNumber.md) | 한국어
 
-- A function that removes only commas from comma-separated numbers.
+- 콤마로 구분된 숫자에서 콤마만 제거하는 함수입니다.
 
 ```tsx
 decommaizeNumber(numStr);
 ```
 
-## Example
+## 기본 사용 예시
 
 ```tsx
 import { decommaizeNumber } from '@fetoolkit/utils';
@@ -16,10 +16,10 @@ import { decommaizeNumber } from '@fetoolkit/utils';
 const num1 = decommaizeNumber('13,209,802'); // 13209802
 ```
 
-## API Reference
+## API 문서
 
-- input
+- 입력 인자
   |name|type|required|description|
   |:---:|:---|:---|:---:|
-  |numStr| string|true|Number before removing commas|
-- output(type): number
+  |numStr| string|true|콤마 제거 전 숫자|
+- 반환 타입: number
