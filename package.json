@@ -8,9 +8,10 @@
   "scripts": {
     "prepare": "husky",
     "build": "lerna run build",
+    "create:project": "lerna create",
+    "version:up": "lerna version --yes --no-git-tag-version --force-publish",
     "packages:react": "yarn workspace @fetoolkit/react",
-    "packages:utils": "yarn workspace @fetoolkit/utils",
-    "version:up": "lerna version --yes --no-git-tag-version --force-publish"
+    "packages:utils": "yarn workspace @fetoolkit/utils"
   },
   "devDependencies": {
     "@eslint/js": "^9.34.0",
