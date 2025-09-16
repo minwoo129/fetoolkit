@@ -19,7 +19,7 @@ jobs:
       - name: Build packages
         run: yarn build
       - name: Run test
-        run: yarn apps:react test:e2e
+        run: yarn tests:react:e2e
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
