@@ -595,7 +595,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fetoolkit/react@workspace:packages/react":
+"@fetoolkit/react@workspace:^, @fetoolkit/react@workspace:packages/react":
   version: 0.0.0-use.local
   resolution: "@fetoolkit/react@workspace:packages/react"
   dependencies:
@@ -7819,6 +7819,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "react-test@workspace:apps/react-test"
   dependencies:
+    "@fetoolkit/react": "workspace:^"
     "@types/react": "npm:^19.1.13"
     "@types/react-dom": "npm:^19.1.9"
     "@vitejs/plugin-react": "npm:^5.0.2"
