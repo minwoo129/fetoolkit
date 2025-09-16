@@ -3,15 +3,18 @@
   "private": true,
   "type": "module",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "apps/*"
   ],
   "scripts": {
     "prepare": "husky",
     "build": "lerna run build",
     "create:project": "lerna create",
     "version:up": "lerna version --yes --no-git-tag-version --force-publish",
+    "apps:react": "yarn workspace react-test",
     "packages:react": "yarn workspace @fetoolkit/react",
-    "packages:utils": "yarn workspace @fetoolkit/utils"
+    "packages:utils": "yarn workspace @fetoolkit/utils",
+    "tests:react:e2e": "cd apps/react-test && yarn playwright install --with-deps && yarn test:e2e"
   },
   "devDependencies": {
     "@eslint/js": "^9.34.0",
