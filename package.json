@@ -3,13 +3,15 @@
   "private": true,
   "type": "module",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "apps/*"
   ],
   "scripts": {
     "prepare": "husky",
     "build": "lerna run build",
     "create:project": "lerna create",
     "version:up": "lerna version --yes --no-git-tag-version --force-publish",
+    "apps:react": "yarn workspace react-test",
     "packages:react": "yarn workspace @fetoolkit/react",
     "packages:utils": "yarn workspace @fetoolkit/utils"
   },

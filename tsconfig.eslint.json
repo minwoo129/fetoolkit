@@ -14,7 +14,9 @@
     "packages/*/__test__/**/*.tsx",
     "packages/*/index.ts",
     "packages/*/**/*.ts",
-    "packages/*/**/*.tsx"
+    "packages/*/**/*.tsx",
+    "apps/*/**/*.ts",
+    "apps/*/**/*.tsx"
   ],
   "exclude": ["node_modules", "dist", "build"]
 }
