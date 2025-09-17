@@ -20,4 +20,4 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Run test
-        run: yarn packages:utils test:unit
+        run: yarn tests:utils:unit

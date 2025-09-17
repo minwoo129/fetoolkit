@@ -20,4 +20,4 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Run test
-        run: yarn packages:react test:unit
+        run: yarn tests:react:unit
