@@ -1,0 +1,108 @@
+name: Close sub-issue and delete branch on PR merge to parent issue
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - 'feature/issue-**'
+      - 'bug/issue-**'
+      - 'docs/issue-**'
+
+jobs:
+  close-sub-issue-and-delete-branch:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GIT_ACCESS_TOKEN }}
+          fetch-depth: 0
+
+      - name: Extract parent issue number from target branch
+        id: extract-parent-issue
+        run: |
+          # 타겟 브랜치에서 상위 이슈 번호 추출 (예: feature/issue-30/test-main-issue)
+          TARGET_BRANCH="${{ github.event.pull_request.base.ref }}"
+          echo "Target branch: $TARGET_BRANCH"
+
+          # feature/issue-{number}/ 패턴에서 이슈 번호 추출
+          PARENT_ISSUE_NUM=$(echo "$TARGET_BRANCH" | grep -oE 'issue-[0-9]+' | sed 's/issue-//')
+
+          if [ -n "$PARENT_ISSUE_NUM" ]; then
+            echo "parent_issue_number=$PARENT_ISSUE_NUM" >> $GITHUB_OUTPUT
+            echo "Found parent issue number: $PARENT_ISSUE_NUM"
+          else
+            echo "Could not extract parent issue number from target branch: $TARGET_BRANCH"
+            exit 1
+          fi
+
+      - name: Extract sub-issue number from source branch
+        id: extract-sub-issue
+        run: |
+          # 소스 브랜치에서 서브 이슈 번호 추출 (예: bug/issue-31/test-sub-issue)
+          SOURCE_BRANCH="${{ github.event.pull_request.head.ref }}"
+          echo "Source branch: $SOURCE_BRANCH"
+
+          # {type}/issue-{number}/ 패턴에서 이슈 번호 추출
+          SUB_ISSUE_NUM=$(echo "$SOURCE_BRANCH" | grep -oE 'issue-[0-9]+' | sed 's/issue-//')
+
+          if [ -n "$SUB_ISSUE_NUM" ]; then
+            echo "sub_issue_number=$SUB_ISSUE_NUM" >> $GITHUB_OUTPUT
+            echo "Found sub-issue number: $SUB_ISSUE_NUM"
+          else
+            echo "Could not extract sub-issue number from source branch: $SOURCE_BRANCH"
+            exit 1
+          fi
+
+      - name: Verify sub-issue relationship
+        run: |
+          PARENT_ISSUE="${{ steps.extract-parent-issue.outputs.parent_issue_number }}"
+          SUB_ISSUE="${{ steps.extract-sub-issue.outputs.sub_issue_number }}"
+
+          echo "Verifying sub-issue relationship..."
+          echo "Parent issue: #$PARENT_ISSUE"
+          echo "Sub-issue: #$SUB_ISSUE"
+
+          # 서브 이슈가 상위 이슈의 서브 이슈인지 확인
+          SUB_ISSUE_DETAILS=$(gh issue view $SUB_ISSUE --repo ${{ github.repository }} --json body,title)
+          echo "Sub-issue details: $SUB_ISSUE_DETAILS"
+        env:
+          GH_TOKEN: ${{ secrets.GIT_ACCESS_TOKEN }}
+
+      - name: Close sub-issue
+        run: |
+          SUB_ISSUE="${{ steps.extract-sub-issue.outputs.sub_issue_number }}"
+          PARENT_ISSUE="${{ steps.extract-parent-issue.outputs.parent_issue_number }}"
+
+          echo "Closing sub-issue #$SUB_ISSUE"
+          gh issue close $SUB_ISSUE --repo ${{ github.repository }} --comment "이 PR이 상위 이슈 #$PARENT_ISSUE의 브랜치에 머지되어 서브 이슈를 닫습니다."
+        env:
+          GH_TOKEN: ${{ secrets.GIT_ACCESS_TOKEN }}
+
+      - name: Delete sub-issue branch
+        run: |
+          HEAD_BRANCH="${{ github.event.pull_request.head.ref }}"
+          echo "Deleting sub-issue branch: $HEAD_BRANCH"
+
+          # 브랜치가 존재하는지 확인
+          if git ls-remote --heads origin "$HEAD_BRANCH" | grep -q "$HEAD_BRANCH"; then
+            git push origin --delete "$HEAD_BRANCH"
+            echo "Successfully deleted sub-issue branch: $HEAD_BRANCH"
+          else
+            echo "Branch $HEAD_BRANCH does not exist or already deleted"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GIT_ACCESS_TOKEN }}
+
+      - name: Summary
+        run: |
+          PARENT_ISSUE="${{ steps.extract-parent-issue.outputs.parent_issue_number }}"
+          SUB_ISSUE="${{ steps.extract-sub-issue.outputs.sub_issue_number }}"
+
+          echo "## 서브 이슈 자동 닫기 작업 완료" >> $GITHUB_STEP_SUMMARY
+          echo "- 상위 이슈: #$PARENT_ISSUE" >> $GITHUB_STEP_SUMMARY
+          echo "- 서브 이슈: #$SUB_ISSUE (닫기 완료)" >> $GITHUB_STEP_SUMMARY
+          echo "- 서브 이슈 브랜치 삭제 완료: ${{ github.event.pull_request.head.ref }}" >> $GITHUB_STEP_SUMMARY
+          echo "- 타겟 브랜치: ${{ github.event.pull_request.base.ref }}" >> $GITHUB_STEP_SUMMARY
