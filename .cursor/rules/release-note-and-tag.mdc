@@ -2,7 +2,7 @@
 alwaysApply: false
 ---
 
-# Add Release Note And Tag in GitHub
+# Write Release Note(Don't upload at github)
 
 ## Release Note(Template)
 
@@ -13,14 +13,14 @@ Released at {Released Date}
 
 ### `@fetoolkit/react`
 
-// changes of packages/react
+// changes of packages/react(based on issues)
 
 ### `@fetoolkit/utils`
 
-// changes of packages/utils
-
-## Detail Changes(issues)
-
-// detail changes
-// All issues associated with a particular version
+// changes of packages/utils(based on issues)
 ```
+
+### Detail
+
+- Refer to all issues reflected in this version.
+  - Exclude `docs` issues, Cursor ruleset modification and CI/CD pipeline modification issues
