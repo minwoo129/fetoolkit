@@ -10,3 +10,5 @@ export * from './src/hooks';
 export type { UseValidateCheckInputType } from './src/hooks/useValidateCheckInput';
 export type { UseValidationCheckType } from './src/hooks/useValidationCheck';
 export * from './src/utils';
+
+console.log('sub issue close test');
