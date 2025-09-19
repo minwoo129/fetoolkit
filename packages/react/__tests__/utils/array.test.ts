@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest';
-import { ArrayUtils } from './array';
+import { ArrayUtils } from '../../src/utils/array';
 
 describe('array', () => {
   let testArray: number[];

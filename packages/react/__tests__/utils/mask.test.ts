@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { MaskUtils } from './mask';
+import { MaskUtils } from '../../src/utils/mask';
 
 describe('mask > maskPhoneNumber', () => {
   describe('하이픈이 없는 전화번호들에 대해 마스킹이 처리되는 경우', () => {

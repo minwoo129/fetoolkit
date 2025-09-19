@@ -1,6 +1,6 @@
 import { act, renderHook } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import { useToggle } from './useToggle';
+import { useToggle } from '../../src/hooks/useToggle';
 
 describe('hook > useToggle', () => {
   it('초기 상태 확인', () => {
