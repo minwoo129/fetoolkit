@@ -3,7 +3,7 @@ globs: packages/utils/src/docs/**/*.md
 alwaysApply: false
 ---
 
-## template(KOR)
+## template(KOR, except Utility types)
 
 - Create function's document files in the following format
   ex) function's file route = `src/utils/array/countOf.ts`
@@ -11,7 +11,7 @@ alwaysApply: false
   ````md
   # Array(countOf)
 
-  [English]({absolute URL}) | 한국어
+  [English]({relative URL}) | 한국어
 
   - 배열에 속해있는 요소 중에서 predicate 메서드 결과에 만족하는 요소들의 개수를 반환합니다.
 
@@ -38,7 +38,7 @@ alwaysApply: false
   - output(type): number
   ````
 
-## template(ENG)
+## template(ENG, except Utility types)
 
 - Create function's document files in the following format
   ex) function's file route = `src/utils/array/countOf.ts`
@@ -46,7 +46,7 @@ alwaysApply: false
   ````md
   # Array(countOf)
 
-  English | [한국어]({absolute URL})
+  English | [한국어]({relative URL})
 
   - Returns the count of elements in the array that satisfy the result of `predicate` function.
 
@@ -99,3 +99,129 @@ alwaysApply: false
     - ENG: `## API Reference`
   - Table the arguments and types of the function, whether it is required, a brief description, etc
   - write by each language
+
+## template(KOR, for Utility types)
+
+- Create Utility Type's document files in the following format
+  ex) Utility Type's file route = `src/utils/types/partialPath.ts`
+
+  ````md
+  # Utility Type(PartialPath)
+
+  [English]({relative URL}) | 한국어
+
+  - 특정 경로상의 프로퍼티를 optional로 처리하는 유틸리티 타입입니다.
+
+  ```tsx
+  type PartialPath<ObjectType, KeyPath>
+  ```
+
+  ## 기본 사용 예시
+
+  ```tsx
+  import { PartialPath } from '@fetoolkit/utils';
+
+  type TestType1 = {
+    name: string;
+    age: number;
+    email: string;
+    phone: string;
+    id: string;
+    address: {
+      city: string;
+      street: string;
+      zip: string;
+    };
+  };
+
+  type TestType2 = PartialPath<TestType1, 'phone'>;
+  type TestType3 = PartialPath<TestType1, 'address.city'>;
+
+  const test2: TestType2 = {
+    name: 'test',
+    age: 20,
+    email: 'test@test.com',
+    id: '1234567890',
+    address: {
+      city: 'test',
+      street: 'test',
+      zip: '1234567890',
+    },
+  };
+
+  const test3: TestType3 = {
+    name: 'test',
+    age: 20,
+    email: 'test@test.com',
+    phone: '010-1234-5678',
+    id: '1234567890',
+    address: {
+      street: 'test',
+      zip: '1234567890',
+    },
+  };
+  ```
+  ````
+
+  ## template(ENG, for Utility types)
+
+- Create Utility Type's document files in the following format
+  ex) Utility Type's file route = `src/utils/types/partialPath.ts`
+
+  ````md
+  # Utility Type(PartialPath)
+
+  English | [한국어]({relative URL})
+
+  - Make specific properties optional
+
+  ```tsx
+  type PartialPath<ObjectType, KeyPath>
+  ```
+
+  ## Example
+
+  ```tsx
+  import { PartialPath } from '@fetoolkit/utils';
+
+  type TestType1 = {
+    name: string;
+    age: number;
+    email: string;
+    phone: string;
+    id: string;
+    address: {
+      city: string;
+      street: string;
+      zip: string;
+    };
+  };
+
+  type TestType2 = PartialPath<TestType1, 'phone'>;
+  type TestType3 = PartialPath<TestType1, 'address.city'>;
+
+  const test2: TestType2 = {
+    name: 'test',
+    age: 20,
+    email: 'test@test.com',
+    id: '1234567890',
+    address: {
+      city: 'test',
+      street: 'test',
+      zip: '1234567890',
+    },
+  };
+
+  const test3: TestType3 = {
+    name: 'test',
+    age: 20,
+    email: 'test@test.com',
+    phone: '010-1234-5678',
+    id: '1234567890',
+    address: {
+      street: 'test',
+      zip: '1234567890',
+    },
+  };
+  ```
+  ````
