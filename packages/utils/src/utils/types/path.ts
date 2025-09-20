@@ -1,14 +1,17 @@
 import type { Join } from './join';
 import type { Primitive } from './permitive';
 
-export type Path<T> = T extends Primitive
+export type Path<ObjectType> = ObjectType extends Primitive
   ? never
-  : T extends object
+  : ObjectType extends object
     ? {
-        [K in Extract<keyof T, string>]: T[K] extends Primitive
+        [K in Extract<
+          keyof ObjectType,
+          string
+        >]: ObjectType[K] extends Primitive
           ? K
-          : T[K] extends object
-            ? K | Join<K, Path<T[K]>>
+          : ObjectType[K] extends object
+            ? K | Join<K, Path<ObjectType[K]>>
             : K;
-      }[Extract<keyof T, string>]
+      }[Extract<keyof ObjectType, string>]
     : never;
