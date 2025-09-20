@@ -1,11 +1,13 @@
+import type { Path } from './path';
+
 export type PartialPath<
   T,
-  P extends string,
+  P extends Path<T> = Path<T>,
 > = P extends `${infer K}.${infer Rest}`
   ? K extends keyof T
     ? {
         [X in keyof T]: X extends K
-          ? PartialPath<T[K], Rest> // 더 내려감
+          ? PartialPath<T[K], Rest & Path<T[K]>> // 더 내려감
           : T[X];
       }
     : T // 잘못된 경로면 원본 유지

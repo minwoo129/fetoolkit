@@ -1,6 +1,7 @@
+import type { Path } from './path';
 import type { Primitive } from './permitive';
 
-export type RequiredPath<T, P extends string> =
+export type RequiredPath<T, P extends Path<T>> =
   // 더 내려갈 경로가 있으면 분해
   P extends `${infer K}.${infer Rest}`
     ? K extends keyof T
@@ -9,7 +10,7 @@ export type RequiredPath<T, P extends string> =
             ? // 중간 노드가 원시여도 "내려가려면" 의미가 없으므로 그대로 둡니다.
               T[X] extends Primitive
               ? T[X]
-              : RequiredPath<T[X], Rest>
+              : RequiredPath<T[X], Rest & Path<T[X]>>
             : T[X];
         }
       : T // 존재하지 않는 키 → 원본 유지
