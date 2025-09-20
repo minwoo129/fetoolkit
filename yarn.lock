@@ -616,13 +616,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@fetoolkit/utils@file:../../packages/utils::locator=react-test%40workspace%3Aapps%2Freact-test":
-  version: 1.3.0
-  resolution: "@fetoolkit/utils@file:../../packages/utils#../../packages/utils::hash=c2d64a&locator=react-test%40workspace%3Aapps%2Freact-test"
-  checksum: 10c0/ad06b74c676b199bbd8494377a69c39f880f277dbb215630010dc7dd3072109ae6007e643e907d30dcbe160d4af166361533f914381742ff983a6e472dd838fe
-  languageName: node
-  linkType: hard
-
 "@fetoolkit/utils@workspace:packages/utils":
   version: 0.0.0-use.local
   resolution: "@fetoolkit/utils@workspace:packages/utils"
@@ -7925,7 +7918,6 @@ __metadata:
   resolution: "react-test@workspace:apps/react-test"
   dependencies:
     "@fetoolkit/react": "workspace:^"
-    "@fetoolkit/utils": ../../packages/utils
     "@playwright/test": "npm:^1.55.0"
     "@types/node": "npm:^24.5.0"
     "@types/react": "npm:^19.1.13"
