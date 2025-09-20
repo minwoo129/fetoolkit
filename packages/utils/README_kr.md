@@ -85,3 +85,11 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
 | omit      | 객체에서 특정 키를 생략한 새로운 객체를 생성하는 함수          |   [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/object/omit_kr.md)    |
 | pick      | 객체에서 특정 키만 포함한 새로운 객체를 생성하는 함수          |   [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/object/pick_kr.md)    |
 | isSameObj | 두 객체가 동일한 객체인지 여부를 반환하는 함수                 | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/object/isSameObj_kr.md) |
+
+## 5. Utility Types
+
+| 이름         | 설명                                       |                                                    공식문서                                                    |
+| :----------- | :----------------------------------------- | :------------------------------------------------------------------------------------------------------------: |
+| PartialPath  | 특정 경로상의 프로퍼티를 optional로 처리   | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/types/partialPath_kr.md) |
+| RequiredPath | 특정 경로상의 프로퍼티를 optional로 처리   |                                                    공식문서                                                    |
+| Path         | 객체타입의 key 값들을 리터럴 타입으로 변환 |                                                    공식문서                                                    |
