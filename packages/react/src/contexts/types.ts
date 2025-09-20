@@ -8,8 +8,8 @@ type ProviderArgs = {
 
 export type ContextProviderType = (
   args: ContextProviderProps,
-) => React.JSX.Element;
+) => React.ReactNode;
 export type ContextProviderProps = {
   contexts: ProviderType[];
-  children: React.JSX.Element;
+  children: React.ReactNode;
 };

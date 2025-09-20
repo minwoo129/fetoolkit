@@ -16,7 +16,7 @@ export const FEToolkitProvider = <ValidatorKeys extends string = string>({
   validators = {} as ValidatorType<ValidatorKeys>,
   children,
 }: {
-  children: React.JSX.Element;
+  children: React.ReactNode;
   validators?: ValidatorType<ValidatorKeys>;
 }) => {
   return (
