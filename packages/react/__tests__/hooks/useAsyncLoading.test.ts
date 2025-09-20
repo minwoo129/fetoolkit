@@ -1,6 +1,6 @@
 import { act, renderHook } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import { useAsyncLoading } from './useAsyncLoading';
+import { useAsyncLoading } from '../../src/hooks/useAsyncLoading';
 
 describe('hook > useAsyncLoading', () => {
   const mockedAPI = async () => ({ result: 'success' });

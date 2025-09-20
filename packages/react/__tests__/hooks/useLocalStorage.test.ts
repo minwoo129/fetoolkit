@@ -1,6 +1,6 @@
 import { act, renderHook } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import { useLocalStorage } from './useLocalStorage';
+import { useLocalStorage } from '../../src/hooks/useLocalStorage';
 
 describe('hook > useLocalStorage', async () => {
   type TestType = {

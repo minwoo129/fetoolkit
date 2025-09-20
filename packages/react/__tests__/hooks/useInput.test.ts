@@ -1,6 +1,6 @@
 import { act, renderHook } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import { useInput } from './useInput';
+import { useInput } from '../../src/hooks/useInput';
 
 describe('hook > useInput', () => {
   describe('입력값 타입: 리터럴(string)', () => {

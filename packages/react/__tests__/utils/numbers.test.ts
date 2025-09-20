@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { NumbersUtils } from './numbers';
+import { NumbersUtils } from '../../src/utils/numbers';
 
 describe('number > formatPhoneNumber', () => {
   describe('휴대폰번호 X', () => {
