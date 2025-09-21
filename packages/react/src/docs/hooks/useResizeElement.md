@@ -1,9 +1,11 @@
 # useResizeElement
 
-- 특정 HTML 요소의 크기를 추적하기 위한 Hook 입니다.
-- 이 Hook은 주어진 요소의 너비와 높이를 상태로 관리하며, 요소가 리사이즈될 때마다 업데이트됩니다.
+English | [한국어](./useResizeElement_kr.md)
 
-## 기본 사용 예시
+- A Hook for tracking the size of a specific HTML element.
+- This Hook manages the width and height of the given element as state and updates whenever the element is resized.
+
+## Example
 
 ```tsx
 import { useResizeElement } from '@fetoolkit/react';
@@ -12,7 +14,7 @@ const elementRef = useRef<HTMLDivElement>(null);
 const [width, height] = useResizeElement(elementRef);
 ```
 
-## API 설명
+## API Reference
 
 ### Input(Ref)
 
@@ -20,17 +22,17 @@ const [width, height] = useResizeElement(elementRef);
 RefObject<HTMLElement | null>;
 ```
 
-| Name       | Type                           | Required | Description                   |
-| :--------- | :----------------------------- | :------- | :---------------------------- |
-| elementRef | RefObject<HTMLElement \| null> | true     | 크기를 추적할 HTML 요소의 ref |
+| Name       | Type                           | Required | Description                       |
+| :--------- | :----------------------------- | :------- | :-------------------------------- |
+| elementRef | RefObject<HTMLElement \| null> | true     | Ref of HTML element to track size |
 
-### Output(튜플)
+### Output(tuple)
 
 ```typescript
 [width: number, height: number]
 ```
 
-| Name   | Type   | Description |
-| ------ | ------ | ----------- |
-| width  | number | 영역의 너비 |
-| height | number | 영역의 높이 |
+| Name   | Type   | Description        |
+| ------ | ------ | ------------------ |
+| width  | number | Width of the area  |
+| height | number | Height of the area |

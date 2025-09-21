@@ -1,10 +1,12 @@
 # ContextMenu
 
-- 커스텀 ContextMenu 컴포넌트를 개발할 때 사용하는 컴포넌트입니다.
-  - 커스텀 ContextMenu를 개발한다고 해도, 이를 위해 필요한 요소들이 있어 반드시 이 컴포넌트를 연결해서 사용하셔야 합니다.
-  - 만약 이를 사용하지 않으면 정상적인 기능동작이 어렵습니다.
+English | [한국어](./ContextMenu_kr.md)
 
-## 기본 사용 예시
+- A Component to create an custom context menu.
+  - There are elements you need for create custom ContextMenu component, so you must connect and use this component.
+  - If you don't use, feature is not available.
+
+## Example
 
 ```tsx
 import { ContextMenu } from '@fetoolkit/react';
@@ -33,30 +35,30 @@ const AppContextMenu = () => {
 };
 ```
 
-## API(Props) 설명
+## API(Props) Reference
 
 ### ContextMenu.Grid
 
-| Name                  | Type                | Required | Default | Description                                                                |
-| :-------------------- | :------------------ | :------- | :------ | :------------------------------------------------------------------------- |
-| x                     | string              | true     | -       | ContextMenu 노출 위치(x축 기준) <br> - x축: Viewpoint 왼쪽면 기준 가로방향 |
-| y                     | string              | true     | -       | ContextMenu 노출 위치(y축 기준) <br> - y축: Viewpoint 위쪽면 기준 세로방향 |
-| className             | string              | false    | -       | CSS 클래스명                                                               |
-| style                 | React.CSSProperties | false    | -       | 스타일 선언 <br> - React \`style\` props와 동일                            |
-| testId                | string              | false    | -       | 테스트 실행 시 선언할 elementId                                            |
-| children              | React.ReactNode     | true     | -       |                                                                            |
-| 이하: Aria 태그 props |                     |          |         |
+| Name                  | Type                | Required | Default | Description                      |
+| :-------------------- | :------------------ | :------- | :------ | :------------------------------- |
+| x                     | string              | true     | -       | ContextMenu location(horizontal) |
+| y                     | string              | true     | -       | ContextMenu location(vertical)   |
+| className             | string              | false    | -       | CSS classname                    |
+| style                 | React.CSSProperties | false    | -       | declare styles by React CSS.     |
+| testId                | string              | false    | -       | elementID for E2E test.          |
+| children              | React.ReactNode     | true     | -       |                                  |
+| more props: Aria Tags |                     |          |         |
 
 ### ContextMenu.Item
 
-| Name                  | Type                | Required | Default | Description                                     |
-| :-------------------- | :------------------ | :------- | :------ | :---------------------------------------------- |
-| value                 | string              | true     | -       | 버튼 value <br> - 이 값은 버튼별로 고유해야 함  |
-| label                 | string              | true     | -       | 버튼 노출 시 실제로 보여질 버튼의 라벨          |
-| className             | string              | false    | -       | CSS 클래스명                                    |
-| style                 | React.CSSProperties | false    | -       | 스타일 선언 <br> - React \`style\` props와 동일 |
-| textStyle             | Object              | false    | -       | 버튼 라벨 스타일                                |
-| textStyle.className   | string              | false    | -       | CSS 클래스명                                    |
-| textStyle.style       | React.CSSProperties | false    | -       | 스타일 선언 <br> - React \`style\` props와 동일 |
-| onClick               | () => void          | false    | -       | 버튼 클릭 이벤트 메서드                         |
-| 이하: Aria 태그 props |                     |          |         |
+| Name                  | Type                | Required | Default | Description                             |
+| :-------------------- | :------------------ | :------- | :------ | :-------------------------------------- |
+| value                 | string              | true     | -       | value of button<br>(role: Id of button) |
+| label                 | string              | true     | -       | label text of button                    |
+| className             | string              | false    | -       | CSS classname                           |
+| style                 | React.CSSProperties | false    | -       | declare styles by React CSS.            |
+| textStyle             | Object              | false    | -       | style of label text                     |
+| textStyle.className   | string              | false    | -       | style of label text<br>(CSS Classname)  |
+| textStyle.style       | React.CSSProperties | false    | -       | style of label text<br>(React CSS)      |
+| onClick               | () => void          | false    | -       | button click event method               |
+| more props: Aria Tags |                     |          |         |

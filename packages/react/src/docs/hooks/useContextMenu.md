@@ -1,12 +1,14 @@
 # useContextMenu
 
-- ContextMenu 기능 실행시 사용하게될 hook 입니다.
+English | [한국어](./useContextMenu_kr.md)
 
-> ### 안내
+- A Hook for controll of ContextMenu feature.
+
+> ### Notice
 >
-> - [해당 문서](../joinedFeatures/contextMenu.md)를 먼저 확인하시기 바랍니다.
+> - Please check [this document](../joinedFeatures/contextMenu.md) first.
 
-## 기본 사용 예시
+## Example
 
 ```tsx
 import { useContextMenu } from '@fetoolkit/react';
@@ -54,13 +56,13 @@ const TestPage = () => {
 }
 ```
 
-## API 설명
+## API Reference
 
-### Input(없음)
+### Input(none)
 
-이 Hook은 매개변수를 받지 않습니다.
+This Hook does not accept parameters.
 
-### Output(객체)
+### Output(Object)
 
 ```typescript
 {
@@ -69,17 +71,17 @@ const TestPage = () => {
 }
 ```
 
-| Name                     | Type                                                                  | Description                                                         |
-| :----------------------- | :-------------------------------------------------------------------- | :------------------------------------------------------------------ |
-| contextMenuHandler       | (props: ContextMenuHanderArgs) => void                                | ContextMenu를 띄우는 메서드.                                        |
-| onClickedContextMenuItem | (callback: (data: LastClickedDataType \| null) => void) => () => void | ContextMenu내 버튼 클릭 이벤트를 감지하기 위한 이벤트 리스너 메서드 |
+| Name                     | Type                                                                  | Description                                                               |
+| :----------------------- | :-------------------------------------------------------------------- | :------------------------------------------------------------------------ |
+| contextMenuHandler       | (props: ContextMenuHanderArgs) => void                                | A function that open ContextMenu                                          |
+| onClickedContextMenuItem | (callback: (data: LastClickedDataType \| null) => void) => () => void | A Event listener of ContextMenu.<br>- used to detection of button clicked |
 
-### 기타 타입 설명
+### Types
 
 ```typescript
 interface ContextMenuHanderArgs {
   elementId: string | number | null;
-  e: React.MouseEvent<HTMLElement, MouseEvent>;
+  event: React.MouseEvent<HTMLElement, MouseEvent>;
   buttonDatas: ContextMenuItemType[];
 }
 
@@ -94,15 +96,15 @@ interface LastClickedDataType {
 }
 ```
 
-| Name                  | Type                                      | Description                                                                                   |
-| :-------------------- | :---------------------------------------- | :-------------------------------------------------------------------------------------------- |
-| ContextMenuHanderArgs | interface                                 | ContextMenu 핸들러의 매개변수 타입                                                            |
-| elementId             | string \| number \| null                  | ContextMenu가 띄워질 element의 고유 ID. <br>onContextMenu 이벤트를 걸어주는 element의 고유 ID |
-| e                     | React.MouseEvent<HTMLElement, MouseEvent> | onContextMenu 이벤트 리스너에서 인수로 반환되는 이벤트 객체                                   |
-| buttonDatas           | ContextMenuItemType[]                     | ContextMenu에 들어갈 버튼 정보                                                                |
-| ContextMenuItemType   | interface                                 | ContextMenu 아이템의 타입                                                                     |
-| value                 | string                                    | 버튼의 고유 key값                                                                             |
-| label                 | string                                    | 버튼에서 보여질 실제 라벨값                                                                   |
-| LastClickedDataType   | interface                                 | 마지막 클릭된 아이템의 데이터 타입                                                            |
-| elementId             | string \| number \| null                  | ContextMenu가 띄워질 element의 고유 ID. <br>onContextMenu 이벤트를 걸어주는 element의 고유 ID |
-| value                 | string                                    | 클릭한 버튼의 value값                                                                         |
+| Name                  | Type                                      | Description                                                                                                                            |
+| :-------------------- | :---------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------- |
+| ContextMenuHanderArgs | interface                                 | Type of parameter for ContextMenu handler                                                                                              |
+| elementId             | string \| number \| null                  | The unique ID of the element on which the ContextMenu will appear. <br>The unique ID of the element that hangs the onContextMenu event |
+| event                 | React.MouseEvent<HTMLElement, MouseEvent> | Event objects returned as arguments in the onContextMenu event listener                                                                |
+| buttonDatas           | ContextMenuItemType[]                     | the button info to enter the Context Menu.                                                                                             |
+| ContextMenuItemType   | interface                                 | Type of context menu item(button)                                                                                                      |
+| value                 | string                                    | Unique key of the button                                                                                                               |
+| label                 | string                                    | label values of the button                                                                                                             |
+| LastClickedDataType   | interface                                 | Data type for last clicked item                                                                                                        |
+| elementId             | string \| number \| null                  | The unique ID of the element on which the ContextMenu will appear. <br>The unique ID of the element that hangs the onContextMenu event |
+| value                 | string                                    | Value of clicked button                                                                                                                |

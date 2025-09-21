@@ -1,28 +1,30 @@
 # Array(findIndex)
 
-- 배열에서 조건에 맞는 첫번째 요소를 반환하는 함수입니다.
-  - 세번째 fromIndex 인자를 선언하면 해당 index에서부터 탐색을 시작합니다.
+English | [한국어](./findIndex_kr.md)
+
+- A function that returns the index of the first element in an array that meets the condition.
+  - If the third fromIndex argument is declared, the search starts from that index.
 
 ```tsx
-find(array, predicate, fromIndex);
+findIndex(array, predicate, fromIndex);
 ```
 
-## 기본 사용 예시
+## Example
 
 ```tsx
-import { find } from '@fetoolkit/utils';
+import { findIndex } from '@fetoolkit/utils';
 
 const testArr = [1, 2, 3, 4, 5];
-const num1 = find(testArr, (item) => item === 2); // 2
-const num2 = find(testArr, (item) => item === 8); // undefined
+const num1 = findIndex(testArr, (item) => item === 2); // 1
+const num2 = findIndex(testArr, (item) => item === 8); // undefined
 ```
 
-## API 문서
+## API Reference
 
-- 입력 인자
+- input
   |name|type|required|description|
   |:---:|:---|:---|:---:|
-  |array|T[]|true|탐색할 배열|
-  |predicate| (item: T, index: number) => unknown |true|검사 함수|
-  |fromIndex| number |false|탐색을 시작할 첫번째 index|
-- 반환 타입: number | undefined
+  |array|T[]|true|Array to search|
+  |predicate| (item: T, index: number) => unknown |true|Test function|
+  |fromIndex| number |false|First index to start searching from|
+- output(type): number | undefined

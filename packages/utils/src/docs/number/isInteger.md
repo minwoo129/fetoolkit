@@ -1,13 +1,15 @@
 # Numbers(isInteger)
 
-- 값이 정수인지 여부를 반환하는 함수입니다.
-  - 이때, 0도 정수에 포함해서 반환합니다.
+English | [한국어](./isInteger_kr.md)
+
+- A function that returns whether a value is an integer.
+  - In this case, 0 is also included in integers and returned.
 
 ```tsx
 isInteger(num);
 ```
 
-## 기본 사용 예시
+## Example
 
 ```tsx
 import { isInteger } from '@fetoolkit/utils';
@@ -19,10 +21,10 @@ const value4 = isInteger(-7.4); // false
 const value5 = isInteger(0); // true
 ```
 
-## API 문서
+## API Reference
 
-- 입력 인자
+- input
   |name|type|required|description|
   |:---:|:---|:---|:---:|
-  |num| number |true||
-- 반환 타입: boolean
+  |num| number |true|Number to check|
+- output(type): boolean

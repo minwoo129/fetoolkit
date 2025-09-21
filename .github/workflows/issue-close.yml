@@ -20,12 +20,11 @@ jobs:
 
       - name: Close linked issue
         run: |
-          # PR 제목이나 본문에서 이슈 번호 추출 (예: #123, closes #123, fixes #123 등)
-          PR_BODY="${{ github.event.pull_request.body }}"
-          PR_TITLE="${{ github.event.pull_request.title }}"
+          # PR 브랜치명에서 이슈 번호 추출 (예: feature/issue-123, docs/issue-456, bug/issue-789 등)
+          HEAD_BRANCH="${{ github.event.pull_request.head.ref }}"
 
-          # 이슈 번호 패턴 매칭
-          ISSUE_NUMBERS=$(echo "$PR_BODY $PR_TITLE" | grep -oE '#[0-9]+' | sed 's/#//g' | sort -u)
+          # 이슈 번호 패턴 매칭 (issue- 다음의 숫자만 추출)
+          ISSUE_NUMBERS=$(echo "$HEAD_BRANCH" | grep -oE 'issue-[0-9]+' | sed 's/issue-//g' | sort -u)
 
           if [ -n "$ISSUE_NUMBERS" ]; then
             for issue_num in $ISSUE_NUMBERS; do
@@ -33,7 +32,7 @@ jobs:
               gh issue close $issue_num --repo ${{ github.repository }} --comment "이 PR이 dev-v** 브랜치에 머지되어 이슈를 닫습니다."
             done
           else
-            echo "No linked issues found in PR title or body"
+            echo "No issue numbers found in PR branch name"
           fi
         env:
           GH_TOKEN: ${{ secrets.GIT_ACCESS_TOKEN }}
