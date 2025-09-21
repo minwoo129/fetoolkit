@@ -2,83 +2,95 @@
 alwaysApply: false
 ---
 
-# Pull Request Rules(to dev)
-
-## basic rules
+# 1. basic rules
 
 - refer to issue number
   - issue number in current branch name
-    - ex1) branch name: feature/issue-32/test-issue  
+    - ex1) branch name: `feature/issue-32/test-issue`  
        => issue number: 32
-    - ex2) branch name: bug/issue-40/test-issue2  
+    - ex2) branch name: `bug/issue-40/test-issue2`  
        => issue number: 40
   - in some case, it needs to refer Sub-issue of it
-- Before Pull Request on GitHub
-  - It must be added after checking the contents.
+- Before Pull Request on GitHub, PR Content pre-check required
+  - don't self PR upload without approval(Important)
 
-## Template
+# 2. basic PR Description(template)
+
+```md
+## 이슈번호
+
+- {issue number}
+
+## Description
+
+// description of the issue
+// Import the "description" part of the linked issue as it is.
+
+- {changes}
+```
+
+# 3. Pull Request Rules(to dev)
+
+## Merge Dir
+
+- `{issue branch}` -> `{devlop branch}`
+  - ex)
+    - `feature/issue-31/test-issue` -> `dev-v1.2.0`
+    - `bug/issue-32/test-issue` -> `dev-v1.2.0`
+    - `docs/issue-33/test-issue` -> `dev-v1.2.0`
+
+## title
+
+- `{Same as the title of the issue}`
+  - ex) title of issue: `[FEAT] Test Issue title (v1.2.0)`  
+     => title of PR: `[FEAT] Test Issue title (v1.2.0)`
+
+# 4. Pull Request Rules(from child issue to parent issue)
+
+## Merge Dir
+
+- `{Child issue branch}` -> `{Parent issue branch}`
+  - ex)
+    - `docs/issue-31/child-test-issue` -> `docs/issue-30/parent-test-issue`
+    - `feature/issue-31/child-test-issue` -> `feature/issue-30/parent-test-issue`
+    - `bug/issue-31/child-test-issue` -> `bug/issue-30/parent-test-issue`
+    - `docs/issue-31/child-test-issue` -> `feature/issue-30/parent-test-issue`
+    - `docs/issue-31/child-test-issue` -> `bug/issue-30/parent-test-issue`
+    - `feature/issue-31/child-test-issue` -> `docs/issue-30/parent-test-issue`
+    - `feature/issue-31/child-test-issue` -> `bug/issue-30/parent-test-issue`
+    - `bug/issue-31/child-test-issue` -> `docs/issue-30/parent-test-issue`
+    - `bug/issue-31/child-test-issue` -> `feature/issue-30/parent-test-issue`
+
+## Title
 
 - title: `{Same as the title of the issue}`
   - ex) title of issue: `[FEAT] Test Issue title (v1.2.0)`  
      => title of PR: `[FEAT] Test Issue title (v1.2.0)`
-  - If there is a sub-issue, apply only to the subject of the issue
-    - ex)  
-       title of issue: `[FEAT] Test Issue title (v1.2.0)`  
-       title of sub-issue: `[FEAT] Test Sub Issue title1 (v1.2.0)`, `[FEAT] Test Sub Issue title2`, ... etc  
-       => title of PR: `[FEAT] Test Issue title (v1.2.0)`
-- merge to(branch): `dev-v{target version}`
-  - target version: At the back of the issue title
-    - ex) title of issue: `[FEAT] Test Issue title (v1.2.0)`  
-      => merge to(branch): `dev_v1.2.0`
-- description
 
-  ```md
-  ## 이슈번호
+# 5. Pull Request Rules(to master)
 
-  - {issue number}
+## Merge Dir
 
-  ## Description
-
-  - {changes}
-  ```
-
-  - issue number(with Sub-issue)
-    - ex)  
-       issue number: 20, Sub-issue: 21, 22, 23, ... etc
-
-      => apply as
-
-      ```md
-      - #20
-      - #21
-      - #22
-      - #23
-      - ...
-      ```
-
-  - description
-    - description of the issue(with Sub-issue)
-    - Import the "description" part of the linked issue as it is.
-
-# Pull Request Rules(to master)
-
-## basic rules
+- `{dev branch}` -> `master`
+  - ex)
+    - `dev-v1.2.0` -> `master`
+    - `dev-v1.3.0` -> `master`
 
 - refer to current branch
 
-## Template
+## Title
 
 - title: `Merge of v{target version}`
-  - ex: current branch name: `dev_v1.2.0`  
+  - ex: current branch name: `dev-v1.2.0`  
     => title: `Merge of v1.2.0`
-- merge to(branch): `master`
-- description
-  ```md
-  ## Changes(issue)
 
-  - {title of issues}
-  ```
+## description
 
-  - title of issues
-    - Bring up all the titles of the issues associated with the branch.
-    - target version: at the end of title of issue.
+```md
+## Changes(issue)
+
+// Bring up all the titles of the issues associated with the branch.
+// target version: at the end of title of issue.
+
+- {changes}
+```

@@ -2,66 +2,25 @@
 alwaysApply: false
 ---
 
-# Add Release Note And Tag in GitHub
-
-## basic rules
-
-- use GitHub MCP
-- add tag first, and Release Note last.
-- Before added in GitHub
-  - It must be added after checking the contents.
-  - both tag and Release Note
-
-## Tag
-
-- Tag(template): `v{version name}`
-  - version name: Refer to the version information applied to the `package.json` file of `@fetoolkit/react` project
-  - ex) version name: 1.0.0  
-    => tag: v1.0.0
+# Write Release Note(Don't upload at github)
 
 ## Release Note(Template)
 
-- title(format): "Release Note v{version name}"
-- tag: Match a tag with the same name as the version name of the title
-- target Branch: `master`
-- description(format)
+```md
+Released at {Released Date}
 
-  ```md
-  Released at {Released Date}
+## Changes
 
-  ## Changes
+### `@fetoolkit/react`
 
-  ### `@fetoolkit/react`
+// changes of packages/react(based on issues)
 
-  // changes of packages/react
+### `@fetoolkit/utils`
 
-  ### `@fetoolkit/utils`
+// changes of packages/utils(based on issues)
+```
 
-  // changes of packages/utils
+### Detail
 
-  ## Detail Changes(issues)
-
-  // detail changes
-
-  ## Full ChangeLog
-
-  // github changelog link
-  ```
-
-  - Released Date(format): YYYY-MM-DD
-  - Changes
-    - Write the changes in Github by bullet points based on the PR lists with the corresponding version names
-    - Separate changes by package unit (by table of contents)
-    - If there are no changes, write "No changes"
-  - Detail changes
-    - Attach all the titles of the PR lists with the corresponding version names in github.
-    - Don't seperate changes by package unit
-  - github changelog link(format)
-    - if there's Existing tag on github
-      `https://github.com/minwoo129/fetoolkit/compare/{previous latest tag}...{new latest tag}`
-    - if there's no Existing tag on github(first tag)  
-       `https://github.com/minwoo129/fetoolkit/commits/{version name}`
-
-- detail Options(GitHub)
-  - `Set as a pre-release`: false
-  - `Set as a latest release`: true
+- Refer to all issues reflected in this version.
+  - Exclude `docs` issues, Cursor ruleset modification and CI/CD pipeline modification issues

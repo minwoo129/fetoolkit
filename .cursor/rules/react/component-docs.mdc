@@ -3,13 +3,15 @@ globs: packages/react/src/docs/components/*.md
 alwaysApply: false
 ---
 
-# Template(KOR)
+## Template(KOR)
 
 - Create Component's document files in the following format  
   ex) Component's file route = `src/components/ContextMenu.tsx`
 
   ````md
   # ContextMenu
+
+  [English]({relative URL}) | 한국어
 
   - 커스텀 ContextMenu 컴포넌트를 개발할 때 사용하는 컴포넌트입니다.
   - 커스텀 ContextMenu를 개발한다고 해도, 이를 위해 필요한 요소들이 있어 반드시 이 컴포넌트를 연결해서 사용하셔야 합니다.
@@ -50,79 +52,133 @@ alwaysApply: false
   | 이하: Aria 태그 props |                     |          |         |
   ````
 
-- template detail description
-  - title
-    - template: `#{ComponentName}`
-  - description
-    - Add One or Two lines of brief Description
-    - write by Korean
-  - example Code
-    - TOC(Table of Contents): `## 기본 사용 예시`
-    - language: tsx
-    - Just add code blocks and don't write the code
-  - API References
-    - TOC(Table of Contents): `## API(Props) 설명`
-    - Refer to Component Export format
-      - Separate detailed table of contents based on the type of component return
-        - ex1) Component export like
+## Template(ENG)
 
-          ```tsx
-          export const ContextMenu = {
-            Grid,
-            Item,
-          };
-          ```
+- Create Component's document files in the following format  
+  ex) Component's file route = `src/components/ContextMenu.tsx`
 
-          => seperate TOC like
+  ````md
+  # ContextMenu
 
-          ```md
-          ## ContextMenu.Grid
+  English | [한국어]({relative URL})
 
-          // API Reference of the Component
+  - This component is created for used to develop custom ContextMenu.
+  - You must have use this component when you want to create your own ContextMenu, because there's necessary elements in this component to create your own.
+  - If you not use it, normal functional operation is difficult.
 
-          ## ContextMenu.Item
+  ## Example
 
-          // API Reference of the Component
-          ```
+  ```tsx
+  // don't write the example code
+  ```
 
-        - ex2) Component export like
+  ## API(Props) Reference
 
-          ```tsx
-          export const TestComponent1 = ...
-          export const TestComponent2 = ...
+  ### ContextMenu.Grid
 
-          ```
+  | Name                  | Type                | Required | Default | Description                                                                |
+  | :-------------------- | :------------------ | :------- | :------ | :------------------------------------------------------------------------- |
+  | x                     | string              | true     | -       | ContextMenu 노출 위치(x축 기준) <br> - x축: Viewpoint 왼쪽면 기준 가로방향 |
+  | y                     | string              | true     | -       | ContextMenu 노출 위치(y축 기준) <br> - y축: Viewpoint 위쪽면 기준 세로방향 |
+  | className             | string              | false    | -       | CSS 클래스명                                                               |
+  | style                 | React.CSSProperties | false    | -       | 스타일 선언 <br> - React \`style\` props와 동일                            |
+  | testId                | string              | false    | -       | 테스트 실행 시 선언할 elementId                                            |
+  | children              | React.ReactNode     | true     | -       |                                                                            |
+  | 이하: Aria 태그 props |                     |          |         |
 
-          => seperate TOC like
+  ### ContextMenu.Item
 
-          ```md
-          ## TestComponent1
+  | Name                  | Type                | Required | Default | Description                                     |
+  | :-------------------- | :------------------ | :------- | :------ | :---------------------------------------------- |
+  | value                 | string              | true     | -       | 버튼 value <br> - 이 값은 버튼별로 고유해야 함  |
+  | label                 | string              | true     | -       | 버튼 노출 시 실제로 보여질 버튼의 라벨          |
+  | className             | string              | false    | -       | CSS 클래스명                                    |
+  | style                 | React.CSSProperties | false    | -       | 스타일 선언 <br> - React \`style\` props와 동일 |
+  | textStyle             | Object              | false    | -       | 버튼 라벨 스타일                                |
+  | textStyle.className   | string              | false    | -       | CSS 클래스명                                    |
+  | textStyle.style       | React.CSSProperties | false    | -       | 스타일 선언 <br> - React \`style\` props와 동일 |
+  | onClick               | () => void          | false    | -       | 버튼 클릭 이벤트 메서드                         |
+  | 이하: Aria 태그 props |                     |          |         |
+  ````
 
-          // API Reference of the Component
+### template detail description
 
-          ## TestComponent2
+- title
+  - template: `#{ComponentName}`
+- description
+  - Add One or Two lines of brief Description
+  - write by each language
+- example Code
+  - TOC(Table of Contents)
+    - KOR: `## 기본 사용 예시`
+    - ENG: `## Example`
+  - language: tsx
+  - Just add code blocks and don't write the code
+- API References
+  - TOC(Table of Contents)
+    - KOR: `## API(Props) 설명`
+    - ENG: `## API(Props) Reference`
+  - Refer to Component Export format
+    - Separate detailed table of contents based on the type of component return
+      - ex1) Component export like
 
-          // API Reference of the Component
-          ```
+        ```tsx
+        export const ContextMenu = {
+          Grid,
+          Item,
+        };
+        ```
 
-        - ex3) Component export like
+        => seperate TOC like
 
-          ```tsx
-          export const TestComponent = <T,>({
-          ...props
-          }: Props<T>) => {
-              ...
-          };
-          ```
+        ```md
+        ## ContextMenu.Grid
 
-          => don't seperate TOC
-          => just write the API Reference Table
+        // API Reference of the Component
 
-    - if a Component is HOC or name is first start by 'Default'
-      - don't write API Reference
-    - Table Column Info
-      - Name(name of each props)
-      - Type(type of each props)
-      - Required(Mandatory Specification)
-      - Default(Default value of each props)
-      - Description(One line of brief Description, write by korean)
+        ## ContextMenu.Item
+
+        // API Reference of the Component
+        ```
+
+      - ex2) Component export like
+
+        ```tsx
+        export const TestComponent1 = ...
+        export const TestComponent2 = ...
+
+        ```
+
+        => seperate TOC like
+
+        ```md
+        ## TestComponent1
+
+        // API Reference of the Component
+
+        ## TestComponent2
+
+        // API Reference of the Component
+        ```
+
+      - ex3) Component export like
+
+        ```tsx
+        export const TestComponent = <T,>({
+        ...props
+        }: Props<T>) => {
+            ...
+        };
+        ```
+
+        => don't seperate TOC
+        => just write the API Reference Table
+
+  - if a Component is HOC or name is first start by 'Default'
+    - don't write API Reference
+  - Table Column Info
+    - Name(name of each props)
+    - Type(type of each props)
+    - Required(Mandatory Specification)
+    - Default(Default value of each props)
+    - Description(One line of brief Description, write by each language)

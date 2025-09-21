@@ -1,31 +1,33 @@
 # useToggle
 
-- 화면 내 boolean 상태를 토글하기 위한 커스텀 훅입니다.
+English | [한국어](./useToggle_kr.md)
 
-## 기본 사용 예시
+- A custom hook for toggling boolean state within the screen.
+
+## Example
 
 ```tsx
 import { useToggle } from '@fetoolkit/react';
  ...
- const [isActive, toggleActive] = useToggle(); // 초기값은 false입니다.
- const [isActive2, toggleActive2] = useToggle(a === b); // 초기값이 지정된 경우
+ const [isActive, toggleActive] = useToggle(); // Initial value is false
+ const [isActive2, toggleActive2] = useToggle(a === b); // When initial value is specified
 ```
 
-## API 설명
+## API Reference
 
 ### Input(boolean)
 
-| Name         | Type    | Required | default | Description     |
-| :----------- | :------ | :------- | :------ | :-------------- |
-| initialValue | boolean | false    | false   | 초기 boolean 값 |
+| Name         | Type    | Required | default | Description           |
+| :----------- | :------ | :------- | :------ | :-------------------- |
+| initialValue | boolean | false    | false   | Initial boolean value |
 
-### Output(튜플)
+### Output(tuple)
 
 ```typescript
 [value: boolean, handleValueChange: (value: boolean) => void]
 ```
 
-| Name              | Type                     | Description        |
-| ----------------- | ------------------------ | ------------------ |
-| value             | boolean                  | 현재 입력값        |
-| handleToggleValue | (value: boolean) => void | 입력값 변경 메서드 |
+| Name              | Type                     | Description                  |
+| ----------------- | ------------------------ | ---------------------------- |
+| value             | boolean                  | Current input value          |
+| handleToggleValue | (value: boolean) => void | Method to change input value |

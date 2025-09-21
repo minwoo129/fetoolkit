@@ -1,12 +1,14 @@
 # Array(groupBy)
 
-- 주어진 키 생성 함수에 따라서 배열의 요소를 분류하는 함수입니다.
+English | [한국어](./groupBy_kr.md)
+
+- A function that classifies array elements according to a given key generation function.
 
 ```tsx
 groupBy(array, getKeyFromItem);
 ```
 
-## 기본 사용 예시
+## Example
 
 ```tsx
 import { groupBy } from '@fetoolkit/utils';
@@ -30,14 +32,14 @@ const array = [
 //         { category: 'vegetable', name: 'broccoli' },
 //     ]
 // }
-const value = groupBy(testArr, (item) => item.category);
+const value = groupBy(array, (item) => item.category);
 ```
 
-## API 문서
+## API Reference
 
-- 입력 인자
+- input
   |name|type|required|description|
   |:---:|:---|:---|:---:|
-  |array|T[]|true|탐색할 배열|
-  |getKeyFromItem|(item: T) => PropertyKey|true|요소에서 키를 생성하는 함수|
-- 반환 타입: T | undefined
+  |array|T[]|true|Array to search|
+  |getKeyFromItem|(item: T) => PropertyKey|true|Function to generate key from element|
+- output(type): Record<PropertyKey, T[]>

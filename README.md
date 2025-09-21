@@ -1,13 +1,15 @@
 # FEToolkit
 
 ![](https://fejumvuajiwc28287693.gcdn.ntruss.com/fetoolkit/fetoolkit_thumbnail.png)
-(해당 썸네일은 Chat GPT를 통해 생성한 이미지입니다.)  
-FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 제공하는 툴킷 라이브러리입니다. 라이브러리는 React, Vue 등 프레임워크에 따라서 구분하여 제공되며, 프레임워크와 무관하게 공통적으로 사용할 수 있는 기능은 별도의 라이브러리로 배포될 예정입니다.  
-현재는 제공되고 있는 기능이 많이 없을지 몰라도 지속적인 업데이트를 통해 기능을 추가해나갈 예정입니다.
+(This thumbnail was created by Chat GPT)
 
-## 제공 모듈
+English | [한국어](./README_kr.md)
 
-| Name  | Description                      |                          Downloads                          |           GitHub            |
-| :---- | :------------------------------- | :---------------------------------------------------------: | :-------------------------: |
-| react | react 전용 패키지입니다.         | [Downloads](https://www.npmjs.com/package/@fetoolkit/react) | [GitHub](./packages/react/) |
-| utils | 유틸리티 함수 전용 패키지입니다. | [Downloads](https://www.npmjs.com/package/@fetoolkit/utils) | [GitHub](./packages/utils/) |
+FEToolkit is a toolkit library that provides useful functions for Frontend development. The library is divided according to frameworks such as React and Vue, and functions that can be used in common regardless of the framework will be distributed as separate libraries.
+
+## Modules
+
+| Name  | Description                   |                          Downloads                          |           GitHub            |
+| :---- | :---------------------------- | :---------------------------------------------------------: | :-------------------------: |
+| react | package for react             | [Downloads](https://www.npmjs.com/package/@fetoolkit/react) | [GitHub](./packages/react/) |
+| utils | package for utility functions | [Downloads](https://www.npmjs.com/package/@fetoolkit/utils) | [GitHub](./packages/utils/) |

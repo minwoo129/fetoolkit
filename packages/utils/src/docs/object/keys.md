@@ -1,12 +1,14 @@
 # Object(keys)
 
-- 객체의 열거가능한 프로퍼티 이름들을 반환하는 함수입니다.
+English | [한국어](./keys_kr.md)
+
+- A function that returns the enumerable property names of an object.
 
 ```tsx
 keys(object);
 ```
 
-## 기본 사용 예시
+## Example
 
 ```tsx
 import { keys } from '@fetoolkit/utils';
@@ -19,10 +21,10 @@ const testObj = {
 const keyArr = keys(testObj); // ['a', 'b', 'c']
 ```
 
-## API 문서
+## API Reference
 
-- 입력 인자
+- input
   |name|type|required|description|
   |:---:|:---|:---|:---:|
-  |object| T |true| 탐색할 객체 |
-- 반환 타입: string[]
+  |object| T |true| Object to get keys from |
+- output(type): string[]

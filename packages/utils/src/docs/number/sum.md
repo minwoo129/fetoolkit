@@ -1,12 +1,14 @@
 # Numbers(sum)
 
-- 배열에 저장된 모든 숫자들을 더하는 함수입니다.
+English | [한국어](./sum_kr.md)
+
+- A function that adds all numbers stored in an array.
 
 ```tsx
 sum(nums);
 ```
 
-## 기본 사용 예시
+## Example
 
 ```tsx
 import { sum } from '@fetoolkit/utils';
@@ -14,10 +16,10 @@ import { sum } from '@fetoolkit/utils';
 const num1 = sum([1, 2, 3, 4, 5]); // 15
 ```
 
-## API 문서
+## API Reference
 
-- 입력 인자
+- input
   |name|type|required|description|
   |:---:|:---|:---|:---:|
-  |nums| number[] |true||
-- 반환 타입: number
+  |nums| number[] |true|Array of numbers to sum|
+- output(type): number

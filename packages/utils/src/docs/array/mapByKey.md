@@ -1,12 +1,14 @@
 # Array(mapByKey)
 
-- 객체 타입 요소를 갖는 Array에서 특정 속성(어트리뷰트)에 해당하는 값만 매핑해서 Array로 반환하는 함수
+English | [한국어](./mapByKey_kr.md)
+
+- A function that maps only the values corresponding to a specific property (attribute) from an Array with object type elements and returns them as an Array
 
 ```tsx
 mapByKey(array, key);
 ```
 
-## 기본 사용 예시
+## Example
 
 ```tsx
 import { mapByKey } from '@fetoolkit/utils';
@@ -45,11 +47,11 @@ const num2 = mapByKey(testArr, 'name'); // ['John', 'Jane', 'Jim', 'Jill']
 const num3 = mapByKey(testArr, 'isMale'); // [true, false, true, false]
 ```
 
-## API 문서
+## API Reference
 
-- 입력 인자
+- input
   |name|type|required|description|
   |:---:|:---|:---|:---:|
-  |array|T[]|true|객체를 요소로 갖는 배열|
-  |key|K|true|요소 객체에 적용된 프로퍼티 이름(key 값)|
-- 반환 타입: Array<T[K]>
+  |array|T[]|true|Array with objects as elements|
+  |key|K|true|Property name (key value) applied to element objects|
+- output(type): Array<T[K]>
