@@ -12,12 +12,14 @@
     "create:project": "lerna create",
     "version:up": "lerna version --yes --no-git-tag-version --force-publish",
     "apps:react": "yarn workspace react-test",
+    "apps:admin-react": "yarn workspace admin-react-test",
     "packages:react": "yarn workspace @fetoolkit/react",
     "packages:utils": "yarn workspace @fetoolkit/utils",
     "packages:admin-react": "yarn workspace @fetoolkit/admin-react",
     "tests:react:e2e": "cd apps/react-test && yarn playwright install --with-deps && yarn test:e2e",
     "tests:react:unit": "cd packages/react && yarn test:unit",
-    "tests:utils:unit": "cd packages/utils && yarn test:unit"
+    "tests:utils:unit": "cd packages/utils && yarn test:unit",
+    "tests:admin-react:e2e": "cd apps/admin-react-test && yarn playwright install --with-deps && yarn test:e2e"
   },
   "devDependencies": {
     "@eslint/js": "^9.34.0",
