@@ -22,6 +22,9 @@
     "open-source-admin"
   ],
   "exports": "./dist/index.js",
+  "scripts": {
+    "build": "tsc -b && vite build"
+  },
   "devDependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",
