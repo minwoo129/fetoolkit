@@ -678,6 +678,7 @@ __metadata:
     jsdom: "npm:^26.1.0"
     react: "npm:^19.1.0"
     react-dom: "npm:^19.1.0"
+    user-agent-data-types: "npm:^0.4.2"
     vite: "npm:^7.1.4"
     vite-plugin-dts: "npm:^4.5.4"
   languageName: unknown
