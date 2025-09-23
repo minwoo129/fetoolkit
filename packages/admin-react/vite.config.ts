@@ -1,5 +1,5 @@
 /// <reference types="vite/client" />
-import react from '@vitejs/plugin-react';
+import react from '@vitejs/plugin-react-swc';
 import path from 'path';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
@@ -11,7 +11,9 @@ export default defineConfig({
       include: ['src/**/*', 'index.ts'],
       tsconfigPath: 'tsconfig.app.json',
     }),
-    react(),
+    react({
+      plugins: [['@swc/plugin-emotion', {}]],
+    }),
   ],
   build: {
     lib: {
@@ -23,11 +25,13 @@ export default defineConfig({
       formats: ['es', 'umd'],
     },
     rollupOptions: {
-      external: ['react', 'react-dom'],
+      external: ['react', 'react-dom', '@emotion/react', '@emotion/styled'],
       output: {
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
+          '@emotion/react': 'EmotionReact',
+          '@emotion/styled': 'EmotionStyled',
         },
         interop: 'auto',
       },
