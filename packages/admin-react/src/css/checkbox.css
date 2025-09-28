@@ -1,0 +1,60 @@
+.fetoolkit-admin-checkbox {
+  border-radius: 0.25rem;
+  border: 1px solid #d1d5db; /* border-gray-300 */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.fetoolkit-admin-checkbox.xs {
+  width: 1rem;
+  height: 1rem;
+}
+
+.fetoolkit-admin-checkbox.sm {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.fetoolkit-admin-checkbox.md {
+  width: 2rem;
+  height: 2rem;
+}
+
+.fetoolkit-admin-checkbox.lg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.fetoolkit-admin-checkbox.xl {
+  width: 3rem;
+  height: 3rem;
+}
+
+.fetoolkit-admin-checkbox:checked {
+  background-color: #2563eb; /* blue-600 */
+  border-color: #2563eb;
+  color: white;
+}
+
+.fetoolkit-admin-checkbox:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  .fetoolkit-admin-checkbox {
+    border-color: #4b5563; /* dark:border-gray-600 */
+    background-color: #111827; /* dark:bg-gray-900 */
+  }
+
+  .fetoolkit-admin-checkbox:checked {
+    background-color: #2563eb; /* dark:checked:bg-blue-600 */
+    border-color: #2563eb;
+  }
+
+  .fetoolkit-admin-checkbox:focus {
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+  }
+}
