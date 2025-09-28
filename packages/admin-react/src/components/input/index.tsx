@@ -1,8 +1,10 @@
+import classNames from 'classnames';
 import React from 'react';
 import '../../css/input.css';
 
 export const AdminInput = ({
+  className,
   ...props
-}: Omit<React.InputHTMLAttributes<HTMLInputElement>, 'className'>) => {
-  return <input className="input-field" {...props} />;
+}: React.InputHTMLAttributes<HTMLInputElement>) => {
+  return <input className={classNames('input-field', className)} {...props} />;
 };
