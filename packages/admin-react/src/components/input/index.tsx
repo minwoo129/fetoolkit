@@ -6,5 +6,10 @@ export const AdminInput = ({
   className,
   ...props
 }: React.InputHTMLAttributes<HTMLInputElement>) => {
-  return <input className={classNames('input-field', className)} {...props} />;
+  return (
+    <input
+      className={classNames('fetoolkit-admin-input', className)}
+      {...props}
+    />
+  );
 };
