@@ -4,9 +4,16 @@
   "type": "module",
   "author": "minwoo129 <key0129mw@naver.com>",
   "license": "MIT",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/index.es.js",
+  "module": "./dist/index.umd.cjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./style.css": "./dist/index.css"
+  },
   "homepage": "https://github.com/minwoo129/fetoolkit",
   "repository": {
     "type": "git",
@@ -23,7 +30,6 @@
     "*.css",
     "**/*.css"
   ],
-  "exports": "./dist/index.js",
   "scripts": {
     "build": "tsc -b && vite build",
     "test:unit": "vitest"
@@ -41,6 +47,7 @@
     "react-dom": "^19.1.0",
     "user-agent-data-types": "^0.4.2",
     "vite": "^7.1.4",
-    "vite-plugin-dts": "^4.5.4"
+    "vite-plugin-dts": "^4.5.4",
+    "vite-plugin-lib-inject-css": "^2.2.2"
   }
 }
