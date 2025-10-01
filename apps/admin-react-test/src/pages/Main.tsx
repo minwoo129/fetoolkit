@@ -1,22 +1,18 @@
-import {
-  AdminCheckbox,
-  AdminInput,
-  AdminSwitch,
-  useInput,
-} from '@fetoolkit/admin-react';
-import React, { useState } from 'react';
+import { AdminCheckbox, AdminInput, AdminSwitch } from '@fetoolkit/admin-react';
+import { useInput, useToggle } from '@fetoolkit/react';
+import React from 'react';
 import '../css/Main.css';
 
 const Main = () => {
   const [input, setInput] = useInput('');
-  const [checkbox1, setCheckbox1] = useState(false);
-  const [checkbox2, setCheckbox2] = useState(false);
-  const [checkbox3, setCheckbox3] = useState(false);
-  const [checkbox4, setCheckbox4] = useState(false);
-  const [checkbox5, setCheckbox5] = useState(false);
-  const [switchValue1, setSwitchValue1] = useState(false);
-  const [switchValue2, setSwitchValue2] = useState(false);
-  const [switchValue3, setSwitchValue3] = useState(false);
+  const [checkbox1, setCheckbox1] = useToggle(false);
+  const [checkbox2, setCheckbox2] = useToggle(false);
+  const [checkbox3, setCheckbox3] = useToggle(false);
+  const [checkbox4, setCheckbox4] = useToggle(false);
+  const [checkbox5, setCheckbox5] = useToggle(false);
+  const [switchValue1, setSwitchValue1] = useToggle(false);
+  const [switchValue2, setSwitchValue2] = useToggle(false);
+  const [switchValue3, setSwitchValue3] = useToggle(false);
 
   return (
     <div className="main">

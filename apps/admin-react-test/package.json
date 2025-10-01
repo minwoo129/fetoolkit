@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@fetoolkit/admin-react": "workspace:^",
+    "@fetoolkit/react": "workspace:^",
     "classnames": "^2.5.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",

@@ -2576,6 +2576,7 @@ __metadata:
   resolution: "admin-react-test@workspace:apps/admin-react-test"
   dependencies:
     "@fetoolkit/admin-react": "workspace:^"
+    "@fetoolkit/react": "workspace:^"
     "@playwright/test": "npm:^1.55.0"
     "@types/node": "npm:^24.5.2"
     "@types/react": "npm:^19.1.13"
