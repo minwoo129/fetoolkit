@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import React, { type CSSProperties } from 'react';
-import '../../css/Switch.css';
+import '../../css/switch.css';
 
 interface Props {
   /** 체크 상태 */

@@ -50,4 +50,17 @@ export default tseslint.config([
       'react/react-in-jsx-scope': 'off',
     },
   },
+  {
+    files: ['packages/admin-react/**/*.{ts,tsx}'],
+    extends: [
+      reactHooks.configs['recommended-latest'],
+      reactRefresh.configs.vite,
+    ],
+    plugins: {
+      react: pluginReact,
+    },
+    rules: {
+      'react/react-in-jsx-scope': 'off',
+    },
+  },
 ]);

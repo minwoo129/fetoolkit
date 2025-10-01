@@ -9,7 +9,7 @@ export default defineConfig({
     dts({
       insertTypesEntry: true,
       include: ['src/**/*', 'index.ts'],
-      tsconfigPath: 'tsconfig.app.json',
+      tsconfigPath: 'tsconfig.json',
     }),
     react(),
     libInjectCss(),

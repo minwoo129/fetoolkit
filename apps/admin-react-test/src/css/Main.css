@@ -1,0 +1,29 @@
+.main {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.input-test {
+  width: 300px;
+}
+
+.checkbox-grid {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.switch2 {
+  margin-left: 10px;
+}
+
+.switch3 {
+  margin-left: 10px;
+}
