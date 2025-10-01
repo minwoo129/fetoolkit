@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import AppMenuTemplate from './components/AppMenuTemplate';
 import Main from './pages/Main';
 import TestPage1 from './pages/TestPage1';
 import TestPage2 from './pages/TestPage2';
@@ -10,7 +11,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route>
+        <Route element={<AppMenuTemplate />}>
           <Route path="/" element={<Main />} />
           <Route path="/test-page-1" element={<TestPage1 />} />
           <Route path="/test-page-2" element={<TestPage2 />} />

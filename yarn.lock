@@ -779,11 +779,13 @@ __metadata:
     react: "npm:^19.1.0"
     react-dom: "npm:^19.1.0"
     user-agent-data-types: "npm:^0.4.2"
+    uuid: "npm:^13.0.0"
     vite: "npm:^7.1.4"
     vite-plugin-dts: "npm:^4.5.4"
     vite-plugin-lib-inject-css: "npm:^2.2.2"
   peerDependencies:
     classnames: ">=2"
+    uuid: ">=13"
   languageName: unknown
   linkType: soft
 
@@ -2586,6 +2588,7 @@ __metadata:
     react: "npm:^19.1.1"
     react-dom: "npm:^19.1.1"
     react-router-dom: "npm:^7.9.1"
+    uuid: "npm:^13.0.0"
     vite: "npm:^7.1.6"
   languageName: unknown
   linkType: soft
@@ -9849,6 +9852,15 @@ __metadata:
   bin:
     uuid: dist/bin/uuid
   checksum: 10c0/eab18c27fe4ab9fb9709a5d5f40119b45f2ec8314f8d4cf12ce27e4c6f4ffa4a6321dc7db6c515068fa373c075b49691ba969f0010bf37f44c37ca40cd6bf7fe
+  languageName: node
+  linkType: hard
+
+"uuid@npm:^13.0.0":
+  version: 13.0.0
+  resolution: "uuid@npm:13.0.0"
+  bin:
+    uuid: dist-node/bin/uuid
+  checksum: 10c0/950e4c18d57fef6c69675344f5700a08af21e26b9eff2bf2180427564297368c538ea11ac9fb2e6528b17fc3966a9fd2c5049361b0b63c7d654f3c550c9b3d67
   languageName: node
   linkType: hard
 
