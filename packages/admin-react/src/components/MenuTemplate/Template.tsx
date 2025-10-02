@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import type { FirstDepthMenuItem, UserProfileType } from '.';
+import type { FirstDepthMenuItem } from '.';
 import '../../css/menuTemplate.css';
 import { DropdownMenu, RouteLinkItem } from './items';
 
 interface Props {
   logo?: React.ReactNode;
   menus: FirstDepthMenuItem[];
-  userProfile?: UserProfileType;
   pathName: string;
   // eslint-disable-next-line no-unused-vars
   onClick: (href: string) => void;
@@ -17,7 +16,6 @@ interface Props {
 export const MenuTemplate = ({
   logo,
   menus,
-  userProfile,
   pathName,
   onClick,
   children,
@@ -64,22 +62,7 @@ export const MenuTemplate = ({
             })}
           </ul>
         </div>
-
-        {userProfile && (
-          <div className="menu-user-profile">
-            <div className="menu-user-link">
-              <img
-                src={userProfile.url}
-                alt={userProfile.name}
-                className="menu-user-avatar"
-              />
-              <div className="menu-user-info">
-                <span className="menu-user-name">{userProfile.name}</span>
-                <span className="menu-user-email">{userProfile.email}</span>
-              </div>
-            </div>
-          </div>
-        )}
+        {/* useProfile 또는 기타 하단 영역 추가 예정(미정) */}
       </div>
       <main className="main-area">{children}</main>
     </div>
