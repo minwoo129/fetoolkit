@@ -68,92 +68,6 @@
   margin: 0;
 }
 
-/* 메뉴 아이템 */
-.menu-item {
-  display: block;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: #d4d4d4;
-  text-align: left;
-  border: 1px solid blue;
-}
-
-.menu-item:hover {
-  background-color: #404040;
-  color: #ffffff;
-}
-
-/* 드롭다운 메뉴 */
-.menu-dropdown {
-  /* group 클래스는 HTML에서 직접 사용 */
-}
-
-/* 드롭다운 요약 */
-.menu-dropdown-summary {
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  color: #d4d4d4;
-}
-
-.menu-dropdown-summary:hover {
-  background-color: #404040;
-  color: #ffffff;
-}
-
-/* 드롭다운 요약 텍스트 */
-.menu-dropdown-text {
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-/* 드롭다운 화살표 */
-.menu-dropdown-arrow {
-  flex-shrink: 0;
-  transition: transform 0.3s;
-}
-
-/* group-open 상태일 때 화살표 회전 */
-.menu-dropdown[open] .menu-dropdown-arrow {
-  transform: rotate(-180deg);
-}
-
-/* 드롭다운 화살표 아이콘 */
-.menu-dropdown-icon {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-/* 드롭다운 서브메뉴 */
-.menu-dropdown-submenu {
-  margin-top: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  padding-left: 1rem;
-}
-
-/* 드롭다운 서브메뉴 아이템 */
-.menu-dropdown-submenu-item {
-  display: block;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: #d4d4d4;
-  text-align: left;
-}
-
-.menu-dropdown-submenu-item:hover {
-  background-color: #404040;
-  color: #ffffff;
-}
-
 /* 하단 사용자 프로필 */
 .menu-user-profile {
   position: sticky;
@@ -208,11 +122,6 @@
   .template-container {
     background-color: #242424;
   }
-}
-
-.item-active {
-  background-color: #404040;
-  color: #ffffff;
 }
 
 /* ======================================================================================================= */
