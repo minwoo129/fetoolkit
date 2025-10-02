@@ -810,7 +810,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@fetoolkit/utils@workspace:packages/utils":
+"@fetoolkit/utils@workspace:^, @fetoolkit/utils@workspace:packages/utils":
   version: 0.0.0-use.local
   resolution: "@fetoolkit/utils@workspace:packages/utils"
   dependencies:
@@ -2579,6 +2579,7 @@ __metadata:
   dependencies:
     "@fetoolkit/admin-react": "workspace:^"
     "@fetoolkit/react": "workspace:^"
+    "@fetoolkit/utils": "workspace:^"
     "@playwright/test": "npm:^1.55.0"
     "@types/node": "npm:^24.5.2"
     "@types/react": "npm:^19.1.13"

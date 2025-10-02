@@ -1,6 +1,18 @@
-import { AdminCheckbox, AdminInput, AdminSwitch } from '@fetoolkit/admin-react';
+import {
+  AdminCheckbox,
+  AdminInput,
+  AdminSwitch,
+  AdminTable,
+  useTable,
+} from '@fetoolkit/admin-react';
 import { useInput, useToggle } from '@fetoolkit/react';
-import React from 'react';
+import { commaizeNumber } from '@fetoolkit/utils';
+import React, { useEffect } from 'react';
+import {
+  defaultData,
+  testTableDatas,
+  TestTableDataType,
+} from '../constants/table';
 import '../css/Main.css';
 
 const Main = () => {
@@ -13,6 +25,37 @@ const Main = () => {
   const [switchValue1, setSwitchValue1] = useToggle(false);
   const [switchValue2, setSwitchValue2] = useToggle(false);
   const [switchValue3, setSwitchValue3] = useToggle(false);
+  const { basicProps, controlTableDataStatus, initializeColumns } =
+    useTable<TestTableDataType>(defaultData);
+
+  useEffect(() => {
+    controlTableDataStatus({
+      type: 'add',
+      data: testTableDatas,
+    });
+    initializeColumns({
+      name: {
+        title: '이름',
+        print: (item) => item,
+        sortOrder: 0,
+      },
+      dob: {
+        title: '생년월일',
+        print: (item) => item,
+        sortOrder: 1,
+      },
+      role: {
+        title: '역할',
+        print: (item) => item,
+        sortOrder: 4,
+      },
+      salary: {
+        title: '급여',
+        print: (item) => `$${commaizeNumber(item)}`,
+        sortOrder: 3,
+      },
+    });
+  }, []);
 
   return (
     <div className="main">
@@ -47,6 +90,9 @@ const Main = () => {
           size="lg"
           className="switch3"
         />
+      </div>
+      <div className="checkbox-grid">
+        <AdminTable {...basicProps} className="table-test" />
       </div>
     </div>
   );
