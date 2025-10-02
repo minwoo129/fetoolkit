@@ -9,6 +9,12 @@
   justify-content: space-between;
 }
 
+.template-container li {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
 .main-area {
   width: 100%;
   height: 100%;
@@ -50,13 +56,16 @@
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  border: 1px solid red;
+  list-style: none;
+  padding: 0;
+  margin-left: 0;
 }
 
 .menu-list li {
-  padding-left: 0;
-  border: 1px solid green;
+  padding: 0;
   width: 100%;
+  list-style: none;
+  margin: 0;
 }
 
 /* 메뉴 아이템 */
@@ -204,4 +213,193 @@
 .item-active {
   background-color: #404040;
   color: #ffffff;
+}
+
+/* ======================================================================================================= */
+
+/* 새로운 메뉴 템플릿 스타일 */
+
+/* 메뉴 아이템 래퍼 */
+.menu-item-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* 라우트 링크 버튼 */
+.menu-item-button {
+  width: 100%;
+  display: block;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #d4d4d4;
+  text-align: left;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.menu-item-button:hover {
+  background-color: #404040;
+  color: #ffffff;
+}
+
+/* 드롭다운 버튼 */
+.menu-dropdown-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #d4d4d4;
+  text-align: left;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.menu-dropdown-button:hover {
+  background-color: #404040;
+  color: #ffffff;
+}
+
+/* 드롭다운 텍스트 */
+.menu-dropdown-text {
+  flex: 1;
+}
+
+/* 드롭다운 화살표 */
+.menu-dropdown-arrow {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+.menu-dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+/* 드롭다운 서브메뉴 */
+.menu-dropdown-submenu {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-left: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0 0 1rem;
+}
+
+/* 서브메뉴 아이템 래퍼 */
+.menu-submenu-item-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* 서브메뉴 아이템 버튼 */
+.menu-submenu-item-button {
+  width: 100%;
+  display: block;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #d4d4d4;
+  text-align: left;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.menu-submenu-item-button:hover {
+  background-color: #404040;
+  color: #ffffff;
+}
+
+/* 활성 상태 */
+.item-active {
+  background-color: #404040;
+  color: #ffffff;
+}
+
+/* 라이트 모드 스타일 */
+@media (prefers-color-scheme: light) {
+  .menu-item-button {
+    color: #374151;
+  }
+
+  .menu-item-button:hover {
+    background-color: #f3f4f6;
+    color: #111827;
+  }
+
+  .menu-dropdown-button {
+    color: #374151;
+  }
+
+  .menu-dropdown-button:hover {
+    background-color: #f3f4f6;
+    color: #111827;
+  }
+
+  .menu-submenu-item-button {
+    color: #374151;
+  }
+
+  .menu-submenu-item-button:hover {
+    background-color: #f3f4f6;
+    color: #111827;
+  }
+
+  .item-active {
+    background-color: #e5e7eb;
+    color: #111827;
+  }
+}
+
+/* 다크 모드 스타일 */
+@media (prefers-color-scheme: dark) {
+  .menu-item-button {
+    color: #d4d4d4;
+  }
+
+  .menu-item-button:hover {
+    background-color: #404040;
+    color: #ffffff;
+  }
+
+  .menu-dropdown-button {
+    color: #d4d4d4;
+  }
+
+  .menu-dropdown-button:hover {
+    background-color: #404040;
+    color: #ffffff;
+  }
+
+  .menu-submenu-item-button {
+    color: #d4d4d4;
+  }
+
+  .menu-submenu-item-button:hover {
+    background-color: #404040;
+    color: #ffffff;
+  }
+
+  .item-active {
+    background-color: #404040;
+    color: #ffffff;
+  }
 }
