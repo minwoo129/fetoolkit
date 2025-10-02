@@ -1,4 +1,4 @@
-export * from './Template';
+export * from './template';
 
 export interface MenuItemType {
   title: string;

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import type { FirstDepthMenuItem, UserProfileType } from '.';
 import '../../css/menuTemplate.css';
+import { DropdownMenu, RouteLinkItem } from './items';
 
 interface Props {
   logo?: React.ReactNode;
@@ -39,57 +40,27 @@ export const MenuTemplate = ({
 
               if (menu.type === 'route-link') {
                 return (
-                  <li key={key} className="menu-item-wrapper">
-                    <button
-                      className={`menu-item-button ${pathName.startsWith(menu.href) ? 'item-active' : ''}`}
-                      onClick={() => onClick(menu.href)}
-                    >
-                      {menu.title}
-                    </button>
-                  </li>
+                  <RouteLinkItem
+                    key={key}
+                    title={menu.title}
+                    href={menu.href}
+                    pathName={pathName}
+                    onClick={onClick}
+                  />
                 );
               }
 
-              if (menu.type === 'dropdown') {
-                const isOpen = openDropdown === menu.title;
-                return (
-                  <li key={key} className="menu-item-wrapper">
-                    <button
-                      className="menu-dropdown-button"
-                      onClick={() => handleDropdownToggle(menu.title)}
-                    >
-                      <span className="menu-dropdown-text">{menu.title}</span>
-                      <span
-                        className={`menu-dropdown-arrow ${isOpen ? 'open' : ''}`}
-                      >
-                        ▼
-                      </span>
-                    </button>
-                    {isOpen && (
-                      <ul className="menu-dropdown-submenu">
-                        {menu.menus.map((subMenu) => {
-                          const subKey = uuidv4();
-                          return (
-                            <li
-                              key={subKey}
-                              className="menu-submenu-item-wrapper"
-                            >
-                              <button
-                                className={`menu-submenu-item-button ${pathName.startsWith(subMenu.href) ? 'item-active' : ''}`}
-                                onClick={() => onClick(subMenu.href)}
-                              >
-                                {subMenu.title}
-                              </button>
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    )}
-                  </li>
-                );
-              }
-
-              return null;
+              return (
+                <DropdownMenu
+                  key={key}
+                  title={menu.title}
+                  menus={menu.menus}
+                  pathName={pathName}
+                  onClick={onClick}
+                  openDropdown={openDropdown}
+                  handleDropdownToggle={handleDropdownToggle}
+                />
+              );
             })}
           </ul>
         </div>
