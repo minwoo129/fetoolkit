@@ -99,10 +99,30 @@ const Main = () => {
         <AdminDropdown
           title="Product"
           menus={[
-            { title: 'Storefront' },
-            { title: 'Warehouse' },
-            { title: 'Stock' },
-            { title: 'Delete', type: 'delete' },
+            { title: 'Storefront', type: 'button' },
+            { title: 'Warehouse', type: 'button' },
+            { title: 'Stock', type: 'button' },
+            { title: 'Delete', type: 'button', styleType: 'delete' },
+          ]}
+        />
+        <AdminDropdown
+          title="Product"
+          className="dropdown1"
+          menus={[
+            {
+              title: 'General',
+              type: 'group',
+              menus: [
+                { title: 'Storefront' },
+                { title: 'Warehouse' },
+                { title: 'Stock' },
+              ],
+            },
+            {
+              title: 'Actions',
+              type: 'group',
+              menus: [{ title: 'Delete', styleType: 'delete' }],
+            },
           ]}
         />
       </div>

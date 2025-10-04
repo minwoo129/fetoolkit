@@ -1,22 +1,43 @@
 import classNames from 'classnames';
-import React, { useState, type CSSProperties } from 'react';
+import React, { useCallback, useState, type CSSProperties } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import '../../css/dropdown.css';
 
 interface Props {
   className?: string;
   styles?: CSSProperties;
   title: string;
-  menus: DropdownMenuItem[];
+  menus: (DropdownMenuItem | DropdownSubMenuItem)[];
+}
+
+interface MenuItemProps {
+  menu: DropdownMenuItem | DropdownSubMenuItem;
+  closeDropdown: () => void;
+}
+
+interface SubMenuItemProps extends Omit<DropdownSubMenuItem, 'type'> {
+  closeDropdown: () => void;
 }
 
 type DropdownMenuItem = {
   title: string;
-  type?: 'basic' | 'delete';
+  type: 'group';
+  menus: Omit<DropdownSubMenuItem, 'type'>[];
+};
+
+type DropdownSubMenuItem = {
+  title: string;
+  type: 'button';
+  styleType?: 'basic' | 'delete';
   onClick?: () => void;
 };
 
 export const AdminDropdown = ({ className, styles, title, menus }: Props) => {
   const [isOpen, setOpen] = useState(false);
+
+  const closeDropdown = useCallback(() => {
+    setOpen(false);
+  }, []);
   return (
     <div className={classNames('dropdown-container', className)} style={styles}>
       <span className="dropdown-button-group">
@@ -37,29 +58,73 @@ export const AdminDropdown = ({ className, styles, title, menus }: Props) => {
           <ArrowIcon />
         </button>
       </span>
+      <p className="block px-3 py-2 text-sm text-gray-500 dark:text-gray-400"></p>
       {isOpen && (
         <div role="menu" className="dropdown-menu">
           {menus.map((menu) => {
-            const { title, type = 'basic', onClick } = menu;
+            const key = uuidv4();
             return (
-              <button
-                className={classNames('dropdown-menu-item', {
-                  delete: type === 'delete',
-                })}
-                role="menuitem"
-                key={title}
-                onClick={() => {
-                  setOpen(false);
-                  onClick?.();
-                }}
-              >
-                {title}
-              </button>
+              <MenuItem menu={menu} closeDropdown={closeDropdown} key={key} />
             );
           })}
         </div>
       )}
     </div>
+  );
+};
+
+const MenuItem = ({ menu, closeDropdown }: MenuItemProps) => {
+  const { title, type } = menu;
+  const key = uuidv4();
+  if (type === 'button') {
+    const { styleType = 'basic', onClick } = menu;
+    return (
+      <SubMenuItem
+        title={title}
+        styleType={styleType}
+        onClick={onClick}
+        closeDropdown={closeDropdown}
+        key={key}
+      />
+    );
+  }
+
+  const { menus } = menu;
+  return (
+    <div>
+      <p className="dropdown-menu-group-title">{title}</p>
+      {menus.map((menu) => (
+        <SubMenuItem
+          title={menu.title}
+          styleType={menu.styleType}
+          onClick={menu.onClick}
+          closeDropdown={closeDropdown}
+          key={key}
+        />
+      ))}
+    </div>
+  );
+};
+
+const SubMenuItem = ({
+  title,
+  styleType = 'basic',
+  onClick,
+  closeDropdown,
+}: SubMenuItemProps) => {
+  return (
+    <button
+      className={classNames('dropdown-menu-item', {
+        delete: styleType === 'delete',
+      })}
+      role="menuitem"
+      onClick={() => {
+        closeDropdown();
+        onClick?.();
+      }}
+    >
+      {title}
+    </button>
   );
 };
 

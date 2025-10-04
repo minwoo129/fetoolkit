@@ -54,6 +54,15 @@
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
+.dropdown-menu-group-title {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #6b7280;
+  margin: 0;
+}
+
 /* Dropdown Menu Item */
 .dropdown-menu-item {
   display: block;
@@ -105,6 +114,10 @@
   .dropdown-menu {
     border-color: #4b5563;
     background-color: #1f2937;
+  }
+
+  .dropdown-menu-group-title {
+    color: #9ca3af;
   }
 
   .dropdown-menu-item {
