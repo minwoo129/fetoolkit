@@ -3,7 +3,7 @@ import type { CSSProperties } from 'react';
 import React from 'react';
 import type { DetailColumnsType, TableDataType } from '.';
 import '../../css/table.css';
-import { Pagination } from '../pagination';
+import { AdminPagination } from '../pagination';
 import TableBody from './TableBody';
 import TableHead from './TableHead';
 
@@ -57,7 +57,7 @@ export const AdminTable = <T extends Record<string, unknown>>({
           onClickRow={onClickRow}
         />
       </table>
-      <Pagination
+      <AdminPagination
         page={page}
         totalPage={totalPage}
         onClickNextPage={onClickNextPage}

@@ -15,7 +15,7 @@ interface Props {
   className?: string;
 }
 
-export const Pagination = ({
+export const AdminPagination = ({
   page,
   totalPage,
   onClickNextPage,
