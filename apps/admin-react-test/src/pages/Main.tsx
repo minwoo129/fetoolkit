@@ -1,5 +1,6 @@
 import {
   AdminCheckbox,
+  AdminDropdown,
   AdminInput,
   AdminSwitch,
   AdminTable,
@@ -93,6 +94,17 @@ const Main = () => {
       </div>
       <div className="checkbox-grid">
         <AdminTable {...basicProps} className="table-test" />
+      </div>
+      <div className="checkbox-grid right-align">
+        <AdminDropdown
+          title="Product"
+          menus={[
+            { title: 'Storefront' },
+            { title: 'Warehouse' },
+            { title: 'Stock' },
+            { title: 'Delete', type: 'delete' },
+          ]}
+        />
       </div>
     </div>
   );
