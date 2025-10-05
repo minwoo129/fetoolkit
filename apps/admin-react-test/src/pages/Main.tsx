@@ -4,6 +4,8 @@ import {
   AdminInput,
   AdminSwitch,
   AdminTable,
+  AdminTextArea,
+  AdminTextAreaFeaturedLayout,
   BasicInputLabel,
   useTable,
 } from '@fetoolkit/admin-react';
@@ -30,6 +32,7 @@ const Main = () => {
   const { basicProps, controlTableDataStatus, initializeColumns } =
     useTable<TestTableDataType>(defaultData);
   const [email1, setEmail1] = useInput('');
+  const [textarea, setTextarea] = useInput('');
 
   useEffect(() => {
     controlTableDataStatus({
@@ -138,6 +141,21 @@ const Main = () => {
             onChange={(e) => setEmail1(e.target.value)}
           />
         </BasicInputLabel>
+      </div>
+      <div className="checkbox-grid">
+        <AdminTextAreaFeaturedLayout
+          buttons={[
+            { type: 'delete', title: 'Delete' },
+            { type: 'clear', title: 'Clear' },
+            { type: 'save', title: 'Save' },
+          ]}
+        >
+          <AdminTextArea
+            value={textarea}
+            onChange={(e) => setTextarea(e.target.value)}
+            className="textarea-test"
+          />
+        </AdminTextAreaFeaturedLayout>
       </div>
     </div>
   );
