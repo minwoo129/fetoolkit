@@ -4,6 +4,7 @@ import {
   AdminInput,
   AdminSwitch,
   AdminTable,
+  BasicInputLabel,
   useTable,
 } from '@fetoolkit/admin-react';
 import { useInput, useToggle } from '@fetoolkit/react';
@@ -28,6 +29,7 @@ const Main = () => {
   const [switchValue3, setSwitchValue3] = useToggle(false);
   const { basicProps, controlTableDataStatus, initializeColumns } =
     useTable<TestTableDataType>(defaultData);
+  const [email1, setEmail1] = useInput('');
 
   useEffect(() => {
     controlTableDataStatus({
@@ -60,7 +62,7 @@ const Main = () => {
 
   return (
     <div className="main">
-      Main
+      <h1>Main</h1>
       <AdminInput
         value={input}
         onChange={(e) => setInput(e.target.value)}
@@ -125,6 +127,17 @@ const Main = () => {
             },
           ]}
         />
+      </div>
+      <div className="checkbox-grid">
+        <BasicInputLabel label="Email" className="basic-label" htmlFor="Email1">
+          <AdminInput
+            type="email"
+            id="Email1"
+            labelType="basic"
+            value={email1}
+            onChange={(e) => setEmail1(e.target.value)}
+          />
+        </BasicInputLabel>
       </div>
     </div>
   );

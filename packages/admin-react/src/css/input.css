@@ -10,6 +10,12 @@
   box-sizing: border-box;
 }
 
+.fetoolkit-admin-input.basic {
+  transition:
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+}
+
 /* 포커스 상태 */
 .fetoolkit-admin-input:focus {
   outline: none;
