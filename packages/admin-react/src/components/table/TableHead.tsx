@@ -1,30 +1,34 @@
 import React from 'react';
-import type { DetailColumnsType } from '.';
 import '../../css/table.css';
 import { AdminCheckbox } from '../checkbox';
+import type { ColumnType, FunctionsType } from './tableTypes';
 
 interface Props<T extends Record<string, unknown>> {
-  detailColumns: DetailColumnsType<T>[];
-  onClickCheckboxOfAll: () => void;
+  columns: ColumnType<T>[];
+  onClickCheckboxOfAll?: FunctionsType['onClickCheckboxOfAll'];
   isAllSelected: boolean;
+  checkboxVisible: boolean;
 }
 
 const TableHead = <T extends Record<string, unknown>>({
-  detailColumns,
+  columns,
   onClickCheckboxOfAll,
   isAllSelected,
+  checkboxVisible,
 }: Props<T>) => {
   return (
     <thead>
       <tr>
-        <th>
-          <AdminCheckbox
-            id={'all'}
-            checked={isAllSelected}
-            onChange={onClickCheckboxOfAll}
-          />
-        </th>
-        {detailColumns.map((column, index) => (
+        {checkboxVisible && (
+          <th>
+            <AdminCheckbox
+              id={'all'}
+              checked={isAllSelected}
+              onChange={onClickCheckboxOfAll}
+            />
+          </th>
+        )}
+        {columns.map((column, index) => (
           <th key={index}>{column.title}</th>
         ))}
       </tr>
