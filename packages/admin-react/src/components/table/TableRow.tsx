@@ -33,8 +33,16 @@ const TableRow = <T extends Record<string, unknown>>({
       )}
       {columns.map((item, index) => {
         const { render, key } = item;
+        // Extract the actual data value, excluding the 'key' property
+        const dataValue = key === 'key' ? undefined : data[key];
         return (
-          <td key={index}>{render ? render(data[key]) : String(data[key])}</td>
+          <td key={index}>
+            {render && dataValue !== undefined
+              ? render(dataValue)
+              : dataValue !== undefined
+                ? String(dataValue)
+                : ''}
+          </td>
         );
       })}
     </tr>
