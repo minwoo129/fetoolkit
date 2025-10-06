@@ -1,70 +1,54 @@
 import classNames from 'classnames';
 import type { CSSProperties } from 'react';
 import React from 'react';
-import type { DetailColumnsType, TableDataType } from '.';
 import '../../css/table.css';
-import { AdminPagination } from '../pagination';
 import TableBody from './TableBody';
 import TableHead from './TableHead';
+import type { ColumnType, FunctionsType, TableDataType } from './tableTypes';
 
-type BasicPropsType<T extends Record<string, unknown>> = {
-  tableDatas: TableDataType<T>[];
-  page: number;
-  totalPage: number;
-  detailColumns: DetailColumnsType<T>[];
-  selectedIds: string[];
-  onClickNextPage: () => void;
-  onClickPrevPage: () => void;
-  // eslint-disable-next-line no-unused-vars
-  onClickCheckboxOfItem: (id: string) => void;
-  onClickCheckboxOfAll: () => void;
-};
-
-interface Props<T extends Record<string, unknown>> extends BasicPropsType<T> {
-  // eslint-disable-next-line no-unused-vars
-  onClickRow?: (id: string) => void;
+interface Props<T extends Record<string, unknown>> {
+  onClickRow?: FunctionsType['onClickRow'];
   className?: string;
   style?: CSSProperties;
+  datas: TableDataType<T>[];
+  columns: ColumnType<T>[];
+  selectedIds: string[];
+  onClickCheckboxOfItem: FunctionsType['onClickCheckboxOfItem'];
+  onClickCheckboxOfAll: FunctionsType['onClickCheckboxOfAll'];
+  header?: React.ReactNode;
+  footer?: React.ReactNode;
 }
 
 export const AdminTable = <T extends Record<string, unknown>>({
-  tableDatas,
-  page,
-  totalPage,
-  detailColumns,
+  datas,
+  columns,
   selectedIds,
-  onClickNextPage,
   onClickCheckboxOfAll,
   onClickCheckboxOfItem,
-  onClickPrevPage,
   onClickRow,
   className,
   style,
+  header,
+  footer,
 }: Props<T>) => {
   return (
     <div className={classNames('table-container', className)} style={style}>
+      {header}
       <table className="table">
         <TableHead
-          detailColumns={detailColumns}
+          columns={columns}
           onClickCheckboxOfAll={onClickCheckboxOfAll}
-          isAllSelected={selectedIds.length === tableDatas.length}
+          isAllSelected={selectedIds.length === datas.length}
         />
         <TableBody
-          detailColumns={detailColumns}
-          tableDatas={tableDatas}
+          columns={columns}
+          datas={datas}
           onClickCheckboxOfItem={onClickCheckboxOfItem}
           selectedIds={selectedIds}
           onClickRow={onClickRow}
         />
       </table>
-      <AdminPagination
-        page={page}
-        totalPage={totalPage}
-        onClickNextPage={onClickNextPage}
-        onClickPrevPage={onClickPrevPage}
-        nextPageBtnDisabled={page === totalPage}
-        prevPageBtnDisabled={page === 1}
-      />
+      {footer}
     </div>
   );
 };

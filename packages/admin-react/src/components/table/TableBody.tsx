@@ -1,32 +1,30 @@
 import React from 'react';
-import type { DetailColumnsType, TableDataType } from '.';
 import '../../css/table.css';
 import TableRow from './TableRow';
+import type { ColumnType, FunctionsType, TableDataType } from './tableTypes';
 
 interface Props<T extends Record<string, unknown>> {
-  detailColumns: DetailColumnsType<T>[];
-  tableDatas: TableDataType<T>[];
-  // eslint-disable-next-line no-unused-vars
-  onClickCheckboxOfItem: (id: string) => void;
+  columns: ColumnType<T>[];
+  datas: TableDataType<T>[];
+  onClickCheckboxOfItem: FunctionsType['onClickCheckboxOfItem'];
   selectedIds: string[];
-  // eslint-disable-next-line no-unused-vars
-  onClickRow?: (id: string) => void;
+  onClickRow?: FunctionsType['onClickRow'];
 }
 
 const TableBody = <T extends Record<string, unknown>>({
-  tableDatas,
-  detailColumns,
+  datas,
+  columns,
   onClickCheckboxOfItem,
   selectedIds,
   onClickRow,
 }: Props<T>) => {
   return (
     <tbody>
-      {tableDatas.map((item) => {
+      {datas.map((item) => {
         return (
           <TableRow
             key={item.key}
-            detailColumns={detailColumns}
+            columns={columns}
             data={item}
             onClickCheckboxOfItem={onClickCheckboxOfItem}
             isSelected={selectedIds.includes(item.key)}

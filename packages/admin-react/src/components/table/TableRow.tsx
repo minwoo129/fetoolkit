@@ -1,20 +1,18 @@
 import React from 'react';
-import type { DetailColumnsType, TableDataType } from '.';
 import '../../css/table.css';
 import { AdminCheckbox } from '../checkbox';
+import type { ColumnType, FunctionsType, TableDataType } from './tableTypes';
 
 interface Props<T extends Record<string, unknown>> {
-  detailColumns: DetailColumnsType<T>[];
+  columns: ColumnType<T>[];
   data: TableDataType<T>;
-  // eslint-disable-next-line no-unused-vars
-  onClickCheckboxOfItem: (id: string) => void;
+  onClickCheckboxOfItem: FunctionsType['onClickCheckboxOfItem'];
   isSelected: boolean;
-  // eslint-disable-next-line no-unused-vars
-  onClickRow?: (id: string) => void;
+  onClickRow?: FunctionsType['onClickRow'];
 }
 
 const TableRow = <T extends Record<string, unknown>>({
-  detailColumns,
+  columns,
   data,
   onClickCheckboxOfItem,
   isSelected,
@@ -29,8 +27,11 @@ const TableRow = <T extends Record<string, unknown>>({
           onChange={() => onClickCheckboxOfItem(data.key)}
         />
       </td>
-      {detailColumns.map((item, index) => {
-        return <td key={index}>{item.print(data.data[item.key])}</td>;
+      {columns.map((item, index) => {
+        const { render, key } = item;
+        return (
+          <td key={index}>{render ? render(data[key]) : String(data[key])}</td>
+        );
       })}
     </tr>
   );

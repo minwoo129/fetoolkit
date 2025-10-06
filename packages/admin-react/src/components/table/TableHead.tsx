@@ -1,16 +1,16 @@
 import React from 'react';
-import type { DetailColumnsType } from '.';
 import '../../css/table.css';
 import { AdminCheckbox } from '../checkbox';
+import type { ColumnType, FunctionsType } from './tableTypes';
 
 interface Props<T extends Record<string, unknown>> {
-  detailColumns: DetailColumnsType<T>[];
-  onClickCheckboxOfAll: () => void;
+  columns: ColumnType<T>[];
+  onClickCheckboxOfAll: FunctionsType['onClickCheckboxOfAll'];
   isAllSelected: boolean;
 }
 
 const TableHead = <T extends Record<string, unknown>>({
-  detailColumns,
+  columns,
   onClickCheckboxOfAll,
   isAllSelected,
 }: Props<T>) => {
@@ -24,7 +24,7 @@ const TableHead = <T extends Record<string, unknown>>({
             onChange={onClickCheckboxOfAll}
           />
         </th>
-        {detailColumns.map((column, index) => (
+        {columns.map((column, index) => (
           <th key={index}>{column.title}</th>
         ))}
       </tr>
