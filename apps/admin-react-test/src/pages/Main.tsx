@@ -7,16 +7,10 @@ import {
   AdminTextArea,
   AdminTextAreaFeaturedLayout,
   BasicInputLabel,
-  useTable,
 } from '@fetoolkit/admin-react';
 import { useInput, useToggle } from '@fetoolkit/react';
-import { commaizeNumber } from '@fetoolkit/utils';
-import React, { useEffect } from 'react';
-import {
-  defaultData,
-  testTableDatas,
-  TestTableDataType,
-} from '../constants/table';
+import React, { useCallback, useEffect, useState } from 'react';
+import { tableColumns, testTableDatas } from '../constants/table';
 import '../css/Main.css';
 
 const Main = () => {
@@ -29,38 +23,58 @@ const Main = () => {
   const [switchValue1, setSwitchValue1] = useToggle(false);
   const [switchValue2, setSwitchValue2] = useToggle(false);
   const [switchValue3, setSwitchValue3] = useToggle(false);
-  const { basicProps, controlTableDataStatus, initializeColumns } =
-    useTable<TestTableDataType>(defaultData);
+  // const { basicProps, controlTableDataStatus, initializeColumns } =
+  //   useTable<TestTableDataType>(defaultData);
   const [email1, setEmail1] = useInput('');
   const [textarea, setTextarea] = useInput('');
 
+  const [selectedIds, setSelectedIds] = useState<string[]>([]);
+
+  const handleTableSelectAll = useCallback(() => {
+    if (selectedIds.length === testTableDatas.length) {
+      setSelectedIds([]);
+      return;
+    }
+
+    setSelectedIds(testTableDatas.map((item) => item.key));
+  }, [testTableDatas, selectedIds]);
+
+  const handleTableSelectItem = useCallback((id: string) => {
+    setSelectedIds((prev) => {
+      if (prev.includes(id)) {
+        return [...prev].filter((item) => item !== id);
+      }
+      return [...prev, id];
+    });
+  }, []);
+
   useEffect(() => {
-    controlTableDataStatus({
-      type: 'add',
-      data: testTableDatas,
-    });
-    initializeColumns({
-      name: {
-        title: '이름',
-        print: (item) => item,
-        sortOrder: 0,
-      },
-      dob: {
-        title: '생년월일',
-        print: (item) => item,
-        sortOrder: 1,
-      },
-      role: {
-        title: '역할',
-        print: (item) => item,
-        sortOrder: 4,
-      },
-      salary: {
-        title: '급여',
-        print: (item) => `$${commaizeNumber(item)}`,
-        sortOrder: 3,
-      },
-    });
+    // controlTableDataStatus({
+    //   type: 'add',
+    //   data: testTableDatas,
+    // });
+    // initializeColumns({
+    //   name: {
+    //     title: '이름',
+    //     print: (item) => item,
+    //     sortOrder: 0,
+    //   },
+    //   dob: {
+    //     title: '생년월일',
+    //     print: (item) => item,
+    //     sortOrder: 1,
+    //   },
+    //   role: {
+    //     title: '역할',
+    //     print: (item) => item,
+    //     sortOrder: 4,
+    //   },
+    //   salary: {
+    //     title: '급여',
+    //     print: (item) => `$${commaizeNumber(item)}`,
+    //     sortOrder: 3,
+    //   },
+    // });
   }, []);
 
   return (
@@ -98,7 +112,14 @@ const Main = () => {
         />
       </div>
       <div className="checkbox-grid">
-        <AdminTable {...basicProps} className="table-test" />
+        <AdminTable
+          className="table-test"
+          columns={tableColumns}
+          datas={testTableDatas}
+          onClickCheckboxOfAll={handleTableSelectAll}
+          selectedIds={selectedIds}
+          onClickCheckboxOfItem={handleTableSelectItem}
+        />
       </div>
       <div className="checkbox-grid right-align">
         <AdminDropdown

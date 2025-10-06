@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import type { CSSProperties } from 'react';
-import React from 'react';
+import React, { useMemo } from 'react';
 import '../../css/table.css';
 import TableBody from './TableBody';
 import TableHead from './TableHead';
@@ -12,9 +12,9 @@ interface Props<T extends Record<string, unknown>> {
   style?: CSSProperties;
   datas: TableDataType<T>[];
   columns: ColumnType<T>[];
-  selectedIds: string[];
-  onClickCheckboxOfItem: FunctionsType['onClickCheckboxOfItem'];
-  onClickCheckboxOfAll: FunctionsType['onClickCheckboxOfAll'];
+  selectedIds?: string[];
+  onClickCheckboxOfItem?: FunctionsType['onClickCheckboxOfItem'];
+  onClickCheckboxOfAll?: FunctionsType['onClickCheckboxOfAll'];
   header?: React.ReactNode;
   footer?: React.ReactNode;
 }
@@ -31,6 +31,12 @@ export const AdminTable = <T extends Record<string, unknown>>({
   header,
   footer,
 }: Props<T>) => {
+  const checkboxVisible = useMemo(() => {
+    if (!onClickCheckboxOfAll) return false;
+    if (!onClickCheckboxOfItem) return false;
+    if (selectedIds === undefined) return false;
+    return true;
+  }, [onClickCheckboxOfAll, onClickCheckboxOfItem, selectedIds]);
   return (
     <div className={classNames('table-container', className)} style={style}>
       {header}
@@ -38,14 +44,16 @@ export const AdminTable = <T extends Record<string, unknown>>({
         <TableHead
           columns={columns}
           onClickCheckboxOfAll={onClickCheckboxOfAll}
-          isAllSelected={selectedIds.length === datas.length}
+          isAllSelected={(selectedIds ?? []).length === datas.length}
+          checkboxVisible={checkboxVisible}
         />
         <TableBody
           columns={columns}
           datas={datas}
           onClickCheckboxOfItem={onClickCheckboxOfItem}
-          selectedIds={selectedIds}
+          selectedIds={selectedIds ?? []}
           onClickRow={onClickRow}
+          checkboxVisible={checkboxVisible}
         />
       </table>
       {footer}

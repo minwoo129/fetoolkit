@@ -5,25 +5,29 @@ import type { ColumnType, FunctionsType } from './tableTypes';
 
 interface Props<T extends Record<string, unknown>> {
   columns: ColumnType<T>[];
-  onClickCheckboxOfAll: FunctionsType['onClickCheckboxOfAll'];
+  onClickCheckboxOfAll?: FunctionsType['onClickCheckboxOfAll'];
   isAllSelected: boolean;
+  checkboxVisible: boolean;
 }
 
 const TableHead = <T extends Record<string, unknown>>({
   columns,
   onClickCheckboxOfAll,
   isAllSelected,
+  checkboxVisible,
 }: Props<T>) => {
   return (
     <thead>
       <tr>
-        <th>
-          <AdminCheckbox
-            id={'all'}
-            checked={isAllSelected}
-            onChange={onClickCheckboxOfAll}
-          />
-        </th>
+        {checkboxVisible && (
+          <th>
+            <AdminCheckbox
+              id={'all'}
+              checked={isAllSelected}
+              onChange={onClickCheckboxOfAll}
+            />
+          </th>
+        )}
         {columns.map((column, index) => (
           <th key={index}>{column.title}</th>
         ))}
