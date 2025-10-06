@@ -3,11 +3,13 @@ export type TableDataType<T extends Record<string, unknown>> = {
 } & T;
 
 export type ColumnType<T extends Record<string, unknown>> = {
-  key: keyof T;
-  title: string;
-  // eslint-disable-next-line no-unused-vars
-  render?: (data: T[keyof T]) => React.ReactNode;
-};
+  [K in keyof T]: {
+    key: K;
+    title: string;
+    // eslint-disable-next-line no-unused-vars
+    render?: (data: T[K]) => React.ReactNode;
+  };
+}[keyof T];
 
 export type FunctionsType = {
   // eslint-disable-next-line no-unused-vars
