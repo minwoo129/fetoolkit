@@ -2,6 +2,7 @@ import {
   AdminCheckbox,
   AdminDropdown,
   AdminInput,
+  AdminRadio,
   AdminSwitch,
   AdminTable,
   AdminTextArea,
@@ -177,6 +178,23 @@ const Main = () => {
             className="textarea-test"
           />
         </AdminTextAreaFeaturedLayout>
+      </div>
+      <div className="checkbox-grid">
+        <AdminRadio name="radio1" />
+        <AdminRadio name="radio1" />
+      </div>
+      <div className="checkbox-grid">
+        <AdminRadio name="radio2" size="sm" />
+        <AdminRadio name="radio2" size="md" />
+        <AdminRadio name="radio2" size="lg" />
+        <AdminRadio name="radio2" size="xl" />
+      </div>
+      <div className="checkbox-grid">
+        <AdminRadio name="radio3" color="primary" />
+        <AdminRadio name="radio3" color="secondary" />
+        <AdminRadio name="radio3" color="success" />
+        <AdminRadio name="radio3" color="warning" />
+        <AdminRadio name="radio3" color="danger" />
       </div>
     </div>
   );
