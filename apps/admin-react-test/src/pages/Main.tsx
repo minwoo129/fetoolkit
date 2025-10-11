@@ -31,6 +31,7 @@ const Main = () => {
   const [textarea, setTextarea] = useInput('');
 
   const tableRef = useRef<AdminTableRef>(null);
+
   useEffect(() => {
     // controlTableDataStatus({
     //   type: 'add',
