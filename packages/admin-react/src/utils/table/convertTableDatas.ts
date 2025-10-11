@@ -1,3 +1,4 @@
+'use client';
 import type { TableDataType } from '../../components';
 
 export const convertTableDatas = <T extends Record<string, unknown>>(

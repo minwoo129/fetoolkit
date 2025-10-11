@@ -1,3 +1,4 @@
+'use client';
 import classNames from 'classnames';
 import React, { useCallback, useState, type CSSProperties } from 'react';
 import { v4 as uuidv4 } from 'uuid';

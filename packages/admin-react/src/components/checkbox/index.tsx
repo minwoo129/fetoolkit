@@ -1,3 +1,5 @@
+'use client';
+
 import classNames from 'classnames';
 import React, { type CSSProperties } from 'react';
 import '../../css/checkbox.css';

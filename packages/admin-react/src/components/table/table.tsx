@@ -1,3 +1,4 @@
+'use client';
 import classNames from 'classnames';
 import type { CSSProperties, ForwardedRef } from 'react';
 import React, { useCallback, useImperativeHandle, useState } from 'react';
