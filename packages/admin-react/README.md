@@ -69,27 +69,27 @@ function App() {
 
 ### 3-1. Components
 
-| Name            | Description                                         |                          Docs                          |
-| :-------------- | :-------------------------------------------------- | :----------------------------------------------------: |
-| AdminTable      | Data table component (supports sorting, pagination) |    [Documentation](./src/docs/components/table.md)     |
-| AdminInput      | Basic input field component                         |    [Documentation](./src/docs/components/input.md)     |
-| AdminTextArea   | Text area component                                 |    [Documentation](./src/docs/components/input.md)     |
-| BasicInputLabel | Input field label component                         |    [Documentation](./src/docs/components/input.md)     |
-| AdminCheckbox   | Checkbox component                                  |    [Documentation](./docs/en/component_checkbox.md)    |
-| AdminRadio      | Radio button component                              |    [Documentation](./src/docs/components/radio.md)     |
-| AdminSwitch     | Switch toggle component                             |    [Documentation](./src/docs/components/switch.md)    |
-| AdminDropdown   | Dropdown selection component                        |   [Documentation](./src/docs/components/dropdown.md)   |
-| AdminPagination | Pagination component                                |  [Documentation](./src/docs/components/pagination.md)  |
-| MenuTemplate    | Menu template component                             | [Documentation](./src/docs/components/menuTemplate.md) |
+| Name            | Description                                         |                       Docs                       |
+| :-------------- | :-------------------------------------------------- | :----------------------------------------------: |
+| AdminTable      | Data table component (supports sorting, pagination) |                  Documentation                   |
+| AdminInput      | Basic input field component                         |                  Documentation                   |
+| AdminTextArea   | Text area component                                 |                  Documentation                   |
+| BasicInputLabel | Input field label component                         |                  Documentation                   |
+| AdminCheckbox   | Checkbox component                                  | [Documentation](./docs/en/component_checkbox.md) |
+| AdminRadio      | Radio button component                              |                  Documentation                   |
+| AdminSwitch     | Switch toggle component                             |                  Documentation                   |
+| AdminDropdown   | Dropdown selection component                        | [Documentation](./docs/en/component_dropdown.md) |
+| AdminPagination | Pagination component                                |                  Documentation                   |
+| MenuTemplate    | Menu template component                             |                  Documentation                   |
 
 ### 3-2. Hooks
 
-| Name     | Description                 |                     Docs                      |
-| :------- | :-------------------------- | :-------------------------------------------: |
-| useTable | Table state management hook | [Documentation](./src/docs/hooks/useTable.md) |
+| Name     | Description                 |     Docs      |
+| :------- | :-------------------------- | :-----------: |
+| useTable | Table state management hook | Documentation |
 
 ### 3-3. Utility Functions
 
-| Name              | Description                   |                          Docs                          |
-| :---------------- | :---------------------------- | :----------------------------------------------------: |
-| convertTableDatas | Table data conversion utility | [Documentation](./src/docs/utils/convertTableDatas.md) |
+| Name              | Description                   |     Docs      |
+| :---------------- | :---------------------------- | :-----------: |
+| convertTableDatas | Table data conversion utility | Documentation |
