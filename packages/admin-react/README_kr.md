@@ -75,7 +75,7 @@ function App() {
 | AdminInput      | 기본 입력 필드 컴포넌트                          |    [공식문서](./src/docs/components/input.md)     |
 | AdminTextArea   | 텍스트 영역 컴포넌트                             |    [공식문서](./src/docs/components/input.md)     |
 | BasicInputLabel | 입력 필드 라벨 컴포넌트                          |    [공식문서](./src/docs/components/input.md)     |
-| AdminCheckbox   | 체크박스 컴포넌트                                |   [공식문서](./src/docs/components/checkbox.md)   |
+| AdminCheckbox   | 체크박스 컴포넌트                                |    [공식문서](./docs/ko/component_checkbox.md)    |
 | AdminRadio      | 라디오 버튼 컴포넌트                             |    [공식문서](./src/docs/components/radio.md)     |
 | AdminSwitch     | 스위치 토글 컴포넌트                             |    [공식문서](./src/docs/components/switch.md)    |
 | AdminDropdown   | 드롭다운 선택 컴포넌트                           |   [공식문서](./src/docs/components/dropdown.md)   |

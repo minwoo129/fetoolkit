@@ -75,7 +75,7 @@ function App() {
 | AdminInput      | Basic input field component                         |    [Documentation](./src/docs/components/input.md)     |
 | AdminTextArea   | Text area component                                 |    [Documentation](./src/docs/components/input.md)     |
 | BasicInputLabel | Input field label component                         |    [Documentation](./src/docs/components/input.md)     |
-| AdminCheckbox   | Checkbox component                                  |   [Documentation](./src/docs/components/checkbox.md)   |
+| AdminCheckbox   | Checkbox component                                  |    [Documentation](./docs/en/component_checkbox.md)    |
 | AdminRadio      | Radio button component                              |    [Documentation](./src/docs/components/radio.md)     |
 | AdminSwitch     | Switch toggle component                             |    [Documentation](./src/docs/components/switch.md)    |
 | AdminDropdown   | Dropdown selection component                        |   [Documentation](./src/docs/components/dropdown.md)   |
