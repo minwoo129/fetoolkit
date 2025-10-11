@@ -5,12 +5,13 @@ import {
   AdminRadio,
   AdminSwitch,
   AdminTable,
+  AdminTableRef,
   AdminTextArea,
   AdminTextAreaFeaturedLayout,
   BasicInputLabel,
 } from '@fetoolkit/admin-react';
 import { useInput, useToggle } from '@fetoolkit/react';
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { tableColumns, testTableDatas } from '../constants/table';
 import '../css/Main.css';
 
@@ -29,26 +30,7 @@ const Main = () => {
   const [email1, setEmail1] = useInput('');
   const [textarea, setTextarea] = useInput('');
 
-  const [selectedIds, setSelectedIds] = useState<string[]>([]);
-
-  const handleTableSelectAll = useCallback(() => {
-    if (selectedIds.length === testTableDatas.length) {
-      setSelectedIds([]);
-      return;
-    }
-
-    setSelectedIds(testTableDatas.map((item) => item.key));
-  }, [testTableDatas, selectedIds]);
-
-  const handleTableSelectItem = useCallback((id: string) => {
-    setSelectedIds((prev) => {
-      if (prev.includes(id)) {
-        return [...prev].filter((item) => item !== id);
-      }
-      return [...prev, id];
-    });
-  }, []);
-
+  const tableRef = useRef<AdminTableRef>(null);
   useEffect(() => {
     // controlTableDataStatus({
     //   type: 'add',
@@ -114,12 +96,10 @@ const Main = () => {
       </div>
       <div className="checkbox-grid">
         <AdminTable
+          ref={tableRef}
           className="table-test"
           columns={tableColumns}
           datas={testTableDatas}
-          onClickCheckboxOfAll={handleTableSelectAll}
-          selectedIds={selectedIds}
-          onClickCheckboxOfItem={handleTableSelectItem}
         />
       </div>
       <div className="checkbox-grid right-align">

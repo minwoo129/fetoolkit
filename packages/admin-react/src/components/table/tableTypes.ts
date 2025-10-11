@@ -18,3 +18,7 @@ export type FunctionsType = {
   onClickRow: (id: string) => void;
   onClickCheckboxOfAll: () => void;
 };
+
+export type AdminTableRef = {
+  getSelectedIds: () => string[];
+};

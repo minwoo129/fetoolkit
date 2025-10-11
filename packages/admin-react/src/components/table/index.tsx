@@ -1,2 +1,2 @@
 export { AdminTable } from './table';
-export type { ColumnType, TableDataType } from './tableTypes';
+export type { AdminTableRef, ColumnType, TableDataType } from './tableTypes';
