@@ -2,7 +2,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-interface BasicInputLabelProps {
+interface AdminInputLabelBasicProps {
   htmlFor: string;
   className?: string;
   style?: React.CSSProperties;
@@ -11,14 +11,14 @@ interface BasicInputLabelProps {
   icon?: React.ReactNode;
 }
 
-export const BasicInputLabel = ({
+export const AdminInputLabelBasic = ({
   htmlFor,
   className,
   style,
   label,
   children,
   icon,
-}: BasicInputLabelProps) => {
+}: AdminInputLabelBasicProps) => {
   return (
     <label
       htmlFor={htmlFor}

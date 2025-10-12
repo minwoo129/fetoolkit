@@ -1,4 +1,4 @@
-import { MenuTemplate } from '@fetoolkit/admin-react';
+import { AdminRouteMenuTemplate } from '@fetoolkit/admin-react';
 import React, { useCallback } from 'react';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 
@@ -14,7 +14,7 @@ const AppMenuTemplate = () => {
   );
 
   return (
-    <MenuTemplate
+    <AdminRouteMenuTemplate
       onClick={handleClick}
       pathName={location.pathname}
       menus={[
@@ -34,7 +34,7 @@ const AppMenuTemplate = () => {
       ]}
     >
       <Outlet />
-    </MenuTemplate>
+    </AdminRouteMenuTemplate>
   );
 };
 

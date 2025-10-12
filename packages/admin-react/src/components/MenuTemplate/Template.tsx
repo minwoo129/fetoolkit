@@ -14,7 +14,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-export const MenuTemplate = ({
+export const AdminRouteMenuTemplate = ({
   logo,
   menus,
   pathName,

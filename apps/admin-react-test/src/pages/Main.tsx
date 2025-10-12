@@ -2,13 +2,13 @@ import {
   AdminCheckbox,
   AdminDropdown,
   AdminInput,
+  AdminInputLabelBasic,
   AdminRadio,
   AdminSwitch,
   AdminTable,
   AdminTableRef,
   AdminTextArea,
   AdminTextAreaFeaturedLayout,
-  BasicInputLabel,
 } from '@fetoolkit/admin-react';
 import { useInput, useToggle } from '@fetoolkit/react';
 import React, { useEffect, useRef } from 'react';
@@ -135,7 +135,11 @@ const Main = () => {
         />
       </div>
       <div className="checkbox-grid">
-        <BasicInputLabel label="Email" className="basic-label" htmlFor="Email1">
+        <AdminInputLabelBasic
+          label="Email"
+          className="basic-label"
+          htmlFor="Email1"
+        >
           <AdminInput
             type="email"
             id="Email1"
@@ -143,7 +147,7 @@ const Main = () => {
             value={email1}
             onChange={(e) => setEmail1(e.target.value)}
           />
-        </BasicInputLabel>
+        </AdminInputLabelBasic>
       </div>
       <div className="checkbox-grid">
         <AdminTextAreaFeaturedLayout
