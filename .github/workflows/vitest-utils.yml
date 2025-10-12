@@ -6,6 +6,8 @@ on:
       - '!feature/issue-**'
       - '!bug/issue-**'
       - '!docs/issue-**'
+    paths:
+      - 'packages/utils/src/**'
 
 jobs:
   test:
