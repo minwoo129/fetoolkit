@@ -6,6 +6,9 @@ on:
       - '!feature/issue-**'
       - '!bug/issue-**'
       - '!docs/issue-**'
+    paths:
+      - 'apps/react-test/**'
+      - 'packages/react/**'
 
 jobs:
   test:
