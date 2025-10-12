@@ -17,17 +17,18 @@ import { AdminTable } from '@fetoolkit/admin-react';
 
 ### AdminTable
 
-| Name            | Type                                             | Required | Default | Description                                                              |
-| :-------------- | :----------------------------------------------- | :------- | :------ | :----------------------------------------------------------------------- |
-| ref             | ForwardedRef<AdminTableRef \| null \| undefined> | false    | -       | 테이블 참조 객체 <br> - useTable hook 사용시 필요                        |
-| datas           | TableDataType\<T\>[]                             | true     | -       | 테이블에 표시할 데이터 배열 <br> - 각 데이터는 고유한 key를 가져야 함    |
-| columns         | ColumnType\<T\>[]                                | true     | -       | 테이블 컬럼 정의 배열 <br> - 각 컬럼의 제목과 렌더링 함수를 정의         |
-| onClickRow      | (id: string) => void                             | false    | -       | 행 클릭 이벤트 핸들러 <br> - 클릭된 행의 key를 매개변수로 전달           |
-| className       | string                                           | false    | -       | CSS 클래스명                                                             |
-| style           | React.CSSProperties                              | false    | -       | 스타일 선언 <br> - React `style` props와 동일                            |
-| header          | React.ReactNode                                  | false    | -       | 테이블 상단에 표시할 헤더 영역                                           |
-| footer          | React.ReactNode                                  | false    | -       | 테이블 하단에 표시할 푸터 영역                                           |
-| checkboxVisible | boolean                                          | false    | true    | 체크박스 컬럼 표시 여부 <br> - true: 체크박스 표시, false: 체크박스 숨김 |
+| Name            | Type                                             | Required | Default | Description                                                                        |
+| :-------------- | :----------------------------------------------- | :------- | :------ | :--------------------------------------------------------------------------------- |
+| ref             | ForwardedRef<AdminTableRef \| null \| undefined> | false    | -       | 테이블 참조 객체 <br> - useTable hook 사용시 필요                                  |
+| datas           | TableDataType\<T\>[]                             | true     | -       | 테이블에 표시할 데이터 배열 <br> - 각 데이터는 고유한 key를 가져야 함              |
+| columns         | ColumnType\<T\>[]                                | true     | -       | 테이블 컬럼 정의 배열 <br> - 각 컬럼의 제목과 렌더링 함수를 정의                   |
+| onClickRow      | (id: string, data: T) => void                    | false    | -       | 행 클릭 이벤트 핸들러 <br> - 클릭된 행의 key를 매개변수로 전달                     |
+| className       | string                                           | false    | -       | CSS 클래스명                                                                       |
+| style           | React.CSSProperties                              | false    | -       | 스타일 선언 <br> - React `style` props와 동일                                      |
+| header          | React.ReactNode                                  | false    | -       | 테이블 상단에 표시할 헤더 영역                                                     |
+| footer          | React.ReactNode                                  | false    | -       | 테이블 하단에 표시할 푸터 영역                                                     |
+| checkboxVisible | boolean                                          | false    | true    | 체크박스 컬럼 표시 여부 <br> - true: 체크박스 표시, false: 체크박스 숨김           |
+| dataTestId      | string                                           | false    | -       | 테스트 실행 시 선언할 elementId <br> - 테이블 컨테이너에 data-testid 속성으로 적용 |
 
 ### Types
 

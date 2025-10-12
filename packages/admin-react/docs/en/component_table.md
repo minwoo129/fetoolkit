@@ -17,17 +17,18 @@ import { AdminTable } from '@fetoolkit/admin-react';
 
 ### AdminTable
 
-| Name            | Type                                             | Required | Default | Description                                                                                  |
-| :-------------- | :----------------------------------------------- | :------- | :------ | :------------------------------------------------------------------------------------------- |
-| ref             | ForwardedRef<AdminTableRef \| null \| undefined> | false    | -       | Table reference object <br> - Required when using useTable hook                              |
-| datas           | TableDataType\<T\>[]                             | true     | -       | Array of data to display in table <br> - Each data must have unique key                      |
-| columns         | ColumnType\<T\>[]                                | true     | -       | Array of table column definitions <br> - Define title and rendering function for each column |
-| onClickRow      | (id: string) => void                             | false    | -       | Row click event handler <br> - Passes the key of clicked row as parameter                    |
-| className       | string                                           | false    | -       | CSS class name                                                                               |
-| style           | React.CSSProperties                              | false    | -       | Style declaration <br> - Same as React `style` props                                         |
-| header          | React.ReactNode                                  | false    | -       | Header area to display at the top of table                                                   |
-| footer          | React.ReactNode                                  | false    | -       | Footer area to display at the bottom of table                                                |
-| checkboxVisible | boolean                                          | false    | true    | Whether to display checkbox column <br> - true: show checkbox, false: hide checkbox          |
+| Name            | Type                                             | Required | Default | Description                                                                                            |
+| :-------------- | :----------------------------------------------- | :------- | :------ | :----------------------------------------------------------------------------------------------------- |
+| ref             | ForwardedRef<AdminTableRef \| null \| undefined> | false    | -       | Table reference object <br> - Required when using useTable hook                                        |
+| datas           | TableDataType\<T\>[]                             | true     | -       | Array of data to display in table <br> - Each data must have unique key                                |
+| columns         | ColumnType\<T\>[]                                | true     | -       | Array of table column definitions <br> - Define title and rendering function for each column           |
+| onClickRow      | (id: string, data: T) => void                    | false    | -       | Row click event handler <br> - Passes the key of clicked row as parameter                              |
+| className       | string                                           | false    | -       | CSS class name                                                                                         |
+| style           | React.CSSProperties                              | false    | -       | Style declaration <br> - Same as React `style` props                                                   |
+| header          | React.ReactNode                                  | false    | -       | Header area to display at the top of table                                                             |
+| footer          | React.ReactNode                                  | false    | -       | Footer area to display at the bottom of table                                                          |
+| checkboxVisible | boolean                                          | false    | true    | Whether to display checkbox column <br> - true: show checkbox, false: hide checkbox                    |
+| dataTestId      | string                                           | false    | -       | Element ID to declare during test execution <br> - Applied as data-testid attribute to table container |
 
 ### Types
 
