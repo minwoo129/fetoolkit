@@ -90,6 +90,6 @@ function App() {
 
 ### 3-3. Utility Functions
 
-| Name              | Description                   |     Docs      |
-| :---------------- | :---------------------------- | :-----------: |
-| convertTableDatas | Table data conversion utility | Documentation |
+| Name              | Description                   |                         Docs                         |
+| :---------------- | :---------------------------- | :--------------------------------------------------: |
+| convertTableDatas | Table data conversion utility | [Documentation](./docs/en/util_convertTableDatas.md) |
