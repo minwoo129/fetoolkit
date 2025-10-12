@@ -6,10 +6,11 @@ import type { ColumnType, FunctionsType, TableDataType } from './tableTypes';
 interface Props<T extends Record<string, unknown>> {
   columns: ColumnType<T>[];
   data: TableDataType<T>;
-  onClickCheckboxOfItem?: FunctionsType['onClickCheckboxOfItem'];
+  onClickCheckboxOfItem?: FunctionsType<T>['onClickCheckboxOfItem'];
   isSelected: boolean;
-  onClickRow?: FunctionsType['onClickRow'];
+  onClickRow?: FunctionsType<T>['onClickRow'];
   checkboxVisible: boolean;
+  dataTestId?: string;
 }
 
 const TableRow = <T extends Record<string, unknown>>({
@@ -19,15 +20,22 @@ const TableRow = <T extends Record<string, unknown>>({
   isSelected,
   onClickRow,
   checkboxVisible,
+  dataTestId,
 }: Props<T>) => {
   return (
-    <tr onClick={() => onClickRow?.(data.key)}>
+    <tr
+      onClick={() => onClickRow?.(data.key, data)}
+      data-testid={dataTestId ? `${dataTestId}-row-${data.key}` : undefined}
+    >
       {checkboxVisible && (
         <td>
           <AdminCheckbox
             id={data.key}
             checked={isSelected}
             onChange={() => onClickCheckboxOfItem?.(data.key)}
+            data-testid={
+              dataTestId ? `${dataTestId}-checkbox-${data.key}` : undefined
+            }
           />
         </td>
       )}

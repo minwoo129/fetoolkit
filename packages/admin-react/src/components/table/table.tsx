@@ -14,7 +14,7 @@ import type {
 
 interface Props<T extends Record<string, unknown>> {
   ref?: ForwardedRef<AdminTableRef | null | undefined>;
-  onClickRow?: FunctionsType['onClickRow'];
+  onClickRow?: FunctionsType<T>['onClickRow'];
   className?: string;
   style?: CSSProperties;
   datas: TableDataType<T>[];
@@ -22,6 +22,7 @@ interface Props<T extends Record<string, unknown>> {
   header?: React.ReactNode;
   footer?: React.ReactNode;
   checkboxVisible?: boolean;
+  dataTestId?: string;
 }
 
 export const AdminTable = <T extends Record<string, unknown>>({
@@ -34,6 +35,7 @@ export const AdminTable = <T extends Record<string, unknown>>({
   header,
   footer,
   checkboxVisible = true,
+  dataTestId,
 }: Props<T>) => {
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
 
@@ -64,7 +66,11 @@ export const AdminTable = <T extends Record<string, unknown>>({
     [selectedIds],
   );
   return (
-    <div className={classNames('table-container', className)} style={style}>
+    <div
+      className={classNames('table-container', className)}
+      style={style}
+      data-testid={dataTestId}
+    >
       {header}
       <table className="table">
         <TableHead
@@ -72,6 +78,7 @@ export const AdminTable = <T extends Record<string, unknown>>({
           onClickCheckboxOfAll={onClickCheckboxOfAll}
           isAllSelected={(selectedIds ?? []).length === datas.length}
           checkboxVisible={checkboxVisible}
+          dataTestId={dataTestId}
         />
         <TableBody
           columns={columns}
@@ -80,6 +87,7 @@ export const AdminTable = <T extends Record<string, unknown>>({
           selectedIds={selectedIds ?? []}
           onClickRow={onClickRow}
           checkboxVisible={checkboxVisible}
+          dataTestId={dataTestId}
         />
       </table>
       {footer}

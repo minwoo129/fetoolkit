@@ -11,11 +11,11 @@ export type ColumnType<T extends Record<string, unknown>> = {
   };
 }[keyof T];
 
-export type FunctionsType = {
+export type FunctionsType<T extends Record<string, unknown>> = {
   // eslint-disable-next-line no-unused-vars
   onClickCheckboxOfItem: (id: string) => void;
   // eslint-disable-next-line no-unused-vars
-  onClickRow: (id: string) => void;
+  onClickRow: (id: string, data: T) => void;
   onClickCheckboxOfAll: () => void;
 };
 

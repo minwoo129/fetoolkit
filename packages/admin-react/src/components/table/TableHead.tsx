@@ -5,9 +5,10 @@ import type { ColumnType, FunctionsType } from './tableTypes';
 
 interface Props<T extends Record<string, unknown>> {
   columns: ColumnType<T>[];
-  onClickCheckboxOfAll?: FunctionsType['onClickCheckboxOfAll'];
+  onClickCheckboxOfAll?: FunctionsType<T>['onClickCheckboxOfAll'];
   isAllSelected: boolean;
   checkboxVisible: boolean;
+  dataTestId?: string;
 }
 
 const TableHead = <T extends Record<string, unknown>>({
@@ -15,9 +16,10 @@ const TableHead = <T extends Record<string, unknown>>({
   onClickCheckboxOfAll,
   isAllSelected,
   checkboxVisible,
+  dataTestId,
 }: Props<T>) => {
   return (
-    <thead>
+    <thead data-testid={dataTestId ? `${dataTestId}-head` : undefined}>
       <tr>
         {checkboxVisible && (
           <th>
@@ -25,6 +27,9 @@ const TableHead = <T extends Record<string, unknown>>({
               id={'all'}
               checked={isAllSelected}
               onChange={onClickCheckboxOfAll}
+              data-testid={
+                dataTestId ? `${dataTestId}-checkbox-all` : undefined
+              }
             />
           </th>
         )}
