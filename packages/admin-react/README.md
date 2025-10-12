@@ -69,18 +69,18 @@ function App() {
 
 ### 3-1. Components
 
-| Name                   | Description                                         |                       Docs                       |
-| :--------------------- | :-------------------------------------------------- | :----------------------------------------------: |
-| AdminTable             | Data table component (supports sorting, pagination) |                  Documentation                   |
-| AdminInput             | Basic input field component                         |  [Documentation](./docs/en/component_input.md)   |
-| AdminTextArea          | Text area component                                 |                  Documentation                   |
-| AdminInputLabelBasic   | Input field label component                         |                  Documentation                   |
-| AdminCheckbox          | Checkbox component                                  | [Documentation](./docs/en/component_checkbox.md) |
-| AdminRadio             | Radio button component                              |                  Documentation                   |
-| AdminSwitch            | Switch toggle component                             |                  Documentation                   |
-| AdminDropdown          | Dropdown selection component                        | [Documentation](./docs/en/component_dropdown.md) |
-| AdminPagination        | Pagination component                                |                  Documentation                   |
-| AdminRouteMenuTemplate | Menu template component                             |                  Documentation                   |
+| Name                   | Description                                         |                           Docs                           |
+| :--------------------- | :-------------------------------------------------- | :------------------------------------------------------: |
+| AdminTable             | Data table component (supports sorting, pagination) |                      Documentation                       |
+| AdminInput             | Basic input field component                         |      [Documentation](./docs/en/component_input.md)       |
+| AdminTextArea          | Text area component                                 |                      Documentation                       |
+| AdminInputLabelBasic   | Input field label component                         | [Documentation](./docs/en/component_inputlabel_basic.md) |
+| AdminCheckbox          | Checkbox component                                  |     [Documentation](./docs/en/component_checkbox.md)     |
+| AdminRadio             | Radio button component                              |                      Documentation                       |
+| AdminSwitch            | Switch toggle component                             |                      Documentation                       |
+| AdminDropdown          | Dropdown selection component                        |     [Documentation](./docs/en/component_dropdown.md)     |
+| AdminPagination        | Pagination component                                |                      Documentation                       |
+| AdminRouteMenuTemplate | Menu template component                             |                      Documentation                       |
 
 ### 3-2. Hooks
 

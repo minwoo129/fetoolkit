@@ -69,18 +69,18 @@ function App() {
 
 ### 3-1. 컴포넌트
 
-| 이름                   | 설명                                             |                  공식문서                   |
-| :--------------------- | :----------------------------------------------- | :-----------------------------------------: |
-| AdminTable             | 데이터 테이블 컴포넌트 (정렬, 페이지네이션 지원) |                  공식문서                   |
-| AdminInput             | 기본 입력 필드 컴포넌트                          |  [공식문서](./docs/ko/component_input.md)   |
-| AdminTextArea          | 텍스트 영역 컴포넌트                             |                  공식문서                   |
-| AdminInputLabelBasic   | 입력 필드 라벨 컴포넌트                          |                  공식문서                   |
-| AdminCheckbox          | 체크박스 컴포넌트                                | [공식문서](./docs/ko/component_checkbox.md) |
-| AdminRadio             | 라디오 버튼 컴포넌트                             |                  공식문서                   |
-| AdminSwitch            | 스위치 토글 컴포넌트                             |                  공식문서                   |
-| AdminDropdown          | 드롭다운 선택 컴포넌트                           | [공식문서](./docs/ko/component_dropdown.md) |
-| AdminPagination        | 페이지네이션 컴포넌트                            |                  공식문서                   |
-| AdminRouteMenuTemplate | 메뉴 템플릿 컴포넌트                             |                  공식문서                   |
+| 이름                   | 설명                                             |                      공식문서                       |
+| :--------------------- | :----------------------------------------------- | :-------------------------------------------------: |
+| AdminTable             | 데이터 테이블 컴포넌트 (정렬, 페이지네이션 지원) |                      공식문서                       |
+| AdminInput             | 기본 입력 필드 컴포넌트                          |      [공식문서](./docs/ko/component_input.md)       |
+| AdminTextArea          | 텍스트 영역 컴포넌트                             |                      공식문서                       |
+| AdminInputLabelBasic   | 입력 필드 라벨 컴포넌트                          | [공식문서](./docs/ko/component_inputlabel_basic.md) |
+| AdminCheckbox          | 체크박스 컴포넌트                                |     [공식문서](./docs/ko/component_checkbox.md)     |
+| AdminRadio             | 라디오 버튼 컴포넌트                             |                      공식문서                       |
+| AdminSwitch            | 스위치 토글 컴포넌트                             |                      공식문서                       |
+| AdminDropdown          | 드롭다운 선택 컴포넌트                           |     [공식문서](./docs/ko/component_dropdown.md)     |
+| AdminPagination        | 페이지네이션 컴포넌트                            |                      공식문서                       |
+| AdminRouteMenuTemplate | 메뉴 템플릿 컴포넌트                             |                      공식문서                       |
 
 ### 3-2. Hooks
 
