@@ -77,7 +77,7 @@ function App() {
 | AdminInputLabelBasic   | Input field label component                         | [Documentation](./docs/en/component_inputlabel_basic.md) |
 | AdminCheckbox          | Checkbox component                                  |     [Documentation](./docs/en/component_checkbox.md)     |
 | AdminRadio             | Radio button component                              |      [Documentation](./docs/en/component_radio.md)       |
-| AdminSwitch            | Switch toggle component                             |                      Documentation                       |
+| AdminSwitch            | Switch toggle component                             |      [Documentation](./docs/en/component_switch.md)      |
 | AdminDropdown          | Dropdown selection component                        |     [Documentation](./docs/en/component_dropdown.md)     |
 | AdminPagination        | Pagination component                                |                      Documentation                       |
 | AdminRouteMenuTemplate | Menu template component                             |   [Documentation](./docs/en/component_menutemplate.md)   |
