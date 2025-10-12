@@ -73,7 +73,7 @@ function App() {
 | :--------------------- | :----------------------------------------------- | :-------------------------------------------------: |
 | AdminTable             | 데이터 테이블 컴포넌트 (정렬, 페이지네이션 지원) |                      공식문서                       |
 | AdminInput             | 기본 입력 필드 컴포넌트                          |      [공식문서](./docs/ko/component_input.md)       |
-| AdminTextArea          | 텍스트 영역 컴포넌트                             |                      공식문서                       |
+| AdminTextArea          | 텍스트 영역 컴포넌트                             |     [공식문서](./docs/ko/component_textarea.md)     |
 | AdminInputLabelBasic   | 입력 필드 라벨 컴포넌트                          | [공식문서](./docs/ko/component_inputlabel_basic.md) |
 | AdminCheckbox          | 체크박스 컴포넌트                                |     [공식문서](./docs/ko/component_checkbox.md)     |
 | AdminRadio             | 라디오 버튼 컴포넌트                             |                      공식문서                       |

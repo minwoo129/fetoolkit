@@ -73,7 +73,7 @@ function App() {
 | :--------------------- | :-------------------------------------------------- | :------------------------------------------------------: |
 | AdminTable             | Data table component (supports sorting, pagination) |                      Documentation                       |
 | AdminInput             | Basic input field component                         |      [Documentation](./docs/en/component_input.md)       |
-| AdminTextArea          | Text area component                                 |                      Documentation                       |
+| AdminTextArea          | Text area component                                 |     [Documentation](./docs/en/component_textarea.md)     |
 | AdminInputLabelBasic   | Input field label component                         | [Documentation](./docs/en/component_inputlabel_basic.md) |
 | AdminCheckbox          | Checkbox component                                  |     [Documentation](./docs/en/component_checkbox.md)     |
 | AdminRadio             | Radio button component                              |                      Documentation                       |
