@@ -5,6 +5,7 @@ import CheckboxTestPage from './pages/CheckboxTestPage';
 import InputTestPage from './pages/InputTestPage';
 import Main from './pages/Main';
 import SwitchTestPage from './pages/SwitchTestPage';
+import TableTestPage from './pages/TableTestPage';
 import TestPage1 from './pages/TestPage1';
 import TestPage2 from './pages/TestPage2';
 import TestPage3 from './pages/TestPage3';
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/input-test" element={<InputTestPage />} />
           <Route path="/checkbox-test" element={<CheckboxTestPage />} />
           <Route path="/switch-test" element={<SwitchTestPage />} />
+          <Route path="/table-test" element={<TableTestPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

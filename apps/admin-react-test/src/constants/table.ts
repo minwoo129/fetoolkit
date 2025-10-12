@@ -8,6 +8,13 @@ export type TestTableDataType = {
   salary: number;
 };
 
+export type TestTableDataType1 = {
+  name: string;
+  birth: string;
+  age: number;
+  email: string;
+};
+
 export const testTableDatas: TableDataType<TestTableDataType>[] = [
   {
     key: '1',
@@ -63,5 +70,24 @@ export const tableColumns: ColumnType<TestTableDataType>[] = [
     key: 'salary',
     title: '급여',
     render: (item) => `$${commaizeNumber(item)}`,
+  },
+];
+
+export const tableColumns1: ColumnType<TestTableDataType1>[] = [
+  {
+    key: 'name',
+    title: '이름',
+  },
+  {
+    key: 'birth',
+    title: '생년월일',
+  },
+  {
+    key: 'age',
+    title: '나이',
+  },
+  {
+    key: 'email',
+    title: '이메일',
   },
 ];
