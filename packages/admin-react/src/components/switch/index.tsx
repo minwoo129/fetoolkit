@@ -30,6 +30,14 @@ interface Props {
    * - default: #b2b3b4
    */
   disabledColor?: string;
+  /**
+   * 스위치 테스트 id
+   */
+  dataTestId?: string;
+  /**
+   * 스위치 상태값 테스트 id
+   */
+  valueTestId?: string;
 }
 
 export type SwitchSize = 'sm' | 'md' | 'lg';
@@ -42,6 +50,8 @@ export const AdminSwitch = ({
   className,
   enabledColor = '#12c82b',
   disabledColor = '#b2b3b4',
+  dataTestId,
+  valueTestId,
 }: Props) => {
   return (
     <label
@@ -50,6 +60,7 @@ export const AdminSwitch = ({
         backgroundColor: checked ? enabledColor : disabledColor,
         ...style,
       }}
+      data-testid={dataTestId}
     >
       <input
         type="checkbox"
@@ -58,6 +69,7 @@ export const AdminSwitch = ({
         onChange={(e) => {
           onChange(e.target.checked);
         }}
+        data-testid={valueTestId}
       />
 
       <span
