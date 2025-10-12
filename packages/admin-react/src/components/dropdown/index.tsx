@@ -9,15 +9,18 @@ interface Props {
   styles?: CSSProperties;
   title: string;
   menus: (DropdownMenuItem | DropdownSubMenuItem)[];
+  dataTestId?: string;
 }
 
 interface MenuItemProps {
   menu: DropdownMenuItem | DropdownSubMenuItem;
   closeDropdown: () => void;
+  dataTestId?: string;
 }
 
 interface SubMenuItemProps extends Omit<DropdownSubMenuItem, 'type'> {
   closeDropdown: () => void;
+  dataTestId?: string;
 }
 
 type DropdownMenuItem = {
@@ -33,19 +36,30 @@ type DropdownSubMenuItem = {
   onClick?: () => void;
 };
 
-export const AdminDropdown = ({ className, styles, title, menus }: Props) => {
+export const AdminDropdown = ({
+  className,
+  styles,
+  title,
+  menus,
+  dataTestId,
+}: Props) => {
   const [isOpen, setOpen] = useState(false);
 
   const closeDropdown = useCallback(() => {
     setOpen(false);
   }, []);
   return (
-    <div className={classNames('dropdown-container', className)} style={styles}>
+    <div
+      className={classNames('dropdown-container', className)}
+      style={styles}
+      data-testid={dataTestId}
+    >
       <span className="dropdown-button-group">
         <button
           type="button"
           className="dropdown-button"
           onClick={() => setOpen(!isOpen)}
+          data-testid={dataTestId ? `${dataTestId}-title-button` : undefined}
         >
           {title}
         </button>
@@ -53,19 +67,30 @@ export const AdminDropdown = ({ className, styles, title, menus }: Props) => {
         <button
           type="button"
           className="dropdown-button"
-          aria-label="Menu"
           onClick={() => setOpen(!isOpen)}
+          data-testid={dataTestId ? `${dataTestId}-arrow-button` : undefined}
         >
           <ArrowIcon />
         </button>
       </span>
       <p className="block px-3 py-2 text-sm text-gray-500 dark:text-gray-400"></p>
       {isOpen && (
-        <div role="menu" className="dropdown-menu">
-          {menus.map((menu) => {
+        <div
+          role="menu"
+          className="dropdown-menu"
+          data-testid={dataTestId ? `${dataTestId}-menu` : undefined}
+        >
+          {menus.map((menu, idx) => {
             const key = uuidv4();
             return (
-              <MenuItem menu={menu} closeDropdown={closeDropdown} key={key} />
+              <MenuItem
+                menu={menu}
+                closeDropdown={closeDropdown}
+                key={key}
+                dataTestId={
+                  dataTestId ? `${dataTestId}-menu-item-${idx}` : undefined
+                }
+              />
             );
           })}
         </div>
@@ -74,9 +99,8 @@ export const AdminDropdown = ({ className, styles, title, menus }: Props) => {
   );
 };
 
-const MenuItem = ({ menu, closeDropdown }: MenuItemProps) => {
+const MenuItem = ({ menu, closeDropdown, dataTestId }: MenuItemProps) => {
   const { title, type } = menu;
-  const key = uuidv4();
   if (type === 'button') {
     const { styleType = 'basic', onClick } = menu;
     return (
@@ -85,7 +109,7 @@ const MenuItem = ({ menu, closeDropdown }: MenuItemProps) => {
         styleType={styleType}
         onClick={onClick}
         closeDropdown={closeDropdown}
-        key={key}
+        dataTestId={dataTestId ? dataTestId : undefined}
       />
     );
   }
@@ -94,15 +118,19 @@ const MenuItem = ({ menu, closeDropdown }: MenuItemProps) => {
   return (
     <div>
       <p className="dropdown-menu-group-title">{title}</p>
-      {menus.map((menu) => (
-        <SubMenuItem
-          title={menu.title}
-          styleType={menu.styleType}
-          onClick={menu.onClick}
-          closeDropdown={closeDropdown}
-          key={key}
-        />
-      ))}
+      {menus.map((menu, idx) => {
+        const key = uuidv4();
+        return (
+          <SubMenuItem
+            title={menu.title}
+            styleType={menu.styleType}
+            onClick={menu.onClick}
+            closeDropdown={closeDropdown}
+            dataTestId={dataTestId ? `${dataTestId}-sub-${idx}` : undefined}
+            key={key}
+          />
+        );
+      })}
     </div>
   );
 };
@@ -112,6 +140,7 @@ const SubMenuItem = ({
   styleType = 'basic',
   onClick,
   closeDropdown,
+  dataTestId,
 }: SubMenuItemProps) => {
   return (
     <button
@@ -123,6 +152,7 @@ const SubMenuItem = ({
         closeDropdown();
         onClick?.();
       }}
+      data-testid={dataTestId}
     >
       {title}
     </button>
