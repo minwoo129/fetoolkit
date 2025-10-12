@@ -7,7 +7,7 @@ on:
       - '!bug/issue-**'
       - '!docs/issue-**'
     paths:
-      - 'packages/utils/src/**'
+      - 'packages/utils/**'
 
 jobs:
   test:

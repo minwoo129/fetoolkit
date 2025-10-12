@@ -8,7 +8,7 @@ on:
       - '!docs/issue-**'
     paths:
       - 'apps/react-test/**'
-      - 'packages/react/src/**'
+      - 'packages/react/**'
 jobs:
   test:
     timeout-minutes: 60
