@@ -3,6 +3,7 @@ import {
   AdminDropdown,
   AdminInput,
   AdminInputLabelBasic,
+  AdminPagination,
   AdminRadio,
   AdminSwitch,
   AdminTable,
@@ -11,7 +12,7 @@ import {
   AdminTextAreaFeaturedLayout,
 } from '@fetoolkit/admin-react';
 import { useInput, useToggle } from '@fetoolkit/react';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { tableColumns, testTableDatas } from '../constants/table';
 import '../css/Main.css';
 
@@ -31,6 +32,9 @@ const Main = () => {
   const [textarea, setTextarea] = useInput('');
 
   const tableRef = useRef<AdminTableRef>(null);
+  const [page, setPage] = useState(1);
+
+  const maxPage = Math.ceil(testTableDatas.length / 10);
 
   useEffect(() => {
     // controlTableDataStatus({
@@ -101,6 +105,16 @@ const Main = () => {
           className="table-test"
           columns={tableColumns}
           datas={testTableDatas}
+          footer={
+            <AdminPagination
+              page={page}
+              totalPage={maxPage}
+              onClickNextPage={() => setPage(page + 1)}
+              onClickPrevPage={() => setPage(page - 1)}
+              nextPageBtnDisabled={page === maxPage}
+              prevPageBtnDisabled={page === 1}
+            />
+          }
         />
       </div>
       <div className="checkbox-grid right-align">

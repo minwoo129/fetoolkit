@@ -79,7 +79,7 @@ function App() {
 | AdminRadio             | Radio button component                              |      [Documentation](./docs/en/component_radio.md)       |
 | AdminSwitch            | Switch toggle component                             |      [Documentation](./docs/en/component_switch.md)      |
 | AdminDropdown          | Dropdown selection component                        |     [Documentation](./docs/en/component_dropdown.md)     |
-| AdminPagination        | Pagination component                                |                      Documentation                       |
+| AdminPagination        | Pagination component                                |    [Documentation](./docs/en/component_pagination.md)    |
 | AdminRouteMenuTemplate | Menu template component                             |   [Documentation](./docs/en/component_menutemplate.md)   |
 
 ### 3-2. Hooks
