@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AppMenuTemplate from './components/AppMenuTemplate';
+import CheckboxTestPage from './pages/CheckboxTestPage';
 import InputTestPage from './pages/InputTestPage';
 import Main from './pages/Main';
 import TestPage1 from './pages/TestPage1';
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/test-page-3" element={<TestPage3 />} />
           <Route path="/test-page-4" element={<TestPage4 />} />
           <Route path="/input-test" element={<InputTestPage />} />
+          <Route path="/checkbox-test" element={<CheckboxTestPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
