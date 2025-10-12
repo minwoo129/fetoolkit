@@ -76,7 +76,7 @@ function App() {
 | AdminTextArea          | 텍스트 영역 컴포넌트                             |     [공식문서](./docs/ko/component_textarea.md)     |
 | AdminInputLabelBasic   | 입력 필드 라벨 컴포넌트                          | [공식문서](./docs/ko/component_inputlabel_basic.md) |
 | AdminCheckbox          | 체크박스 컴포넌트                                |     [공식문서](./docs/ko/component_checkbox.md)     |
-| AdminRadio             | 라디오 버튼 컴포넌트                             |                      공식문서                       |
+| AdminRadio             | 라디오 버튼 컴포넌트                             |      [공식문서](./docs/ko/component_radio.md)       |
 | AdminSwitch            | 스위치 토글 컴포넌트                             |                      공식문서                       |
 | AdminDropdown          | 드롭다운 선택 컴포넌트                           |     [공식문서](./docs/ko/component_dropdown.md)     |
 | AdminPagination        | 페이지네이션 컴포넌트                            |                      공식문서                       |

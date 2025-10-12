@@ -76,7 +76,7 @@ function App() {
 | AdminTextArea          | Text area component                                 |     [Documentation](./docs/en/component_textarea.md)     |
 | AdminInputLabelBasic   | Input field label component                         | [Documentation](./docs/en/component_inputlabel_basic.md) |
 | AdminCheckbox          | Checkbox component                                  |     [Documentation](./docs/en/component_checkbox.md)     |
-| AdminRadio             | Radio button component                              |                      Documentation                       |
+| AdminRadio             | Radio button component                              |      [Documentation](./docs/en/component_radio.md)       |
 | AdminSwitch            | Switch toggle component                             |                      Documentation                       |
 | AdminDropdown          | Dropdown selection component                        |     [Documentation](./docs/en/component_dropdown.md)     |
 | AdminPagination        | Pagination component                                |                      Documentation                       |
