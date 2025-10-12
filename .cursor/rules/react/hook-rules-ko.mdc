@@ -1,5 +1,5 @@
 ---
-globs: packages/react/src/docs/hooks/*.md
+globs: packages/admin-react/docs/ko/hook_*.md
 alwaysApply: false
 ---
 
@@ -34,54 +34,6 @@ alwaysApply: false
   | --------------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
   | isLoading       | boolean                         | startTransition으로 감싼 비동기 함수의 로딩 상태 <br> - 요청이 시작되면 `true`로 변경되고, 요청이 완료되면 `false`로 변경됩니다. |
   | startTransition | (req: Promise<T>) => Promise<T> | 로딩 처리를 위한 비동기 함수를 감싸는 메서드                                                                                     |
-  ````
-
-## Template(ENG)
-
-- Create Hook's document files in the following format  
-  ex) Hook's file route = `src/hooks/useAsyncLoading.tsx`
-
-  ````md
-  # useAsyncLoading
-
-  English | [한국어]({relative URL})
-
-  - A Hook to manage the loading status of async process.
-  - Accept Promise as a factor and return the loading status and Promise results.
-
-  ## Example
-
-  ```tsx
-  import { useAsyncLoading } from '@fetoolkit/react';
-  ...
-  const [isLoading, startTransition] = useAsyncLoading();
-  ...
-  const fetchData = async () => {
-    try {
-        const data = await startTransition(fetch('/api/data'));
-        console.log(data);
-    } catch (error) {
-        console.error('Error fetching data:', error);
-    }
-  };
-  ```
-
-  ## API Reference
-
-  ### Input(none)
-
-  This Hook does not accept parameters.
-
-  ### Output(tuple)
-
-  ```typescript
-  [isLoading: boolean, startTransition:function]
-  ```
-
-  | Name            | Type                                | Description                                                                                                                                                                              |
-  | --------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-  | isLoading       | boolean                             | Load status of asynchronous function wrapped by startTransition <br> - When the request is started, it is changed to `true` and when the request is completed, it is changed to `false`. |
-  | startTransition | (req: Promise\<T\>) => Promise\<T\> | Method to enclose async functions for loading processing                                                                                                                                 |
   ````
 
 ## template detail description
