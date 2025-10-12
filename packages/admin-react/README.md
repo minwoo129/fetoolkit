@@ -84,9 +84,9 @@ function App() {
 
 ### 3-2. Hooks
 
-| Name     | Description                 |     Docs      |
-| :------- | :-------------------------- | :-----------: |
-| useTable | Table state management hook | Documentation |
+| Name     | Description                 |                    Docs                     |
+| :------- | :-------------------------- | :-----------------------------------------: |
+| useTable | Table state management hook | [Documentation](./docs/en/hook_useTable.md) |
 
 ### 3-3. Utility Functions
 
