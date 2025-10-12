@@ -71,7 +71,7 @@ function App() {
 
 | Name                   | Description                                         |                           Docs                           |
 | :--------------------- | :-------------------------------------------------- | :------------------------------------------------------: |
-| AdminTable             | Data table component (supports sorting, pagination) |                      Documentation                       |
+| AdminTable             | Data table component (supports sorting, pagination) |      [Documentation](./docs/en/component_table.md)       |
 | AdminInput             | Basic input field component                         |      [Documentation](./docs/en/component_input.md)       |
 | AdminTextArea          | Text area component                                 |     [Documentation](./docs/en/component_textarea.md)     |
 | AdminInputLabelBasic   | Input field label component                         | [Documentation](./docs/en/component_inputlabel_basic.md) |
