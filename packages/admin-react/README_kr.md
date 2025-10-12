@@ -80,7 +80,7 @@ function App() {
 | AdminSwitch            | 스위치 토글 컴포넌트                             |                      공식문서                       |
 | AdminDropdown          | 드롭다운 선택 컴포넌트                           |     [공식문서](./docs/ko/component_dropdown.md)     |
 | AdminPagination        | 페이지네이션 컴포넌트                            |                      공식문서                       |
-| AdminRouteMenuTemplate | 메뉴 템플릿 컴포넌트                             |                      공식문서                       |
+| AdminRouteMenuTemplate | 메뉴 템플릿 컴포넌트                             |   [공식문서](./docs/ko/component_menutemplate.md)   |
 
 ### 3-2. Hooks
 

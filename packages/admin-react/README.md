@@ -80,7 +80,7 @@ function App() {
 | AdminSwitch            | Switch toggle component                             |                      Documentation                       |
 | AdminDropdown          | Dropdown selection component                        |     [Documentation](./docs/en/component_dropdown.md)     |
 | AdminPagination        | Pagination component                                |                      Documentation                       |
-| AdminRouteMenuTemplate | Menu template component                             |                      Documentation                       |
+| AdminRouteMenuTemplate | Menu template component                             |   [Documentation](./docs/en/component_menutemplate.md)   |
 
 ### 3-2. Hooks
 
