@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AppMenuTemplate from './components/AppMenuTemplate';
+import InputTestPage from './pages/InputTestPage';
 import Main from './pages/Main';
 import TestPage1 from './pages/TestPage1';
 import TestPage2 from './pages/TestPage2';
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/test-page-2" element={<TestPage2 />} />
           <Route path="/test-page-3" element={<TestPage3 />} />
           <Route path="/test-page-4" element={<TestPage4 />} />
+          <Route path="/input-test" element={<InputTestPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

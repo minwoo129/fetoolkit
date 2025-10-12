@@ -1,0 +1,11 @@
+.mainLayer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}

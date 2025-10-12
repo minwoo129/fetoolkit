@@ -31,6 +31,11 @@ const AppMenuTemplate = () => {
           type: 'route-link',
           href: '/test-page-4',
         },
+        {
+          title: 'E2E Test',
+          type: 'dropdown',
+          menus: [{ href: '/input-test', title: 'Input Test' }],
+        },
       ]}
     >
       <Outlet />
