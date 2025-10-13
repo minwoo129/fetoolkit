@@ -39,6 +39,7 @@ const AppMenuTemplate = () => {
             { href: '/checkbox-test', title: 'Checkbox Test' },
             { href: '/switch-test', title: 'Switch Test' },
             { href: '/table-test', title: 'Table Test' },
+            { href: '/dropdown-test', title: 'Dropdown Test' },
           ],
         },
       ]}

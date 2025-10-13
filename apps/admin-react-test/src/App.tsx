@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AppMenuTemplate from './components/AppMenuTemplate';
 import CheckboxTestPage from './pages/CheckboxTestPage';
+import DropdownTestPage from './pages/DropdownTestPage';
 import InputTestPage from './pages/InputTestPage';
 import Main from './pages/Main';
 import SwitchTestPage from './pages/SwitchTestPage';
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/checkbox-test" element={<CheckboxTestPage />} />
           <Route path="/switch-test" element={<SwitchTestPage />} />
           <Route path="/table-test" element={<TableTestPage />} />
+          <Route path="/dropdown-test" element={<DropdownTestPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
