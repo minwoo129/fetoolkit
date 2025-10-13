@@ -5,6 +5,7 @@ import CheckboxTestPage from './pages/CheckboxTestPage';
 import DropdownTestPage from './pages/DropdownTestPage';
 import InputTestPage from './pages/InputTestPage';
 import Main from './pages/Main';
+import RadioTestPage from './pages/RadioTestPage';
 import SwitchTestPage from './pages/SwitchTestPage';
 import TableTestPage from './pages/TableTestPage';
 import TestPage1 from './pages/TestPage1';
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/table-test" element={<TableTestPage />} />
           <Route path="/dropdown-test" element={<DropdownTestPage />} />
           <Route path="/textarea-test" element={<TextareaTestPage />} />
+          <Route path="/radio-test" element={<RadioTestPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
