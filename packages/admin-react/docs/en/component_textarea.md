@@ -34,16 +34,18 @@ English | [한국어](../ko/component_textarea.md)
 | :--------------------------- | :------------------ | :------- | :------ | :--------------------------------------------------- |
 | className                    | string              | false    | -       | CSS class name                                       |
 | style                        | React.CSSProperties | false    | -       | Style declaration <br> - Same as React `style` props |
+| dataTestId                   | string              | false    | -       | Element ID for test execution                        |
 | 이하: TextareaHTMLAttributes |                     |          |         | Supports all attributes of HTML textarea element     |
 
 ### AdminTextAreaFeaturedLayout
 
-| Name      | Type                       | Required | Default | Description                                            |
-| :-------- | :------------------------- | :------- | :------ | :----------------------------------------------------- |
-| className | string                     | false    | -       | CSS class name                                         |
-| style     | React.CSSProperties        | false    | -       | Style declaration <br> - Same as React `style` props   |
-| buttons   | FeaturedLayoutButtonType[] | true     | -       | Array of buttons to display at the bottom of text area |
-| children  | React.ReactNode            | true     | -       | Text area component                                    |
+| Name       | Type                       | Required | Default | Description                                            |
+| :--------- | :------------------------- | :------- | :------ | :----------------------------------------------------- |
+| className  | string                     | false    | -       | CSS class name                                         |
+| style      | React.CSSProperties        | false    | -       | Style declaration <br> - Same as React `style` props   |
+| buttons    | FeaturedLayoutButtonType[] | true     | -       | Array of buttons to display at the bottom of text area |
+| children   | React.ReactNode            | true     | -       | Text area component                                    |
+| dataTestId | string                     | false    | -       | Element ID for test execution                          |
 
 ### Types
 

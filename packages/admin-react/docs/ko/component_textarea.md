@@ -34,16 +34,18 @@
 | :--------------------------- | :------------------ | :------- | :------ | :-------------------------------------------- |
 | className                    | string              | false    | -       | CSS 클래스명                                  |
 | style                        | React.CSSProperties | false    | -       | 스타일 선언 <br> - React `style` props와 동일 |
+| dataTestId                   | string              | false    | -       | 테스트 실행 시 선언할 elementId               |
 | 이하: TextareaHTMLAttributes |                     |          |         | HTML textarea 요소의 모든 속성 지원           |
 
 ### AdminTextAreaFeaturedLayout
 
-| Name      | Type                       | Required | Default | Description                                   |
-| :-------- | :------------------------- | :------- | :------ | :-------------------------------------------- |
-| className | string                     | false    | -       | CSS 클래스명                                  |
-| style     | React.CSSProperties        | false    | -       | 스타일 선언 <br> - React `style` props와 동일 |
-| buttons   | FeaturedLayoutButtonType[] | true     | -       | 텍스트 영역 하단에 표시될 버튼 배열           |
-| children  | React.ReactNode            | true     | -       | 텍스트 영역 컴포넌트                          |
+| Name       | Type                       | Required | Default | Description                                   |
+| :--------- | :------------------------- | :------- | :------ | :-------------------------------------------- |
+| className  | string                     | false    | -       | CSS 클래스명                                  |
+| style      | React.CSSProperties        | false    | -       | 스타일 선언 <br> - React `style` props와 동일 |
+| buttons    | FeaturedLayoutButtonType[] | true     | -       | 텍스트 영역 하단에 표시될 버튼 배열           |
+| children   | React.ReactNode            | true     | -       | 텍스트 영역 컴포넌트                          |
+| dataTestId | string                     | false    | -       | 테스트 실행 시 선언할 elementId               |
 
 ### Types
 

@@ -8,6 +8,15 @@ interface FeaturedLayoutProps {
   style?: CSSProperties;
   buttons: FeaturedLayoutButtonType[];
   children: React.ReactNode;
+  dataTestId?: string;
+}
+
+interface TextAreaProps
+  extends Omit<
+    React.TextareaHTMLAttributes<HTMLTextAreaElement>,
+    'data-testid'
+  > {
+  dataTestId?: string;
 }
 
 type FeaturedLayoutButtonType = {
@@ -18,10 +27,15 @@ type FeaturedLayoutButtonType = {
 
 export const AdminTextArea = ({
   className,
+  dataTestId,
   ...props
-}: React.TextareaHTMLAttributes<HTMLTextAreaElement>) => {
+}: TextAreaProps) => {
   return (
-    <textarea className={classNames('admin-textarea', className)} {...props} />
+    <textarea
+      className={classNames('admin-textarea', className)}
+      data-testid={dataTestId}
+      {...props}
+    />
   );
 };
 
@@ -30,16 +44,21 @@ export const AdminTextAreaFeaturedLayout = ({
   style,
   buttons,
   children,
+  dataTestId,
 }: FeaturedLayoutProps) => {
   return (
     <div
       className={classNames('admin-textarea-container', className)}
       style={style}
+      data-testid={dataTestId}
     >
       {children}
 
-      <div className="admin-textarea-actions">
-        {buttons.map((button) => {
+      <div
+        className="admin-textarea-actions"
+        data-testid={dataTestId ? `${dataTestId}-actions-container` : undefined}
+      >
+        {buttons.map((button, idx) => {
           const { type, title, onClick } = button;
           return (
             <button
@@ -51,6 +70,9 @@ export const AdminTextAreaFeaturedLayout = ({
               })}
               key={title}
               onClick={onClick}
+              data-testid={
+                dataTestId ? `${dataTestId}-button-${idx}` : undefined
+              }
             >
               {title}
             </button>
