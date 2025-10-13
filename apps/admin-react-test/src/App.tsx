@@ -11,6 +11,7 @@ import TestPage1 from './pages/TestPage1';
 import TestPage2 from './pages/TestPage2';
 import TestPage3 from './pages/TestPage3';
 import TestPage4 from './pages/TestPage4';
+import TextareaTestPage from './pages/TextareaTestPage';
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/switch-test" element={<SwitchTestPage />} />
           <Route path="/table-test" element={<TableTestPage />} />
           <Route path="/dropdown-test" element={<DropdownTestPage />} />
+          <Route path="/textarea-test" element={<TextareaTestPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

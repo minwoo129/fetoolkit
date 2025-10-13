@@ -22,3 +22,8 @@
   align-items: center;
   margin-top: 20px;
 }
+
+.textarea-test {
+  width: 600px;
+  height: 400px;
+}

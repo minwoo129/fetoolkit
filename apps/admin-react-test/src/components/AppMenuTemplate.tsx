@@ -40,6 +40,7 @@ const AppMenuTemplate = () => {
             { href: '/switch-test', title: 'Switch Test' },
             { href: '/table-test', title: 'Table Test' },
             { href: '/dropdown-test', title: 'Dropdown Test' },
+            { href: '/textarea-test', title: 'Textarea Test' },
           ],
         },
       ]}
