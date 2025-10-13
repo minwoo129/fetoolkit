@@ -119,7 +119,12 @@ const MenuItem = ({ menu, closeDropdown, dataTestId }: MenuItemProps) => {
   const { menus } = menu;
   return (
     <div>
-      <p className="dropdown-menu-group-title">{title}</p>
+      <p
+        className="dropdown-menu-group-title"
+        data-testid={dataTestId ? `${dataTestId}-sub-title` : undefined}
+      >
+        {title}
+      </p>
       {menus.map((menu, idx) => {
         const key = uuidv4();
         return (
