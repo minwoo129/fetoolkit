@@ -25,12 +25,14 @@ import { AdminDropdown } from '@fetoolkit/admin-react';
 
 ### AdminDropdown
 
-| Name      | Type                                        | Required | Default | Description                                   |
-| :-------- | :------------------------------------------ | :------- | :------ | :-------------------------------------------- |
-| className | string                                      | false    | -       | CSS 클래스명                                  |
-| styles    | React.CSSProperties                         | false    | -       | 스타일 선언 <br> - React `style` props와 동일 |
-| title     | string                                      | true     | -       | 드롭다운 버튼에 표시될 제목 텍스트            |
-| menus     | (DropdownMenuItem \| DropdownSubMenuItem)[] | true     | -       | 드롭다운 메뉴 아이템 배열                     |
+| Name       | Type                                        | Required | Default | Description                                                                  |
+| :--------- | :------------------------------------------ | :------- | :------ | :--------------------------------------------------------------------------- |
+| className  | string                                      | false    | -       | CSS 클래스명                                                                 |
+| styles     | React.CSSProperties                         | false    | -       | 스타일 선언 <br> - React `style` props와 동일                                |
+| title      | string                                      | true     | -       | 드롭다운 버튼에 표시될 제목 텍스트                                           |
+| menus      | (DropdownMenuItem \| DropdownSubMenuItem)[] | true     | -       | 드롭다운 메뉴 아이템 배열                                                    |
+| align      | 'left' \| 'right'                           | false    | 'right' | 드롭다운 메뉴 정렬 방향 <br> - 'left': 왼쪽 정렬 <br> - 'right': 오른쪽 정렬 |
+| dataTestId | string                                      | false    | -       | 테스트 실행 시 선언할 elementId                                              |
 
 ### Types
 

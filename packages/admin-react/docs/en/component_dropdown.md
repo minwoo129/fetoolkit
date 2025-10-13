@@ -25,12 +25,14 @@ import { AdminDropdown } from '@fetoolkit/admin-react';
 
 ### AdminDropdown
 
-| Name      | Type                                        | Required | Default | Description                                          |
-| :-------- | :------------------------------------------ | :------- | :------ | :--------------------------------------------------- |
-| className | string                                      | false    | -       | CSS class name                                       |
-| styles    | React.CSSProperties                         | false    | -       | Style declaration <br> - Same as React `style` props |
-| title     | string                                      | true     | -       | Title text to be displayed on the dropdown button    |
-| menus     | (DropdownMenuItem \| DropdownSubMenuItem)[] | true     | -       | Array of dropdown menu items                         |
+| Name       | Type                                        | Required | Default | Description                                                                                     |
+| :--------- | :------------------------------------------ | :------- | :------ | :---------------------------------------------------------------------------------------------- |
+| className  | string                                      | false    | -       | CSS class name                                                                                  |
+| styles     | React.CSSProperties                         | false    | -       | Style declaration <br> - Same as React `style` props                                            |
+| title      | string                                      | true     | -       | Title text to be displayed on the dropdown button                                               |
+| menus      | (DropdownMenuItem \| DropdownSubMenuItem)[] | true     | -       | Array of dropdown menu items                                                                    |
+| align      | 'left' \| 'right'                           | false    | 'right' | Dropdown menu alignment direction <br> - 'left': Left alignment <br> - 'right': Right alignment |
+| dataTestId | string                                      | false    | -       | Element ID to declare when running tests                                                        |
 
 ### Types
 

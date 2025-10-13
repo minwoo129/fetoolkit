@@ -9,6 +9,7 @@ interface Props {
   styles?: CSSProperties;
   title: string;
   menus: (DropdownMenuItem | DropdownSubMenuItem)[];
+  align?: 'left' | 'right';
   dataTestId?: string;
 }
 
@@ -41,6 +42,7 @@ export const AdminDropdown = ({
   styles,
   title,
   menus,
+  align = 'right',
   dataTestId,
 }: Props) => {
   const [isOpen, setOpen] = useState(false);
@@ -77,7 +79,7 @@ export const AdminDropdown = ({
       {isOpen && (
         <div
           role="menu"
-          className="dropdown-menu"
+          className={classNames('dropdown-menu', align)}
           data-testid={dataTestId ? `${dataTestId}-menu` : undefined}
         >
           {menus.map((menu, idx) => {
