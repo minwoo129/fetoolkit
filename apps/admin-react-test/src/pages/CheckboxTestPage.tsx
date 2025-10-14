@@ -17,35 +17,35 @@ const CheckboxTestPage = () => {
           checked={checkbox1}
           onChange={setCheckbox1}
           size="xs"
-          data-testid="checkbox1"
+          dataTestId="checkbox1"
         />
         <AdminCheckbox
           checked={checkbox2}
           onChange={setCheckbox2}
           size="sm"
           className="ml-16"
-          data-testid="checkbox2"
+          dataTestId="checkbox2"
         />
         <AdminCheckbox
           checked={checkbox3}
           onChange={setCheckbox3}
           size="md"
           className="ml-16"
-          data-testid="checkbox3"
+          dataTestId="checkbox3"
         />
         <AdminCheckbox
           checked={checkbox4}
           onChange={setCheckbox4}
           size="lg"
           className="ml-16"
-          data-testid="checkbox4"
+          dataTestId="checkbox4"
         />
         <AdminCheckbox
           checked={checkbox5}
           onChange={setCheckbox5}
           size="xl"
           className="ml-16"
-          data-testid="checkbox5"
+          dataTestId="checkbox5"
         />
       </div>
     </div>

@@ -27,4 +27,5 @@ const [checkbox1, setCheckbox1] = useToggle(false);
 | size                  | 'xs' \| 'sm' \| 'md' \| 'lg' \| 'xl' | false    | 'xs'    | Checkbox size                                                                        |
 | className             | string                               | false    | -       | CSS class name                                                                       |
 | style                 | React.CSSProperties                  | false    | -       | Style declaration <br> - Same as React \`style\` props (excluding width, height)     |
+| dataTestId            | string                               | false    | -       | Element ID to declare during test execution                                          |
 | 이하: HTML Input 속성 |                                      |          |         | Basic HTML input element attributes (excluding onChange, type, value, checked, size) |
