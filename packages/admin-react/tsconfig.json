@@ -13,7 +13,7 @@
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
     "noEmit": true,
-    "jsx": "preserve",
+    "jsx": "react",
 
     /* Linting */
     "strict": true,
