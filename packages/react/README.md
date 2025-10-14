@@ -73,7 +73,7 @@ createRoot(document.getElementById('root')!).render(
 
 | Name                  | Description                                                                     |                                                        Docs                                                         |
 | :-------------------- | :------------------------------------------------------------------------------ | :-----------------------------------------------------------------------------------------------------------------: |
-| useAsyncLoading       | A Hook to manage the loading status of async <br>process.                       |   [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useAsyncLoading.md)   |
+| useAsyncLoading       | A Hook to manage the loading status of async <br>process.                       |                                    [Document](./docs/en/hook_useasyncloading.md)                                    |
 | useCountdown          | A Hook to implement countdown feature.                                          |    [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useCountdown.md)     |
 | useImageLazyLoading   | A Hook for implementing Image Lazy loading.                                     | [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useImageLazyLoading.md) |
 | useInput              | A Hook to manage input value.                                                   |      [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useInput.md)       |
