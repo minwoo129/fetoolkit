@@ -27,7 +27,16 @@ const last = <T>(array: T[]) => {
 };
 
 export const ArrayUtils = {
+  /**
+   * @deprecated use `at` from `[@fetoolkit/utils](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils)` instead
+   */
   at,
+  /**
+   * @deprecated use `first` from `[@fetoolkit/utils](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils)` instead
+   */
   first,
+  /**
+   * @deprecated use `last` from `[@fetoolkit/utils](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils)` instead
+   */
   last,
 };
