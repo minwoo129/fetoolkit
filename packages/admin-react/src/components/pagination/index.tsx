@@ -14,6 +14,7 @@ interface Props {
   prevPageBtnDisabled?: boolean;
   style?: CSSProperties;
   className?: string;
+  dataTestId?: string;
 }
 
 export const AdminPagination = ({
@@ -25,21 +26,30 @@ export const AdminPagination = ({
   prevPageBtnDisabled = false,
   style,
   className,
+  dataTestId,
 }: Props) => {
   return (
-    <ul className={classNames('pagination', className)} style={style}>
+    <ul
+      className={classNames('pagination', className)}
+      style={style}
+      data-testid={dataTestId}
+    >
       <li>
         <button
           className="page-button"
           aria-label="Previous page"
           onClick={onClickPrevPage}
           disabled={prevPageBtnDisabled}
+          data-testid={dataTestId ? `${dataTestId}-prev-button` : undefined}
         >
           <LeftArrow />
         </button>
       </li>
 
-      <li className="page-info">{`${page}/${totalPage}`}</li>
+      <li
+        className="page-info"
+        data-testid={dataTestId ? `${dataTestId}-page-info` : undefined}
+      >{`${page}/${totalPage}`}</li>
 
       <li>
         <button
@@ -47,6 +57,7 @@ export const AdminPagination = ({
           aria-label="Next page"
           onClick={onClickNextPage}
           disabled={nextPageBtnDisabled}
+          data-testid={dataTestId ? `${dataTestId}-next-button` : undefined}
         >
           <RightArrow />
         </button>

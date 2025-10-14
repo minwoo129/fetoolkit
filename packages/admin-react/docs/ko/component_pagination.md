@@ -33,3 +33,4 @@ import { AdminPagination } from '@fetoolkit/admin-react';
 | prevPageBtnDisabled | boolean             | false    | false   | 이전 페이지 버튼 비활성화 여부                |
 | style               | React.CSSProperties | false    | -       | 스타일 선언 <br> - React `style` props와 동일 |
 | className           | string              | false    | -       | CSS 클래스명                                  |
+| dataTestId          | string              | false    | -       | 테스트 실행 시 선언할 elementId               |

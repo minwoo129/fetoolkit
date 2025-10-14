@@ -33,3 +33,4 @@ import { AdminPagination } from '@fetoolkit/admin-react';
 | prevPageBtnDisabled | boolean             | false    | false   | Whether previous page button is disabled             |
 | style               | React.CSSProperties | false    | -       | Style declaration <br> - Same as React `style` props |
 | className           | string              | false    | -       | CSS class name                                       |
+| dataTestId          | string              | false    | -       | Element ID to declare during test execution          |
