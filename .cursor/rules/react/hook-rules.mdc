@@ -115,7 +115,3 @@ alwaysApply: false
     - Type
       - If the value depends on the generic type, indicate it as generic type
     - Description(One line of brief Description, write by Each language)
-
-```
-
-```
