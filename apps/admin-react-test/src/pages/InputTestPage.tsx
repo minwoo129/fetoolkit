@@ -12,7 +12,7 @@ const InputTestPage = () => {
         value={input1}
         onChange={(e) => setInput1(e.target.value)}
         className="input-test"
-        data-testid="input1"
+        dataTestId="input1"
       />
 
       <AdminInputLabelBasic
@@ -26,7 +26,7 @@ const InputTestPage = () => {
           labelType="basic"
           value={input2}
           onChange={(e) => setInput2(e.target.value)}
-          data-testid="input2"
+          dataTestId="input2"
         />
       </AdminInputLabelBasic>
     </div>

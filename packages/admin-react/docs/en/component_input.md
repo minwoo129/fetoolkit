@@ -23,4 +23,5 @@ const [input, setInput] = useInput('');
 | Name                  | Type              | Required | Default | Description                                                          |
 | :-------------------- | :---------------- | :------- | :------ | :------------------------------------------------------------------- |
 | labelType             | 'none' \| 'basic' | false    | 'none'  | Label type <br> - 'none': No label <br> - 'basic': Basic label style |
+| dataTestId            | string            | false    | -       | Element ID for testing                                               |
 | 이하: HTML Input 속성 |                   |          |         | Basic properties of HTML input element                               |
