@@ -1,8 +1,6 @@
-import type { ValidatorType } from '@fetoolkit/react';
-
-export const Validators: ValidatorType = {
+export const Validators = {
   email: {
-    validator: (value) => {
+    validator: (value: string) => {
       return /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value);
     },
     errorStatus: {
@@ -11,7 +9,7 @@ export const Validators: ValidatorType = {
     },
   },
   password_length: {
-    validator: (value) => {
+    validator: (value: string) => {
       return value.length >= 8;
     },
     errorStatus: {
@@ -20,7 +18,7 @@ export const Validators: ValidatorType = {
     },
   },
   number_test: {
-    validator: (value) => {
+    validator: (value: string) => {
       return typeof value === 'number';
     },
     errorStatus: {
@@ -28,4 +26,4 @@ export const Validators: ValidatorType = {
       errorMessage: '숫자가 아닙니다.',
     },
   },
-};
+} as const;
