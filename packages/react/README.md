@@ -93,17 +93,16 @@ createRoot(document.getElementById('root')!).render(
 
 > ### 안내
 >
-> An utility functions except `getUserAgent` was moved to [`@fetoolkit/utils`](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils) library. therefore, they will be deprecated at Dec 31, 2025  
-> -> The functions would be provided, but they would not be updated anymore.
+> An utility functions except `getUserAgent` was moved to [`@fetoolkit/utils`](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils) library.
 
-| Name                          | Description                                                                               |                                                           Docs                                                            |
-| :---------------------------- | :---------------------------------------------------------------------------------------- | :-----------------------------------------------------------------------------------------------------------------------: |
-| getUserAgent                  | A function that return UserAgent data from browser.<br>(no-cached data)                   |                                        [Document](./docs/en/utils_getuseragent.md)                                        |
-| formatPhoneNumber<br>(number) | Separates the given phone number by hyphen(-).                                            | [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/numbers_formatPhoneNumber.md) |
-| commaizeNumber<br>(number)    | Separates the given value by comma.                                                       |  [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/numbers_commaizeNumber.md)   |
-| decommaizeNumber<br>(number)  | Removed commas from commaized value.                                                      | [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/numbers_decommaizeNumber.md)  |
-| maskName<br>(mask)            | Masks the given name.                                                                     |       [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/mask_maskName.md)       |
-| maskPhoneNumber<br>(mask)     | Masks the given phone number.                                                             |   [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/mask_maskPhoneNumber.md)    |
-| at<br>(array)                 | Return element in a particular index in an array.<br>(include negative index like Python) |         [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/array_at.md)          |
-| first<br>(array)              | Return first element of array.                                                            |        [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/array_first.md)        |
-| last<br>(array)               | Return last element of array.                                                             |        [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/array_last.md)         |
+| Name                                                                | Description                                                                                       |                            Docs                            |
+| :------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------ | :--------------------------------------------------------: |
+| getUserAgent                                                        | A function that return UserAgent data from browser.<br>(no-cached data)                           |        [Document](./docs/en/utils_getuseragent.md)         |
+| ~~formatPhoneNumber~~<br><span style="color: red">Deprecated</span> | ~~Separates the given phone number by hyphen(-).~~<br> <span style="color: red">Deprecated</span> | ~~Document~~<br><span style="color: red">Deprecated</span> |
+| ~~commaizeNumber~~<br><span style="color: red">Deprecated</span>    | ~~Separates the given value by comma.~~<br> <span style="color: red">Deprecated</span>            | ~~Document~~<br><span style="color: red">Deprecated</span> |
+| ~~decommaizeNumber~~<br><span style="color: red">Deprecated</span>  | ~~Removed commas from commaized value.~~<br> <span style="color: red">Deprecated</span>           | ~~Document~~<br><span style="color: red">Deprecated</span> |
+| ~~maskName~~<br><span style="color: red">Deprecated</span>          | ~~Masks the given name.~~<br> <span style="color: red">Deprecated</span>                          | ~~Document~~<br><span style="color: red">Deprecated</span> |
+| ~~maskPhoneNumber~~<br><span style="color: red">Deprecated</span>   | ~~Masks the given phone number.~~<br> <span style="color: red">Deprecated</span>                  | ~~Document~~<br><span style="color: red">Deprecated</span> |
+| ~~at~~<br><span style="color: red">Deprecated</span>                | ~~Return element in a particular index in an array.<br>(include negative index like Python)~~     | ~~Document~~<br><span style="color: red">Deprecated</span> |
+| ~~first~~<br><span style="color: red">Deprecated</span>             | ~~Return first element of array.~~<br> <span style="color: red">Deprecated</span>                 | ~~Document~~<br><span style="color: red">Deprecated</span> |
+| ~~last~~<br><span style="color: red">Deprecated</span>              | ~~Return last element of array.~~ <br> <span style="color: red">Deprecated</span>                 | ~~Document~~<br><span style="color: red">Deprecated</span> |
