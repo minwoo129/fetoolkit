@@ -87,7 +87,7 @@ createRoot(document.getElementById('root')!).render(
 | useResizeWindow       | 브라우저 창의 크기를 추적하기 위한 Hook                                                      |                                  [공식문서](./docs/ko/hook_useresizewindow.md)                                  |
 | useScroll             | 스크롤 위치를 추적하고, 스크롤을 최상단으로 이동시키는<br> 기능을 제공하는 Hook              |                                     [공식문서](./docs/ko/hook_usescroll.md)                                     |
 | useSessionStorage     | SessionStorage 사용을 위한 Hook                                                              |                                 [공식문서](./docs/ko/hook_usesessionstorage.md)                                 |
-| useToggle             | 토글 형태의 input 값 제어를 위한 Hook                                                        |  [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useToggle_kr.md)   |
+| useToggle             | 토글 형태의 input 값 제어를 위한 Hook                                                        |                                     [공식문서](./docs/ko/hook_usetoggle.md)                                     |
 | useUserAgent          | UserAgent를 통해 받아온 런타임이 돌아가고 있는 브라우저<br> 및 운영체제 정보를 반환하는 Hook | [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useUserAgent_kr.md) |
 | useValidationCheck    | 유효성 검사를 위한 hook 입니다.                                                              |                                [공식문서](./docs/ko/hook_usevalidationcheck.md)                                 |
 | useValidateCheckInput | 입력값 상태관리와 유효성 검사기능이 결합된 hook입니다.                                       |                               [공식문서](./docs/ko/hook_usevalidatecheckinput.md)                               |
