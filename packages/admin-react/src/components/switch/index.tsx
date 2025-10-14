@@ -34,10 +34,6 @@ interface Props {
    * 스위치 테스트 id
    */
   dataTestId?: string;
-  /**
-   * 스위치 상태값 테스트 id
-   */
-  valueTestId?: string;
 }
 
 export type SwitchSize = 'sm' | 'md' | 'lg';
@@ -51,7 +47,6 @@ export const AdminSwitch = ({
   enabledColor = '#12c82b',
   disabledColor = '#b2b3b4',
   dataTestId,
-  valueTestId,
 }: Props) => {
   return (
     <label
@@ -69,7 +64,7 @@ export const AdminSwitch = ({
         onChange={(e) => {
           onChange(e.target.checked);
         }}
-        data-testid={valueTestId}
+        data-testid={dataTestId ? `${dataTestId}-value` : undefined}
       />
 
       <span
@@ -78,6 +73,7 @@ export const AdminSwitch = ({
           size,
           checked ? 'checked' : 'unchecked',
         )}
+        data-testid={dataTestId ? `${dataTestId}-handle` : undefined}
       ></span>
     </label>
   );

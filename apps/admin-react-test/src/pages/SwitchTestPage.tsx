@@ -16,7 +16,6 @@ const SwitchTestPage = () => {
           onChange={setSwitchValue1}
           size="sm"
           dataTestId="switch1"
-          valueTestId="switch1-value"
         />
         <AdminSwitch
           checked={switchValue2}
@@ -24,7 +23,6 @@ const SwitchTestPage = () => {
           size="md"
           className="ml-16"
           dataTestId="switch2"
-          valueTestId="switch2-value"
         />
         <AdminSwitch
           checked={switchValue3}
@@ -32,7 +30,6 @@ const SwitchTestPage = () => {
           size="lg"
           className="ml-16"
           dataTestId="switch3"
-          valueTestId="switch3-value"
         />
         <AdminSwitch
           checked={switchValue4}
@@ -40,7 +37,6 @@ const SwitchTestPage = () => {
           className="ml-16"
           dataTestId="switch4"
           enabledColor="#1a8ec0"
-          valueTestId="switch4-value"
         />
       </div>
     </div>

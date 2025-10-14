@@ -29,3 +29,4 @@ const [switchValue1, setSwitchValue1] = useToggle(false);
 | style         | Omit<CSSProperties, 'width' \| 'height' \| 'color' \| 'backgroundColor' \| 'borderColor'> | false    | -         | Switch style (width, height, color, backgroundColor, borderColor properties cannot be written) |
 | enabledColor  | string                                                                                    | false    | '#12c82b' | Color when in checked state                                                                    |
 | disabledColor | string                                                                                    | false    | '#b2b3b4' | Color when not in checked state                                                                |
+| dataTestId    | string                                                                                    | false    | -         | Switch test id                                                                                 |

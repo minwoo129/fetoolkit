@@ -29,3 +29,4 @@ const [switchValue1, setSwitchValue1] = useToggle(false);
 | style         | Omit<CSSProperties, 'width' \| 'height' \| 'color' \| 'backgroundColor' \| 'borderColor'> | false    | -         | 스위치 스타일 (width, height, color, backgroundColor, borderColor 속성은 작성 불가) |
 | enabledColor  | string                                                                                    | false    | '#12c82b' | 체크 상태일 때의 색상                                                               |
 | disabledColor | string                                                                                    | false    | '#b2b3b4' | 체크 상태가 아닐 때의 색상                                                          |
+| dataTestId    | string                                                                                    | false    | -         | 스위치 테스트 id                                                                    |
