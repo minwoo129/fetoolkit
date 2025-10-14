@@ -83,13 +83,14 @@ export default App;
 
 ### AdminRouteMenuTemplate
 
-| Name     | Type                   | Required | Default | Description                                          |
-| :------- | :--------------------- | :------- | :------ | :--------------------------------------------------- |
-| logo     | React.ReactNode        | false    | 'Logo'  | Logo component or element to display in menu header  |
-| menus    | FirstDepthMenuItem[]   | true     | -       | Array of menu items for navigation                   |
-| pathName | string                 | true     | -       | Current path name for active menu highlighting       |
-| onClick  | (href: string) => void | true     | -       | Callback function executed when menu item is clicked |
-| children | React.ReactNode        | true     | -       | Main content to display in content area              |
+| Name       | Type                   | Required | Default | Description                                          |
+| :--------- | :--------------------- | :------- | :------ | :--------------------------------------------------- |
+| logo       | React.ReactNode        | false    | 'Logo'  | Logo component or element to display in menu header  |
+| menus      | FirstDepthMenuItem[]   | true     | -       | Array of menu items for navigation                   |
+| pathName   | string                 | true     | -       | Current path name for active menu highlighting       |
+| onClick    | (href: string) => void | true     | -       | Callback function executed when menu item is clicked |
+| dataTestId | string                 | false    | -       | Element ID for test execution                        |
+| children   | React.ReactNode        | true     | -       | Main content to display in content area              |
 
 ### Types
 

@@ -83,13 +83,14 @@ export default App;
 
 ### AdminRouteMenuTemplate
 
-| Name     | Type                   | Required | Default | Description                                |
-| :------- | :--------------------- | :------- | :------ | :----------------------------------------- |
-| logo     | React.ReactNode        | false    | 'Logo'  | 메뉴 헤더에 표시할 로고 컴포넌트 또는 요소 |
-| menus    | FirstDepthMenuItem[]   | true     | -       | 네비게이션을 위한 메뉴 아이템 배열         |
-| pathName | string                 | true     | -       | 활성 메뉴 하이라이팅을 위한 현재 경로명    |
-| onClick  | (href: string) => void | true     | -       | 메뉴 아이템 클릭 시 실행되는 콜백 함수     |
-| children | React.ReactNode        | true     | -       | 콘텐츠 영역에 표시될 메인 콘텐츠           |
+| Name       | Type                   | Required | Default | Description                                |
+| :--------- | :--------------------- | :------- | :------ | :----------------------------------------- |
+| logo       | React.ReactNode        | false    | 'Logo'  | 메뉴 헤더에 표시할 로고 컴포넌트 또는 요소 |
+| menus      | FirstDepthMenuItem[]   | true     | -       | 네비게이션을 위한 메뉴 아이템 배열         |
+| pathName   | string                 | true     | -       | 활성 메뉴 하이라이팅을 위한 현재 경로명    |
+| onClick    | (href: string) => void | true     | -       | 메뉴 아이템 클릭 시 실행되는 콜백 함수     |
+| dataTestId | string                 | false    | -       | 테스트 실행 시 선언할 elementId            |
+| children   | React.ReactNode        | true     | -       | 콘텐츠 영역에 표시될 메인 콘텐츠           |
 
 ### Types
 

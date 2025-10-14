@@ -11,6 +11,7 @@ interface Props {
   pathName: string;
   // eslint-disable-next-line no-unused-vars
   onClick: (href: string) => void;
+  dataTestId?: string;
   children: React.ReactNode;
 }
 
@@ -19,6 +20,7 @@ export const AdminRouteMenuTemplate = ({
   menus,
   pathName,
   onClick,
+  dataTestId,
   children,
 }: Props) => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -28,13 +30,27 @@ export const AdminRouteMenuTemplate = ({
   };
 
   return (
-    <div className="template-container">
-      <div className="menu-container">
-        <div className="menu-area">
-          <span className="menu-logo">{logo ?? 'Logo'}</span>
+    <div className="template-container" data-testid={dataTestId}>
+      <div
+        className="menu-container"
+        data-testid={dataTestId ? `${dataTestId}-container` : undefined}
+      >
+        <div
+          className="menu-area"
+          data-testid={dataTestId ? `${dataTestId}-menu-area` : undefined}
+        >
+          <span
+            className="menu-logo"
+            data-testid={dataTestId ? `${dataTestId}-menu-logo` : undefined}
+          >
+            {logo ?? 'Logo'}
+          </span>
 
-          <ul className="menu-list">
-            {menus.map((menu) => {
+          <ul
+            className="menu-list"
+            data-testid={dataTestId ? `${dataTestId}-menu-list` : undefined}
+          >
+            {menus.map((menu, idx) => {
               const key = uuidv4();
 
               if (menu.type === 'route-link') {
@@ -45,6 +61,9 @@ export const AdminRouteMenuTemplate = ({
                     href={menu.href}
                     pathName={pathName}
                     onClick={onClick}
+                    dataTestId={
+                      dataTestId ? `${dataTestId}-routelink-${idx}` : undefined
+                    }
                   />
                 );
               }
@@ -58,6 +77,9 @@ export const AdminRouteMenuTemplate = ({
                   onClick={onClick}
                   openDropdown={openDropdown}
                   handleDropdownToggle={handleDropdownToggle}
+                  dataTestId={
+                    dataTestId ? `${dataTestId}-dropdown-${idx}` : undefined
+                  }
                 />
               );
             })}
