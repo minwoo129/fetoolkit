@@ -10,7 +10,8 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
 
 ## 제공 모듈
 
-| Name  | Description                      |                          Downloads                          |           GitHub            |
-| :---- | :------------------------------- | :---------------------------------------------------------: | :-------------------------: |
-| react | react 전용 패키지입니다.         | [Downloads](https://www.npmjs.com/package/@fetoolkit/react) | [GitHub](./packages/react/) |
-| utils | 유틸리티 함수 전용 패키지입니다. | [Downloads](https://www.npmjs.com/package/@fetoolkit/utils) | [GitHub](./packages/utils/) |
+| Name        | Description                                                                              |                          Downloads                          |              GitHub               |
+| :---------- | :--------------------------------------------------------------------------------------- | :---------------------------------------------------------: | :-------------------------------: |
+| react       | react 전용 패키지입니다.                                                                 | [Downloads](https://www.npmjs.com/package/@fetoolkit/react) |    [GitHub](./packages/react/)    |
+| utils       | 유틸리티 함수 전용 패키지입니다.                                                         | [Downloads](https://www.npmjs.com/package/@fetoolkit/utils) |    [GitHub](./packages/utils/)    |
+| admin-react | 관리자 페이지 개발시 유용한 컴포넌트, hook, 함수 등을 제공하는 패키지입니다.(react 전용) |                          Downloads                          | [GitHub](./packages/admin-react/) |

@@ -9,7 +9,8 @@ FEToolkit is a toolkit library that provides useful functions for Frontend devel
 
 ## Modules
 
-| Name  | Description                   |                          Downloads                          |           GitHub            |
-| :---- | :---------------------------- | :---------------------------------------------------------: | :-------------------------: |
-| react | package for react             | [Downloads](https://www.npmjs.com/package/@fetoolkit/react) | [GitHub](./packages/react/) |
-| utils | package for utility functions | [Downloads](https://www.npmjs.com/package/@fetoolkit/utils) | [GitHub](./packages/utils/) |
+| Name        | Description                                                            |                          Downloads                          |              GitHub               |
+| :---------- | :--------------------------------------------------------------------- | :---------------------------------------------------------: | :-------------------------------: |
+| react       | package for react                                                      | [Downloads](https://www.npmjs.com/package/@fetoolkit/react) |    [GitHub](./packages/react/)    |
+| utils       | package for utility functions                                          | [Downloads](https://www.npmjs.com/package/@fetoolkit/utils) |    [GitHub](./packages/utils/)    |
+| admin-react | package for provide useful features when develop admin site(for react) |                          Downloads                          | [GitHub](./packages/admin-react/) |
