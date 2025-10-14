@@ -30,7 +30,16 @@ const decommaizeNumber = (numStr: string) => {
 };
 
 export const NumbersUtils = {
+  /**
+   * @deprecated use `formatPhoneNumber` from `[@fetoolkit/utils](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils)` instead
+   */
   formatPhoneNumber,
+  /**
+   * @deprecated use `commaizeNumber` from `[@fetoolkit/utils](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils)` instead
+   */
   commaizeNumber,
+  /**
+   * @deprecated use `decommaizeNumber` from `[@fetoolkit/utils](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils)` instead
+   */
   decommaizeNumber,
 };
