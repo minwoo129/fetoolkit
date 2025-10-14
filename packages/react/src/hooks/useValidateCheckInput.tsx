@@ -19,7 +19,9 @@ export const useValidateCheckInput = <V extends ValidatorType<string>>(
     React.Dispatch<React.SetStateAction<ValidationStatusType>>,
   ];
 } => {
-  const { appValidators } = useContext(ValidationContexts);
+  const { appValidators } = useContext(ValidationContexts) as {
+    appValidators: V;
+  };
   const [value, setValue] = useState(initialValue);
   const [validationStatus, setValidationStatus] =
     useState<ValidationStatusType>({ isPassed: false });
@@ -29,7 +31,7 @@ export const useValidateCheckInput = <V extends ValidatorType<string>>(
       setValue(value);
 
       for (const key of validateKeys) {
-        const { validator, errorStatus } = appValidators[key as string];
+        const { validator, errorStatus } = appValidators[key];
         const isPassed = validator(value);
         if (isPassed) {
           continue;
