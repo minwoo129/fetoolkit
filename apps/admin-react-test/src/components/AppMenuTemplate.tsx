@@ -17,6 +17,7 @@ const AppMenuTemplate = () => {
     <AdminRouteMenuTemplate
       onClick={handleClick}
       pathName={location.pathname}
+      dataTestId="app-menu-template"
       menus={[
         {
           title: 'Test1',
