@@ -61,13 +61,13 @@ createRoot(document.getElementById('root')!).render(
 
 ### 3-2. Components
 
-| Name                | Description                                                                                             |                                                        Docs                                                         |
-| :------------------ | :------------------------------------------------------------------------------------------------------ | :-----------------------------------------------------------------------------------------------------------------: |
-| ErrorBoundary       | A Component which is useful to controll an error declaratively<br>(with HOC)                            |                                  [Document](./docs/en/component_errorboundary.md)                                   |
-| Flatlist            | A Component which is useful to render flat list.<br>(p.s. if you're RN developer, you will understand.) |                                     [Document](./docs/en/component_flatlist.md)                                     |
-| InfiniteScroll      | A Component to create an infinite scrolling.                                                            | [Document](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/components/InfiniteScroll.md) |
-| ContextMenu         | A Component to create an custom context menu                                                            |                                   [Document](./docs/en/component_contextmenu.md)                                    |
-| ContextMenuProvider | A Provider Component to create an custom context menu                                                   |                               [Document](./docs/en/component_contextmenuprovider.md)                                |
+| Name                | Description                                                                                             |                          Docs                          |
+| :------------------ | :------------------------------------------------------------------------------------------------------ | :----------------------------------------------------: |
+| ErrorBoundary       | A Component which is useful to controll an error declaratively<br>(with HOC)                            |    [Document](./docs/en/component_errorboundary.md)    |
+| Flatlist            | A Component which is useful to render flat list.<br>(p.s. if you're RN developer, you will understand.) |      [Document](./docs/en/component_flatlist.md)       |
+| InfiniteScroll      | A Component to create an infinite scrolling.                                                            |   [Document](./docs/en/component_infinitescroll.md)    |
+| ContextMenu         | A Component to create an custom context menu                                                            |     [Document](./docs/en/component_contextmenu.md)     |
+| ContextMenuProvider | A Provider Component to create an custom context menu                                                   | [Document](./docs/en/component_contextmenuprovider.md) |
 
 ### 3-3. Hooks
 
