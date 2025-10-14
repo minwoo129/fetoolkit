@@ -57,16 +57,23 @@ createRoot(document.getElementById('root')!).render(
 
 ## 제공되는 기능
 
-### 3-1. 컴포넌트
+## 3-1. 통합 기능
+
+| 이름        | 설명                                         |                                                        공식문서                                                         |
+| :---------- | :------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------: |
+| ContextMenu | 사용자 선언 ContextMenu 구현을 위한 컴포넌트 | [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/joinedFeatures/contextMenu_kr.md) |
+| Validation  | 유효성 검사 기능                             |                                                        공식문서                                                         |
+
+### 3-2. 컴포넌트
 
 | 이름           | 설명                                                                                                                                              |                                                        공식문서                                                         |
-| :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------: |
+| :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------: | --- |
 | ErrorBoundary  | React 기본 탑재 기능인 ErrorBoundary를 함수 컴포넌트 및<br> HOC 형태로 제공하는 컴포넌트                                                          |  [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/components/ErrorBoundary_kr.md)  |
 | Flatlist       | 많은 양의 스크롤이 필요한 리스트 아이템을 보여주고자 할 때<br> 사용할 수 있는 컴포넌트 <br> (참고: React Native 개발자라면 이해할 수 있을겁니다!) |    [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/components/Flatlist_kr.md)     |
 | InfiniteScroll | 무한 스크롤 기능 컴포넌트                                                                                                                         | [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/components/InfiniteScroll_kr.md)  |
-| ContextMenu    | 사용자 선언 ContextMenu 구현을 위한 컴포넌트                                                                                                      | [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/joinedFeatures/contextMenu_kr.md) |
+| ContextMenu    | 사용자 선언 ContextMenu 구현을 위한 컴포넌트                                                                                                      | [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/joinedFeatures/contextMenu_kr.md) | m   |
 
-### 3-2. Hook
+### 3-3. Hook
 
 | 이름                  | 설명                                                                                         |                                                          공식문서                                                           |
 | :-------------------- | :------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------: |
@@ -86,7 +93,7 @@ createRoot(document.getElementById('root')!).render(
 | useContextMenu        | ContextMenu 기능 실행을 위한 hook 입니다.                                                    |      [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useContextMenu_kr.md)      |
 | useCustomContextMenu  | 사용자 선언형 ContextMenu 컴포넌트 구현시 필요한 <br> 값들을 반환하는 hook 입니다.           |   [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/hooks/useCustomContextMenu_kr.md)   |
 
-### 3-3. 유틸리티 함수
+### 3-4. 유틸리티 함수
 
 > ### 안내
 >
