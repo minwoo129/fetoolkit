@@ -22,7 +22,7 @@
 }
 
 /* 메뉴 템플릿 컨테이너 */
-.menu-template {
+.menu-container {
   display: flex;
   min-width: 250px;
   height: 100vh;
@@ -34,7 +34,7 @@
 }
 
 /* 헤더 영역 */
-.menu-header {
+.menu-area {
   padding: 1.5rem 1rem;
 }
 

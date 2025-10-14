@@ -29,8 +29,8 @@ export const AdminRouteMenuTemplate = ({
 
   return (
     <div className="template-container">
-      <div className="menu-template">
-        <div className="menu-header">
+      <div className="menu-container">
+        <div className="menu-area">
           <span className="menu-logo">{logo ?? 'Logo'}</span>
 
           <ul className="menu-list">
