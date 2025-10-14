@@ -2,7 +2,6 @@ import { act, renderHook } from '@testing-library/react';
 import React from 'react';
 import { describe, expect, it } from 'vitest';
 import { FEToolkitProvider } from '../../src/contexts';
-import type { ValidatorType } from '../../src/contexts/ValidationContext';
 import { useValidateCheckInput } from '../../src/hooks/useValidateCheckInput';
 
 const pattern_eng = /[a-zA-Z]/;
@@ -11,11 +10,9 @@ const pattern_kor = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
 // eslint-disable-next-line no-useless-escape
 const pattern_spc = /[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/;
 
-const Validators: ValidatorType<
-  'email' | 'password_length' | 'password_non_kor' | 'password_pattern'
-> = {
+const Validators = {
   email: {
-    validator: (value) => {
+    validator: (value: string) => {
       return /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value);
     },
     errorStatus: {
@@ -24,7 +21,7 @@ const Validators: ValidatorType<
     },
   },
   password_length: {
-    validator: (value) => {
+    validator: (value: string) => {
       return value.length >= 8 && value.length <= 15;
     },
     errorStatus: {
@@ -33,7 +30,7 @@ const Validators: ValidatorType<
     },
   },
   password_non_kor: {
-    validator: (value) => {
+    validator: (value: string) => {
       return !pattern_kor.test(value);
     },
     errorStatus: {
@@ -42,7 +39,7 @@ const Validators: ValidatorType<
     },
   },
   password_pattern: {
-    validator: (value) => {
+    validator: (value: string) => {
       return (
         pattern_eng.test(value) &&
         pattern_num.test(value) &&
@@ -54,7 +51,7 @@ const Validators: ValidatorType<
       errorMessage: '비밀번호는 영어, 숫자, 특수문자를 포함해야 합니다.',
     },
   },
-};
+} as const;
 
 const wrapper = ({ children }: { children: React.ReactNode }) => {
   return (

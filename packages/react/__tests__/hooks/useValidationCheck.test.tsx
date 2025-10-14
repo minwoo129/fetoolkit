@@ -2,7 +2,6 @@ import { renderHook } from '@testing-library/react';
 import React from 'react';
 import { describe, expect, it } from 'vitest';
 import { FEToolkitProvider } from '../../src/contexts';
-import type { ValidatorType } from '../../src/contexts/ValidationContext';
 import { useValidationCheck } from '../../src/hooks/useValidationCheck';
 
 const pattern_eng = /[a-zA-Z]/;
@@ -11,9 +10,9 @@ const pattern_kor = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
 // eslint-disable-next-line no-useless-escape
 const pattern_spc = /[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/;
 
-const Validators: ValidatorType<'email' | 'password'> = {
+const Validators = {
   email: {
-    validator: (value) => {
+    validator: (value: string) => {
       return /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value);
     },
     errorStatus: {
@@ -22,7 +21,7 @@ const Validators: ValidatorType<'email' | 'password'> = {
     },
   },
   password: {
-    validator: (value) => {
+    validator: (value: string) => {
       if (value.length < 8 || value.length > 15) {
         return false;
       }
@@ -39,7 +38,7 @@ const Validators: ValidatorType<'email' | 'password'> = {
         '비밀번호는 8자 이상 15자 이하, 영어, 숫자, 특수문자, 한글을 포함해야 합니다.',
     },
   },
-};
+} as const;
 
 const wrapper = ({ children }: { children: React.ReactNode }) => {
   return (
