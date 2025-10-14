@@ -1,5 +1,5 @@
 ---
-globs: packages/admin-react/docs/en/component_*.md
+globs: packages/admin-react/docs/en/component_*.md,packages/react/docs/en/component_*.md
 alwaysApply: false
 ---
 
