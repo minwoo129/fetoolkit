@@ -1,4 +1,4 @@
-export * from './template.tsx';
+export * from './Template';
 
 export interface MenuItemType {
   title: string;
