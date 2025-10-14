@@ -9,6 +9,7 @@ interface AdminInputLabelBasicProps {
   label: string;
   children: React.ReactNode;
   icon?: React.ReactNode;
+  dataTestId?: string;
 }
 
 export const AdminInputLabelBasic = ({
@@ -18,12 +19,14 @@ export const AdminInputLabelBasic = ({
   label,
   children,
   icon,
+  dataTestId,
 }: AdminInputLabelBasicProps) => {
   return (
     <label
       htmlFor={htmlFor}
       className={classNames('basic-input-label', className)}
       style={style}
+      data-testid={dataTestId}
     >
       <span className="icon-wrapper">{label}</span>
 

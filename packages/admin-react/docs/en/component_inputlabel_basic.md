@@ -28,11 +28,12 @@ const [email1, setEmail1] = useInput('');
 
 ## API(Props) Reference
 
-| Name      | Type                | Required | Default | Description                                                                                                 |
-| :-------- | :------------------ | :------- | :------ | :---------------------------------------------------------------------------------------------------------- |
-| htmlFor   | string              | true     | -       | ID value of the input field to connect                                                                      |
-| label     | string              | true     | -       | Text to display in the label                                                                                |
-| children  | React.ReactNode     | true     | -       | Input field component                                                                                       |
-| icon      | React.ReactNode     | false    | -       | Icon to display next to the input field <br> - Used when displaying functional icons such as search, filter |
-| className | string              | false    | -       | CSS class name <br> - Class name for additional styling                                                     |
-| style     | React.CSSProperties | false    | -       | Style declaration <br> - Apply inline styles in the same way as React `style` props                         |
+| Name       | Type                | Required | Default | Description                                                                                                 |
+| :--------- | :------------------ | :------- | :------ | :---------------------------------------------------------------------------------------------------------- |
+| htmlFor    | string              | true     | -       | ID value of the input field to connect                                                                      |
+| label      | string              | true     | -       | Text to display in the label                                                                                |
+| children   | React.ReactNode     | true     | -       | Input field component                                                                                       |
+| icon       | React.ReactNode     | false    | -       | Icon to display next to the input field <br> - Used when displaying functional icons such as search, filter |
+| className  | string              | false    | -       | CSS class name <br> - Class name for additional styling                                                     |
+| style      | React.CSSProperties | false    | -       | Style declaration <br> - Apply inline styles in the same way as React `style` props                         |
+| dataTestId | string              | false    | -       | Element ID to declare during test execution <br> - Used to identify components in test code                 |
