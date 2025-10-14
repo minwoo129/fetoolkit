@@ -103,7 +103,7 @@ createRoot(document.getElementById('root')!).render(
 
 | 이름                          | 설명                                                                                         |                                                         공식문서                                                          |
 | :---------------------------- | :------------------------------------------------------------------------------------------- | :-----------------------------------------------------------------------------------------------------------------------: |
-| getUserAgent                  | UserAgent를 통해 받아온 런타임이 돌아가고 있는 브라우저<br> 및 운영체제 정보를 반환하는 함수 |      [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/getUserAgent_kr.md)      |
+| getUserAgent                  | UserAgent를 통해 받아온 런타임이 돌아가고 있는 브라우저<br> 및 운영체제 정보를 반환하는 함수 |                                        [공식문서](./docs/ko/utils_getuseragent.md)                                        |
 | formatPhoneNumber<br>(number) | 전화번호를 하이픈(-)이 들어간 형태로 반환하는 함수                                           | [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/numbers_formatPhoneNumber.md) |
 | commaizeNumber<br>(number)    | 숫자 콤마 처리 함수                                                                          |  [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/numbers_commaizeNumber.md)   |
 | decommaizeNumber<br>(number)  | 콤마 처리가 들어간 숫자의 콤마 제거 함수                                                     | [공식문서](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/src/docs/utils/numbers_decommaizeNumber.md)  |
