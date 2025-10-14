@@ -54,6 +54,12 @@ const maskExceptForEdge = (text: string, edgeSize: number) => {
 };
 
 export const MaskUtils = {
+  /**
+   * @deprecated use `maskPhoneNumber` from `[@fetoolkit/utils](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils)` instead
+   */
   maskPhoneNumber,
+  /**
+   * @deprecated use `maskName` from `[@fetoolkit/utils](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils)` instead
+   */
   maskName,
 };
