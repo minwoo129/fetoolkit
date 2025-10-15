@@ -33,22 +33,22 @@ FEToolkit is a toolkit library that provides useful functions for Frontend devel
 
 ## 1. Array
 
-| Name      | Description                                                                               |                                                   Docs                                                    |
-| :-------- | :---------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------: |
-| at        | Return element in a particular index in an array.<br>(include negative index like Python) |                                     [Document](./docs/en/array_at.md)                                     |
-| first     | Return first element of array.                                                            |                                   [Document](./docs/en/array_first.md)                                    |
-| last      | Return last element of array.                                                             |                                    [Document](./docs/en/array_last.md)                                    |
-| filter    | Return filtered elements in array.                                                        |                                   [Document](./docs/en/array_filter.md)                                   |
-| mapByKey  | Return array of elements that mapped to particular key in object array.                   |                                  [Document](./docs/en/array_mapbykey.md)                                  |
-| chunk     | Chunk an array to a specific length.                                                      |                                   [Document](./docs/en/array_chunk.md)                                    |
-| count     | Count a length of array.                                                                  |                                   [Document](./docs/en/array_count.md)                                    |
-| countBy   | Classify and counting number of array values according to result of mapper Function.      |                                  [Document](./docs/en/array_countby.md)                                   |
-| countOf   | count a number of array values satisfied by specific condition.                           |                                  [Document](./docs/en/array_countof.md)                                   |
-| find      | return first element satisfied by specific condition.                                     |                                    [Document](./docs/en/array_find.md)                                    |
-| findIndex | return first element's index satisfied by specific condition.                             |                                 [Document](./docs/en/array_findindex.md)                                  |
-| groupBy   | classify elements in an array according to given key generation function.                 |                                  [Document](./docs/en/array_groupby.md)                                   |
-| isSameArr | chaek that whether the elements in both arrays are same until the order.                  |                                 [Document](./docs/en/array_issamearr.md)                                  |
-| uniqArray | returns a new array that removes duplicate elements.                                      | [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/uniqArray.md) |
+| Name      | Description                                                                               |                   Docs                   |
+| :-------- | :---------------------------------------------------------------------------------------- | :--------------------------------------: |
+| at        | Return element in a particular index in an array.<br>(include negative index like Python) |    [Document](./docs/en/array_at.md)     |
+| first     | Return first element of array.                                                            |   [Document](./docs/en/array_first.md)   |
+| last      | Return last element of array.                                                             |   [Document](./docs/en/array_last.md)    |
+| filter    | Return filtered elements in array.                                                        |  [Document](./docs/en/array_filter.md)   |
+| mapByKey  | Return array of elements that mapped to particular key in object array.                   | [Document](./docs/en/array_mapbykey.md)  |
+| chunk     | Chunk an array to a specific length.                                                      |   [Document](./docs/en/array_chunk.md)   |
+| count     | Count a length of array.                                                                  |   [Document](./docs/en/array_count.md)   |
+| countBy   | Classify and counting number of array values according to result of mapper Function.      |  [Document](./docs/en/array_countby.md)  |
+| countOf   | count a number of array values satisfied by specific condition.                           |  [Document](./docs/en/array_countof.md)  |
+| find      | return first element satisfied by specific condition.                                     |   [Document](./docs/en/array_find.md)    |
+| findIndex | return first element's index satisfied by specific condition.                             | [Document](./docs/en/array_findindex.md) |
+| groupBy   | classify elements in an array according to given key generation function.                 |  [Document](./docs/en/array_groupby.md)  |
+| isSameArr | chaek that whether the elements in both arrays are same until the order.                  | [Document](./docs/en/array_issamearr.md) |
+| uniqArray | returns a new array that removes duplicate elements.                                      | [Document](./docs/en/array_uniqarray.md) |
 
 ## 2. Number
 
