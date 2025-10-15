@@ -1,5 +1,5 @@
 ---
-globs: packages/admin-react/docs/en/hook_*.md
+globs: packages/admin-react/docs/en/hook_*.md,packages/react/docs/en/hook_*.md
 alwaysApply: false
 ---
 

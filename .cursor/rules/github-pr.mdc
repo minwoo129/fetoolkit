@@ -19,7 +19,7 @@ alwaysApply: false
 ```md
 ## 이슈번호
 
-- {issue number}
+- #{issue number}
 
 ## Description
 
