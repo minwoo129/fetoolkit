@@ -59,7 +59,7 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
 
 | 이름              | 설명                                                      |                                                       공식문서                                                        |
 | :---------------- | :-------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------: |
-| commaizeNumber    | 주어진 숫자를 콤마로 구분하는 함수입니다.                 |  [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/commaizeNumber_kr.md)   |
+| commaizeNumber    | 주어진 숫자를 콤마로 구분하는 함수입니다.                 |                                    [공식문서](./docs/ko/number_commaizenumber.md)                                     |
 | decommaizeNumber  | 콤마로 구분된 숫자에서 콤마만 제거하는 함수입니다.        | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/decommaizeNumber_kr.md)  |
 | formatPhoneNumber | 전화번호를 하이픈(-)이 들어간 형태로 변환하는 함수입니다. | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/formatPhoneNumber_kr.md) |
 | percent           | 나눗셈 결과를 퍼센트로 계산해주는 함수입니다.             |      [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/percent_kr.md)      |
