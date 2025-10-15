@@ -7,11 +7,13 @@ English | [한국어](https://github.com/minwoo129/fetoolkit/blob/master/package
 
 FEToolkit is a toolkit library that provides useful functions for Frontend development. The library is divided according to frameworks such as React and Vue, and functions that can be used in common regardless of the framework will be distributed as separate libraries.
 
-## Documentation
+## Dependencies
 
-- This library is created for `React`
-  - You can't use it in `Next.js` and `React Native`
-- This library can only operate with React 19 or later
+|  Framework   | enabled | version |
+| :----------: | :-----: | :-----: |
+|    React     |   ⭕    |  >=19   |
+|   Next.js    |   ❌    |         |
+| React Native |   ❌    |         |
 
 ## Getting Started
 
