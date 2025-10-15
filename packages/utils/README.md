@@ -47,7 +47,7 @@ FEToolkit is a toolkit library that provides useful functions for Frontend devel
 | find      | return first element satisfied by specific condition.                                     |                                    [Document](./docs/en/array_find.md)                                    |
 | findIndex | return first element's index satisfied by specific condition.                             |                                 [Document](./docs/en/array_findindex.md)                                  |
 | groupBy   | classify elements in an array according to given key generation function.                 |                                  [Document](./docs/en/array_groupby.md)                                   |
-| isSameArr | chaek that whether the elements in both arrays are same until the order.                  | [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/isSameArr.md) |
+| isSameArr | chaek that whether the elements in both arrays are same until the order.                  |                                 [Document](./docs/en/array_issamearr.md)                                  |
 | uniqArray | returns a new array that removes duplicate elements.                                      | [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/uniqArray.md) |
 
 ## 2. Number

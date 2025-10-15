@@ -52,7 +52,7 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
 | find      | 배열에서 조건에 맞는 첫번째 요소를 반환하는 함수                                                         |                                     [공식문서](./docs/ko/array_find.md)                                      |
 | findIndex | 배열에서 조건에 맞는 첫번째 요소의 index를 반환하는 함수                                                 |                                   [공식문서](./docs/ko/array_findindex.md)                                   |
 | groupBy   | 주어진 키 생성 함수에 따라서 배열의 요소를 분류하는 함수                                                 |                                    [공식문서](./docs/ko/array_groupby.md)                                    |
-| isSameArr | 두 배열에 들어가있는 요소가 순서까지 모두 동일한지 여부를 반환하는 함수                                  | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/isSameArr_kr.md) |
+| isSameArr | 두 배열에 들어가있는 요소가 순서까지 모두 동일한지 여부를 반환하는 함수                                  |                                   [공식문서](./docs/ko/array_issamearr.md)                                   |
 | uniqArray | 배열에 들어가있는 중복 요소를 제거한 새로운 배열을 반환하는 함수                                         | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/uniqArray_kr.md) |
 
 ## 2. Number
