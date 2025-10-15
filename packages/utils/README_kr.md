@@ -48,7 +48,7 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
 | chunk     | 배열을 정해진 길이에 맞게 더 작은 배열로 나누는 함수                                                     |                                     [공식문서](./docs/ko/array_chunk.md)                                     |
 | count     | 배열의 길이를 반환하는 함수                                                                              |                                     [공식문서](./docs/ko/array_count.md)                                     |
 | countBy   | 배열에 속해있는 요소를 mapper 함수가 반환하는 값에 따라 분류하고 개수를 반환하는 함수                    |                                    [공식문서](./docs/ko/array_countby.md)                                    |
-| countOf   | 배열에 속해있는 요소 중에서 특정 조건을 만족하는 요소들의 개수를 카운팅하는 함수                         |  [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/countOf_kr.md)  |
+| countOf   | 배열에 속해있는 요소 중에서 특정 조건을 만족하는 요소들의 개수를 카운팅하는 함수                         |                                    [공식문서](./docs/ko/array_countof.md)                                    |
 | find      | 배열에서 조건에 맞는 첫번째 요소를 반환하는 함수                                                         |   [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/find_kr.md)    |
 | findIndex | 배열에서 조건에 맞는 첫번째 요소의 index를 반환하는 함수                                                 | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/findIndex_kr.md) |
 | groupBy   | 주어진 키 생성 함수에 따라서 배열의 요소를 분류하는 함수                                                 |  [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/groupBy_kr.md)  |
