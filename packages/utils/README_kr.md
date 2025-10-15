@@ -40,7 +40,7 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
 
 | 이름      | 설명                                                                                                     |                                                   공식문서                                                   |
 | :-------- | :------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------: |
-| at        | 배열에서 특정 인덱스에 있는 요소를 반환하는 함수<br> (파이썬처럼 음수 인덱스도 지원)                     |    [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/at_kr.md)     |
+| at        | 배열에서 특정 인덱스에 있는 요소를 반환하는 함수<br> (파이썬처럼 음수 인덱스도 지원)                     |                                      [공식문서](./docs/ko/array_at.md)                                       |
 | first     | 배열의 첫번째 요소를 꺼내오는 함수                                                                       |   [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/first_kr.md)   |
 | last      | 배열의 마지막 요소를 꺼내오는 함수                                                                       |   [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/last_kr.md)    |
 | filter    | Array에서 조건에 맞는 값들만 필터링하는 함수입니다.                                                      |  [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/filter_kr.md)   |
