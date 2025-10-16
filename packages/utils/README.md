@@ -56,7 +56,7 @@ FEToolkit is a toolkit library that provides useful functions for Frontend devel
 | :---------------- | :------------------------------------------------ | :----------------------------------------------------------------------------------------------------------------: |
 | commaizeNumber    | generate number seperated by comma.               |                                   [Document](./docs/en/number_commaizenumber.md)                                   |
 | decommaizeNumber  | remove comma from number                          |                                  [Document](./docs/en/number_decommaizenumber.md)                                  |
-| formatPhoneNumber | convert a phone number into a hyphen type.        | [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/formatPhoneNumber.md) |
+| formatPhoneNumber | convert a phone number into a hyphen type.        |                                 [Document](./docs/en/number_formatphonenumber.md)                                  |
 | percent           | Calculate the result of division as a percentage. |      [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/percent.md)      |
 | sum               | add all the numbers of values in an array.        |        [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/sum.md)        |
 | isInteger         | check the value is integer.                       |     [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/isInteger.md)     |
