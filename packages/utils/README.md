@@ -82,7 +82,7 @@ FEToolkit is a toolkit library that provides useful functions for Frontend devel
 | keys      | return keys of object.                                                 |  [Document](./docs/en/object_keys.md)  |
 | values    | return values of object.                                               | [Document](./docs/en/object_values.md) |
 | omit      | generates a new object that omits a particular key from the object.    |  [Document](./docs/en/object_omit.md)  |
-| pick      | creates a new object containing only a specific key in the object.     |         [Document](./docs/en/)         |
+| pick      | creates a new object containing only a specific key in the object.     |  [Document](./docs/en/object_pick.md)  |
 | isSameObj | check that whether both object is same                                 |         [Document](./docs/en/)         |
 
 ## 5. Utility Types
