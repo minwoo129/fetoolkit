@@ -79,7 +79,7 @@ FEToolkit is a toolkit library that provides useful functions for Frontend devel
 | Name      | Description                                                            |                 Docs                  |
 | :-------- | :--------------------------------------------------------------------- | :-----------------------------------: |
 | forIn     | call iteratee function for each attribute while traversing the object. | [Document](./docs/en/object_forin.md) |
-| keys      | return keys of object.                                                 |        [Document](./docs/en/)         |
+| keys      | return keys of object.                                                 | [Document](./docs/en/object_keys.md)  |
 | values    | return values of object.                                               |        [Document](./docs/en/)         |
 | omit      | generates a new object that omits a particular key from the object.    |        [Document](./docs/en/)         |
 | pick      | creates a new object containing only a specific key in the object.     |        [Document](./docs/en/)         |
