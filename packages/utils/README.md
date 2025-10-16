@@ -60,7 +60,7 @@ FEToolkit is a toolkit library that provides useful functions for Frontend devel
 | percent           | Calculate the result of division as a percentage. |      [Document](./docs/en/number_percent.md)      |
 | sum               | add all the numbers of values in an array.        |        [Document](./docs/en/number_sum.md)        |
 | isInteger         | check the value is integer.                       |     [Document](./docs/en/number_isinteger.md)     |
-| isPositiveInteger | check the value is positive integer.(except 0)    |              [Document](./docs/en/)               |
+| isPositiveInteger | check the value is positive integer.(except 0)    | [Document](./docs/en/number_ispositiveinteger.md) |
 | isNegativeInteger | check the value is negative integer.(except 0)    |              [Document](./docs/en/)               |
 
 ## 3. Mask
