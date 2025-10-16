@@ -38,58 +38,62 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
 
 ## 1. Array
 
-| 이름      | 설명                                                                                                     |                                                   공식문서                                                   |
-| :-------- | :------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------: |
-| at        | 배열에서 특정 인덱스에 있는 요소를 반환하는 함수<br> (파이썬처럼 음수 인덱스도 지원)                     |    [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/at_kr.md)     |
-| first     | 배열의 첫번째 요소를 꺼내오는 함수                                                                       |   [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/first_kr.md)   |
-| last      | 배열의 마지막 요소를 꺼내오는 함수                                                                       |   [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/last_kr.md)    |
-| filter    | Array에서 조건에 맞는 값들만 필터링하는 함수입니다.                                                      |  [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/filter_kr.md)   |
-| mapByKey  | 객체 타입 요소를 갖는 Array에서 특정 속성(어트리뷰트)에 <br>해당하는 값만 매핑해서 Array로 반환하는 함수 | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/mapByKey_kr.md)  |
-| chunk     | 배열을 정해진 길이에 맞게 더 작은 배열로 나누는 함수                                                     |   [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/chunk_kr.md)   |
-| count     | 배열의 길이를 반환하는 함수                                                                              |   [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/count_kr.md)   |
-| countBy   | 배열에 속해있는 요소를 mapper 함수가 반환하는 값에 따라 분류하고 개수를 반환하는 함수                    |  [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/countBy_kr.md)  |
-| countOf   | 배열에 속해있는 요소 중에서 특정 조건을 만족하는 요소들의 개수를 카운팅하는 함수                         |  [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/countOf_kr.md)  |
-| find      | 배열에서 조건에 맞는 첫번째 요소를 반환하는 함수                                                         |   [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/find_kr.md)    |
-| findIndex | 배열에서 조건에 맞는 첫번째 요소의 index를 반환하는 함수                                                 | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/findIndex_kr.md) |
-| groupBy   | 주어진 키 생성 함수에 따라서 배열의 요소를 분류하는 함수                                                 |  [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/groupBy_kr.md)  |
-| isSameArr | 두 배열에 들어가있는 요소가 순서까지 모두 동일한지 여부를 반환하는 함수                                  | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/isSameArr_kr.md) |
-| uniqArray | 배열에 들어가있는 중복 요소를 제거한 새로운 배열을 반환하는 함수                                         | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/uniqArray_kr.md) |
+| 이름      | 설명                                                                                                     |                 공식문서                 |
+| :-------- | :------------------------------------------------------------------------------------------------------- | :--------------------------------------: |
+| at        | 배열에서 특정 인덱스에 있는 요소를 반환하는 함수<br> (파이썬처럼 음수 인덱스도 지원)                     |    [공식문서](./docs/ko/array_at.md)     |
+| first     | 배열의 첫번째 요소를 꺼내오는 함수                                                                       |   [공식문서](./docs/ko/array_first.md)   |
+| last      | 배열의 마지막 요소를 꺼내오는 함수                                                                       |   [공식문서](./docs/ko/array_last.md)    |
+| filter    | Array에서 조건에 맞는 값들만 필터링하는 함수입니다.                                                      |  [공식문서](./docs/ko/array_filter.md)   |
+| mapByKey  | 객체 타입 요소를 갖는 Array에서 특정 속성(어트리뷰트)에 <br>해당하는 값만 매핑해서 Array로 반환하는 함수 | [공식문서](./docs/ko/array_mapbykey.md)  |
+| chunk     | 배열을 정해진 길이에 맞게 더 작은 배열로 나누는 함수                                                     |   [공식문서](./docs/ko/array_chunk.md)   |
+| count     | 배열의 길이를 반환하는 함수                                                                              |   [공식문서](./docs/ko/array_count.md)   |
+| countBy   | 배열에 속해있는 요소를 mapper 함수가 반환하는 값에 따라 분류하고 개수를 반환하는 함수                    |  [공식문서](./docs/ko/array_countby.md)  |
+| countOf   | 배열에 속해있는 요소 중에서 특정 조건을 만족하는 요소들의 개수를 카운팅하는 함수                         |  [공식문서](./docs/ko/array_countof.md)  |
+| find      | 배열에서 조건에 맞는 첫번째 요소를 반환하는 함수                                                         |   [공식문서](./docs/ko/array_find.md)    |
+| findIndex | 배열에서 조건에 맞는 첫번째 요소의 index를 반환하는 함수                                                 | [공식문서](./docs/ko/array_findindex.md) |
+| groupBy   | 주어진 키 생성 함수에 따라서 배열의 요소를 분류하는 함수                                                 |  [공식문서](./docs/ko/array_groupby.md)  |
+| isSameArr | 두 배열에 들어가있는 요소가 순서까지 모두 동일한지 여부를 반환하는 함수                                  | [공식문서](./docs/ko/array_issamearr.md) |
+| uniqArray | 배열에 들어가있는 중복 요소를 제거한 새로운 배열을 반환하는 함수                                         | [공식문서](./docs/ko/array_uniqarray.md) |
 
 ## 2. Number
 
-| 이름              | 설명                                                      |                                                       공식문서                                                        |
-| :---------------- | :-------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------: |
-| commaizeNumber    | 주어진 숫자를 콤마로 구분하는 함수입니다.                 |  [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/commaizeNumber_kr.md)   |
-| decommaizeNumber  | 콤마로 구분된 숫자에서 콤마만 제거하는 함수입니다.        | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/decommaizeNumber_kr.md)  |
-| formatPhoneNumber | 전화번호를 하이픈(-)이 들어간 형태로 변환하는 함수입니다. | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/formatPhoneNumber_kr.md) |
-| percent           | 나눗셈 결과를 퍼센트로 계산해주는 함수입니다.             |      [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/percent_kr.md)      |
-| sum               | 배열에 저장된 모든 숫자들을 더하는 함수입니다.            |        [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/sum_kr.md)        |
-| isInteger         | 값이 정수인지 여부를 반환하는 함수입니다.                 |     [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/isInteger_kr.md)     |
-| isPositiveInteger | 값이 양의 정수인지 여부를 반환하는 함수입니다.(0 제외)    | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/isPositiveInteger_kr.md) |
-| isNegativeInteger | 값이 음의 정수인지 여부를 반환하는 함수입니다.(0 제외)    | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/isNegativeInteger_kr.md) |
+| 이름              | 설명                                                      |                     공식문서                      |
+| :---------------- | :-------------------------------------------------------- | :-----------------------------------------------: |
+| commaizeNumber    | 주어진 숫자를 콤마로 구분하는 함수입니다.                 |  [공식문서](./docs/ko/number_commaizenumber.md)   |
+| decommaizeNumber  | 콤마로 구분된 숫자에서 콤마만 제거하는 함수입니다.        | [공식문서](./docs/ko/number_decommaizenumber.md)  |
+| formatPhoneNumber | 전화번호를 하이픈(-)이 들어간 형태로 변환하는 함수입니다. | [공식문서](./docs/ko/number_formatphonenumber.md) |
+| percent           | 나눗셈 결과를 퍼센트로 계산해주는 함수입니다.             |      [공식문서](./docs/ko/number_percent.md)      |
+| sum               | 배열에 저장된 모든 숫자들을 더하는 함수입니다.            |        [공식문서](./docs/ko/number_sum.md)        |
+| isInteger         | 값이 정수인지 여부를 반환하는 함수입니다.                 |     [공식문서](./docs/ko/number_isinteger.md)     |
+| isPositiveInteger | 값이 양의 정수인지 여부를 반환하는 함수입니다.(0 제외)    | [공식문서](./docs/ko/number_ispositiveinteger.md) |
+| isNegativeInteger | 값이 음의 정수인지 여부를 반환하는 함수입니다.(0 제외)    | [공식문서](./docs/ko/number_isnegativeinteger.md) |
 
 ## 3. Mask
 
-| 이름            | 설명                                 |                                                공식문서                                                 |
-| :-------------- | :----------------------------------- | :-----------------------------------------------------------------------------------------------------: |
-| maskName        | 이름을 마스킹하는 함수입니다.        | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/mask/maskName.md) |
-| maskPhoneNumber | 휴대폰 번호를 마스킹하는 함수입니다. | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/mask/maskName.md) |
+> ### 알려드립니다.
+>
+> 해당 함수들의 경우에는 유틸리티 함수로서 일정부분 역할을 수행은 하지만, 한국에서만 사용할 수 있는 유틸리티 함수로서 사용성이 부족하다고 판단하였습니다. 또한 toss-slash에서 동일한 기능을 제공하는 함수가 있어 Deprecated 처리하기로 결정하였습니다. 함수는 계속 제공이 되지만 앞으로 업데이트는 이뤄지지 않음으로 이점 참고해주시기 바랍니다.
+
+| 이름                                                              | 설명                                                                                   | 공식문서 |
+| :---------------------------------------------------------------- | :------------------------------------------------------------------------------------- | :------: |
+| ~~maskName~~<br><span style="color: red">Deprecated</span>        | ~~이름을 마스킹하는 함수입니다.~~<br><span style="color: red">Deprecated</span>        | 공식문서 |
+| ~~maskPhoneNumber~~<br><span style="color: red">Deprecated</span> | ~~휴대폰 번호를 마스킹하는 함수입니다.~~<br><span style="color: red">Deprecated</span> | 공식문서 |
 
 ## 4. Object
 
-| 이름      | 설명                                                           |                                                   공식문서                                                    |
-| :-------- | :------------------------------------------------------------- | :-----------------------------------------------------------------------------------------------------------: |
-| forIn     | 객체를 순회하면서 각 속성에 대해 iteratee 함수를 호출하는 함수 |   [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/object/forIn_kr.md)   |
-| keys      | 객체의 열거가능한 프로퍼티 이름들을 반환하는 함수              |   [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/object/keys_kr.md)    |
-| values    | 객체의 열거가능한 프로퍼티 값들을 반환하는 함수                |  [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/object/values_kr.md)   |
-| omit      | 객체에서 특정 키를 생략한 새로운 객체를 생성하는 함수          |   [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/object/omit_kr.md)    |
-| pick      | 객체에서 특정 키만 포함한 새로운 객체를 생성하는 함수          |   [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/object/pick_kr.md)    |
-| isSameObj | 두 객체가 동일한 객체인지 여부를 반환하는 함수                 | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/object/isSameObj_kr.md) |
+| 이름      | 설명                                                           |                 공식문서                  |
+| :-------- | :------------------------------------------------------------- | :---------------------------------------: |
+| forIn     | 객체를 순회하면서 각 속성에 대해 iteratee 함수를 호출하는 함수 |   [공식문서](./docs/ko/object_forin.md)   |
+| keys      | 객체의 열거가능한 프로퍼티 이름들을 반환하는 함수              |   [공식문서](./docs/ko/object_keys.md)    |
+| values    | 객체의 열거가능한 프로퍼티 값들을 반환하는 함수                |  [공식문서](./docs/ko/object_values.md)   |
+| omit      | 객체에서 특정 키를 생략한 새로운 객체를 생성하는 함수          |   [공식문서](./docs/ko/object_omit.md)    |
+| pick      | 객체에서 특정 키만 포함한 새로운 객체를 생성하는 함수          |   [공식문서](./docs/ko/object_pick.md)    |
+| isSameObj | 두 객체가 동일한 객체인지 여부를 반환하는 함수                 | [공식문서](./docs/ko/object_issameobj.md) |
 
 ## 5. Utility Types
 
-| 이름         | 설명                                       |                                                    공식문서                                                     |
-| :----------- | :----------------------------------------- | :-------------------------------------------------------------------------------------------------------------: |
-| PartialPath  | 특정 경로상의 프로퍼티를 optional로 처리   | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/types/partialPath_kr.md)  |
-| RequiredPath | 특정 경로상의 프로퍼티를 optional로 처리   | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/types/requiredPath_kr.md) |
-| Path         | 객체타입의 key 값들을 리터럴 타입으로 변환 |     [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/types/path_kr.md)     |
+| 이름         | 설명                                       |                  공식문서                  |
+| :----------- | :----------------------------------------- | :----------------------------------------: |
+| PartialPath  | 특정 경로상의 프로퍼티를 optional로 처리   | [공식문서](./docs/ko/type_partialpath.md)  |
+| RequiredPath | 특정 경로상의 프로퍼티를 optional로 처리   | [공식문서](./docs/ko/type_requiredpath.md) |
+| Path         | 객체타입의 key 값들을 리터럴 타입으로 변환 |     [공식문서](./docs/ko/type_path.md)     |
