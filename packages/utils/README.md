@@ -61,7 +61,7 @@ FEToolkit is a toolkit library that provides useful functions for Frontend devel
 | sum               | add all the numbers of values in an array.        |        [Document](./docs/en/number_sum.md)        |
 | isInteger         | check the value is integer.                       |     [Document](./docs/en/number_isinteger.md)     |
 | isPositiveInteger | check the value is positive integer.(except 0)    | [Document](./docs/en/number_ispositiveinteger.md) |
-| isNegativeInteger | check the value is negative integer.(except 0)    |              [Document](./docs/en/)               |
+| isNegativeInteger | check the value is negative integer.(except 0)    | [Document](./docs/en/number_isnegativeinteger.md) |
 
 ## 3. Mask
 

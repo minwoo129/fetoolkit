@@ -66,7 +66,7 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
 | sum               | 배열에 저장된 모든 숫자들을 더하는 함수입니다.            |        [공식문서](./docs/ko/number_sum.md)        |
 | isInteger         | 값이 정수인지 여부를 반환하는 함수입니다.                 |     [공식문서](./docs/ko/number_isinteger.md)     |
 | isPositiveInteger | 값이 양의 정수인지 여부를 반환하는 함수입니다.(0 제외)    | [공식문서](./docs/ko/number_ispositiveinteger.md) |
-| isNegativeInteger | 값이 음의 정수인지 여부를 반환하는 함수입니다.(0 제외)    |              [공식문서](./docs/ko/)               |
+| isNegativeInteger | 값이 음의 정수인지 여부를 반환하는 함수입니다.(0 제외)    | [공식문서](./docs/ko/number_isnegativeinteger.md) |
 
 ## 3. Mask
 
