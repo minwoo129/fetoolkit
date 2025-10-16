@@ -52,39 +52,39 @@ FEToolkit is a toolkit library that provides useful functions for Frontend devel
 
 ## 2. Number
 
-| Name              | Description                                       |                                                        Docs                                                        |
-| :---------------- | :------------------------------------------------ | :----------------------------------------------------------------------------------------------------------------: |
-| commaizeNumber    | generate number seperated by comma.               |                                   [Document](./docs/en/number_commaizenumber.md)                                   |
-| decommaizeNumber  | remove comma from number                          |                                  [Document](./docs/en/number_decommaizenumber.md)                                  |
-| formatPhoneNumber | convert a phone number into a hyphen type.        |                                 [Document](./docs/en/number_formatphonenumber.md)                                  |
-| percent           | Calculate the result of division as a percentage. |                                      [Document](./docs/en/number_percent.md)                                       |
-| sum               | add all the numbers of values in an array.        |                                        [Document](./docs/en/number_sum.md)                                         |
-| isInteger         | check the value is integer.                       |     [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/isInteger.md)     |
-| isPositiveInteger | check the value is positive integer.(except 0)    | [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/isPositiveInteger.md) |
-| isNegativeInteger | check the value is negative integer.(except 0)    | [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/isNegativeInteger.md) |
+| Name              | Description                                       |                       Docs                        |
+| :---------------- | :------------------------------------------------ | :-----------------------------------------------: |
+| commaizeNumber    | generate number seperated by comma.               |  [Document](./docs/en/number_commaizenumber.md)   |
+| decommaizeNumber  | remove comma from number                          | [Document](./docs/en/number_decommaizenumber.md)  |
+| formatPhoneNumber | convert a phone number into a hyphen type.        | [Document](./docs/en/number_formatphonenumber.md) |
+| percent           | Calculate the result of division as a percentage. |      [Document](./docs/en/number_percent.md)      |
+| sum               | add all the numbers of values in an array.        |        [Document](./docs/en/number_sum.md)        |
+| isInteger         | check the value is integer.                       |     [Document](./docs/en/number_isinteger.md)     |
+| isPositiveInteger | check the value is positive integer.(except 0)    |              [Document](./docs/en/)               |
+| isNegativeInteger | check the value is negative integer.(except 0)    |              [Document](./docs/en/)               |
 
 ## 3. Mask
 
-| Name            | Description          |                                                  Docs                                                   |
-| :-------------- | :------------------- | :-----------------------------------------------------------------------------------------------------: |
-| maskName        | masking user name    | [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/mask/maskName.md) |
-| maskPhoneNumber | masking phone number | [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/mask/maskName.md) |
+| Name            | Description          |          Docs          |
+| :-------------- | :------------------- | :--------------------: |
+| maskName        | masking user name    | [Document](./docs/en/) |
+| maskPhoneNumber | masking phone number | [Document](./docs/en/) |
 
 ## 4. Object
 
-| Name      | Description                                                            |                                                    Docs                                                    |
-| :-------- | :--------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------: |
-| forIn     | call iteratee function for each attribute while traversing the object. |   [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/object/forIn.md)   |
-| keys      | return keys of object.                                                 |   [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/object/keys.md)    |
-| values    | return values of object.                                               |  [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/object/values.md)   |
-| omit      | generates a new object that omits a particular key from the object.    |   [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/object/omit.md)    |
-| pick      | creates a new object containing only a specific key in the object.     |   [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/object/pick.md)    |
-| isSameObj | check that whether both object is same                                 | [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/object/isSameObj.md) |
+| Name      | Description                                                            |          Docs          |
+| :-------- | :--------------------------------------------------------------------- | :--------------------: |
+| forIn     | call iteratee function for each attribute while traversing the object. | [Document](./docs/en/) |
+| keys      | return keys of object.                                                 | [Document](./docs/en/) |
+| values    | return values of object.                                               | [Document](./docs/en/) |
+| omit      | generates a new object that omits a particular key from the object.    | [Document](./docs/en/) |
+| pick      | creates a new object containing only a specific key in the object.     | [Document](./docs/en/) |
+| isSameObj | check that whether both object is same                                 | [Document](./docs/en/) |
 
 ## 5. Utility Types
 
-| Name         | Description                               |                                                     Docs                                                     |
-| :----------- | :---------------------------------------- | :----------------------------------------------------------------------------------------------------------: |
-| PartialPath  | Make specific properties optional         | [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/types/partialPath.md)  |
-| RequiredPath | Make specific properties required         | [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/types/requiredPath.md) |
-| Path         | Convert object type keys to literal types |     [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/types/path.md)     |
+| Name         | Description                               |          Docs          |
+| :----------- | :---------------------------------------- | :--------------------: |
+| PartialPath  | Make specific properties optional         | [Document](./docs/en/) |
+| RequiredPath | Make specific properties required         | [Document](./docs/en/) |
+| Path         | Convert object type keys to literal types | [Document](./docs/en/) |

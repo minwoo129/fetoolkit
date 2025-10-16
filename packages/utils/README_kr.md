@@ -57,39 +57,39 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
 
 ## 2. Number
 
-| 이름              | 설명                                                      |                                                       공식문서                                                        |
-| :---------------- | :-------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------: |
-| commaizeNumber    | 주어진 숫자를 콤마로 구분하는 함수입니다.                 |                                    [공식문서](./docs/ko/number_commaizenumber.md)                                     |
-| decommaizeNumber  | 콤마로 구분된 숫자에서 콤마만 제거하는 함수입니다.        |                                   [공식문서](./docs/ko/number_decommaizenumber.md)                                    |
-| formatPhoneNumber | 전화번호를 하이픈(-)이 들어간 형태로 변환하는 함수입니다. |                                   [공식문서](./docs/ko/number_formatphonenumber.md)                                   |
-| percent           | 나눗셈 결과를 퍼센트로 계산해주는 함수입니다.             |                                        [공식문서](./docs/ko/number_percent.md)                                        |
-| sum               | 배열에 저장된 모든 숫자들을 더하는 함수입니다.            |                                          [공식문서](./docs/ko/number_sum.md)                                          |
-| isInteger         | 값이 정수인지 여부를 반환하는 함수입니다.                 |     [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/isInteger_kr.md)     |
-| isPositiveInteger | 값이 양의 정수인지 여부를 반환하는 함수입니다.(0 제외)    | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/isPositiveInteger_kr.md) |
-| isNegativeInteger | 값이 음의 정수인지 여부를 반환하는 함수입니다.(0 제외)    | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/isNegativeInteger_kr.md) |
+| 이름              | 설명                                                      |                     공식문서                      |
+| :---------------- | :-------------------------------------------------------- | :-----------------------------------------------: |
+| commaizeNumber    | 주어진 숫자를 콤마로 구분하는 함수입니다.                 |  [공식문서](./docs/ko/number_commaizenumber.md)   |
+| decommaizeNumber  | 콤마로 구분된 숫자에서 콤마만 제거하는 함수입니다.        | [공식문서](./docs/ko/number_decommaizenumber.md)  |
+| formatPhoneNumber | 전화번호를 하이픈(-)이 들어간 형태로 변환하는 함수입니다. | [공식문서](./docs/ko/number_formatphonenumber.md) |
+| percent           | 나눗셈 결과를 퍼센트로 계산해주는 함수입니다.             |      [공식문서](./docs/ko/number_percent.md)      |
+| sum               | 배열에 저장된 모든 숫자들을 더하는 함수입니다.            |        [공식문서](./docs/ko/number_sum.md)        |
+| isInteger         | 값이 정수인지 여부를 반환하는 함수입니다.                 |     [공식문서](./docs/ko/number_isinteger.md)     |
+| isPositiveInteger | 값이 양의 정수인지 여부를 반환하는 함수입니다.(0 제외)    |              [공식문서](./docs/ko/)               |
+| isNegativeInteger | 값이 음의 정수인지 여부를 반환하는 함수입니다.(0 제외)    |              [공식문서](./docs/ko/)               |
 
 ## 3. Mask
 
-| 이름            | 설명                                 |                                                공식문서                                                 |
-| :-------------- | :----------------------------------- | :-----------------------------------------------------------------------------------------------------: |
-| maskName        | 이름을 마스킹하는 함수입니다.        | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/mask/maskName.md) |
-| maskPhoneNumber | 휴대폰 번호를 마스킹하는 함수입니다. | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/mask/maskName.md) |
+| 이름            | 설명                                 |        공식문서        |
+| :-------------- | :----------------------------------- | :--------------------: |
+| maskName        | 이름을 마스킹하는 함수입니다.        | [공식문서](./docs/ko/) |
+| maskPhoneNumber | 휴대폰 번호를 마스킹하는 함수입니다. | [공식문서](./docs/ko/) |
 
 ## 4. Object
 
-| 이름      | 설명                                                           |                                                   공식문서                                                    |
-| :-------- | :------------------------------------------------------------- | :-----------------------------------------------------------------------------------------------------------: |
-| forIn     | 객체를 순회하면서 각 속성에 대해 iteratee 함수를 호출하는 함수 |   [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/object/forIn_kr.md)   |
-| keys      | 객체의 열거가능한 프로퍼티 이름들을 반환하는 함수              |   [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/object/keys_kr.md)    |
-| values    | 객체의 열거가능한 프로퍼티 값들을 반환하는 함수                |  [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/object/values_kr.md)   |
-| omit      | 객체에서 특정 키를 생략한 새로운 객체를 생성하는 함수          |   [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/object/omit_kr.md)    |
-| pick      | 객체에서 특정 키만 포함한 새로운 객체를 생성하는 함수          |   [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/object/pick_kr.md)    |
-| isSameObj | 두 객체가 동일한 객체인지 여부를 반환하는 함수                 | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/object/isSameObj_kr.md) |
+| 이름      | 설명                                                           |        공식문서        |
+| :-------- | :------------------------------------------------------------- | :--------------------: |
+| forIn     | 객체를 순회하면서 각 속성에 대해 iteratee 함수를 호출하는 함수 | [공식문서](./docs/ko/) |
+| keys      | 객체의 열거가능한 프로퍼티 이름들을 반환하는 함수              | [공식문서](./docs/ko/) |
+| values    | 객체의 열거가능한 프로퍼티 값들을 반환하는 함수                | [공식문서](./docs/ko/) |
+| omit      | 객체에서 특정 키를 생략한 새로운 객체를 생성하는 함수          | [공식문서](./docs/ko/) |
+| pick      | 객체에서 특정 키만 포함한 새로운 객체를 생성하는 함수          | [공식문서](./docs/ko/) |
+| isSameObj | 두 객체가 동일한 객체인지 여부를 반환하는 함수                 | [공식문서](./docs/ko/) |
 
 ## 5. Utility Types
 
-| 이름         | 설명                                       |                                                    공식문서                                                     |
-| :----------- | :----------------------------------------- | :-------------------------------------------------------------------------------------------------------------: |
-| PartialPath  | 특정 경로상의 프로퍼티를 optional로 처리   | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/types/partialPath_kr.md)  |
-| RequiredPath | 특정 경로상의 프로퍼티를 optional로 처리   | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/types/requiredPath_kr.md) |
-| Path         | 객체타입의 key 값들을 리터럴 타입으로 변환 |     [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/types/path_kr.md)     |
+| 이름         | 설명                                       |        공식문서        |
+| :----------- | :----------------------------------------- | :--------------------: |
+| PartialPath  | 특정 경로상의 프로퍼티를 optional로 처리   | [공식문서](./docs/ko/) |
+| RequiredPath | 특정 경로상의 프로퍼티를 optional로 처리   | [공식문서](./docs/ko/) |
+| Path         | 객체타입의 key 값들을 리터럴 타입으로 변환 | [공식문서](./docs/ko/) |
