@@ -65,10 +65,14 @@ FEToolkit is a toolkit library that provides useful functions for Frontend devel
 
 ## 3. Mask
 
-| Name            | Description          |          Docs          |
-| :-------------- | :------------------- | :--------------------: |
-| maskName        | masking user name    | [Document](./docs/en/) |
-| maskPhoneNumber | masking phone number | [Document](./docs/en/) |
+> ### Notice
+>
+> In the case of these functions, they play some role as utility functions, but they were judged to be insufficient in usability as utility functions that can only be used in Korea. Also, there was a function that provided the same function in toth-slash, so we decided to process it Deprecated. Please note that the function will continue to be provided, but no updates will be provided.
+
+| Name                                                              | Description                                                            |   Docs   |
+| :---------------------------------------------------------------- | :--------------------------------------------------------------------- | :------: |
+| ~~maskName~~<br><span style="color: red">Deprecated</span>        | ~~masking user name~~<br><span style="color: red">Deprecated</span>    | Document |
+| ~~maskPhoneNumber~~<br><span style="color: red">Deprecated</span> | ~~masking phone number~~<br><span style="color: red">Deprecated</span> | Document |
 
 ## 4. Object
 
