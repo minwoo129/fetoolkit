@@ -6,6 +6,9 @@ const isSeperatedByHyphen = (phoneNumber: string) => {
   return /^\d{2,3}-\d{3,4}-\d{4}$/.test(phoneNumber);
 };
 
+/**
+ * @deprecated
+ */
 export const maskPhoneNumber = (phoneNumber: string) => {
   if (isSeperatedByHyphen(phoneNumber)) {
     return phoneNumber.replace(
