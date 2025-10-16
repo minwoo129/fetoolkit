@@ -115,7 +115,7 @@ export const ContextMenuProvider = ({
                 y={locate.y}
                 items={buttonDatas}
                 onClick={onClickedContextMenuItem}
-                testId="context-menu-default-test"
+                dataTestId="context-menu-default-test"
               />
             )}
           </div>
