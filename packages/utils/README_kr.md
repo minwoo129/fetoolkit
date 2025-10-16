@@ -63,7 +63,7 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
 | decommaizeNumber  | 콤마로 구분된 숫자에서 콤마만 제거하는 함수입니다.        |                                   [공식문서](./docs/ko/number_decommaizenumber.md)                                    |
 | formatPhoneNumber | 전화번호를 하이픈(-)이 들어간 형태로 변환하는 함수입니다. |                                   [공식문서](./docs/ko/number_formatphonenumber.md)                                   |
 | percent           | 나눗셈 결과를 퍼센트로 계산해주는 함수입니다.             |                                        [공식문서](./docs/ko/number_percent.md)                                        |
-| sum               | 배열에 저장된 모든 숫자들을 더하는 함수입니다.            |        [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/sum_kr.md)        |
+| sum               | 배열에 저장된 모든 숫자들을 더하는 함수입니다.            |                                          [공식문서](./docs/ko/number_sum.md)                                          |
 | isInteger         | 값이 정수인지 여부를 반환하는 함수입니다.                 |     [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/isInteger_kr.md)     |
 | isPositiveInteger | 값이 양의 정수인지 여부를 반환하는 함수입니다.(0 제외)    | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/isPositiveInteger_kr.md) |
 | isNegativeInteger | 값이 음의 정수인지 여부를 반환하는 함수입니다.(0 제외)    | [공식문서](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/isNegativeInteger_kr.md) |
