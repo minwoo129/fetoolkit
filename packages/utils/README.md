@@ -91,4 +91,4 @@ FEToolkit is a toolkit library that provides useful functions for Frontend devel
 | :----------- | :---------------------------------------- | :----------------------------------------: |
 | PartialPath  | Make specific properties optional         | [Document](./docs/en/type_partialpath.md)  |
 | RequiredPath | Make specific properties required         | [Document](./docs/en/type_requiredpath.md) |
-| Path         | Convert object type keys to literal types |           [Document](./docs/en/)           |
+| Path         | Convert object type keys to literal types |     [Document](./docs/en/type_path.md)     |
