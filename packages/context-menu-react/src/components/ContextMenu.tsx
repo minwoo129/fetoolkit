@@ -19,8 +19,8 @@ interface ContextMenuGridItemProps extends AriaAttributes {
     className?: string;
     style?: CSSProperties;
   };
-  onClick?: () => void;
   dataTestId?: string;
+  contextMenuItemId: string;
 }
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -50,10 +50,10 @@ const Item = ({
   value,
   label,
   style,
-  onClick,
   className,
   textStyle,
   dataTestId,
+  contextMenuItemId,
   ...rest
 }: ContextMenuGridItemProps) => {
   return (
@@ -61,9 +61,9 @@ const Item = ({
       className={`context-menu-item ${className}`}
       value={value}
       style={style}
-      onClick={onClick}
-      {...rest}
       data-testid={dataTestId}
+      context-menu-item-id={contextMenuItemId}
+      {...rest}
     >
       <span
         className={`context-menu-span ${textStyle?.className ?? ''}`}

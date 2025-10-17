@@ -6,17 +6,16 @@ type DefaultContextMenuProps = {
   x: string;
   y: string;
   items: ContextMenuItemType[];
-  // eslint-disable-next-line no-unused-vars
-  onClick: (value: string) => void;
   dataTestId?: string;
+  contextMenuId: string;
 };
 
 export const DefaultContextMenu = ({
   x,
   y,
   items,
-  onClick,
   dataTestId,
+  contextMenuId,
 }: DefaultContextMenuProps) => {
   return (
     <ContextMenu.Grid x={x} y={y} dataTestId={dataTestId}>
@@ -26,7 +25,7 @@ export const DefaultContextMenu = ({
             key={item.value}
             value={item.value}
             label={item.label}
-            onClick={() => onClick(item.value)}
+            contextMenuItemId={contextMenuId}
           />
         );
       })}
