@@ -12,7 +12,7 @@ test('렌더링 테스트', async ({ page }) => {
 });
 
 test('버튼 클릭 테스트', async ({ page }) => {
-  await page.goto('http://localhost:3003/test-page-1');
+  await page.goto(URL);
   await page.getByText('Test Element').click({
     button: 'right',
   });
