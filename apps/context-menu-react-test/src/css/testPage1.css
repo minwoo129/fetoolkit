@@ -1,0 +1,28 @@
+.mainLayer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.ml-16 {
+  margin-left: 16px;
+}
+
+.row-items-grid {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.test-element {
+  border: 1px solid red;
+}
