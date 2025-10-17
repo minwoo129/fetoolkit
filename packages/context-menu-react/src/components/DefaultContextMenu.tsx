@@ -18,7 +18,11 @@ export const DefaultContextMenu = ({
   contextMenuId,
 }: DefaultContextMenuProps) => {
   return (
-    <ContextMenu.Grid x={x} y={y} dataTestId={dataTestId}>
+    <ContextMenu.Grid
+      x={x}
+      y={y}
+      dataTestId={dataTestId ? `${dataTestId}-${contextMenuId}` : undefined}
+    >
       {items.map((item) => {
         return (
           <ContextMenu.Item
@@ -26,6 +30,11 @@ export const DefaultContextMenu = ({
             value={item.value}
             label={item.label}
             contextMenuItemId={contextMenuId}
+            dataTestId={
+              dataTestId
+                ? `${dataTestId}-${contextMenuId}-${item.value}`
+                : undefined
+            }
           />
         );
       })}
