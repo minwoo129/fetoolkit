@@ -1,21 +1,21 @@
 import { useContext, useMemo } from 'react';
-import ContextMenuContext from '../contexts/ContextMenuContext';
+import PageLayoutContext from '../contexts/PageLayoutContext';
 
 export const useCustomContextMenu = () => {
-  const context = useContext(ContextMenuContext);
+  const context = useContext(PageLayoutContext);
 
   if (context == null) {
-    throw new Error('ContextMenuContext not found');
+    throw new Error('PageLayoutContext not found');
   }
 
-  const { buttonDatas, locate, onClickedContextMenuItem } = context;
+  const { location, buttonDatas, menuId } = context;
 
   return useMemo(
     () => ({
+      location,
       buttonDatas,
-      locate,
-      onClickedContextMenuItem,
+      menuId,
     }),
-    [buttonDatas, locate, onClickedContextMenuItem],
+    [location, buttonDatas, menuId],
   );
 };
