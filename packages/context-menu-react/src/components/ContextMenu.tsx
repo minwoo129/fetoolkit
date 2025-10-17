@@ -23,11 +23,7 @@ interface ContextMenuGridItemProps extends AriaAttributes {
   dataTestId?: string;
 }
 
-export type ContextMenuItemType = {
-  value: string;
-  label: string;
-};
-
+// eslint-disable-next-line react-refresh/only-export-components
 const Grid = ({
   x,
   y,
@@ -49,6 +45,7 @@ const Grid = ({
   );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 const Item = ({
   value,
   label,

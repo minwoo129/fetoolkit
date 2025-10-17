@@ -1,5 +1,6 @@
 import React from 'react';
-import { ContextMenu, type ContextMenuItemType } from './ContextMenu';
+import type { ContextMenuItemType } from '../types';
+import { ContextMenu } from './ContextMenu';
 
 type DefaultContextMenuProps = {
   x: string;
