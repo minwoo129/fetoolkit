@@ -59,7 +59,6 @@ export const PageLayoutContextProvider = ({
     };
 
     document.addEventListener('contextmenu', contextMenuListener);
-
     return () => {
       document.removeEventListener('contextmenu', contextMenuListener);
     };

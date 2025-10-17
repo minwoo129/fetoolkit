@@ -63,11 +63,14 @@ const Item = ({
       style={style}
       data-testid={dataTestId}
       context-menu-item-id={contextMenuItemId}
+      context-menu-item-value={value}
       {...rest}
     >
       <span
         className={`context-menu-span ${textStyle?.className ?? ''}`}
         style={textStyle?.style}
+        context-menu-item-id={contextMenuItemId}
+        context-menu-item-value={value}
       >
         {label}
       </span>

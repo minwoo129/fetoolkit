@@ -1,5 +1,5 @@
 import { useCallback, useContext, useEffect, useMemo, useState } from 'react';
-import ContextMenuContext from '../contexts/ContextMenuContext';
+import PageLayoutContext from '../contexts/PageLayoutContext';
 
 type LastClickedDataType = {
   menuId: string;
@@ -7,31 +7,29 @@ type LastClickedDataType = {
 };
 
 export const useContextMenu = () => {
-  const context = useContext(ContextMenuContext);
+  const context = useContext(PageLayoutContext);
   const [lastClickedData, setLastClickedData] =
     useState<LastClickedDataType | null>(null);
 
   if (context == null) {
-    throw new Error('PageLayoutContext is not found');
+    throw new Error('PageLayoutContext not found');
   }
 
-  const { appButtonDatas } = context;
-
+  // 메뉴 클릭 리스너 설정
   useEffect(() => {
     const menuBtnClickListener = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
       const menuId = target.getAttribute('context-menu-item-id');
 
       if (!menuId) return;
-      const value = target.getAttribute('value');
+      event.preventDefault();
+      const value = target.getAttribute('context-menu-item-value');
       if (!value) return;
 
       setLastClickedData({
         menuId,
         value,
       });
-
-      event.preventDefault();
     };
 
     document.addEventListener('click', menuBtnClickListener);
@@ -39,11 +37,11 @@ export const useContextMenu = () => {
     return () => {
       document.removeEventListener('click', menuBtnClickListener);
     };
-  }, [appButtonDatas]);
+  }, []);
 
   const onClickedContextMenuItem = useCallback(
     // eslint-disable-next-line no-unused-vars
-    (callback: (data: LastClickedDataType) => void) => {
+    (callback: (data: typeof lastClickedData) => void) => {
       if (lastClickedData) {
         callback(lastClickedData);
       }
