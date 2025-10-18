@@ -17,5 +17,7 @@ test('버튼 클릭 테스트', async ({ page }) => {
   });
   await expect(page.getByTestId('app-context-menu')).toBeVisible();
   await page.getByTestId('app-context-menu-item-apple').click();
-  await expect(page.getByTestId('print-value')).toHaveText('test-menu-2-apple');
+  await expect(page.getByTestId('print-value')).toHaveText(
+    '{"menuId":"test-menu-2","value":"apple"}',
+  );
 });

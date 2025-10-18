@@ -8,7 +8,7 @@ const ContextMenuTestPage1 = () => {
   useEffect(() => {
     const unsubscribe = onClickedContextMenuItem((data) => {
       if (data) {
-        setPrintValue(`${data.menuId}-${data.value}`);
+        setPrintValue(JSON.stringify(data));
       }
     });
     return () => {
@@ -19,7 +19,13 @@ const ContextMenuTestPage1 = () => {
     <div className="mainLayer">
       <div className="row-items-grid">
         <div className="test-element" context-menu-id="test-menu-1">
-          Test Element
+          Test Element1
+        </div>
+        <div className="test-element" context-menu-id="test-menu-2">
+          Test Element2
+        </div>
+        <div className="test-element" context-menu-id="test-menu-3">
+          Test Element3
         </div>
       </div>
       <div className="row-items-grid">
