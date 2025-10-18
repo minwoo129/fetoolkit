@@ -78,7 +78,7 @@ export const PageLayoutContextProvider = ({
                 x={location.x}
                 y={location.y}
                 items={buttonDatas}
-                dataTestId="page-layout-default-test"
+                dataTestId="default-context-menu"
                 contextMenuId={menuId}
               />
             )}
