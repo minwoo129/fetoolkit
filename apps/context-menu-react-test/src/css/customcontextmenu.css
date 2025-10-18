@@ -1,0 +1,13 @@
+.custom-context-menu {
+  background-color: #61c93b;
+  border-radius: 10px;
+  position: absolute;
+  box-shadow: 0 6px 17px rgba(119, 119, 119, 0.2);
+  padding: 4px;
+}
+
+.context-menu-text {
+  font-size: medium;
+  margin-left: 8px;
+  color: #343434;
+}
