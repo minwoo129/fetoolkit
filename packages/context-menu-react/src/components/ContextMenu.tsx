@@ -1,4 +1,10 @@
-import React, { type AriaAttributes, type CSSProperties } from 'react';
+import { useResizeElement, useResizeWindow } from '@fetoolkit/react';
+import React, {
+  useMemo,
+  useRef,
+  type AriaAttributes,
+  type CSSProperties,
+} from 'react';
 import '../css/contextmenu.css';
 
 interface ContextMenuGridProps extends AriaAttributes {
@@ -33,12 +39,34 @@ const Grid = ({
   className,
   ...rest
 }: ContextMenuGridProps) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [ew, eh] = useResizeElement(ref);
+  const [vw, vh] = useResizeWindow();
+
+  const { nx, ny } = useMemo(() => {
+    const cx = Number(x);
+    const cy = Number(y);
+    let nx = cx;
+    let ny = cy;
+
+    if (vw < ew + cx - 10) {
+      nx = vw - ew - 10;
+    }
+
+    if (vh < eh + cy - 10) {
+      ny = vh - eh - 10;
+    }
+
+    return { nx, ny };
+  }, [ew, eh, vw, vh, x, y]);
+
   return (
     <div
+      ref={ref}
       className={`context-menu-wrapper ${className}`}
-      style={{ left: `${x}px`, top: `${y}px`, ...style }}
-      {...rest}
+      style={{ left: `${nx}px`, top: `${ny}px`, ...style }}
       data-testid={dataTestId}
+      {...rest}
     >
       <ul className="context-menu-menu">{children}</ul>
     </div>
