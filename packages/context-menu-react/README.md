@@ -269,19 +269,19 @@ You can connect ContextMenu components with your desired style using the provide
 
 ### 5-2. HOC (High-Order Component)
 
-| Name            | Description                                           |   Docs   |
-| :-------------- | :---------------------------------------------------- | :------: |
-| withContextMenu | HOC for connecting ContextMenu functionality per page | Document |
+| Name            | Description                                           |                     Docs                     |
+| :-------------- | :---------------------------------------------------- | :------------------------------------------: |
+| withContextMenu | HOC for connecting ContextMenu functionality per page | [Document](./docs/en/hoc_withcontextmenu.md) |
 
 ### 5-3. Hook
 
-| Name           | Description                        |   Docs   |
-| :------------- | :--------------------------------- | :------: |
-| useContextMenu | Hook for ContextMenu functionality | Document |
+| Name           | Description                        |          Docs          |
+| :------------- | :--------------------------------- | :--------------------: |
+| useContextMenu | Hook for ContextMenu functionality | [Document](./docs/en/) |
 
 ### 5-4. Type
 
-| Name                   | Description                                              |   Docs   |
-| :--------------------- | :------------------------------------------------------- | :------: |
-| ContextMenuButtonDatas | Type for ContextMenu data object to be declared globally | Document |
-| ContextMenuItemType    | Data type for each button                                | Document |
+| Name                   | Description                                              |          Docs          |
+| :--------------------- | :------------------------------------------------------- | :--------------------: |
+| ContextMenuButtonDatas | Type for ContextMenu data object to be declared globally | [Document](./docs/en/) |
+| ContextMenuItemType    | Data type for each button                                | [Document](./docs/en/) |

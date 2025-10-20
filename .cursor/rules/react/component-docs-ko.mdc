@@ -1,5 +1,5 @@
 ---
-globs: packages/*/docs/ko/component_*.md
+globs: packages/*/docs/ko/component_*.md,packages/*/docs/ko/hoc_*.md
 alwaysApply: false
 ---
 
