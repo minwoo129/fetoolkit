@@ -109,6 +109,9 @@ interface ContextMenuGridItemProps extends AriaAttributes {
   onClick?: () => void;
 }
 
+/**
+ * @deprecated
+ */
 export type ContextMenuItemType = {
   value: string;
   label: string;
@@ -162,6 +165,9 @@ const Item = ({
   );
 };
 
+/**
+ * @deprecated
+ */
 // eslint-disable-next-line react-refresh/only-export-components
 export const ContextMenu = {
   Grid,
@@ -177,6 +183,9 @@ type DefaultContextMenuProps = {
   testId?: string;
 };
 
+/**
+ * @deprecated
+ */
 export const DefaultContextMenu = ({
   x,
   y,

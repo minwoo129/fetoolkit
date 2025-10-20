@@ -1,6 +1,9 @@
 import { useContext, useMemo } from 'react';
 import ContextMenuContext from '../contexts/ContextMenuContext';
 
+/**
+ * @deprecated
+ */
 export const useCustomContextMenu = () => {
   const context = useContext(ContextMenuContext);
 
