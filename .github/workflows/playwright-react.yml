@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
       - name: Build packages
-        run: yarn build
+        run: yarn apps:react:auto-install
       - name: Run test
         run: yarn tests:react:e2e
       - uses: actions/upload-artifact@v4
