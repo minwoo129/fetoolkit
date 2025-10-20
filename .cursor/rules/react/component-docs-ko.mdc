@@ -1,5 +1,5 @@
 ---
-globs: packages/admin-react/docs/ko/component_*.md,packages/react/docs/ko/component_*.md
+globs: packages/*/docs/ko/component_*.md,packages/*/docs/ko/hoc_*.md
 alwaysApply: false
 ---
 
