@@ -45,14 +45,7 @@ export const MenuButtons: ContextMenuButtonDatas = {
 
 ## API Documentation
 
-- Structure
-  |name|type|description|
-  |:---:|:---|:---:|
-  |key|string|Menu ID (matches the data-context-menu-id attribute of HTML elements)|
-  |value|ContextMenuItemType[]|Array of items to be displayed in the menu|
-
-- ContextMenuItemType Structure
-  |name|type|required|description|
-  |:---:|:---|:---|:---:|
-  |label|string|true|Text to be displayed on the menu item|
-  |value|string|true|Unique value of the menu item (used in event handlers when clicked)|
+| name  | type                                                   |                              description                              |
+| :---: | :----------------------------------------------------- | :-------------------------------------------------------------------: |
+|  key  | string                                                 | Menu ID (matches the data-context-menu-id attribute of HTML elements) |
+| value | [ContextMenuItemType](./type_contextmenuitemtype.md)[] |              Array of items to be displayed in the menu               |

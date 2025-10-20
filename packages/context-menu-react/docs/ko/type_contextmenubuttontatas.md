@@ -45,14 +45,7 @@ export const MenuButtons: ContextMenuButtonDatas = {
 
 ## API 문서
 
-- 구조
-  |name|type|description|
-  |:---:|:---|:---:|
-  |key|string|메뉴 ID (HTML 요소의 data-context-menu-id 속성과 일치)|
-  |value|ContextMenuItemType[]|해당 메뉴에 표시될 아이템들의 배열|
-
-- ContextMenuItemType 구조
-  |name|type|required|description|
-  |:---:|:---|:---|:---:|
-  |label|string|true|메뉴 아이템에 표시될 텍스트|
-  |value|string|true|메뉴 아이템의 고유 값 (클릭 시 이벤트 핸들러에서 사용)|
+| name  | type                                                   |                      description                       |
+| :---: | :----------------------------------------------------- | :----------------------------------------------------: |
+|  key  | string                                                 | 메뉴 ID (HTML 요소의 data-context-menu-id 속성과 일치) |
+| value | [ContextMenuItemType](./type_contextmenuitemtype.md)[] |           해당 메뉴에 표시될 아이템들의 배열           |
