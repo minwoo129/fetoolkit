@@ -285,4 +285,4 @@ You can connect ContextMenu components with your desired style using the provide
 | :--------------------- | :------------------------------------------------------------- | :--------------------------------------------------: |
 | ContextMenuButtonDatas | Type for ContextMenu data object to be declared globally       | [Document](./docs/en/type_contextmenubuttontatas.md) |
 | ContextMenuItemType    | Data type for each button                                      |  [Document](./docs/en/type_contextmenuitemtype.md)   |
-| LastClickedDataType    | Information about the last event where a button click occurred |                [Document](./docs/en/)                |
+| LastClickedDataType    | Information about the last event where a button click occurred |  [Document](./docs/en/type_lastclickeddatatype.md)   |

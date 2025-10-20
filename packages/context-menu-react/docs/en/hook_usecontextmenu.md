@@ -31,6 +31,6 @@ useEffect(() => {
 }
 ```
 
-| Name                     | Type                                                                  | Description                                                                                                                                                                         |
-| ------------------------ | --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| onClickedContextMenuItem | (callback: (data: LastClickedDataType \| null) => void) => () => void | Method to register a callback function that will be executed when a context menu item is clicked <br> - Passes data including the ID and value of the clicked menu to the callback. |
+| Name                     | Type                                                                                                   | Description                                                                                                                                                                         |
+| ------------------------ | ------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| onClickedContextMenuItem | (callback: (data: [LastClickedDataType](./type_lastclickeddatatype.md) \| null) => void) => () => void | Method to register a callback function that will be executed when a context menu item is clicked <br> - Passes data including the ID and value of the clicked menu to the callback. |
