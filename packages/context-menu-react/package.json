@@ -33,7 +33,7 @@
     "**/*.css"
   ],
   "scripts": {
-    "build": "tsc -b && vite build",
+    "build": "tsc -b --skipLibCheck && vite build",
     "test:unit": "vitest"
   },
   "devDependencies": {
