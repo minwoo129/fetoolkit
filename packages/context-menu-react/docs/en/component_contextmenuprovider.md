@@ -20,7 +20,7 @@ createRoot(document.getElementById('root')!).render(
 
 ## API(Props) Reference
 
-| Name        | Type                   | Required | Default | Description                                  |
-| :---------- | :--------------------- | :------- | :------ | :------------------------------------------- |
-| buttonDatas | ContextMenuButtonDatas | true     | -       | Button data object to be used in ContextMenu |
-| children    | ReactNode              | true     | -       | Child components to be wrapped by Provider   |
+| Name        | Type                                                       | Required | Default | Description                                  |
+| :---------- | :--------------------------------------------------------- | :------- | :------ | :------------------------------------------- |
+| buttonDatas | [ContextMenuButtonDatas](./type_contextmenubuttontatas.md) | true     | -       | Button data object to be used in ContextMenu |
+| children    | ReactNode                                                  | true     | -       | Child components to be wrapped by Provider   |

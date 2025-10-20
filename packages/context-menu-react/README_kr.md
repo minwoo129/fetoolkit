@@ -281,8 +281,8 @@ export default ContextMenuTestPage1;
 
 ### 5-4. Type
 
-| 이름                   | 설명                                       |        공식문서        |
-| :--------------------- | :----------------------------------------- | :--------------------: |
-| ContextMenuButtonDatas | 전역에 선언할 ContextMenu 데이터 객체 타입 | [공식문서](./docs/ko/) |
-| ContextMenuItemType    | 각 버튼 별 데이터 타입                     | [공식문서](./docs/ko/) |
-| LastClickedDataType    | 버튼 클릭이 발생한 마지막 이벤트 정보      | [공식문서](./docs/ko/) |
+| 이름                   | 설명                                       |                       공식문서                       |
+| :--------------------- | :----------------------------------------- | :--------------------------------------------------: |
+| ContextMenuButtonDatas | 전역에 선언할 ContextMenu 데이터 객체 타입 | [공식문서](./docs/ko/type_contextmenubuttontatas.md) |
+| ContextMenuItemType    | 각 버튼 별 데이터 타입                     |                [공식문서](./docs/ko/)                |
+| LastClickedDataType    | 버튼 클릭이 발생한 마지막 이벤트 정보      |                [공식문서](./docs/ko/)                |

@@ -20,7 +20,7 @@ createRoot(document.getElementById('root')!).render(
 
 ## API(Props) 설명
 
-| Name        | Type                   | Required | Default | Description                             |
-| :---------- | :--------------------- | :------- | :------ | :-------------------------------------- |
-| buttonDatas | ContextMenuButtonDatas | true     | -       | ContextMenu에서 사용할 버튼 데이터 객체 |
-| children    | ReactNode              | true     | -       | Provider로 감쌀 하위 컴포넌트들         |
+| Name        | Type                                                       | Required | Default | Description                             |
+| :---------- | :--------------------------------------------------------- | :------- | :------ | :-------------------------------------- |
+| buttonDatas | [ContextMenuButtonDatas](./type_contextmenubuttontatas.md) | true     | -       | ContextMenu에서 사용할 버튼 데이터 객체 |
+| children    | ReactNode                                                  | true     | -       | Provider로 감쌀 하위 컴포넌트들         |
