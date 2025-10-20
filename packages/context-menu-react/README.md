@@ -263,25 +263,25 @@ You can connect ContextMenu components with your desired style using the provide
 
 ### 5-1. Components
 
-| Name                | Description                                      | Docs |
-| :------------------ | :----------------------------------------------- | :--: |
-| ContextMenuProvider | Provider component for ContextMenu functionality | Docs |
+| Name                | Description                                      |                          Docs                          |
+| :------------------ | :----------------------------------------------- | :----------------------------------------------------: |
+| ContextMenuProvider | Provider component for ContextMenu functionality | [Document](./docs/en/component_contextmenuprovider.md) |
 
 ### 5-2. HOC (High-Order Component)
 
-| Name            | Description                                           | Docs |
-| :-------------- | :---------------------------------------------------- | :--: |
-| withContextMenu | HOC for connecting ContextMenu functionality per page | Docs |
+| Name            | Description                                           |   Docs   |
+| :-------------- | :---------------------------------------------------- | :------: |
+| withContextMenu | HOC for connecting ContextMenu functionality per page | Document |
 
 ### 5-3. Hook
 
-| Name           | Description                        | Docs |
-| :------------- | :--------------------------------- | :--: |
-| useContextMenu | Hook for ContextMenu functionality | Docs |
+| Name           | Description                        |   Docs   |
+| :------------- | :--------------------------------- | :------: |
+| useContextMenu | Hook for ContextMenu functionality | Document |
 
 ### 5-4. Type
 
-| Name                   | Description                                              | Docs |
-| :--------------------- | :------------------------------------------------------- | :--: |
-| ContextMenuButtonDatas | Type for ContextMenu data object to be declared globally | Docs |
-| ContextMenuItemType    | Data type for each button                                | Docs |
+| Name                   | Description                                              |   Docs   |
+| :--------------------- | :------------------------------------------------------- | :------: |
+| ContextMenuButtonDatas | Type for ContextMenu data object to be declared globally | Document |
+| ContextMenuItemType    | Data type for each button                                | Document |

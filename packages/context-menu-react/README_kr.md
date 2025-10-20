@@ -263,9 +263,9 @@ export default ContextMenuTestPage1;
 
 ### 5-1. 컴포넌트
 
-| 이름                | 설명                                           | 공식문서 |
-| :------------------ | :--------------------------------------------- | :------: |
-| ContextMenuProvider | ContextMenu 기능 실행을 위한 Provider 컴포넌트 | 공식문서 |
+| 이름                | 설명                                           |                        공식문서                        |
+| :------------------ | :--------------------------------------------- | :----------------------------------------------------: |
+| ContextMenuProvider | ContextMenu 기능 실행을 위한 Provider 컴포넌트 | [공식문서](./docs/ko/component_contextmenuprovider.md) |
 
 ### 5-2. HOC(High-Order Component)
 
