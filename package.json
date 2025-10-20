@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "prepare": "husky",
-    "build": "yarn packages:utils build && yarn packages:react build && yarn packages:admin-react build && yarn packages:context-menu-react build",
+    "build": "lerna run build",
     "create:project": "lerna create",
     "version:up": "lerna version --yes --no-git-tag-version --force-publish",
     "packages:react": "yarn workspace @fetoolkit/react",
