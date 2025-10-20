@@ -275,13 +275,14 @@ You can connect ContextMenu components with your desired style using the provide
 
 ### 5-3. Hook
 
-| Name           | Description                        |          Docs          |
-| :------------- | :--------------------------------- | :--------------------: |
-| useContextMenu | Hook for ContextMenu functionality | [Document](./docs/en/) |
+| Name           | Description                        |                     Docs                     |
+| :------------- | :--------------------------------- | :------------------------------------------: |
+| useContextMenu | Hook for ContextMenu functionality | [Document](./docs/en/hook_usecontextmenu.md) |
 
 ### 5-4. Type
 
-| Name                   | Description                                              |          Docs          |
-| :--------------------- | :------------------------------------------------------- | :--------------------: |
-| ContextMenuButtonDatas | Type for ContextMenu data object to be declared globally | [Document](./docs/en/) |
-| ContextMenuItemType    | Data type for each button                                | [Document](./docs/en/) |
+| Name                   | Description                                                    |          Docs          |
+| :--------------------- | :------------------------------------------------------------- | :--------------------: |
+| ContextMenuButtonDatas | Type for ContextMenu data object to be declared globally       | [Document](./docs/en/) |
+| ContextMenuItemType    | Data type for each button                                      | [Document](./docs/en/) |
+| LastClickedDataType    | Information about the last event where a button click occurred | [Document](./docs/en/) |
