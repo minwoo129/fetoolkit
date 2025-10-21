@@ -124,6 +124,9 @@ interface ContextMenuProviderProps {
   children: ReactNode;
 }
 
+/**
+ * @deprecated
+ */
 export const ContextMenuProvider = ({
   menuComponent,
   children,

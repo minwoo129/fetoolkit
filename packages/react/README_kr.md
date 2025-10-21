@@ -6,7 +6,15 @@
 [English](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/README.md) | 한국어
 
 FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 제공하는 툴킷 라이브러리입니다. 라이브러리는 React, Vue 등 프레임워크에 따라서 구분하여 제공되며, 프레임워크와 무관하게 공통적으로 사용할 수 있는 기능은 별도의 라이브러리로 배포될 예정입니다.  
-현재는 제공되고 있는 기능이 많이 없을지 몰라도 지속적인 업데이트를 통해 기능을 추가해나갈 예정입니다.
+이 패키지는 react 환경에서만 사용 가능한 패키지입니다.
+
+> ### 알려드립니다.
+>
+> - V2 버전 업데이트를 통해 대규모 업데이트를 진행하였습니다.
+>   - ContextMenu 기능은 [`@fetoolkit/context-menu-react`](../context-menu-react/)로 이전하였습니다.(이 패키지에서 제공하던 관련 기능은 deprecated 처리하였습니다.)
+>   - 해당 패키지에서 제공하고 있던 모든 유틸리티 함수는 deprecated 처리하였습니다.
+>     - userAgent 기능은 `@fetoolkit/user-agent`로 이전하였습니다.
+>     - 그 외 다른 함수들은 [`@fetoolkit/utils`](../utils/)에서 제공하고 있습니다.
 
 ## 의존성
 
@@ -57,10 +65,9 @@ createRoot(document.getElementById('root')!).render(
 
 ## 3-1. 통합 기능
 
-| 이름        | 설명                                         |                 공식문서                 |
-| :---------- | :------------------------------------------- | :--------------------------------------: |
-| ContextMenu | 사용자 선언 ContextMenu 구현을 위한 컴포넌트 |   [공식문서](./docs/ko/contextmenu.md)   |
-| Validation  | 유효성 검사 기능                             | [공식문서](./docs/ko/validationcheck.md) |
+| 이름       | 설명             |                 공식문서                 |
+| :--------- | :--------------- | :--------------------------------------: |
+| Validation | 유효성 검사 기능 | [공식문서](./docs/ko/validationcheck.md) |
 
 ### 3-2. 컴포넌트
 
@@ -89,23 +96,3 @@ createRoot(document.getElementById('root')!).render(
 | useUserAgent          | UserAgent를 통해 받아온 런타임이 돌아가고 있는 브라우저<br> 및 운영체제 정보를 반환하는 Hook |     [공식문서](./docs/ko/hook_useuseragent.md)      |
 | useValidationCheck    | 유효성 검사를 위한 hook 입니다.                                                              |  [공식문서](./docs/ko/hook_usevalidationcheck.md)   |
 | useValidateCheckInput | 입력값 상태관리와 유효성 검사기능이 결합된 hook입니다.                                       | [공식문서](./docs/ko/hook_usevalidatecheckinput.md) |
-| useContextMenu        | ContextMenu 기능 실행을 위한 hook 입니다.                                                    |    [공식문서](./docs/ko/hook_usecontextmenu.md)     |
-| useCustomContextMenu  | 사용자 선언형 ContextMenu 컴포넌트 구현시 필요한 <br> 값들을 반환하는 hook 입니다.           | [공식문서](./docs/ko/hook_usecustomcontextmenu.md)  |
-
-### 3-4. 유틸리티 함수
-
-> ### 안내
->
-> getUserAgent를 제외한 모든 유틸리티 함수는 [`@fetoolkit/utils`](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils)로 이동하였습니다.
-
-| 이름                                                                | 설명                                                                                                                                    |                          공식문서                           |
-| :------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------: |
-| getUserAgent                                                        | UserAgent를 통해 받아온 런타임이 돌아가고 있는 브라우저<br> 및 운영체제 정보를 반환하는 함수                                            |         [공식문서](./docs/ko/utils_getuseragent.md)         |
-| ~~formatPhoneNumber~~<br><span style="color: red">Deprecated</span> | ~~전화번호를 하이픈(-)이 들어간 형태로 반환하는 함수~~<br> <span style="color: red">Deprecated</span>                                   | ~~공식문서~~<br> <span style="color: red">Deprecated</span> |
-| ~~commaizeNumber~~<br><span style="color: red">Deprecated</span>    | ~~숫자 콤마 처리 함수~~<br> <span style="color: red">Deprecated</span>                                                                  | ~~공식문서~~<br> <span style="color: red">Deprecated</span> |
-| ~~decommaizeNumber~~<br><span style="color: red">Deprecated</span>  | ~~콤마 처리가 들어간 숫자의 콤마 제거 함수~~<br> <span style="color: red">Deprecated</span>                                             | ~~공식문서~~<br> <span style="color: red">Deprecated</span> |
-| ~~maskName~~<br><span style="color: red">Deprecated</span>          | ~~이름 마스킹 처리 함수~~<br> <span style="color: red">Deprecated</span>                                                                | ~~공식문서~~<br> <span style="color: red">Deprecated</span> |
-| ~~maskPhoneNumber~~<br><span style="color: red">Deprecated</span>   | ~~전화번호 마스킹 처리 함수~~<br> <span style="color: red">Deprecated</span>                                                            | ~~공식문서~~<br> <span style="color: red">Deprecated</span> |
-| ~~at~~<br><span style="color: red">Deprecated</span>                | ~~배열에서 특정 인덱스에 있는 요소를 반환하는 함수<br> (파이썬처럼 음수 인덱스도 지원)~~<br> <span style="color: red">Deprecated</span> | ~~공식문서~~<br> <span style="color: red">Deprecated</span> |
-| ~~first~~<br><span style="color: red">Deprecated</span>             | ~~배열의 첫번째 요소를 꺼내오는 함수~~<br> <span style="color: red">Deprecated</span>                                                   | ~~공식문서~~<br> <span style="color: red">Deprecated</span> |
-| ~~last~~<br><span style="color: red">Deprecated</span>              | ~~배열의 마지막 요소를 꺼내오는 함수~~<br> <span style="color: red">Deprecated</span>                                                   | ~~공식문서~~<br> <span style="color: red">Deprecated</span> |
