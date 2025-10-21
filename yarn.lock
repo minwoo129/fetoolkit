@@ -831,6 +831,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@fetoolkit/user-agent@workspace:packages/user-agent":
+  version: 0.0.0-use.local
+  resolution: "@fetoolkit/user-agent@workspace:packages/user-agent"
+  dependencies:
+    user-agent-data-types: "npm:^0.4.2"
+    vite: "npm:^7.1.4"
+    vite-plugin-dts: "npm:^4.5.4"
+  languageName: unknown
+  linkType: soft
+
 "@fetoolkit/utils@workspace:^, @fetoolkit/utils@workspace:packages/utils":
   version: 0.0.0-use.local
   resolution: "@fetoolkit/utils@workspace:packages/utils"
