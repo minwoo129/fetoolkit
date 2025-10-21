@@ -23,7 +23,12 @@ export default defineConfig({
       formats: ['es', 'umd'],
     },
     rollupOptions: {
-      external: ['react', 'react-dom', '@fetoolkit/context-menu-react'],
+      external: [
+        'react',
+        'react-dom',
+        '@fetoolkit/react',
+        '@fetoolkit/context-menu-react',
+      ],
       output: {
         globals: {
           react: 'React',
