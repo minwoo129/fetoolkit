@@ -15,6 +15,7 @@
     "packages:utils": "yarn workspace @fetoolkit/utils",
     "packages:admin-react": "yarn workspace @fetoolkit/admin-react",
     "packages:context-menu-react": "yarn workspace @fetoolkit/context-menu-react",
+    "packages:user-agent": "yarn workspace @fetoolkit/user-agent",
     "tests:react:e2e": "cd apps/react-test && yarn playwright install --with-deps && yarn test:e2e",
     "tests:react:unit": "cd packages/react && yarn test:unit",
     "tests:utils:unit": "cd packages/utils && yarn test:unit",
