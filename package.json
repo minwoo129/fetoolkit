@@ -26,7 +26,9 @@
     "apps:admin-react": "yarn workspace admin-react-test",
     "apps:admin-react:auto-install": "yarn build && yarn apps:admin-react install",
     "apps:context-menu-react": "yarn workspace context-menu-react-test",
-    "apps:context-menu-react:auto-install": "yarn build && yarn apps:context-menu-react install"
+    "apps:context-menu-react:auto-install": "yarn build && yarn apps:context-menu-react install",
+    "apps:user-agent": "yarn workspace user-agent-test",
+    "apps:user-agent:auto-install": "yarn build && yarn apps:user-agent install"
   },
   "devDependencies": {
     "@eslint/js": "^9.34.0",
