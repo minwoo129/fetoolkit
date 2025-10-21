@@ -25,7 +25,7 @@ export default defineConfig({
       cssFileName: 'index.css',
     },
     rollupOptions: {
-      external: ['react', 'react-dom', '@fetoolkit/react'],
+      external: ['react', 'react-dom'],
       output: {
         globals: { react: 'React', 'react-dom': 'ReactDOM' },
         chunkFileNames: 'chunks/[name].[hash].js',

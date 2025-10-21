@@ -1,7 +1,8 @@
-import { useResizeElement, useResizeWindow } from '@fetoolkit/react';
 import React, {
+  useEffect,
   useMemo,
   useRef,
+  useState,
   type AriaAttributes,
   type CSSProperties,
 } from 'react';
@@ -40,12 +41,51 @@ const Grid = ({
   ...rest
 }: ContextMenuGridProps) => {
   const ref = useRef<HTMLDivElement>(null);
-  const [ew, eh] = useResizeElement(ref);
-  const [vw, vh] = useResizeWindow();
+  const [viewportSize, setViewportSize] = useState<{ vw: number; vh: number }>({
+    vw: 0,
+    vh: 0,
+  });
+  const [elementSize, setElementSize] = useState<{ ew: number; eh: number }>({
+    ew: 0,
+    eh: 0,
+  });
+
+  useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+
+    setElementSize({
+      ew: element.offsetWidth,
+      eh: element.offsetHeight,
+    });
+  }, [ref]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return () => {
+        window.removeEventListener('resize', () => null);
+      };
+    }
+
+    const handleResize = () => {
+      setViewportSize({
+        vw: window.innerWidth,
+        vh: window.innerHeight,
+      });
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const { nx, ny } = useMemo(() => {
     const cx = Number(x);
     const cy = Number(y);
+    const { ew, eh } = elementSize;
+    const { vw, vh } = viewportSize;
     let nx = cx;
     let ny = cy;
 
@@ -58,7 +98,7 @@ const Grid = ({
     }
 
     return { nx, ny };
-  }, [ew, eh, vw, vh, x, y]);
+  }, [x, y, elementSize, viewportSize]);
 
   return (
     <div
