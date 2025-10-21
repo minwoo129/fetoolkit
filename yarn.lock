@@ -10055,6 +10055,7 @@ __metadata:
   resolution: "user-agent-test@workspace:apps/user-agent-test"
   dependencies:
     "@fetoolkit/user-agent": "workspace:^"
+    "@playwright/test": "npm:^1.56.1"
     "@types/node": "npm:^24.9.1"
     "@types/react": "npm:^19"
     "@types/react-dom": "npm:^19"

@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "test:e2e:with-report": "yarn test:e2e && yarn playwright show-report"
   },
   "dependencies": {
     "@fetoolkit/user-agent": "workspace:^",
@@ -12,6 +13,7 @@
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.56.1",
     "@types/node": "^24.9.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
