@@ -54,6 +54,8 @@ function getClientHintsAgent(
   const isMobile = userAgentData.mobile || false;
   const firstBrand = brands[0];
   const platform = (osData.platform || userAgentData.platform).toLowerCase();
+
+  const uaString = getUserAgentString();
   const browser: AgentBrowserInfo = {
     name: firstBrand.brand,
     version: firstBrand.version,
@@ -63,8 +65,8 @@ function getClientHintsAgent(
     chromium: false,
     chromiumVersion: '-1',
     webview:
-      !!findPresetBrand(WEBVIEW_PRESETS, brands).brand ||
-      isWebView(getUserAgentString()),
+      !!findPresetBrand(WEBVIEW_PRESETS, brands).brand || isWebView(uaString),
+    isEdgeBrowser: false,
   };
   const os: AgentOSInfo = {
     name: 'unknown',
@@ -109,6 +111,10 @@ function getClientHintsAgent(
   if (os.name === 'ios' && browser.webview) {
     browser.version = '-1';
   }
+  if (os.name === 'window') {
+    const isEdgeBrowser = /edgios|edge|edg|Edg/.test(uaString);
+    browser.isEdgeBrowser = isEdgeBrowser;
+  }
 
   os.version = convertVersion(os.version);
   browser.version = convertVersion(browser.version);
@@ -140,6 +146,7 @@ function getFallbackAgentInfo(): AgentInfo {
     chromium: false,
     chromiumVersion: '-1',
     webview: isWebView(userAgent),
+    isEdgeBrowser: false,
   };
 
   // WebKit/Chromium 정보 파싱
