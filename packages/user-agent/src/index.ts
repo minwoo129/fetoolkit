@@ -10,6 +10,7 @@ import {
   convertVersion,
   find,
   findBrand,
+  findPreset,
   findPresetBrand,
   getUserAgentString,
   hasUserAgentData,
@@ -17,15 +18,14 @@ import {
   some,
 } from './utils';
 
-/**
- *
- * @deprecated
- */
 export const getUserAgent = async () => {
   const userAgentData = hasUserAgentData();
+
+  // User-Agent Client Hints API가 지원되지 않는 경우 fallback 사용
   if (!userAgentData) {
-    throw new Error('userAgentData is null');
+    return getFallbackAgentInfo();
   }
+
   try {
     const result = await userAgentData.getHighEntropyValues([
       'architecture',
@@ -54,6 +54,8 @@ function getClientHintsAgent(
   const isMobile = userAgentData.mobile || false;
   const firstBrand = brands[0];
   const platform = (osData.platform || userAgentData.platform).toLowerCase();
+
+  const uaString = getUserAgentString();
   const browser: AgentBrowserInfo = {
     name: firstBrand.brand,
     version: firstBrand.version,
@@ -63,8 +65,8 @@ function getClientHintsAgent(
     chromium: false,
     chromiumVersion: '-1',
     webview:
-      !!findPresetBrand(WEBVIEW_PRESETS, brands).brand ||
-      isWebView(getUserAgentString()),
+      !!findPresetBrand(WEBVIEW_PRESETS, brands).brand || isWebView(uaString),
+    isEdgeBrowser: false,
   };
   const os: AgentOSInfo = {
     name: 'unknown',
@@ -109,7 +111,67 @@ function getClientHintsAgent(
   if (os.name === 'ios' && browser.webview) {
     browser.version = '-1';
   }
+  if (os.name === 'window') {
+    const isEdgeBrowser = /edgios|edge|edg|Edg/.test(uaString);
+    browser.isEdgeBrowser = isEdgeBrowser;
+  }
 
+  os.version = convertVersion(os.version);
+  browser.version = convertVersion(browser.version);
+  os.majorVersion = parseInt(os.version, 10);
+  browser.majorVersion = parseInt(browser.version, 10);
+
+  return {
+    browser,
+    os,
+    isMobile,
+  };
+}
+
+function getFallbackAgentInfo(): AgentInfo {
+  const userAgent = getUserAgentString();
+  const isMobile =
+    /mobile|android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(
+      userAgent,
+    );
+
+  // 브라우저 정보 파싱
+  const browserResult = findPreset(BROWSER_PRESETS, userAgent);
+  const browser: AgentBrowserInfo = {
+    name: browserResult.preset?.id || 'unknown',
+    version: browserResult.version,
+    majorVersion: -1,
+    webkit: false,
+    webkitVersion: '-1',
+    chromium: false,
+    chromiumVersion: '-1',
+    webview: isWebView(userAgent),
+    isEdgeBrowser: false,
+  };
+
+  // WebKit/Chromium 정보 파싱
+  const webkitResult = findPreset(WEBKIT_PRESETS, userAgent);
+  const chromiumResult = findPreset(CHROMIUM_PRESETS, userAgent);
+
+  browser.webkit = !!webkitResult.preset;
+  browser.webkitVersion = webkitResult.version;
+  browser.chromium = !!chromiumResult.preset;
+  browser.chromiumVersion = chromiumResult.version;
+
+  // OS 정보 파싱
+  const osResult = findPreset(OS_PRESETS, userAgent);
+  const os: AgentOSInfo = {
+    name: osResult.preset?.id || 'unknown',
+    version: osResult.version,
+    majorVersion: -1,
+  };
+
+  // WebKit 기반 브라우저의 경우 OS 정보 수정
+  if (browser.webkit) {
+    os.name = isMobile ? 'ios' : 'mac';
+  }
+
+  // 버전 정보 정리
   os.version = convertVersion(os.version);
   browser.version = convertVersion(browser.version);
   os.majorVersion = parseInt(os.version, 10);

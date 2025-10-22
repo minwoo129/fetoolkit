@@ -1,4 +1,4 @@
-name: Unit Test(Vitest) - fetoolkit/react
+name: E2E Test(Playwright) - fetoolkit/user-agent
 on:
   pull_request:
     branches:
@@ -7,25 +7,26 @@ on:
       - '!bug/issue-**'
       - '!docs/issue-**'
     paths:
-      - 'apps/react-test/**'
-      - 'packages/react/**'
-
+      - 'packages/user-agent/**'
 jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
       - name: Install yarn
         run: npm install -g yarn
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --immutable
       - name: Build packages
-        run: yarn build
+        run: yarn apps:user-agent:auto-install
       - name: Run test
-        run: yarn tests:react:unit
+        run: yarn tests:user-agent:e2e
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report
+          path: playwright-report/

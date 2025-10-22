@@ -25,7 +25,7 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    /* Base URL to use in actions like `await page.goto('/')`. */
+    /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
@@ -34,19 +34,40 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
+    // Desktop Chrome
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
 
+    // Desktop Firefox
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
 
+    // Desktop Safari
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
+    },
+
+    // Mobile Chrome
+    {
+      name: 'Mobile Chrome',
+      use: { ...devices['Pixel 5'] },
+    },
+
+    // Mobile Safari
+    {
+      name: 'Mobile Safari',
+      use: { ...devices['iPhone 12'] },
+    },
+
+    // Microsoft Edge
+    {
+      name: 'Microsoft Edge',
+      use: { ...devices['Desktop Edge'] },
     },
 
     /* Test against mobile viewports. */
@@ -73,6 +94,6 @@ export default defineConfig({
   /* Run your local dev server before starting the tests */
   webServer: {
     command: 'yarn dev',
-    port: 3001,
+    port: 3004,
   },
 });
