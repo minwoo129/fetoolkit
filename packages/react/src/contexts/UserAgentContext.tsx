@@ -1,6 +1,5 @@
+import { getUserAgent, type AgentInfo } from '@fetoolkit/user-agent';
 import React, { createContext, useCallback, useEffect, useState } from 'react';
-import { getUserAgent } from '../utils/userAgent';
-import type { AgentInfo } from '../utils/userAgent/types';
 import type { ProviderType } from './types';
 
 export type UserAgentContextsType = {

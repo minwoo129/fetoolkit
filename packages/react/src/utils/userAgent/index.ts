@@ -17,6 +17,10 @@ import {
   some,
 } from './utils';
 
+/**
+ *
+ * @deprecated
+ */
 export const getUserAgent = async () => {
   const userAgentData = hasUserAgentData();
   if (!userAgentData) {
