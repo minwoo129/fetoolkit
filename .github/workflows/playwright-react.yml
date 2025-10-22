@@ -1,14 +1,6 @@
 name: E2E Test(Playwright) - fetoolkit/react
 on:
-  pull_request:
-    branches:
-      - 'dev-v**'
-      - '!feature/issue-**'
-      - '!bug/issue-**'
-      - '!docs/issue-**'
-    paths:
-      - 'apps/react-test/**'
-      - 'packages/react/**'
+  push:
 jobs:
   test:
     timeout-minutes: 60
