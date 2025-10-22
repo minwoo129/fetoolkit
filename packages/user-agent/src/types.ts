@@ -27,6 +27,7 @@ export interface AgentBrowserInfo extends AgentVersionInfo {
   chromium: boolean;
   chromiumVersion: string;
   webview: boolean;
+  isEdgeBrowser: boolean;
 }
 
 export interface PresetInfo {
