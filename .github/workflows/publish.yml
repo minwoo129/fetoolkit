@@ -3,12 +3,12 @@ on:
   push:
     branches:
       - release
+permissions:
+  id-token: write
+  contents: read
 jobs:
   publish-to-npm:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      id-token: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -34,5 +34,3 @@ jobs:
           git add .
           git commit -m "temp commit"
           yarn lerna publish from-package --yes
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
