@@ -830,7 +830,7 @@ __metadata:
     vite: "npm:^7.1.4"
     vite-plugin-dts: "npm:^4.5.4"
   peerDependencies:
-    "@fetoolkit/user-agent": 1.0.0-beta.1
+    "@fetoolkit/user-agent": 2.0.0-beta.1
   peerDependenciesMeta:
     "@fetoolkit/user-agent":
       optional: true
@@ -8370,7 +8370,6 @@ __metadata:
   resolution: "react-test@workspace:apps/react-test"
   dependencies:
     "@fetoolkit/react": "workspace:^"
-    "@fetoolkit/user-agent": "workspace:^"
     "@playwright/test": "npm:^1.55.0"
     "@types/node": "npm:^24.5.0"
     "@types/react": "npm:^19.1.13"
