@@ -5,16 +5,11 @@
 
 English | [한국어](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/README_kr.md)
 
-FEToolkit is a toolkit library that provides useful functions for Frontend development. The library is divided according to frameworks such as React and Vue, and functions that can be used in common regardless of the framework will be distributed as separate libraries.
+FEToolkit utils is a library that provides utility functions that can be used during feature development.
 
-## Documentation
+## 1. Getting Started
 
-- This library is a collection of utility functions only.
-  - You can use it in any environment.
-
-## Getting Started
-
-### 1. Installation
+### 1-1. Installation
 
 - npm
   ```
@@ -29,9 +24,9 @@ FEToolkit is a toolkit library that provides useful functions for Frontend devel
   pnpm add @fetoolkit/utils
   ```
 
-## Features
+## 2. Features
 
-## 1. Array
+### 2-1. Array
 
 | Name      | Description                                                                               |                   Docs                   |
 | :-------- | :---------------------------------------------------------------------------------------- | :--------------------------------------: |
@@ -50,7 +45,7 @@ FEToolkit is a toolkit library that provides useful functions for Frontend devel
 | isSameArr | chaek that whether the elements in both arrays are same until the order.                  | [Document](./docs/en/array_issamearr.md) |
 | uniqArray | returns a new array that removes duplicate elements.                                      | [Document](./docs/en/array_uniqarray.md) |
 
-## 2. Number
+### 2-2. Number
 
 | Name              | Description                                       |                       Docs                        |
 | :---------------- | :------------------------------------------------ | :-----------------------------------------------: |
@@ -63,7 +58,7 @@ FEToolkit is a toolkit library that provides useful functions for Frontend devel
 | isPositiveInteger | check the value is positive integer.(except 0)    | [Document](./docs/en/number_ispositiveinteger.md) |
 | isNegativeInteger | check the value is negative integer.(except 0)    | [Document](./docs/en/number_isnegativeinteger.md) |
 
-## 3. Mask
+### 2-3. Mask
 
 > ### Notice
 >
@@ -74,7 +69,7 @@ FEToolkit is a toolkit library that provides useful functions for Frontend devel
 | ~~maskName~~<br><span style="color: red">Deprecated</span>        | ~~masking user name~~<br><span style="color: red">Deprecated</span>    | Document |
 | ~~maskPhoneNumber~~<br><span style="color: red">Deprecated</span> | ~~masking phone number~~<br><span style="color: red">Deprecated</span> | Document |
 
-## 4. Object
+### 2-4. Object
 
 | Name      | Description                                                            |                   Docs                    |
 | :-------- | :--------------------------------------------------------------------- | :---------------------------------------: |
@@ -85,7 +80,7 @@ FEToolkit is a toolkit library that provides useful functions for Frontend devel
 | pick      | creates a new object containing only a specific key in the object.     |   [Document](./docs/en/object_pick.md)    |
 | isSameObj | check that whether both object is same                                 | [Document](./docs/en/object_issameobj.md) |
 
-## 5. Utility Types
+### 2-5. Utility Types
 
 | Name         | Description                               |                    Docs                    |
 | :----------- | :---------------------------------------- | :----------------------------------------: |

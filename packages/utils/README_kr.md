@@ -5,21 +5,11 @@
 
 [English](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/README.md) | 한국어
 
-FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 제공하는 툴킷 라이브러리입니다. 라이브러리는 React, Vue 등 프레임워크에 따라서 구분하여 제공되며, 프레임워크와 무관하게 공통적으로 사용할 수 있는 기능은 별도의 라이브러리로 배포될 예정입니다.  
-현재는 제공되고 있는 기능이 많이 없을지 몰라도 지속적인 업데이트를 통해 기능을 추가해나갈 예정입니다.
+FEToolkit utils는 기능 개발 중 사용할 수 있는 유틸리티 함수를 제공하는 라이브러리입니다.
 
-> ### 알려드립니다
->
-> 이 패키지는 기존에 배포된 [fetoolkit-utils](https://github.com/minwoo129/fetoolkit-utils)와 동일한 프로젝트입니다. 관리의 효율화를 위해 작업환경을 이전한 것이오니 이 점 참고 부탁드립니다.
+## 1. 초기 설정 절차
 
-## Documentation
-
-- 이 라이브러리는 유틸리티 함수만 모아놓은 라이브러리입니다.
-  - 프레임워크에 제한 없이 모든 환경에서 제약없이 사용하실 수 있습니다.
-
-## 초기 설정 절차
-
-### 1. 설치 방법
+### 1-1. 설치 방법
 
 - npm
   ```
@@ -34,9 +24,9 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
   pnpm add @fetoolkit/utils
   ```
 
-## 제공되는 유틸리티 함수
+## 2. 제공되는 유틸리티 함수
 
-## 1. Array
+### 2-1. Array
 
 | 이름      | 설명                                                                                                     |                 공식문서                 |
 | :-------- | :------------------------------------------------------------------------------------------------------- | :--------------------------------------: |
@@ -55,7 +45,7 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
 | isSameArr | 두 배열에 들어가있는 요소가 순서까지 모두 동일한지 여부를 반환하는 함수                                  | [공식문서](./docs/ko/array_issamearr.md) |
 | uniqArray | 배열에 들어가있는 중복 요소를 제거한 새로운 배열을 반환하는 함수                                         | [공식문서](./docs/ko/array_uniqarray.md) |
 
-## 2. Number
+### 2-2. Number
 
 | 이름              | 설명                                                      |                     공식문서                      |
 | :---------------- | :-------------------------------------------------------- | :-----------------------------------------------: |
@@ -68,7 +58,7 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
 | isPositiveInteger | 값이 양의 정수인지 여부를 반환하는 함수입니다.(0 제외)    | [공식문서](./docs/ko/number_ispositiveinteger.md) |
 | isNegativeInteger | 값이 음의 정수인지 여부를 반환하는 함수입니다.(0 제외)    | [공식문서](./docs/ko/number_isnegativeinteger.md) |
 
-## 3. Mask
+### 2-3. Mask
 
 > ### 알려드립니다.
 >
@@ -79,7 +69,7 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
 | ~~maskName~~<br><span style="color: red">Deprecated</span>        | ~~이름을 마스킹하는 함수입니다.~~<br><span style="color: red">Deprecated</span>        | 공식문서 |
 | ~~maskPhoneNumber~~<br><span style="color: red">Deprecated</span> | ~~휴대폰 번호를 마스킹하는 함수입니다.~~<br><span style="color: red">Deprecated</span> | 공식문서 |
 
-## 4. Object
+### 2-4. Object
 
 | 이름      | 설명                                                           |                 공식문서                  |
 | :-------- | :------------------------------------------------------------- | :---------------------------------------: |
@@ -90,7 +80,7 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
 | pick      | 객체에서 특정 키만 포함한 새로운 객체를 생성하는 함수          |   [공식문서](./docs/ko/object_pick.md)    |
 | isSameObj | 두 객체가 동일한 객체인지 여부를 반환하는 함수                 | [공식문서](./docs/ko/object_issameobj.md) |
 
-## 5. Utility Types
+### 2-5. Utility Types
 
 | 이름         | 설명                                       |                  공식문서                  |
 | :----------- | :----------------------------------------- | :----------------------------------------: |
