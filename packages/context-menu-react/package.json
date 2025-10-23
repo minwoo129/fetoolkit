@@ -18,7 +18,8 @@
   "homepage": "https://github.com/minwoo129/fetoolkit",
   "repository": {
     "type": "git",
-    "url": "https://github.com/minwoo129/fetoolkit/tree/master/packages/context-menu-react"
+    "url": "https://github.com/minwoo129/fetoolkit.git",
+    "directory": "packages/context-menu-react"
   },
   "files": [
     "dist"

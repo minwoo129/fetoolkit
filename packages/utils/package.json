@@ -10,7 +10,8 @@
   "homepage": "https://github.com/minwoo129/fetoolkit",
   "repository": {
     "type": "git",
-    "url": "https://github.com/minwoo129/fetoolkit/tree/master/packages/utils"
+    "url": "https://github.com/minwoo129/fetoolkit.git",
+    "directory": "packages/utils"
   },
   "files": [
     "dist"

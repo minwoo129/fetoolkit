@@ -10,7 +10,8 @@
   "homepage": "https://github.com/minwoo129/fetoolkit",
   "repository": {
     "type": "git",
-    "url": "https://github.com/minwoo129/fetoolkit/tree/master/packages/user-agent"
+    "url": "https://github.com/minwoo129/fetoolkit.git",
+    "directory": "packages/user-agent"
   },
   "files": [
     "dist"
