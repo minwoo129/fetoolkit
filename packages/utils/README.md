@@ -7,6 +7,11 @@ English | [한국어](https://github.com/minwoo129/fetoolkit/tree/master/package
 
 FEToolkit utils is a library that provides utility functions that can be used during feature development.
 
+> ### Notice
+>
+> The feature description currently exposed is about the upcoming version of V2.  
+> Please note that it has not been distributed yet as it has been applied to the master branch for beta testing of the new package that is being released in the v2 version.
+
 ## 1. Getting Started
 
 ### 1-1. Installation
