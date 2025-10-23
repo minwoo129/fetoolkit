@@ -41,6 +41,21 @@ This package is only available for React.
   pnpm add @fetoolkit/react
   ```
 
+#### 2-1-1. Additional Required Packages
+
+- npm
+  ```
+  npm i @fetoolkit/user-agent
+  ```
+- yarn
+  ```
+  yarn add @fetoolkit/user-agent
+  ```
+- pnpm
+  ```
+  pnpm add @fetoolkit/user-agent
+  ```
+
 ### 2-2. Connect Provider
 
 You need to connect `FEToolkitProvider` Component on root to Stable functional behavior

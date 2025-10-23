@@ -41,6 +41,21 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
   pnpm add @fetoolkit/react
   ```
 
+#### 2-1-1. 추가 설치 패키지(필수)
+
+- npm
+  ```
+  npm i @fetoolkit/user-agent
+  ```
+- yarn
+  ```
+  yarn add @fetoolkit/user-agent
+  ```
+- pnpm
+  ```
+  pnpm add @fetoolkit/user-agent
+  ```
+
 ### 2-2. Provider 연결
 
 이 툴킷의 안정적인 기능사용을 위해선, 최상단에 FEToolkitProvider 컴포넌트 연결이 필요합니다.
