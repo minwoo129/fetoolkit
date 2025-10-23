@@ -13,7 +13,7 @@ Previously, you had to separately declare `onContextMenu` events on HTML tags an
 >
 > - This version is currently distributed for alpha and beta testing purposes. There may be unstable features, so please do not install before the official release!!!
 
-## 1. Dependencies
+## 1. Compatibility
 
 |  Framework   | enabled | version |
 | :----------: | :-----: | :-----: |
@@ -54,7 +54,7 @@ Previously, you had to separately declare `onContextMenu` events on HTML tags an
   pnpm add @fetoolkit/react
   ```
 
-### 2-2. ContextMenu Data Configuration
+### 2-2. Configure ContextMenu Data
 
 Declare ContextMenu button configurations for each ID.
 
@@ -130,7 +130,7 @@ export const MenuButtons: ContextMenuButtonDatas = {
 };
 ```
 
-### 2-3. Provider Connection
+### 2-3. Connect Provider
 
 Connect the Provider component and the written ContextMenu data object at the top level of the project.
 
@@ -154,7 +154,7 @@ createRoot(document.getElementById('root')!).render(
 
 ## 3. Usage
 
-### 3-1. ContextMenu HOC Connection
+### 3-1. Connect ContextMenu HOC
 
 Connect the `withContextMenu` HOC (High-Order Component) to the page where you want to expose the ContextMenu.
 
@@ -195,7 +195,7 @@ const App = () => {
 export default App;
 ```
 
-### 3-2. HTML Tag ID Connection
+### 3-2. Attach an ID to an HTML tag
 
 Connect the ID of the pre-written ContextMenu data object to the desired HTML tag within the page. (When entering the ID, it must be applied in the `context-menu-id` format).
 
@@ -207,7 +207,7 @@ Connect the ID of the pre-written ContextMenu data object to the desired HTML ta
 </div>
 ```
 
-### 3-3. Listener Application
+### 3-3. add Listener in Component
 
 Import the `useContextMenu` hook within the page component to connect the ContextMenu click event listener.
 
