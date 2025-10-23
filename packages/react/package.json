@@ -1,6 +1,6 @@
 {
   "name": "@fetoolkit/react",
-  "version": "1.3.0",
+  "version": "2.0.0-beta.1",
   "type": "module",
   "author": "minwoo129 <key0129mw@naver.com>",
   "license": "MIT",
@@ -44,7 +44,7 @@
     "throttle-debounce": "^5.0.2"
   },
   "peerDependencies": {
-    "@fetoolkit/user-agent": "1.0.0-beta.1"
+    "@fetoolkit/user-agent": "2.0.0-beta.1"
   },
   "peerDependenciesMeta": {
     "@fetoolkit/user-agent": {
