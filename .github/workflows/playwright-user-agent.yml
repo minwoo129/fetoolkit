@@ -21,7 +21,7 @@ jobs:
       - name: Install yarn
         run: npm install -g yarn
       - name: Install dependencies
-        run: yarn install --immutable --check-cache
+        run: yarn install --immutable
       - name: Build packages
         run: yarn apps:user-agent:auto-install
       - name: Run test

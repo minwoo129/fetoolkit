@@ -24,6 +24,6 @@ jobs:
       - name: Install yarn
         run: npm install -g yarn
       - name: Install dependencies
-        run: yarn install --immutable --check-cache
+        run: yarn install
       - name: Run test
         run: yarn tests:utils:unit
