@@ -8,15 +8,20 @@ English | [한국어](https://github.com/minwoo129/fetoolkit/blob/master/package
 FEToolkit is a toolkit library that provides useful functions for Frontend development. The library is divided according to frameworks such as React and Vue, and functions that can be used in common regardless of the framework will be distributed as separate libraries.
 This package is only available for React.
 
-> ### Notice
+<!-- > ### Notice
 >
 > - We have conducted a major update through V2 version update.
 >   - ContextMenu functionality has been moved to [`@fetoolkit/context-menu-react`](../context-menu-react/). (Related features provided by this package have been deprecated.)
 >   - All utility functions provided by this package have been deprecated.
 >     - userAgent functionality has been moved to `@fetoolkit/user-agent`.
->     - Other functions are provided in [`@fetoolkit/utils`](../utils/).
+>     - Other functions are provided in [`@fetoolkit/utils`](../utils/). -->
 
-## Dependencies
+> ### Notice
+>
+> The feature description currently exposed is about the upcoming version of V2.  
+> Please note that it has not been distributed yet as it has been applied to the master branch for beta testing of the new package that is being released in the v2 version.
+
+## 1. Compatibility
 
 |  Framework   | enabled | version |
 | :----------: | :-----: | :-----: |
@@ -24,9 +29,9 @@ This package is only available for React.
 |   Next.js    |   ❌    |         |
 | React Native |   ❌    |         |
 
-## Getting Started
+## 2. Getting Started
 
-### 1. Installation
+### 2-1. Installation
 
 - npm
   ```
@@ -41,7 +46,22 @@ This package is only available for React.
   pnpm add @fetoolkit/react
   ```
 
-### 2. Connect Provider
+#### 2-1-1. Additional Required Packages
+
+- npm
+  ```
+  npm i @fetoolkit/user-agent
+  ```
+- yarn
+  ```
+  yarn add @fetoolkit/user-agent
+  ```
+- pnpm
+  ```
+  pnpm add @fetoolkit/user-agent
+  ```
+
+### 2-2. Connect Provider
 
 You need to connect `FEToolkitProvider` Component on root to Stable functional behavior
 
@@ -61,7 +81,7 @@ createRoot(document.getElementById('root')!).render(
 );
 ```
 
-## Features
+## 3. Features
 
 ### 3-1. Integrated Features
 

@@ -11,15 +11,17 @@ This project is a package that provides components, hooks, and utility functions
 >
 > This version is currently distributed for alpha and beta testing purposes. There may be unstable features, so please do not install before the official release!!!
 
-## Dependencies
+## 1. Compatibility
 
-- react: 19 or higher
-- classnames: 2 or higher
-- uuid: 13 or higher
+|  Framework   | enabled | version |
+| :----------: | :-----: | :-----: |
+|    React     |   ⭕    |  >=19   |
+|   Next.js    |   ❌    |         |
+| React Native |   ❌    |         |
 
-## Getting Started
+## 2. Getting Started
 
-### 1. Installation
+### 2-1. Installation
 
 - npm
   ```
@@ -34,7 +36,7 @@ This project is a package that provides components, hooks, and utility functions
   pnpm add @fetoolkit/admin-react
   ```
 
-#### 1-1. Additional Required Packages
+#### 2-1-1. Additional Required Packages
 
 - npm
   ```
@@ -49,7 +51,7 @@ This project is a package that provides components, hooks, and utility functions
   pnpm add classnames uuid
   ```
 
-### 2. Basic Usage
+## 3. Basic Usage
 
 ```tsx
 import { AdminTable, AdminInput, AdminSwitch } from '@fetoolkit/admin-react';
@@ -65,9 +67,9 @@ function App() {
 }
 ```
 
-## Features
+## 4. Features
 
-### 3-1. Components
+### 4-1. Components
 
 | Name                   | Description                                         |                           Docs                           |
 | :--------------------- | :-------------------------------------------------- | :------------------------------------------------------: |
@@ -82,7 +84,7 @@ function App() {
 | AdminPagination        | Pagination component                                |    [Documentation](./docs/en/component_pagination.md)    |
 | AdminRouteMenuTemplate | Menu template component                             |   [Documentation](./docs/en/component_menutemplate.md)   |
 
-### 3-2. Hooks
+### 4-2. Hooks
 
 | Name     | Description                 |                    Docs                     |
 | :------- | :-------------------------- | :-----------------------------------------: |

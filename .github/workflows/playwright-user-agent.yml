@@ -8,6 +8,7 @@ on:
       - '!docs/issue-**'
     paths:
       - 'packages/user-agent/**'
+      - '!**.md'
 jobs:
   test:
     timeout-minutes: 60

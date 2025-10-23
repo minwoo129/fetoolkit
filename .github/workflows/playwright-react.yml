@@ -9,6 +9,7 @@ on:
     paths:
       - 'apps/react-test/**'
       - 'packages/react/**'
+      - '!**.md'
 jobs:
   test:
     timeout-minutes: 60

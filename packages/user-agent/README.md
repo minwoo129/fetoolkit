@@ -7,15 +7,15 @@ English | [한국어](./README_kr.md)
 
 FEToolkit User-Agent is a utility library that accurately parses and analyzes browser User-Agent information. It prioritizes the User-Agent Client Hints API and falls back to parsing traditional User-Agent strings for browsers that don't support it.
 
-## Dependencies
+## 1. Compatibility
 
 |  Framework   | enabled | version |
 | :----------: | :-----: | :-----: |
 | All Browsers |   ✅    | ES2015+ |
 
-## Getting Started
+## 2. Getting Started
 
-### 1. Installation
+### 2-1. Installation
 
 - npm
   ```
@@ -30,13 +30,7 @@ FEToolkit User-Agent is a utility library that accurately parses and analyzes br
   pnpm add @fetoolkit/user-agent
   ```
 
-## Features
-
-| Name         | Description                                                     |            Docs            |
-| :----------- | :-------------------------------------------------------------- | :------------------------: |
-| getUserAgent | Returns User-Agent information including browser and OS details | [View Docs](#getuseragent) |
-
-## Usage
+## 3. Usage
 
 ### getUserAgent
 
@@ -135,7 +129,3 @@ interface AgentOSInfo {
 - **TypeScript Support**: Complete type definitions provided
 - **Lightweight**: Fast loading with minimal dependencies
 - **Mobile Support**: Perfect support for mobile browsers and WebView environments
-
-## License
-
-MIT License

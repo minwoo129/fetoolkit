@@ -8,15 +8,20 @@
 FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 제공하는 툴킷 라이브러리입니다. 라이브러리는 React, Vue 등 프레임워크에 따라서 구분하여 제공되며, 프레임워크와 무관하게 공통적으로 사용할 수 있는 기능은 별도의 라이브러리로 배포될 예정입니다.  
 이 패키지는 react 환경에서만 사용 가능한 패키지입니다.
 
-> ### 알려드립니다.
+<!-- > ### 알려드립니다.
 >
 > - V2 버전 업데이트를 통해 대규모 업데이트를 진행하였습니다.
 >   - ContextMenu 기능은 [`@fetoolkit/context-menu-react`](../context-menu-react/)로 이전하였습니다.(이 패키지에서 제공하던 관련 기능은 deprecated 처리하였습니다.)
 >   - 해당 패키지에서 제공하고 있던 모든 유틸리티 함수는 deprecated 처리하였습니다.
 >     - userAgent 기능은 `@fetoolkit/user-agent`로 이전하였습니다.
->     - 그 외 다른 함수들은 [`@fetoolkit/utils`](../utils/)에서 제공하고 있습니다.
+>     - 그 외 다른 함수들은 [`@fetoolkit/utils`](../utils/)에서 제공하고 있습니다. -->
 
-## 의존성
+> ### 알려드립니다
+>
+> 현재 노출되는 기능 설명은 앞으로 올라갈 V2 버전에 대한 내용입니다.  
+> v2 버전에서 새로 출시되는 새로운 패키지의 베타 테스트를 위해 master 브랜치에 함께 적용된 것이므로 아직 배포되지 않았으니 참고 부탁드립니다.
+
+## 1. 호환성
 
 |  프레임워크  | 사용가능여부 | 최소버전 |
 | :----------: | :----------: | :------: |
@@ -24,9 +29,9 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
 |   Next.js    |      ❌      |          |
 | React Native |      ❌      |          |
 
-## 초기 설정 절차
+## 2. 초기 설정 절차
 
-### 1. 설치 방법
+### 2-1. 설치 방법
 
 - npm
   ```
@@ -41,7 +46,22 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
   pnpm add @fetoolkit/react
   ```
 
-### 2. Provider 연결
+#### 2-1-1. 추가 설치 패키지(필수)
+
+- npm
+  ```
+  npm i @fetoolkit/user-agent
+  ```
+- yarn
+  ```
+  yarn add @fetoolkit/user-agent
+  ```
+- pnpm
+  ```
+  pnpm add @fetoolkit/user-agent
+  ```
+
+### 2-2. Provider 연결
 
 이 툴킷의 안정적인 기능사용을 위해선, 최상단에 FEToolkitProvider 컴포넌트 연결이 필요합니다.
 
@@ -61,7 +81,7 @@ createRoot(document.getElementById('root')!).render(
 );
 ```
 
-## 제공되는 기능
+## 3. 제공되는 기능
 
 ## 3-1. 통합 기능
 
