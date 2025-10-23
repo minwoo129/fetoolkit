@@ -7,9 +7,15 @@
 
 FEToolkit User-Agent는 브라우저의 User-Agent 정보를 정확하게 파싱하고 분석할 수 있는 유틸리티 라이브러리입니다. User-Agent Client Hints API를 우선적으로 사용하며, 지원하지 않는 브라우저에서는 기존 User-Agent 문자열을 파싱하는 방식으로 동작합니다.
 
-## 초기 설정 절차
+## 1. 호환성
 
-### 1. 설치 방법
+|  프레임워크   | 사용가능여부 | 최소버전 |
+| :-----------: | :----------: | :------: |
+| 전체 브라우저 |      ✅      | ES2015+  |
+
+## 2. 초기 설정 절차
+
+### 2-1. 설치 방법
 
 - npm
   ```
@@ -24,7 +30,7 @@ FEToolkit User-Agent는 브라우저의 User-Agent 정보를 정확하게 파싱
   pnpm add @fetoolkit/user-agent
   ```
 
-## 사용법
+## 3. 사용법
 
 ### getUserAgent
 
@@ -123,7 +129,3 @@ interface AgentOSInfo {
 - **TypeScript 지원**: 완전한 타입 정의 제공
 - **경량화**: 최소한의 의존성으로 빠른 로딩
 - **모바일 지원**: 모바일 브라우저와 WebView 환경 완벽 지원
-
-## 라이선스
-
-MIT License
