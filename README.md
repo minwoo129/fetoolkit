@@ -9,8 +9,10 @@ FEToolkit is a toolkit library that provides useful functions for Frontend devel
 
 ## Modules
 
-| Name        | Description                                                            |                          Downloads                          |              GitHub               |
-| :---------- | :--------------------------------------------------------------------- | :---------------------------------------------------------: | :-------------------------------: |
-| react       | package for react                                                      | [Downloads](https://www.npmjs.com/package/@fetoolkit/react) |    [GitHub](./packages/react/)    |
-| utils       | package for utility functions                                          | [Downloads](https://www.npmjs.com/package/@fetoolkit/utils) |    [GitHub](./packages/utils/)    |
-| admin-react | package for provide useful features when develop admin site(for react) |                          Downloads                          | [GitHub](./packages/admin-react/) |
+| Name               | Description                                                            |                          Downloads                          |                  GitHub                  |
+| :----------------- | :--------------------------------------------------------------------- | :---------------------------------------------------------: | :--------------------------------------: |
+| react              | package for react                                                      | [Downloads](https://www.npmjs.com/package/@fetoolkit/react) |       [GitHub](./packages/react/)        |
+| utils              | package for utility functions                                          | [Downloads](https://www.npmjs.com/package/@fetoolkit/utils) |       [GitHub](./packages/utils/)        |
+| admin-react        | package for provide useful features when develop admin site(for react) |                          Downloads                          |    [GitHub](./packages/admin-react/)     |
+| context-menu-react | package for provide ContextMenu functionality in React projects        |                          Downloads                          | [GitHub](./packages/context-menu-react/) |
+| user-agent         | package for querying UserAgent data                                    |                          Downloads                          |     [GitHub](./packages/user-agent/)     |
