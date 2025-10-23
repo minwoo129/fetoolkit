@@ -9,6 +9,7 @@ on:
     paths:
       - 'apps/admin-react-test/**'
       - 'packages/admin-react/**'
+      - '!**.md'
 jobs:
   test:
     timeout-minutes: 60

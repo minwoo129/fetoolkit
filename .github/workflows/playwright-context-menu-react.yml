@@ -9,6 +9,7 @@ on:
     paths:
       - 'apps/context-menu-react-test/**'
       - 'packages/context-menu-react/**'
+      - '!**.md'
 jobs:
   test:
     timeout-minutes: 60
