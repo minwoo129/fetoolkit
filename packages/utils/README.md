@@ -5,16 +5,16 @@
 
 English | [한국어](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/README_kr.md)
 
-FEToolkit is a toolkit library that provides useful functions for Frontend development. The library is divided according to frameworks such as React and Vue, and functions that can be used in common regardless of the framework will be distributed as separate libraries.
+FEToolkit utils is a library that provides utility functions that can be used during feature development.
 
-## Documentation
+> ### Notice
+>
+> The feature description currently exposed is about the upcoming version of V2.  
+> Please note that it has not been distributed yet as it has been applied to the master branch for beta testing of the new package that is being released in the v2 version.
 
-- This library is a collection of utility functions only.
-  - You can use it in any environment.
+## 1. Getting Started
 
-## Getting Started
-
-### 1. Installation
+### 1-1. Installation
 
 - npm
   ```
@@ -29,62 +29,66 @@ FEToolkit is a toolkit library that provides useful functions for Frontend devel
   pnpm add @fetoolkit/utils
   ```
 
-## Features
+## 2. Features
 
-## 1. Array
+### 2-1. Array
 
-| Name      | Description                                                                               |                                                   Docs                                                    |
-| :-------- | :---------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------: |
-| at        | Return element in a particular index in an array.<br>(include negative index like Python) |    [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/at.md)     |
-| first     | Return first element of array.                                                            |   [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/first.md)   |
-| last      | Return last element of array.                                                             |   [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/last.md)    |
-| filter    | Return filtered elements in array.                                                        |  [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/filter.md)   |
-| mapByKey  | Return array of elements that mapped to particular key in object array.                   | [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/mapByKey.md)  |
-| chunk     | Chunk an array to a specific length.                                                      |   [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/chunk.md)   |
-| count     | Count a length of array.                                                                  |   [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/count.md)   |
-| countBy   | Classify and counting number of array values according to result of mapper Function.      |  [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/countBy.md)  |
-| countOf   | count a number of array values satisfied by specific condition.                           |  [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/countOf.md)  |
-| find      | return first element satisfied by specific condition.                                     |   [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/find.md)    |
-| findIndex | return first element's index satisfied by specific condition.                             | [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/findIndex.md) |
-| groupBy   | classify elements in an array according to given key generation function.                 |  [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/groupBy.md)  |
-| isSameArr | chaek that whether the elements in both arrays are same until the order.                  | [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/isSameArr.md) |
-| uniqArray | returns a new array that removes duplicate elements.                                      | [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/array/uniqArray.md) |
+| Name      | Description                                                                               |                   Docs                   |
+| :-------- | :---------------------------------------------------------------------------------------- | :--------------------------------------: |
+| at        | Return element in a particular index in an array.<br>(include negative index like Python) |    [Document](./docs/en/array_at.md)     |
+| first     | Return first element of array.                                                            |   [Document](./docs/en/array_first.md)   |
+| last      | Return last element of array.                                                             |   [Document](./docs/en/array_last.md)    |
+| filter    | Return filtered elements in array.                                                        |  [Document](./docs/en/array_filter.md)   |
+| mapByKey  | Return array of elements that mapped to particular key in object array.                   | [Document](./docs/en/array_mapbykey.md)  |
+| chunk     | Chunk an array to a specific length.                                                      |   [Document](./docs/en/array_chunk.md)   |
+| count     | Count a length of array.                                                                  |   [Document](./docs/en/array_count.md)   |
+| countBy   | Classify and counting number of array values according to result of mapper Function.      |  [Document](./docs/en/array_countby.md)  |
+| countOf   | count a number of array values satisfied by specific condition.                           |  [Document](./docs/en/array_countof.md)  |
+| find      | return first element satisfied by specific condition.                                     |   [Document](./docs/en/array_find.md)    |
+| findIndex | return first element's index satisfied by specific condition.                             | [Document](./docs/en/array_findindex.md) |
+| groupBy   | classify elements in an array according to given key generation function.                 |  [Document](./docs/en/array_groupby.md)  |
+| isSameArr | chaek that whether the elements in both arrays are same until the order.                  | [Document](./docs/en/array_issamearr.md) |
+| uniqArray | returns a new array that removes duplicate elements.                                      | [Document](./docs/en/array_uniqarray.md) |
 
-## 2. Number
+### 2-2. Number
 
-| Name              | Description                                       |                                                        Docs                                                        |
-| :---------------- | :------------------------------------------------ | :----------------------------------------------------------------------------------------------------------------: |
-| commaizeNumber    | generate number seperated by comma.               |  [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/commaizeNumber.md)   |
-| decommaizeNumber  | remove comma from number                          | [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/decommaizeNumber.md)  |
-| formatPhoneNumber | convert a phone number into a hyphen type.        | [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/formatPhoneNumber.md) |
-| percent           | Calculate the result of division as a percentage. |      [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/percent.md)      |
-| sum               | add all the numbers of values in an array.        |        [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/sum.md)        |
-| isInteger         | check the value is integer.                       |     [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/isInteger.md)     |
-| isPositiveInteger | check the value is positive integer.(except 0)    | [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/isPositiveInteger.md) |
-| isNegativeInteger | check the value is negative integer.(except 0)    | [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/number/isNegativeInteger.md) |
+| Name              | Description                                       |                       Docs                        |
+| :---------------- | :------------------------------------------------ | :-----------------------------------------------: |
+| commaizeNumber    | generate number seperated by comma.               |  [Document](./docs/en/number_commaizenumber.md)   |
+| decommaizeNumber  | remove comma from number                          | [Document](./docs/en/number_decommaizenumber.md)  |
+| formatPhoneNumber | convert a phone number into a hyphen type.        | [Document](./docs/en/number_formatphonenumber.md) |
+| percent           | Calculate the result of division as a percentage. |      [Document](./docs/en/number_percent.md)      |
+| sum               | add all the numbers of values in an array.        |        [Document](./docs/en/number_sum.md)        |
+| isInteger         | check the value is integer.                       |     [Document](./docs/en/number_isinteger.md)     |
+| isPositiveInteger | check the value is positive integer.(except 0)    | [Document](./docs/en/number_ispositiveinteger.md) |
+| isNegativeInteger | check the value is negative integer.(except 0)    | [Document](./docs/en/number_isnegativeinteger.md) |
 
-## 3. Mask
+### 2-3. Mask
 
-| Name            | Description          |                                                  Docs                                                   |
-| :-------------- | :------------------- | :-----------------------------------------------------------------------------------------------------: |
-| maskName        | masking user name    | [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/mask/maskName.md) |
-| maskPhoneNumber | masking phone number | [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/mask/maskName.md) |
+> ### Notice
+>
+> In the case of these functions, they play some role as utility functions, but they were judged to be insufficient in usability as utility functions that can only be used in Korea. Also, there was a function that provided the same function in toth-slash, so we decided to process it Deprecated. Please note that the function will continue to be provided, but no updates will be provided.
 
-## 4. Object
+| Name                                                              | Description                                                            |   Docs   |
+| :---------------------------------------------------------------- | :--------------------------------------------------------------------- | :------: |
+| ~~maskName~~<br><span style="color: red">Deprecated</span>        | ~~masking user name~~<br><span style="color: red">Deprecated</span>    | Document |
+| ~~maskPhoneNumber~~<br><span style="color: red">Deprecated</span> | ~~masking phone number~~<br><span style="color: red">Deprecated</span> | Document |
 
-| Name      | Description                                                            |                                                    Docs                                                    |
-| :-------- | :--------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------: |
-| forIn     | call iteratee function for each attribute while traversing the object. |   [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/object/forIn.md)   |
-| keys      | return keys of object.                                                 |   [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/object/keys.md)    |
-| values    | return values of object.                                               |  [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/object/values.md)   |
-| omit      | generates a new object that omits a particular key from the object.    |   [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/object/omit.md)    |
-| pick      | creates a new object containing only a specific key in the object.     |   [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/object/pick.md)    |
-| isSameObj | check that whether both object is same                                 | [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/object/isSameObj.md) |
+### 2-4. Object
 
-## 5. Utility Types
+| Name      | Description                                                            |                   Docs                    |
+| :-------- | :--------------------------------------------------------------------- | :---------------------------------------: |
+| forIn     | call iteratee function for each attribute while traversing the object. |   [Document](./docs/en/object_forin.md)   |
+| keys      | return keys of object.                                                 |   [Document](./docs/en/object_keys.md)    |
+| values    | return values of object.                                               |  [Document](./docs/en/object_values.md)   |
+| omit      | generates a new object that omits a particular key from the object.    |   [Document](./docs/en/object_omit.md)    |
+| pick      | creates a new object containing only a specific key in the object.     |   [Document](./docs/en/object_pick.md)    |
+| isSameObj | check that whether both object is same                                 | [Document](./docs/en/object_issameobj.md) |
 
-| Name         | Description                               |                                                     Docs                                                     |
-| :----------- | :---------------------------------------- | :----------------------------------------------------------------------------------------------------------: |
-| PartialPath  | Make specific properties optional         | [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/types/partialPath.md)  |
-| RequiredPath | Make specific properties required         | [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/types/requiredPath.md) |
-| Path         | Convert object type keys to literal types |     [Document](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/src/docs/types/path.md)     |
+### 2-5. Utility Types
+
+| Name         | Description                               |                    Docs                    |
+| :----------- | :---------------------------------------- | :----------------------------------------: |
+| PartialPath  | Make specific properties optional         | [Document](./docs/en/type_partialpath.md)  |
+| RequiredPath | Make specific properties required         | [Document](./docs/en/type_requiredpath.md) |
+| Path         | Convert object type keys to literal types |     [Document](./docs/en/type_path.md)     |

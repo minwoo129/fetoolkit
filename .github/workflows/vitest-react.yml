@@ -6,6 +6,10 @@ on:
       - '!feature/issue-**'
       - '!bug/issue-**'
       - '!docs/issue-**'
+    paths:
+      - 'apps/react-test/**'
+      - 'packages/react/**'
+      - '!**.md'
 
 jobs:
   test:
@@ -22,5 +26,7 @@ jobs:
         run: npm install -g yarn
       - name: Install dependencies
         run: yarn install
+      - name: Build packages
+        run: yarn build
       - name: Run test
         run: yarn tests:react:unit

@@ -23,7 +23,7 @@ export default defineConfig({
       formats: ['es', 'umd'],
     },
     rollupOptions: {
-      external: ['react', 'react-dom'],
+      external: ['react', 'react-dom', '@fetoolkit/user-agent'],
       output: {
         globals: {
           react: 'React',

@@ -1,0 +1,27 @@
+{
+  "name": "admin-react-test",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@fetoolkit/admin-react": "workspace:^",
+    "@fetoolkit/react": "workspace:^",
+    "@fetoolkit/utils": "workspace:^",
+    "classnames": "^2.5.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.9.1",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.5.2",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.3",
+    "vite": "^7.1.6"
+  }
+}

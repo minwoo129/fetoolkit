@@ -8,6 +8,9 @@ type ContextMenuHandlerArgs<T extends HTMLElement> = {
   event: React.MouseEvent<T, MouseEvent>;
 };
 
+/**
+ * @deprecated
+ */
 export const useContextMenu = () => {
   const context = useContext(ContextMenuContext);
   if (context == null) {

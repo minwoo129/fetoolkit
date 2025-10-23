@@ -1,0 +1,54 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: 1px solid red;
+  padding: 20px;
+}
+
+.input-test {
+  width: 300px;
+}
+
+.checkbox-grid {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.right-align {
+  justify-content: flex-end;
+}
+
+.switch2 {
+  margin-left: 10px;
+}
+
+.switch3 {
+  margin-left: 10px;
+}
+
+.table-test {
+  width: 100%;
+}
+
+.dropdown1 {
+  margin-left: 30px;
+}
+
+.basic-label {
+  margin-right: 30px;
+}
+
+.basic-label-input {
+  width: 600px;
+}
+
+.textarea-test {
+  width: 600px;
+  height: 400px;
+}

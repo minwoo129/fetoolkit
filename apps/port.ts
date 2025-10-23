@@ -1,0 +1,6 @@
+export const PORT = {
+  REACT: 3001,
+  ADMIN_REACT: 3002,
+  CONTEXT_MENU_REACT: 3003,
+  USER_AGENT: 3004,
+};

@@ -6,6 +6,10 @@ on:
       - '!feature/issue-**'
       - '!bug/issue-**'
       - '!docs/issue-**'
+    paths:
+      - 'apps/react-test/**'
+      - 'packages/react/**'
+      - '!**.md'
 jobs:
   test:
     timeout-minutes: 60
@@ -20,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
       - name: Build packages
-        run: yarn build
+        run: yarn apps:react:auto-install
       - name: Run test
         run: yarn tests:react:e2e
       - uses: actions/upload-artifact@v4

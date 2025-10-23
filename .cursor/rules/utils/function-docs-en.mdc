@@ -1,0 +1,129 @@
+---
+globs: packages/utils/docs/en/*.md
+alwaysApply: false
+---
+
+## template(ENG, except Utility types)
+
+- Create function's document files in the following format
+  ex) function's file route = `src/utils/array/countOf.ts`
+
+  ````md
+  # Array(countOf)
+
+  English | [한국어]({relative URL})
+
+  - Returns the count of elements in the array that satisfy the result of `predicate` function.
+
+  ```tsx
+  countOf(array, predicate);
+  ```
+
+  ## Example
+
+  ```tsx
+  import { countOf } from '@fetoolkit/utils';
+
+  const testArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const num1 = countOf(testArr, (item) => item % 2 === 0); // 5
+  ```
+
+  ## API Reference
+
+  - input
+    |name|type|required|description|
+    |:---:|:---|:---|:---:|
+    |array|T[]|true|탐색할 배열|
+    |predicate|(item: T, index: number) => boolean|true|요소가 조건에 만족하는지를 검사할 메서드|
+  - output(type): number
+  ````
+
+### template detail description
+
+- title
+  - template: `#{Directory Name}(function's name)`
+- description
+  - Add One line of brief Description
+  - write by each language
+- example Code1
+  - language: Typescript
+  - Just like how user write a function
+  - Argument: as it is by referring to the function creation file
+- example Code2
+  - TOC(Table of Contents)
+    - KOR: `## 기본 사용 예시`
+    - ENG: `## Example`
+  - language: Typescript
+  - Refer to the test case of the function and write the result value of one of the corresponding test data in inline annotation
+    - ex)
+      - function's file route = `src/utils/array/countOf`
+      - test file = `__test__/array/countOf.test.ts`
+- API References
+  - TOC(Table of Contents)
+    - KOR: `## API 문서`
+    - ENG: `## API Reference`
+  - Table the arguments and types of the function, whether it is required, a brief description, etc
+  - write by each language
+
+  ## template(ENG, for Utility types)
+
+- Create Utility Type's document files in the following format
+  ex) Utility Type's file route = `src/utils/types/partialPath.ts`
+
+  ````md
+  # Utility Type(PartialPath)
+
+  English | [한국어]({relative URL})
+
+  - Make specific properties optional
+
+  ```tsx
+  type PartialPath<ObjectType, KeyPath>
+  ```
+
+  ## Example
+
+  ```tsx
+  import { PartialPath } from '@fetoolkit/utils';
+
+  type TestType1 = {
+    name: string;
+    age: number;
+    email: string;
+    phone: string;
+    id: string;
+    address: {
+      city: string;
+      street: string;
+      zip: string;
+    };
+  };
+
+  type TestType2 = PartialPath<TestType1, 'phone'>;
+  type TestType3 = PartialPath<TestType1, 'address.city'>;
+
+  const test2: TestType2 = {
+    name: 'test',
+    age: 20,
+    email: 'test@test.com',
+    id: '1234567890',
+    address: {
+      city: 'test',
+      street: 'test',
+      zip: '1234567890',
+    },
+  };
+
+  const test3: TestType3 = {
+    name: 'test',
+    age: 20,
+    email: 'test@test.com',
+    phone: '010-1234-5678',
+    id: '1234567890',
+    address: {
+      street: 'test',
+      zip: '1234567890',
+    },
+  };
+  ```
+  ````

@@ -1,3 +1,6 @@
+/**
+ * @deprecated
+ */
 export const maskName = (name: string) => {
   const isKoreanName = /[가-힣]{2,}/.test(name);
 

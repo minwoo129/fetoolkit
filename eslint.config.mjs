@@ -38,7 +38,11 @@ export default tseslint.config([
     },
   },
   {
-    files: ['packages/react/**/*.{ts,tsx}'],
+    files: [
+      'packages/react/**/*.{ts,tsx}',
+      'packages/admin-react/**/*.{ts,tsx}',
+      'packages/context-menu-react/**/*.{ts,tsx}',
+    ],
     extends: [
       reactHooks.configs['recommended-latest'],
       reactRefresh.configs.vite,
