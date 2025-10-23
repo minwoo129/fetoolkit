@@ -1,7 +1,10 @@
 import { expect, test } from '@playwright/test';
+import { PORT } from '../../port';
+
+const URL = `http://localhost:${PORT.ADMIN_REACT}/checkbox-test`;
 
 test('렌더링 테스트 ', async ({ page }) => {
-  await page.goto('http://localhost:3002/checkbox-test');
+  await page.goto(URL);
   await expect(page.getByTestId('checkbox1')).toBeVisible();
   await expect(page.getByTestId('checkbox2')).toBeVisible();
   await expect(page.getByTestId('checkbox3')).toBeVisible();
@@ -10,7 +13,7 @@ test('렌더링 테스트 ', async ({ page }) => {
 });
 
 test('element 별 크기 테스트', async ({ page }) => {
-  await page.goto('http://localhost:3002/checkbox-test');
+  await page.goto(URL);
   const checkbox1 = page.getByTestId('checkbox1');
   const checkbox2 = page.getByTestId('checkbox2');
   const checkbox3 = page.getByTestId('checkbox3');
@@ -31,7 +34,7 @@ test('element 별 크기 테스트', async ({ page }) => {
 });
 
 test('checkbox 클릭 테스트(checkbox1)', async ({ page }) => {
-  await page.goto('http://localhost:3002/checkbox-test');
+  await page.goto(URL);
   await page.getByTestId('checkbox1').click();
   await expect(page.getByTestId('checkbox1')).toBeChecked();
 
@@ -40,7 +43,7 @@ test('checkbox 클릭 테스트(checkbox1)', async ({ page }) => {
 });
 
 test('checkbox 클릭 테스트(checkbox2)', async ({ page }) => {
-  await page.goto('http://localhost:3002/checkbox-test');
+  await page.goto(URL);
   await page.getByTestId('checkbox2').click();
   await expect(page.getByTestId('checkbox2')).toBeChecked();
 
@@ -49,7 +52,7 @@ test('checkbox 클릭 테스트(checkbox2)', async ({ page }) => {
 });
 
 test('checkbox 클릭 테스트(checkbox3)', async ({ page }) => {
-  await page.goto('http://localhost:3002/checkbox-test');
+  await page.goto(URL);
   await page.getByTestId('checkbox3').click();
   await expect(page.getByTestId('checkbox3')).toBeChecked();
 
@@ -58,7 +61,7 @@ test('checkbox 클릭 테스트(checkbox3)', async ({ page }) => {
 });
 
 test('checkbox 클릭 테스트(checkbox4)', async ({ page }) => {
-  await page.goto('http://localhost:3002/checkbox-test');
+  await page.goto(URL);
   await page.getByTestId('checkbox4').click();
   await expect(page.getByTestId('checkbox4')).toBeChecked();
 
@@ -67,7 +70,7 @@ test('checkbox 클릭 테스트(checkbox4)', async ({ page }) => {
 });
 
 test('checkbox 클릭 테스트(checkbox5)', async ({ page }) => {
-  await page.goto('http://localhost:3002/checkbox-test');
+  await page.goto(URL);
   await page.getByTestId('checkbox5').click();
   await expect(page.getByTestId('checkbox5')).toBeChecked();
 

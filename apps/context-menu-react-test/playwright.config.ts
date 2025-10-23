@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import { PORT } from '../port';
 
 /**
  * Read environment variables from file.
@@ -73,6 +74,6 @@ export default defineConfig({
   /* Run your local dev server before starting the tests */
   webServer: {
     command: 'yarn dev',
-    port: 3003,
+    port: PORT.CONTEXT_MENU_REACT,
   },
 });

@@ -1,5 +1,7 @@
 import { expect, test } from '@playwright/test';
-const URL = 'http://localhost:3002/textarea-test';
+import { PORT } from '../../port';
+
+const URL = `http://localhost:${PORT.ADMIN_REACT}/textarea-test`;
 
 test('렌더링 테스트', async ({ page }) => {
   await page.goto(URL);

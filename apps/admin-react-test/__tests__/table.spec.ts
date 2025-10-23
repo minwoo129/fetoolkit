@@ -1,22 +1,25 @@
 import { expect, test } from '@playwright/test';
+import { PORT } from '../../port';
+
+const URL = `http://localhost:${PORT.ADMIN_REACT}/table-test`;
 
 test('렌더링 테스트', async ({ page }) => {
-  await page.goto('http://localhost:3002/table-test');
+  await page.goto(URL);
   await expect(page.getByTestId('e2e-test-table')).toBeVisible();
 });
 
 test('테이블 헤더 렌더링 테스트', async ({ page }) => {
-  await page.goto('http://localhost:3002/table-test');
+  await page.goto(URL);
   await expect(page.getByTestId('e2e-test-table-head')).toBeVisible();
 });
 
 test('테이블 데이터 렌더링 테스트', async ({ page }) => {
-  await page.goto('http://localhost:3002/table-test');
+  await page.goto(URL);
   await expect(page.getByTestId('e2e-test-table-body')).toBeVisible();
 });
 
 test('체크박스 전체 선택 기능 테스트', async ({ page }) => {
-  await page.goto('http://localhost:3002/table-test');
+  await page.goto(URL);
   await page.getByTestId('e2e-test-table-checkbox-all').check();
   await page.getByTestId('id-print-button').click();
 
@@ -27,7 +30,7 @@ test('체크박스 전체 선택 기능 테스트', async ({ page }) => {
 });
 
 test('체크박스 개별 선택 기능 테스트', async ({ page }) => {
-  await page.goto('http://localhost:3002/table-test');
+  await page.goto(URL);
 
   const idx1 = 2;
   const idx2 = 5;
@@ -50,7 +53,7 @@ test('체크박스 개별 선택 기능 테스트', async ({ page }) => {
 });
 
 test('체크박스 선택 해제 기능 테스트', async ({ page }) => {
-  await page.goto('http://localhost:3002/table-test');
+  await page.goto(URL);
 
   const idx1 = 3;
   const idx2 = 6;
@@ -82,7 +85,7 @@ test('체크박스 선택 해제 기능 테스트', async ({ page }) => {
 });
 
 test('체크박스 전체 선택 해제 기능 테스트', async ({ page }) => {
-  await page.goto('http://localhost:3002/table-test');
+  await page.goto(URL);
 
   await page.getByTestId('e2e-test-table-checkbox-all').check();
   await expect(page.getByTestId('e2e-test-table-checkbox-all')).toBeChecked();
@@ -100,7 +103,7 @@ test('체크박스 전체 선택 해제 기능 테스트', async ({ page }) => {
 });
 
 test('행 클릭 이벤트 테스트', async ({ page }) => {
-  await page.goto('http://localhost:3002/table-test');
+  await page.goto(URL);
 
   const idx = Math.floor(Math.random() * 10);
 

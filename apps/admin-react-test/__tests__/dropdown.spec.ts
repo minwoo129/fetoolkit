@@ -1,6 +1,7 @@
 import { expect, test } from '@playwright/test';
+import { PORT } from '../../port';
 
-const URL = 'http://localhost:3002/dropdown-test';
+const URL = `http://localhost:${PORT.ADMIN_REACT}/dropdown-test`;
 
 test('드롭다운 렌더링 테스트', async ({ page }) => {
   await page.goto(URL);

@@ -1,7 +1,10 @@
 import { expect, test } from '@playwright/test';
+import { PORT } from '../../port';
+
+const URL = `http://localhost:${PORT.ADMIN_REACT}/switch-test`;
 
 test('렌더링 테스트', async ({ page }) => {
-  await page.goto('http://localhost:3002/switch-test');
+  await page.goto(URL);
   await expect(page.getByTestId('switch1')).toBeVisible();
   await expect(page.getByTestId('switch2')).toBeVisible();
   await expect(page.getByTestId('switch3')).toBeVisible();
@@ -9,7 +12,7 @@ test('렌더링 테스트', async ({ page }) => {
 });
 
 test('element 별 크기 테스트', async ({ page }) => {
-  await page.goto('http://localhost:3002/switch-test');
+  await page.goto(URL);
   const switch1 = page.getByTestId('switch1');
   const switch2 = page.getByTestId('switch2');
   const switch3 = page.getByTestId('switch3');
@@ -24,7 +27,7 @@ test('element 별 크기 테스트', async ({ page }) => {
 });
 
 test('switch 클릭 테스트(switch1)', async ({ page }) => {
-  await page.goto('http://localhost:3002/switch-test');
+  await page.goto(URL);
   await page.getByTestId('switch1').click();
   await expect(page.getByTestId('switch1-value')).toBeChecked();
 
@@ -33,7 +36,7 @@ test('switch 클릭 테스트(switch1)', async ({ page }) => {
 });
 
 test('switch 클릭 테스트(switch2)', async ({ page }) => {
-  await page.goto('http://localhost:3002/switch-test');
+  await page.goto(URL);
   await page.getByTestId('switch2').click();
   await expect(page.getByTestId('switch2-value')).toBeChecked();
 
@@ -42,7 +45,7 @@ test('switch 클릭 테스트(switch2)', async ({ page }) => {
 });
 
 test('switch 클릭 테스트(switch3)', async ({ page }) => {
-  await page.goto('http://localhost:3002/switch-test');
+  await page.goto(URL);
   await page.getByTestId('switch3').click();
   await expect(page.getByTestId('switch3-value')).toBeChecked();
 
@@ -51,7 +54,7 @@ test('switch 클릭 테스트(switch3)', async ({ page }) => {
 });
 
 test('switch 클릭 테스트(switch4)', async ({ page }) => {
-  await page.goto('http://localhost:3002/switch-test');
+  await page.goto(URL);
   await page.getByTestId('switch4').click();
   await expect(page.getByTestId('switch4-value')).toBeChecked();
 
@@ -60,7 +63,7 @@ test('switch 클릭 테스트(switch4)', async ({ page }) => {
 });
 
 test('switch 색상 테스트(switch4)', async ({ page }) => {
-  await page.goto('http://localhost:3002/switch-test');
+  await page.goto(URL);
   await page.getByTestId('switch4').click();
   await expect(page.getByTestId('switch4')).toHaveAttribute(
     'style',

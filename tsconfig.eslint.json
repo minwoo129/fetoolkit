@@ -9,7 +9,8 @@
     "packages/**/*.ts",
     "packages/**/*.tsx",
     "apps/*/**/*.ts",
-    "apps/*/**/*.tsx"
+    "apps/*/**/*.tsx",
+    "apps/port.ts"
   ],
   "exclude": ["node_modules", "dist", "build"]
 }

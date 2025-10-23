@@ -1,9 +1,10 @@
 import { expect, test } from '@playwright/test';
+import { PORT } from '../../port';
 
-const URL = 'http://localhost:3003/test-page-1';
+const URL = `http://localhost:${PORT.CONTEXT_MENU_REACT}/test-page-1`;
 
 test('렌더링 테스트', async ({ page }) => {
-  await page.goto('http://localhost:3003/test-page-1');
+  await page.goto(URL);
   await page.getByText('Test Element1').click({
     button: 'right',
   });

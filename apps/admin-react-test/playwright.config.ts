@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import { PORT } from '../port';
 
 /**
  * Read environment variables from file.
@@ -78,6 +79,6 @@ export default defineConfig({
   // },
   webServer: {
     command: 'yarn dev',
-    port: 3002,
+    port: PORT.ADMIN_REACT,
   },
 });
