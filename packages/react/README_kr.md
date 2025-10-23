@@ -16,7 +16,7 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
 >     - userAgent 기능은 `@fetoolkit/user-agent`로 이전하였습니다.
 >     - 그 외 다른 함수들은 [`@fetoolkit/utils`](../utils/)에서 제공하고 있습니다.
 
-## 의존성
+## 1. 호환성
 
 |  프레임워크  | 사용가능여부 | 최소버전 |
 | :----------: | :----------: | :------: |
@@ -24,9 +24,9 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
 |   Next.js    |      ❌      |          |
 | React Native |      ❌      |          |
 
-## 초기 설정 절차
+## 2. 초기 설정 절차
 
-### 1. 설치 방법
+### 2-1. 설치 방법
 
 - npm
   ```
@@ -41,7 +41,7 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
   pnpm add @fetoolkit/react
   ```
 
-### 2. Provider 연결
+### 2-2. Provider 연결
 
 이 툴킷의 안정적인 기능사용을 위해선, 최상단에 FEToolkitProvider 컴포넌트 연결이 필요합니다.
 
@@ -61,7 +61,7 @@ createRoot(document.getElementById('root')!).render(
 );
 ```
 
-## 제공되는 기능
+## 3. 제공되는 기능
 
 ## 3-1. 통합 기능
 

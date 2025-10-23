@@ -16,7 +16,7 @@ This package is only available for React.
 >     - userAgent functionality has been moved to `@fetoolkit/user-agent`.
 >     - Other functions are provided in [`@fetoolkit/utils`](../utils/).
 
-## Dependencies
+## 1. Compatibility
 
 |  Framework   | enabled | version |
 | :----------: | :-----: | :-----: |
@@ -24,9 +24,9 @@ This package is only available for React.
 |   Next.js    |   ❌    |         |
 | React Native |   ❌    |         |
 
-## Getting Started
+## 2. Getting Started
 
-### 1. Installation
+### 2-1. Installation
 
 - npm
   ```
@@ -41,7 +41,7 @@ This package is only available for React.
   pnpm add @fetoolkit/react
   ```
 
-### 2. Connect Provider
+### 2-2. Connect Provider
 
 You need to connect `FEToolkitProvider` Component on root to Stable functional behavior
 
@@ -61,7 +61,7 @@ createRoot(document.getElementById('root')!).render(
 );
 ```
 
-## Features
+## 3. Features
 
 ### 3-1. Integrated Features
 
