@@ -22,7 +22,7 @@ jobs:
       - name: Install yarn
         run: npm install -g yarn
       - name: Install dependencies
-        run: yarn install --immutable
+        run: yarn install --immutable --check-cache
       - name: Build packages
         run: yarn apps:context-menu-react:auto-install
       - name: Run test
