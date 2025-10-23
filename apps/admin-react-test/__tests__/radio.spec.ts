@@ -1,6 +1,8 @@
 import { expect, test } from '@playwright/test';
+import { PORT } from '../../port';
 
-const URL = 'http://localhost:3002/radio-test';
+const URL = `http://localhost:${PORT.ADMIN_REACT}/radio-test`;
+
 test('렌더링 테스트', async ({ page }) => {
   await page.goto(URL);
   await expect(page.getByTestId('radio1-1')).toBeVisible();
