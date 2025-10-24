@@ -10,18 +10,21 @@
 }
 
 .switch-label.sm {
-  width: 2.5rem;
-  height: 1.5rem;
+  width: 2.5rem !important;
+  height: 1.5rem !important;
+  min-width: 2.5rem !important;
 }
 
 .switch-label.md {
-  width: 3.5rem;
-  height: 2rem;
+  width: 3.5rem !important;
+  height: 2rem !important;
+  min-width: 3.5rem !important;
 }
 
 .switch-label.lg {
-  width: 4.5rem;
-  height: 2.5rem;
+  width: 4.5rem !important;
+  height: 2.5rem !important;
+  min-width: 4.5rem !important;
 }
 
 /* 체크박스 숨김 */
