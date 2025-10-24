@@ -1,6 +1,7 @@
 'use client';
 import classNames from 'classnames';
 import React from 'react';
+import '../../css/inputLabel.css';
 
 interface AdminInputLabelBasicProps {
   htmlFor: string;
