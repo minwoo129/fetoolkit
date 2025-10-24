@@ -33,7 +33,6 @@ const [email1, setEmail1] = useInput('');
 | htmlFor    | string              | true     | -       | 연결할 입력 필드의 id 값                                                         |
 | label      | string              | true     | -       | 라벨에 표시될 텍스트                                                             |
 | children   | React.ReactNode     | true     | -       | 입력 필드 컴포넌트                                                               |
-| icon       | React.ReactNode     | false    | -       | 입력 필드 옆에 표시될 아이콘 <br> - 검색, 필터 등의 기능 아이콘을 표시할 때 사용 |
 | className  | string              | false    | -       | CSS 클래스명 <br> - 추가적인 스타일링을 위한 클래스명                            |
 | style      | React.CSSProperties | false    | -       | 스타일 선언 <br> - React `style` props와 동일한 방식으로 인라인 스타일 적용      |
 | dataTestId | string              | false    | -       | 테스트 실행 시 선언할 elementId <br> - 테스트 코드에서 컴포넌트를 식별할 때 사용 |
