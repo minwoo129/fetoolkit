@@ -12,16 +12,19 @@
 .switch-label.sm {
   width: 2.5rem;
   height: 1.5rem;
+  min-width: 2.5rem;
 }
 
 .switch-label.md {
   width: 3.5rem;
   height: 2rem;
+  min-width: 3.5rem;
 }
 
 .switch-label.lg {
   width: 4.5rem;
   height: 2.5rem;
+  min-width: 4.5rem;
 }
 
 /* 체크박스 숨김 */
