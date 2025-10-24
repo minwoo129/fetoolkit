@@ -56,41 +56,49 @@
 .radio.sm {
   width: 16px !important;
   height: 16px !important;
+  min-width: 16px !important;
 }
 
 .radio.sm:checked::after {
   width: 8px !important;
   height: 8px !important;
+  min-width: 8px !important;
 }
 
 .radio.md {
   width: 20px !important;
   height: 20px !important;
+  min-width: 20px !important;
 }
 
 .radio.md:checked::after {
   width: 10px !important;
   height: 10px !important;
+  min-width: 10px !important;
 }
 
 .radio.lg {
   width: 24px !important;
   height: 24px !important;
+  min-width: 24px !important;
 }
 
 .radio.lg:checked::after {
   width: 12px !important;
   height: 12px !important;
+  min-width: 12px !important;
 }
 
 .radio.xl {
   width: 28px !important;
   height: 28px !important;
+  min-width: 28px !important;
 }
 
 .radio.xl:checked::after {
   width: 14px !important;
   height: 14px !important;
+  min-width: 14px !important;
 }
 
 /* Color Variants */
