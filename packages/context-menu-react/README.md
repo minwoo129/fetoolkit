@@ -152,6 +152,29 @@ createRoot(document.getElementById('root')!).render(
 );
 ```
 
+### 2-4. Set App.tsx Basic Style
+
+For React projects, you need to set up basic styles in the `App.tsx` component, which is the top-level file excluding `main.tsx`.
+
+```css
+/* route(ex): ./src/App.css */
+#root {
+  width: 100vw; /* Only these two properties are required to be applied. */
+  height: 100vh; /* Only these two properties are required to be applied. */
+}
+```
+
+```tsx
+// route(ex): ./src/App.tsx
+import React from 'react';
+...
+import './App.css';
+
+const App = () => {
+  ...
+}
+```
+
 ## 3. Usage
 
 ### 3-1. Connect ContextMenu HOC
@@ -249,6 +272,18 @@ const ContextMenuTestPage1 = () => {
 
 export default ContextMenuTestPage1;
 ```
+
+> ### Notice
+>
+> The `withContextMenu` HOC has `overflow: hidden;` CSS option applied. Therefore, if you want to use scrolling within the page, you can set the style of the top-level Element of the page component as follows.
+>
+> ```css
+> .mainLayer {
+>   width: 100%;
+>   height: 100%;
+>   overflow: auto;
+> }
+> ```
 
 ## 4. (Additional) Custom ContextMenu Connection
 

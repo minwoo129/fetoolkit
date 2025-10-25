@@ -152,6 +152,29 @@ createRoot(document.getElementById('root')!).render(
 );
 ```
 
+### 2-4. App.tsx 파일 기본 스타일 설정
+
+React 프로젝트를 기준으로 `main.tsx`를 제외한 최상위 파일인 `App.tsx` 컴포넌트에서의 기본 스타일을 설정해줘야 합니다.
+
+```css
+/* 경로(예시): ./src/App.css */
+#root {
+  width: 100vw; /* 이 두 속성만 필수로 적용해주면 됩니다. */
+  height: 100vh; /* 이 두 속성만 필수로 적용해주면 됩니다. */
+}
+```
+
+```tsx
+// 경로(예시): ./src/App.tsx
+import React from 'react';
+...
+import './App.css';
+
+const App = () => {
+  ...
+}
+```
+
 ## 3. 사용법
 
 ### 3-1. ContextMenu HOC 연결
@@ -249,6 +272,18 @@ const ContextMenuTestPage1 = () => {
 
 export default ContextMenuTestPage1;
 ```
+
+> ### 알려드립니다.
+>
+> `withContextMenu` HOC에는 `overflow: hidden;` CSS 옵션이 적용되어 있습니다. 따라서 페이지 내에서 스크롤을 사용하실 경우 페이지 컴포넌트의 최상위 Element의 스타일을 다음과 같이 지정하시면 됩니다.
+>
+> ```css
+> .mainLayer {
+>   width: 100%;
+>   height: 100%;
+>   overflow: auto;
+> }
+> ```
 
 ## 4. (추가) 커스텀 ContextMenu 연결하기
 
