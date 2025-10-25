@@ -43,15 +43,15 @@ Previously, you had to separately declare `onContextMenu` events on HTML tags an
 
 - npm
   ```
-  npm i @fetoolkit/react
+  npm i classnames
   ```
 - yarn
   ```
-  yarn add @fetoolkit/react
+  yarn add classnames
   ```
 - pnpm
   ```
-  pnpm add @fetoolkit/react
+  pnpm add classnames
   ```
 
 ### 2-2. Configure ContextMenu Data

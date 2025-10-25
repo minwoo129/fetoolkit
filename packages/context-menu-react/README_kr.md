@@ -43,15 +43,15 @@
 
 - npm
   ```
-  npm i @fetoolkit/react
+  npm i classnames
   ```
 - yarn
   ```
-  yarn add @fetoolkit/react
+  yarn add classnames
   ```
 - pnpm
   ```
-  pnpm add @fetoolkit/react
+  pnpm add classnames
   ```
 
 ### 2-2. ContextMenu 데이터 설정
