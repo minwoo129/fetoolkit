@@ -1,5 +1,6 @@
 .basic-input-label {
   display: flex;
+  flex-direction: column;
 }
 
 .basic-input-label > .icon-wrapper {
@@ -9,11 +10,9 @@
 }
 
 .basic-input-label > .input-wrapper {
-  position: relative;
 }
 
 .basic-input-label > .icon-wrapper {
-  position: absolute; /* absolute */
   top: 0; /* inset-y-0 */
   bottom: 0; /* inset-y-0 */
   right: 0; /* right-0 */

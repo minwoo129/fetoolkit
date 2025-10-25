@@ -1,6 +1,7 @@
 import { withContextMenu } from '@fetoolkit/context-menu-react';
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import '../App.css';
 import AppContextMenu from './components/AppContextMenu';
 import ContextMenuTestPage1 from './pages/ContextMenuTestPage1';
 import ContextMenuTestPage2 from './pages/ContextMenuTestPage2';
