@@ -4,6 +4,7 @@
   height: 100%;
   box-sizing: border-box;
   overflow: hidden;
+  border: 2px solid blue; /* 테스트용(삭제필요) */
 }
 
 .context-menu-provider-wrapper {
