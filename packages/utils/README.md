@@ -9,8 +9,7 @@ FEToolkit utils is a library that provides utility functions that can be used du
 
 > ### Notice
 >
-> The feature description currently exposed is about the upcoming version of V2.  
-> Please note that it has not been distributed yet as it has been applied to the master branch for beta testing of the new package that is being released in the v2 version.
+> - This version is currently distributed for beta testing purposes. There may be unstable features, so please do not install before the official release!!!
 
 ## 1. Getting Started
 
