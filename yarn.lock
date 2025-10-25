@@ -833,7 +833,7 @@ __metadata:
     vite: "npm:^7.1.4"
     vite-plugin-dts: "npm:^4.5.4"
   peerDependencies:
-    "@fetoolkit/user-agent": 2.0.0-beta.4
+    "@fetoolkit/user-agent": 2.0.0-beta.5
   peerDependenciesMeta:
     "@fetoolkit/user-agent":
       optional: true
