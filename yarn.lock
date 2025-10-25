@@ -800,6 +800,7 @@ __metadata:
     "@types/react-dom": "npm:^19.1.9"
     "@types/throttle-debounce": "npm:^5"
     "@vitejs/plugin-react": "npm:^5.0.2"
+    classnames: "npm:^2.5.1"
     jsdom: "npm:^26.1.0"
     react: "npm:^19.1.0"
     react-dom: "npm:^19.1.0"
@@ -807,6 +808,8 @@ __metadata:
     vite: "npm:^7.1.4"
     vite-plugin-dts: "npm:^4.5.4"
     vite-plugin-lib-inject-css: "npm:^2.2.2"
+  peerDependencies:
+    classnames: ">=2"
   languageName: unknown
   linkType: soft
 
@@ -3621,6 +3624,7 @@ __metadata:
     "@types/react": "npm:^19"
     "@types/react-dom": "npm:^19"
     "@vitejs/plugin-react": "npm:^5.0.4"
+    classnames: "npm:^2.5.1"
     react: "npm:^19.2.0"
     react-dom: "npm:^19.2.0"
     react-router-dom: "npm:^7.9.4"

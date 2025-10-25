@@ -9,6 +9,7 @@
   "dependencies": {
     "@fetoolkit/context-menu-react": "workspace:^",
     "@fetoolkit/react": "workspace:^",
+    "classnames": "^2.5.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.9.4"

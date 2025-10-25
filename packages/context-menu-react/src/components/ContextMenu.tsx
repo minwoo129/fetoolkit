@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React, {
   useEffect,
   useMemo,
@@ -103,7 +104,7 @@ const Grid = ({
   return (
     <div
       ref={ref}
-      className={`context-menu-wrapper ${className}`}
+      className={classNames('context-menu-wrapper', className)}
       style={{ left: `${nx}px`, top: `${ny}px`, ...style }}
       data-testid={dataTestId}
       {...rest}
@@ -126,7 +127,7 @@ const Item = ({
 }: ContextMenuGridItemProps) => {
   return (
     <li
-      className={`context-menu-item ${className}`}
+      className={classNames('context-menu-item', className)}
       value={value}
       style={style}
       data-testid={dataTestId}
@@ -135,7 +136,7 @@ const Item = ({
       {...rest}
     >
       <span
-        className={`context-menu-span ${textStyle?.className ?? ''}`}
+        className={classNames('context-menu-span', textStyle?.className)}
         style={textStyle?.style}
         context-menu-item-id={contextMenuItemId}
         context-menu-item-value={value}
