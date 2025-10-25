@@ -1,7 +1,7 @@
 {
   "name": "user-agent-test",
-  "version": "2.0.0-beta.4",
-  "main": "index.js",
+  "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "test:e2e": "playwright test",
