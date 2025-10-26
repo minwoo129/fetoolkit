@@ -3,13 +3,9 @@
 ![](https://fejumvuajiwc28287693.gcdn.ntruss.com/fetoolkit/fetoolkit_thumbnail.png)
 (This thumbnail was created by Chat GPT)
 
-English | [한국어](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/README_kr.md)
+English | [한국어](./README_kr.md)
 
 FEToolkit utils is a library that provides utility functions that can be used during feature development.
-
-> ### Notice
->
-> - This version is currently distributed for beta testing purposes. There may be unstable features, so please do not install before the official release!!!
 
 ## 1. Getting Started
 

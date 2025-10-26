@@ -7,10 +7,6 @@ English | [한국어](./README_kr.md)
 
 This project is a package that provides components, hooks, and utility functions useful for Admin (administrator page) development. You can use it effectively when developing administrator pages in a React environment.
 
-> ### Notice
->
-> This version is currently distributed for alpha and beta testing purposes. There may be unstable features, so please do not install before the official release!!!
-
 ## 1. Compatibility
 
 |  Framework   | enabled | version |

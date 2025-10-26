@@ -3,22 +3,18 @@
 ![](https://fejumvuajiwc28287693.gcdn.ntruss.com/fetoolkit/fetoolkit_thumbnail.png)
 (해당 썸네일은 Chat GPT를 통해 생성한 이미지입니다.)
 
-[English](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/README.md) | 한국어
+[English](./README.md) | 한국어
 
 FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 제공하는 툴킷 라이브러리입니다. 라이브러리는 React, Vue 등 프레임워크에 따라서 구분하여 제공되며, 프레임워크와 무관하게 공통적으로 사용할 수 있는 기능은 별도의 라이브러리로 배포될 예정입니다.  
 이 패키지는 react 환경에서만 사용 가능한 패키지입니다.
 
-<!-- > ### 알려드립니다.
+> ### 알려드립니다.
 >
 > - V2 버전 업데이트를 통해 대규모 업데이트를 진행하였습니다.
 >   - ContextMenu 기능은 [`@fetoolkit/context-menu-react`](../context-menu-react/)로 이전하였습니다.(이 패키지에서 제공하던 관련 기능은 deprecated 처리하였습니다.)
 >   - 해당 패키지에서 제공하고 있던 모든 유틸리티 함수는 deprecated 처리하였습니다.
 >     - userAgent 기능은 `@fetoolkit/user-agent`로 이전하였습니다.
->     - 그 외 다른 함수들은 [`@fetoolkit/utils`](../utils/)에서 제공하고 있습니다. -->
-
-> ### 알려드립니다
->
-> - 해당 버전은 현재 베타 테스트 목적으로 배포된 버전입니다. 기능상 불안정한 기능이 존재할 수 있으니 정식 배포 전에는 설치하지 마세요!!!
+>     - 그 외 다른 함수들은 [`@fetoolkit/utils`](../utils/)에서 제공하고 있습니다.
 
 ## 1. 호환성
 
