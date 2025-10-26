@@ -3,13 +3,9 @@
 ![](https://fejumvuajiwc28287693.gcdn.ntruss.com/fetoolkit/fetoolkit_thumbnail.png)
 (해당 썸네일은 Chat GPT를 통해 생성한 이미지입니다.)
 
-[English](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/README.md) | 한국어
+[English](./README.md) | 한국어
 
 FEToolkit utils는 기능 개발 중 사용할 수 있는 유틸리티 함수를 제공하는 라이브러리입니다.
-
-> ### 알려드립니다
->
-> - 해당 버전은 현재 베타 테스트 목적으로 배포된 버전입니다. 기능상 불안정한 기능이 존재할 수 있으니 정식 배포 전에는 설치하지 마세요!!!
 
 ## 1. 초기 설정 절차
 
