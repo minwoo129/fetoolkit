@@ -10,56 +10,36 @@ permissions:
 jobs:
   publish-to-npm:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
         with:
           ref: 'release'
           fetch-depth: 0
-
+          token: ${{ secrets.GIT_ACCESS_TOKEN }}
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '20.x'
           registry-url: 'https://registry.npmjs.org'
-          cache: 'yarn'
-          # OIDC에선 굳이 필요 없음(설치 단계에서 auth 강제 안 함)
-          # always-auth: true
-
-      # npm 최신 (provenance 지원 + OIDC 플로우 안정)
-      - name: Use latest npm
-        run: npm i -g npm@latest
-
-      # 혹시 남아있는 토큰 기반 설정이 OIDC를 방해하지 않도록 정리
-      - name: Remove legacy npm tokens in .npmrc (if any)
+          always-auth: true
+      - name: Update npm
         run: |
-          if [ -f ~/.npmrc ]; then
-            sed -i '/_authToken/d' ~/.npmrc || true
-          fi
-          # 레포 내부 .npmrc에도 토큰 줄이 있으면 제거 권장
-          if [ -f .npmrc ]; then
-            sed -i '/_authToken/d' .npmrc || true
-          fi
-
+          npm install -g npm@latest
       - name: Install yarn
-        run: npm i -g yarn
-
+        run: npm install -g yarn
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
-
-      - name: Git setup (for lerna tagging/commits if needed)
+        run: yarn install
+      - name: GIT Setup
         run: |
           git config --global user.name "${{ secrets.GH_NAME }}"
           git config --global user.email "${{ secrets.GH_EMAIL }}"
-
-      - name: Build projects
+      - name: build Projects
         run: yarn build
-
-      # ✅ OIDC + provenance 로 퍼블리시 (lerna는 내부적으로 npm publish 호출)
-      - name: Publish (lerna from-package)
-        env:
-          # 공개 패키지면 provenance 첨부 (npm 9.5+)
-          NPM_CONFIG_PROVENANCE: 'true'
+      - name: publish
         run: |
-          # 워킹트리 임시 커밋은 지양(더티 상태면 lerna가 거부할 수 있음)
-          # 버전/태그는 release 브랜치에서 미리 완료되어 있어야 함 (from-package 방식)
-          npx lerna publish from-package --yes --loglevel verbose
+          git add .
+          git commit -m "temp commit"
+          yarn packages:react:publish 
+          yarn packages:utils:publish
+          yarn packages:admin-react:publish
+          yarn packages:context-menu-react:publish
+          yarn packages:user-agent:publish
