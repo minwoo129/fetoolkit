@@ -3,7 +3,7 @@
 ![](https://fejumvuajiwc28287693.gcdn.ntruss.com/fetoolkit/fetoolkit_thumbnail.png)
 (해당 썸네일은 Chat GPT를 통해 생성한 이미지입니다.)
 
-[English](https://github.com/minwoo129/fetoolkit/blob/master/packages/react/README.md) | 한국어
+[English](./README.md) | 한국어
 
 FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 제공하는 툴킷 라이브러리입니다. 라이브러리는 React, Vue 등 프레임워크에 따라서 구분하여 제공되며, 프레임워크와 무관하게 공통적으로 사용할 수 있는 기능은 별도의 라이브러리로 배포될 예정입니다.  
 이 패키지는 react 환경에서만 사용 가능한 패키지입니다.

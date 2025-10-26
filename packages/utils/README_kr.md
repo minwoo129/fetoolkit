@@ -3,7 +3,7 @@
 ![](https://fejumvuajiwc28287693.gcdn.ntruss.com/fetoolkit/fetoolkit_thumbnail.png)
 (해당 썸네일은 Chat GPT를 통해 생성한 이미지입니다.)
 
-[English](https://github.com/minwoo129/fetoolkit/tree/master/packages/utils/README.md) | 한국어
+[English](./README.md) | 한국어
 
 FEToolkit utils는 기능 개발 중 사용할 수 있는 유틸리티 함수를 제공하는 라이브러리입니다.
 
