@@ -9,10 +9,6 @@ This project is a package that provides ContextMenu functionality for React-base
 The functionality provided by this package differs significantly from the ContextMenu provided by the previous "@fetoolkit/react" package. Therefore, the codebase of v1 cannot be used anymore.
 Previously, you had to separately declare `onContextMenu` events on HTML tags and declare button configurations each time, but from this version, usability has been improved so that when an ID is declared on an HTML tag, the menu configuration declared according to that ID is exposed in that area.
 
-> ### Notice
->
-> - This version is currently distributed for alpha and beta testing purposes. There may be unstable features, so please do not install before the official release!!!
-
 ## 1. Compatibility
 
 |  Framework   | enabled | version |

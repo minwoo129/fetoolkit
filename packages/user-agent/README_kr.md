@@ -119,8 +119,6 @@ interface AgentOSInfo {
 - **macOS**: 모든 버전
 - **iOS**: 모든 버전
 - **Android**: 모든 버전
-- **Tizen**: Tizen OS
-- **WebOS**: WebOS
 
 ## 특징
 

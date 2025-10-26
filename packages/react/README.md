@@ -8,17 +8,13 @@ English | [한국어](https://github.com/minwoo129/fetoolkit/blob/master/package
 FEToolkit is a toolkit library that provides useful functions for Frontend development. The library is divided according to frameworks such as React and Vue, and functions that can be used in common regardless of the framework will be distributed as separate libraries.
 This package is only available for React.
 
-<!-- > ### Notice
+> ### Notice
 >
 > - We have conducted a major update through V2 version update.
 >   - ContextMenu functionality has been moved to [`@fetoolkit/context-menu-react`](../context-menu-react/). (Related features provided by this package have been deprecated.)
 >   - All utility functions provided by this package have been deprecated.
 >     - userAgent functionality has been moved to `@fetoolkit/user-agent`.
->     - Other functions are provided in [`@fetoolkit/utils`](../utils/). -->
-
-> ### Notice
->
-> - This version is currently distributed for beta testing purposes. There may be unstable features, so please do not install before the official release!!!
+>     - Other functions are provided in [`@fetoolkit/utils`](../utils/).
 
 ## 1. Compatibility
 
