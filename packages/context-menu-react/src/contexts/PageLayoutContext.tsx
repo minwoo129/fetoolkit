@@ -5,7 +5,7 @@ import React, {
   useState,
   type ReactNode,
 } from 'react';
-import { DefaultContextMenu } from '../components/DefaultContextMenu';
+import { ContextMenuModal } from '../components/ContextMenuModal';
 import '../css/provider.css';
 import type { ContextMenuItemType } from '../types';
 import ContextMenuContext from './ContextMenuContext';
@@ -66,25 +66,15 @@ export const PageLayoutContextProvider = ({
 
   return (
     <PageLayoutContext.Provider value={{ location, buttonDatas, menuId }}>
-      <div className="context-menu-provider">
-        {children}
-        {visible && (
-          <div
-            className="context-menu-provider-wrapper"
-            onClick={() => setVisible(!visible)}
-          >
-            {menuComponent ?? (
-              <DefaultContextMenu
-                x={location.x}
-                y={location.y}
-                items={buttonDatas}
-                dataTestId="default-context-menu"
-                contextMenuId={menuId}
-              />
-            )}
-          </div>
-        )}
-      </div>
+      {children}
+      <ContextMenuModal
+        visible={visible}
+        onClickClose={() => setVisible(false)}
+        menuComponent={menuComponent}
+        location={location}
+        buttonDatas={buttonDatas}
+        menuId={menuId}
+      />
     </PageLayoutContext.Provider>
   );
 };

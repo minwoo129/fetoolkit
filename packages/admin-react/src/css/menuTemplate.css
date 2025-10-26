@@ -7,7 +7,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border: 2px solid red; /* 테스트용(삭제필요) */
 }
 
 .template-container li {
@@ -19,7 +18,6 @@
 .main-area {
   width: 100%;
   height: 100%;
-  border: 2px solid green; /* 테스트용(삭제필요) */
   overflow: scroll;
 }
 
