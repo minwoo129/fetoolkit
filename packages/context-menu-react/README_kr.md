@@ -54,7 +54,24 @@
   pnpm add classnames
   ```
 
-### 2-2. ContextMenu 데이터 설정
+### 2-2. index.html 파일에 루트 Element 추가(매우 중요!!!)
+
+`public/index.html` 파일에서 id가 `root`로 설정된 `<div>` 태그 밑에 다음과 같이 Element를 추가합니다.
+
+> #### 참고
+>
+> Vite 기반 React 프로젝트의 경우 `index.html` 파일은 `public` 폴더가 아닌 `<프로젝트 루트>`에 있습니다.  
+> 사용하시는 번들러에 따라 위치는 다를 수 있습니다.
+
+```html
+<body>
+  <div id="root"></div>
+  <!-- 이거(그대로 복사) -->
+  <div id="fetoolkit-context-menu"></div>
+</body>
+```
+
+### 2-3. ContextMenu 데이터 설정
 
 각각의 ID 별로 ContextMenu 버튼 구성을 선언합니다.
 
@@ -130,7 +147,7 @@ export const MenuButtons: ContextMenuButtonDatas = {
 };
 ```
 
-### 2-3. Provider 연결
+### 2-4. Provider 연결
 
 프로젝트 최상단에 Provider 컴포넌트와 작성한 ContextMenu 데이터 객체를 연결합니다.
 
@@ -150,29 +167,6 @@ createRoot(document.getElementById('root')!).render(
     </ContextMenuProvider>
   </StrictMode>,
 );
-```
-
-### 2-4. App.tsx 파일 기본 스타일 설정
-
-React 프로젝트를 기준으로 `main.tsx`를 제외한 최상위 파일인 `App.tsx` 컴포넌트에서의 기본 스타일을 설정해줘야 합니다.
-
-```css
-/* 경로(예시): ./src/App.css */
-#root {
-  width: 100vw; /* 이 두 속성만 필수로 적용해주면 됩니다. */
-  height: 100vh; /* 이 두 속성만 필수로 적용해주면 됩니다. */
-}
-```
-
-```tsx
-// 경로(예시): ./src/App.tsx
-import React from 'react';
-...
-import './App.css';
-
-const App = () => {
-  ...
-}
 ```
 
 ## 3. 사용법
