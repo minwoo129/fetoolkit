@@ -1,0 +1,143 @@
+/* Radio Button Base Styles */
+.radio {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #d1d5db;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+.radio:hover {
+  border-color: #9ca3af;
+}
+
+.radio:checked {
+  border-color: #3b82f6;
+  background-color: transparent;
+}
+
+.radio:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #3b82f6;
+}
+
+.radio:focus {
+  outline: none;
+}
+
+.radio:disabled {
+  border-color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.radio:disabled:checked {
+  border-color: #9ca3af;
+}
+
+.radio:disabled:checked::after {
+  background-color: #9ca3af;
+}
+
+/* Size Variants */
+.radio.sm {
+  width: 16px !important;
+  height: 16px !important;
+  min-width: 16px !important;
+}
+
+.radio.sm:checked::after {
+  width: 8px !important;
+  height: 8px !important;
+  min-width: 8px !important;
+}
+
+.radio.md {
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+}
+
+.radio.md:checked::after {
+  width: 10px !important;
+  height: 10px !important;
+  min-width: 10px !important;
+}
+
+.radio.lg {
+  width: 24px !important;
+  height: 24px !important;
+  min-width: 24px !important;
+}
+
+.radio.lg:checked::after {
+  width: 12px !important;
+  height: 12px !important;
+  min-width: 12px !important;
+}
+
+.radio.xl {
+  width: 28px !important;
+  height: 28px !important;
+  min-width: 28px !important;
+}
+
+.radio.xl:checked::after {
+  width: 14px !important;
+  height: 14px !important;
+  min-width: 14px !important;
+}
+
+/* Color Variants */
+.radio.primary:checked {
+  border-color: #3b82f6 !important;
+}
+
+.radio.primary:checked::after {
+  background-color: #3b82f6 !important;
+}
+
+.radio.secondary:checked {
+  border-color: #6b7280 !important;
+}
+
+.radio.secondary:checked::after {
+  background-color: #6b7280 !important;
+}
+
+.radio.success:checked {
+  border-color: #10b981 !important;
+}
+
+.radio.success:checked::after {
+  background-color: #10b981 !important;
+}
+
+.radio.warning:checked {
+  border-color: #f59e0b !important;
+}
+
+.radio.warning:checked::after {
+  background-color: #f59e0b !important;
+}
+
+.radio.danger:checked {
+  border-color: #ef4444 !important;
+}
+
+.radio.danger:checked::after {
+  background-color: #ef4444 !important;
+}

@@ -11,10 +11,10 @@ assignees: ''
 
 ## 이슈 유형 <!-- 체크는 수정하지 말것 -->
 - [ ] Feature
-- [x] Bug
+- [ ] Bug
   - [ ] Basic
   - [ ] HotFix
-- [ ] Docs
+- [x] Docs
 
 ## 작업 상세 내용
 - [ ] TODO

@@ -1,0 +1,25 @@
+{
+  "name": "context-menu-react-test",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@fetoolkit/context-menu-react": "workspace:^",
+    "@fetoolkit/react": "workspace:^",
+    "classnames": "^2.5.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.9.4"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.8.1",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^5.0.4",
+    "vite": "^7.1.10"
+  }
+}

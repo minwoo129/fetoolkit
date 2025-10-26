@@ -1,0 +1,33 @@
+.basic-input-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.basic-input-label > .icon-wrapper {
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+  color: #374151; /* text-gray-700 */
+}
+
+.basic-input-label > .input-wrapper {
+}
+
+.basic-input-label > .icon-wrapper {
+  top: 0; /* inset-y-0 */
+  bottom: 0; /* inset-y-0 */
+  right: 0; /* right-0 */
+  display: grid; /* grid */
+  width: 2rem; /* w-8 */
+  place-content: center; /* place-content-center */
+  color: #374151; /* text-gray-700 */
+}
+
+@media (prefers-color-scheme: dark) {
+  .basic-input-label > .icon-wrapper {
+    color: #e5e7eb;
+  }
+
+  .basic-input-label > .icon-wrapper {
+    color: #e5e7eb;
+  }
+}

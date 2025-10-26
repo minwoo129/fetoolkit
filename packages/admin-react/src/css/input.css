@@ -1,0 +1,41 @@
+.fetoolkit-admin-input {
+  margin-top: 0.125rem; /* mt-0.5 */
+  width: 300px;
+  height: 40px;
+  border-radius: 0.25rem; /* rounded */
+  border: 1px solid #d1d5db; /* border-gray-300 */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+  font-size: 0.875rem; /* sm:text-sm */
+  padding: 0.5rem 0.75rem;
+  box-sizing: border-box;
+}
+
+.fetoolkit-admin-input.basic {
+  transition:
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+}
+
+/* 포커스 상태 */
+.fetoolkit-admin-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* 호버 상태 */
+.fetoolkit-admin-input:hover {
+  border-color: #9ca3af;
+}
+
+/* 다크 모드 호버 상태 */
+@media (prefers-color-scheme: dark) {
+  .fetoolkit-admin-input {
+    border-color: #4b5563; /* dark:border-gray-600 */
+    background-color: #15181e; /* dark:bg-gray-900 */
+    color: #ffffff; /* dark:text-white */
+  }
+  .fetoolkit-admin-input:hover {
+    border-color: #6b7280;
+  }
+}

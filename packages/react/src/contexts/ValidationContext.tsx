@@ -21,16 +21,18 @@ export type ValidatorActionType = {
   };
 };
 
-type ValidationContextsType<K extends string = string> = {
-  appValidators: ValidatorType<K>;
+type ValidationContextsType<
+  T extends ValidatorType<string> = ValidatorType<string>,
+> = {
+  appValidators: T;
 };
 
 const ValidationContexts = createContext<ValidationContextsType>({
-  appValidators: {},
+  appValidators: {} as ValidatorType,
 });
 
-type ProviderArgs<K extends string = string> = {
-  validators: ValidatorType<K>;
+type ProviderArgs<T extends ValidatorType<string> = ValidatorType<string>> = {
+  validators: T;
   children: React.JSX.Element;
 };
 
@@ -43,10 +45,12 @@ export type ValidationStatusType = {
   errorMessage?: string;
 };
 
-export const ValidationContextsProvider = <K extends string = string>({
+export const ValidationContextsProvider = <
+  T extends ValidatorType<string> = ValidatorType<string>,
+>({
   validators,
   children,
-}: ProviderArgs<K>) => {
+}: ProviderArgs<T>) => {
   const appValidators = useMemo(() => {
     return validators;
   }, [validators]);
