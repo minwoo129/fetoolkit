@@ -54,7 +54,24 @@ Previously, you had to separately declare `onContextMenu` events on HTML tags an
   pnpm add classnames
   ```
 
-### 2-2. Configure ContextMenu Data
+### 2-2. Add Root Element to index.html (Very Important!!!)
+
+Add the following element below the `<div>` tag with id `root` in the `public/index.html` file.
+
+> #### Note
+>
+> For Vite-based React projects, the `index.html` file is located in the `<project root>` directory, not in the `public` folder.  
+> The location may vary depending on the bundler you are using.
+
+```html
+<body>
+  <div id="root"></div>
+  <!-- Copy this exactly -->
+  <div id="fetoolkit-context-menu"></div>
+</body>
+```
+
+### 2-3. Configure ContextMenu Data
 
 Declare ContextMenu button configurations for each ID.
 
@@ -130,7 +147,7 @@ export const MenuButtons: ContextMenuButtonDatas = {
 };
 ```
 
-### 2-3. Connect Provider
+### 2-4. Connect Provider
 
 Connect the Provider component and the written ContextMenu data object at the top level of the project.
 
@@ -150,29 +167,6 @@ createRoot(document.getElementById('root')!).render(
     </ContextMenuProvider>
   </StrictMode>,
 );
-```
-
-### 2-4. Set App.tsx Basic Style
-
-For React projects, you need to set up basic styles in the `App.tsx` component, which is the top-level file excluding `main.tsx`.
-
-```css
-/* route(ex): ./src/App.css */
-#root {
-  width: 100vw; /* Only these two properties are required to be applied. */
-  height: 100vh; /* Only these two properties are required to be applied. */
-}
-```
-
-```tsx
-// route(ex): ./src/App.tsx
-import React from 'react';
-...
-import './App.css';
-
-const App = () => {
-  ...
-}
 ```
 
 ## 3. Usage
