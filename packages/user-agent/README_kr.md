@@ -9,9 +9,9 @@ FEToolkit User-Agent는 브라우저의 User-Agent 정보를 정확하게 파싱
 
 ## 1. 호환성
 
-|  프레임워크   | 사용가능여부 | 최소버전 |
-| :-----------: | :----------: | :------: |
-| 전체 브라우저 |      ✅      | ES2015+  |
+|   브라우저    | 사용가능여부 |
+| :-----------: | :----------: |
+| 전체 브라우저 |      ✅      |
 
 ## 2. 초기 설정 절차
 
@@ -54,7 +54,8 @@ console.log(agentInfo);
 //     chromium: true,
 //     chromiumVersion: '120.0.6099.109',
 //     webview: false,
-//     isEdgeBrowser: false
+//     isEdgeBrowser: false,
+//     jsEngine: 'v8
 //   },
 //   os: {
 //     name: 'window',
@@ -64,6 +65,11 @@ console.log(agentInfo);
 //   isMobile: false
 // }
 ```
+
+> #### 안내
+>
+> - [OpenAI Atlas](https://openai.com/ko-KR/index/introducing-chatgpt-atlas/)의 경우 브라우저 이름이 chrome으로 노출됩니다.(2025년 11월 기준)
+>   - 현재 Atlas의 자체 UA 브랜드 정보가 아직 등록되지 않은 상태이기 때문입니다.
 
 ### 반환되는 데이터 구조
 
@@ -90,6 +96,7 @@ interface AgentBrowserInfo {
   chromiumVersion: string; // Chromium 버전
   webview: boolean; // WebView 환경 여부
   isEdgeBrowser: boolean; // Edge 브라우저 여부
+  jsEngine: JavaScriptEngine; // 브라우저별 JavaScript 엔진
 }
 ```
 
@@ -101,6 +108,20 @@ interface AgentOSInfo {
   version: string; // 운영체제 버전
   majorVersion: number; // 메이저 버전 번호
 }
+```
+
+#### JavaScriptEngine
+
+```typescript
+// 지원되는 브라우저: Google Chrome, MS Edge, Opera, Naver Whale, Firefox, Apple Safari, OpenAI Atlas
+// OpenAI Atlas는 chromium 기반 브라우저로서 v8을 사용합니다.
+type JavaScriptEngine =
+  | 'v8'
+  | 'spidermonkey'
+  | 'javascriptcore'
+  | 'rhino'
+  | 'chakra'
+  | 'unknown';
 ```
 
 ## 지원하는 브라우저

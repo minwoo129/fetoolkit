@@ -9,9 +9,9 @@ FEToolkit User-Agent is a utility library that accurately parses and analyzes br
 
 ## 1. Compatibility
 
-|  Framework   | enabled | version |
-| :----------: | :-----: | :-----: |
-| All Browsers |   ✅    | ES2015+ |
+|   Browser    | enabled |
+| :----------: | :-----: |
+| All Browsers |   ✅    |
 
 ## 2. Getting Started
 
@@ -54,7 +54,8 @@ console.log(agentInfo);
 //     chromium: true,
 //     chromiumVersion: '120.0.6099.109',
 //     webview: false,
-//     isEdgeBrowser: false
+//     isEdgeBrowser: false,
+//     jsEngine: 'v8
 //   },
 //   os: {
 //     name: 'window',
@@ -64,6 +65,11 @@ console.log(agentInfo);
 //   isMobile: false
 // }
 ```
+
+> #### Notice
+>
+> - in [OpenAI Atlas](https://openai.com/ko-KR/index/introducing-chatgpt-atlas/), browser name will be return as 'chrome'(Nov 2025)
+>   - Atlas's own UA Brand Information is not registered yet.
 
 ### Return Data Structure
 
@@ -90,6 +96,7 @@ interface AgentBrowserInfo {
   chromiumVersion: string; // Chromium version
   webview: boolean; // Whether it's a WebView environment
   isEdgeBrowser: boolean; // Whether it's Edge browser
+  jsEngine: JavaScriptEngine; // JavaScript Engine of Browser
 }
 ```
 
@@ -101,6 +108,20 @@ interface AgentOSInfo {
   version: string; // Operating system version
   majorVersion: number; // Major version number
 }
+```
+
+#### JavaScriptEngine
+
+```typescript
+// Supported browsers: Google Chrome, MS Edge, Opera, Naver Whale, Firefox, Apple Safari, OpenAI Atlas
+// OpenAI Atlas is a Chromium-based browser that uses v8.
+type JavaScriptEngine =
+  | 'v8'
+  | 'spidermonkey'
+  | 'javascriptcore'
+  | 'rhino'
+  | 'chakra'
+  | 'unknown';
 ```
 
 ## Supported Browsers

@@ -1,2 +1,7 @@
 export * from './src';
-export type { AgentBrowserInfo, AgentInfo, AgentOSInfo } from './src/types';
+export type {
+  AgentBrowserInfo,
+  AgentInfo,
+  AgentOSInfo,
+  JavaScriptEngine,
+} from './src/types';
