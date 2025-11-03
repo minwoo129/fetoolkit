@@ -9,9 +9,19 @@ FEToolkit User-Agent는 브라우저의 User-Agent 정보를 정확하게 파싱
 
 ## 1. 호환성
 
-|  프레임워크   | 사용가능여부 | 최소버전 |
-| :-----------: | :----------: | :------: |
-| 전체 브라우저 |      ✅      | ES2015+  |
+|                   Browser                   | enabled |
+| :-----------------------------------------: | :-----: |
+|           chromium 기반 브라우저            |         |
+|  [Google Chrome](https://buly.kr/C0AmRVv)   |   ✅    |
+|   [Naver Whale](https://buly.kr/3COtOjy)    |   ✅    |
+|      [Opera](https://buly.kr/4xYTCu5)       |   ✅    |
+|  [MicroSoft Edge](https://buly.kr/9MRPjIr)  |   ✅    |
+|   [OpenAI Atlas](https://buly.kr/FWTw3uH)   |   ✅    |
+| [Samsung Internet](https://buly.kr/8IwrqUu) |   ✅    |
+|            webkit 기반 브라우저             |         |
+|      [Safari](https://buly.kr/CWv3NyP)      |   ✅    |
+|                    기타                     |         |
+|     [Firefox](https://buly.kr/C0AmRWL)      |   ✅    |
 
 ## 2. 초기 설정 절차
 
@@ -54,7 +64,8 @@ console.log(agentInfo);
 //     chromium: true,
 //     chromiumVersion: '120.0.6099.109',
 //     webview: false,
-//     isEdgeBrowser: false
+//     isEdgeBrowser: false,
+//     jsEngine: 'v8
 //   },
 //   os: {
 //     name: 'window',
@@ -64,6 +75,11 @@ console.log(agentInfo);
 //   isMobile: false
 // }
 ```
+
+> #### 안내
+>
+> - [OpenAI Atlas](https://openai.com/ko-KR/index/introducing-chatgpt-atlas/)의 경우 브라우저 이름이 chrome으로 노출됩니다.(2025년 11월 기준)
+>   - 현재 Atlas의 자체 UA 브랜드 정보가 아직 등록되지 않은 상태이기 때문입니다.
 
 ### 반환되는 데이터 구조
 
@@ -90,6 +106,7 @@ interface AgentBrowserInfo {
   chromiumVersion: string; // Chromium 버전
   webview: boolean; // WebView 환경 여부
   isEdgeBrowser: boolean; // Edge 브라우저 여부
+  jsEngine: JavaScriptEngine; // 브라우저별 JavaScript 엔진
 }
 ```
 
@@ -103,15 +120,19 @@ interface AgentOSInfo {
 }
 ```
 
-## 지원하는 브라우저
+#### JavaScriptEngine
 
-- **Chrome/Chromium 기반 브라우저**: Chrome, Edge, Opera 등
-- **Firefox**: 모든 버전
-- **Safari**: 모든 버전
-- **Internet Explorer**: 모든 버전
-- **모바일 브라우저**: iOS Safari, Android Chrome, Samsung Internet 등
-- **기타 브라우저**: Whale (네이버 웨일), MIUI Browser, PhantomJS 등
-- **WebView**: 앱 내 웹뷰 환경
+```typescript
+// 지원되는 브라우저: Google Chrome, MS Edge, Opera, Naver Whale, Firefox, Apple Safari, OpenAI Atlas
+// OpenAI Atlas는 chromium 기반 브라우저로서 v8을 사용합니다.
+type JavaScriptEngine =
+  | 'v8'
+  | 'spidermonkey'
+  | 'javascriptcore'
+  | 'rhino'
+  | 'chakra'
+  | 'unknown';
+```
 
 ## 지원하는 운영체제
 
