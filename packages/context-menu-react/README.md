@@ -263,18 +263,6 @@ const ContextMenuTestPage1 = () => {
 export default ContextMenuTestPage1;
 ```
 
-> ### Notice
->
-> The `withContextMenu` HOC has `overflow: hidden;` CSS option applied. Therefore, if you want to use scrolling within the page, you can set the style of the top-level Element of the page component as follows.
->
-> ```css
-> .mainLayer {
->   width: 100%;
->   height: 100%;
->   overflow: auto;
-> }
-> ```
-
 ## 4. (Additional) Custom ContextMenu Connection
 
 > ### Notice

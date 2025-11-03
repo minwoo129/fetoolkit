@@ -263,18 +263,6 @@ const ContextMenuTestPage1 = () => {
 export default ContextMenuTestPage1;
 ```
 
-> ### 알려드립니다.
->
-> `withContextMenu` HOC에는 `overflow: hidden;` CSS 옵션이 적용되어 있습니다. 따라서 페이지 내에서 스크롤을 사용하실 경우 페이지 컴포넌트의 최상위 Element의 스타일을 다음과 같이 지정하시면 됩니다.
->
-> ```css
-> .mainLayer {
->   width: 100%;
->   height: 100%;
->   overflow: auto;
-> }
-> ```
-
 ## 4. (추가) 커스텀 ContextMenu 연결하기
 
 > ### 알려드립니다.
