@@ -9,9 +9,19 @@ FEToolkit User-Agent는 브라우저의 User-Agent 정보를 정확하게 파싱
 
 ## 1. 호환성
 
-|   브라우저    | 사용가능여부 |
-| :-----------: | :----------: |
-| 전체 브라우저 |      ✅      |
+|                   Browser                   | enabled |
+| :-----------------------------------------: | :-----: |
+|           chromium 기반 브라우저            |         |
+|  [Google Chrome](https://buly.kr/C0AmRVv)   |   ✅    |
+|   [Naver Whale](https://buly.kr/3COtOjy)    |   ✅    |
+|      [Opera](https://buly.kr/4xYTCu5)       |   ✅    |
+|  [MicroSoft Edge](https://buly.kr/9MRPjIr)  |   ✅    |
+|   [OpenAI Atlas](https://buly.kr/FWTw3uH)   |   ✅    |
+| [Samsung Internet](https://buly.kr/8IwrqUu) |   ✅    |
+|            webkit 기반 브라우저             |         |
+|      [Safari](https://buly.kr/CWv3NyP)      |   ✅    |
+|                    기타                     |         |
+|     [Firefox](https://buly.kr/C0AmRWL)      |   ✅    |
 
 ## 2. 초기 설정 절차
 
@@ -123,16 +133,6 @@ type JavaScriptEngine =
   | 'chakra'
   | 'unknown';
 ```
-
-## 지원하는 브라우저
-
-- **Chrome/Chromium 기반 브라우저**: Chrome, Edge, Opera 등
-- **Firefox**: 모든 버전
-- **Safari**: 모든 버전
-- **Internet Explorer**: 모든 버전
-- **모바일 브라우저**: iOS Safari, Android Chrome, Samsung Internet 등
-- **기타 브라우저**: Whale (네이버 웨일), MIUI Browser, PhantomJS 등
-- **WebView**: 앱 내 웹뷰 환경
 
 ## 지원하는 운영체제
 
