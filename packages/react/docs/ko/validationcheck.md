@@ -167,50 +167,10 @@ const {
 
 ### 5-1. 타입
 
-- ValidatorType  
-  사용자가 작성할 유효성검사 로직 그룹핑 객체
-  ```tsx
-  type ValidatorType<K extends string> = {
-    [key in K]: ValidatorActionType;
-  };
-  ```
-- ValidatorActionType  
-  ValidatorType에서 각 key별 Value 객체
-  ```tsx
-  type ValidatorActionType = {
-    validator: (value: string) => boolean;
-    errorStatus: {
-      errorCode: string;
-      errorMessage: string;
-    };
-  };
-  ```
-  | name                     | type                       | description                                                    |
-  | :----------------------- | :------------------------- | :------------------------------------------------------------- |
-  | validator                | (value: string) => boolean | 실행할 유효성 검사 로직                                        |
-  | errorStatus.errorCode    | string                     | 유효성검사 미통과 시 에러 코드<br>(사용자가 원하는 형식대로)   |
-  | errorStatus.errorMessage | string                     | 유효성검사 미통과 시 에러 메세지<br>(사용자가 원하는 형식대로) |
-- ValidationStatusType  
-  사용자가 유효성 검사를 실행한 후 반환받는 객체 타입
-  ```tsx
-  type ValidationStatusType = {
-    isPassed: boolean;
-    errorCode?: string;
-    errorMessage?: string;
-  };
-  ```
-  | name         | type                | description                                                                   |
-  | :----------- | :------------------ | :---------------------------------------------------------------------------- |
-  | isPassed     | boolean             | 유효성 검사를 통과했는지 여부                                                 |
-  | errorCode    | string \| undefined | 유효성검사 실패시 에러코드<br>(유효성 검사를 통과하지 못한 경우에만 반환됨)   |
-  | errorMessage | string \| undefined | 유효성검사 실패시 에러메세지<br>(유효성 검사를 통과하지 못한 경우에만 반환됨) |
-- UseValidateCheckInputType  
-  useValidateCheckInput hook의 리턴타입. 위 손쉬운 사용 문서에서 처럼 커스텀 hook을 만들때 사용할 수 있습니다.
-  ```tsx
-  UseValidateCheckInputType<ValidatorType<string>>;
-  ```
-- UseValidationCheckType  
-  useValidationCheck hook의 리턴타입. 위 손쉬운 사용 문서에서 처럼 커스텀 hook을 만들때 사용할 수 있습니다.
-  ```tsx
-  UseValidationCheckType<ValidatorType<string>>;
-  ```
+| 이름                      | 설명                                                | 공식문서                                        |
+| :------------------------ | :-------------------------------------------------- | :---------------------------------------------- |
+| ValidatorType             | 사용자가 작성할 유효성검사 로직 그룹핑 객체         | [공식문서](./type_validatortype.md)             |
+| ValidatorActionType       | ValidatorType에서 각 key별 Value 객체               | [공식문서](./type_validatoractiontype.md)       |
+| ValidationStatusType      | 사용자가 유효성 검사를 실행한 후 반환받는 객체 타입 | [공식문서](./type_validationstatustype.md)      |
+| UseValidateCheckInputType | useValidateCheckInput hook의 리턴타입.              | [공식문서](./type_usevalidatecheckinputtype.md) |
+| UseValidationCheckType    | useValidationCheck hook의 리턴타입.                 | [공식문서](./type_usevalidationchecktype.md)    |
