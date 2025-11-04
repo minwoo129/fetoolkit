@@ -13,7 +13,7 @@ This package is only available for React.
 > - We have conducted a major update through V2 version update.
 >   - ContextMenu functionality has been moved to [`@fetoolkit/context-menu-react`](../context-menu-react/). (Related features provided by this package have been deprecated.)
 >   - All utility functions provided by this package have been deprecated.
->     - userAgent functionality has been moved to `@fetoolkit/user-agent`.
+>     - userAgent functionality has been moved to [`@fetoolkit/user-agent`](../user-agent/).
 >     - Other functions are provided in [`@fetoolkit/utils`](../utils/).
 
 ## 1. Compatibility
