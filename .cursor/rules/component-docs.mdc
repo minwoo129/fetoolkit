@@ -1,5 +1,5 @@
 ---
-globs: packages/*/docs/*/component_*.md,packages/*/docs/*/hoc_*.md
+globs: packages/admin-react/docs/*/component_*.md,packages/react/docs/*/component_*.md,packages/context-menu-react/docs/*/hoc_*.md
 alwaysApply: false
 ---
 

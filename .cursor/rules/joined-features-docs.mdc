@@ -1,5 +1,5 @@
 ---
-globs: packages/*/docs/*/*.md
+globs: packages/react/docs/*/*.md
 alwaysApply: false
 ---
 
