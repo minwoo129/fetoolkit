@@ -2,25 +2,29 @@
 alwaysApply: false
 ---
 
-# Write Release Note(Don't upload at github)
+# GitHub Release Note 문서 작성
 
-## Release Note(Template)
+## Rules
 
-```md
-Released at {Released Date}
+1. 해당 기능은 패키지 배포후 GitHub에 추가할 Release Note 문서를 자동 작성해주는 기능으로, 문서 작성만 도와준다.
+   - GitHub MCP에 Release Note 작성 API가 없어 직접 업로드는 불가능
+   - 내용만 작성해주면 사용자가 직접 추가할 예정
+2. 사용자가 프롬프트에 버전정보에 대해 알려주면 GitHub MCP를 통해 제목에 해당 버전명이 적혀있는 이슈들을 모두 조회한다.
+3. 이슈들을 조회하면 아래와 같이 Release Note를 작성한다.
 
-## Changes
+   ```md
+   Released at {당일날짜(ex, 2025-10-20)}
 
-### `@fetoolkit/react`
+   ## Changes
 
-// changes of packages/react(based on issues)
+   // 각 패키지별로 목차를 추가할 것
 
-### `@fetoolkit/utils`
+   ### `{패키지명(ex, @fetoolkit/react)}` {만약에 새로 추가된 패키지의 경우 "(신규 패키지)"라고 추가할것}
 
-// changes of packages/utils(based on issues)
-```
+   - {해당 패키지에 적용된 변경사항(만약에 없으면, "변동사항 없음"이라고만 표시)}
+   - {새로 추가된 패키지의 경우 추가된 기능들을 모두 작성할 것}
 
-### Detail
+   ## 세부 변경사항
 
-- Refer to all issues reflected in this version.
-  - Exclude `docs` issues, Cursor ruleset modification and CI/CD pipeline modification issues
+   // 하위 내용은 작성하지 말고 놔둘것
+   ```
