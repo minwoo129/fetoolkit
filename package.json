@@ -38,7 +38,7 @@
     "tests:context-menu-react:e2e": "cd apps/context-menu-react-test && yarn playwright install --with-deps && yarn test:e2e",
     "tests:user-agent:e2e": "cd apps/user-agent-test && yarn playwright install --with-deps && yarn test:e2e",
     "apps:react": "yarn workspace react-test",
-    "apps:react:auto-install": "yarn packages:react:build && yarn packages:user-agent:build && yarn apps:react install",
+    "apps:react:auto-install": "yarn build && yarn apps:react install",
     "apps:admin-react": "yarn workspace admin-react-test",
     "apps:admin-react:auto-install": "yarn build && yarn apps:admin-react install",
     "apps:context-menu-react": "yarn workspace context-menu-react-test",
