@@ -32,7 +32,7 @@ alwaysApply: false
 
        ## Changes
 
-       - {변경사항 작성(커밋 기준, 이슈 번호 첨부 삭제)}
+       - {변경사항 작성(커밋 기준, 커밋 메세지 내 이슈 번호 첨부 삭제)}
        ```
 
    - Merge 경로: 이슈 브랜치(`feature/issue-(이슈번호)/...`, `bug/issue-(이슈번호)/...`, `docs/issue-(이슈번호)/...`) -> `dev-v(버전명)`
@@ -50,7 +50,7 @@ alwaysApply: false
 
        ## Changes
 
-       - {변경사항 작성(커밋 기준)}
+       - {변경사항 작성(커밋 기준, , 커밋 메세지 내 이슈 번호 첨부 삭제)}
        ```
 
    - Merge 경로: `dev-v(버전명)` -> `master`
