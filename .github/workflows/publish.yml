@@ -34,12 +34,17 @@ jobs:
           git config --global user.email "${{ secrets.GH_EMAIL }}"
       - name: build Projects
         run: yarn build
-      - name: publish
+      - name: temp commit for publish
         run: |
           git add .
           git commit -m "temp commit"
-          yarn packages:react:publish 
-          yarn packages:utils:publish
-          yarn packages:admin-react:publish
-          yarn packages:context-menu-react:publish
-          yarn packages:user-agent:publish
+      - name: publish(fetoolkit/react)
+        run: yarn packages:react:publish
+      - name: publish(fetoolkit/utils)
+        run: yarn packages:utils:publish
+      - name: publish(fetoolkit/admin-react)
+        run: yarn packages:admin-react:publish
+      - name: publish(fetoolkit/context-menu-react)
+        run: yarn packages:context-menu-react:publish
+      - name: publish(fetoolkit/user-agent)
+        run: yarn packages:user-agent:publish

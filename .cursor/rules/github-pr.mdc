@@ -2,95 +2,86 @@
 alwaysApply: false
 ---
 
-# 1. basic rules
+# Pull Request 생성
 
-- refer to issue number
-  - issue number in current branch name
-    - ex1) branch name: `feature/issue-32/test-issue`  
-       => issue number: 32
-    - ex2) branch name: `bug/issue-40/test-issue2`  
-       => issue number: 40
-  - in some case, it needs to refer Sub-issue of it
-- Before Pull Request on GitHub, PR Content pre-check required
-  - don't self PR upload without approval(Important)
+# 1. Rules
 
-# 2. basic PR Description(template)
+1. Pull Request 내용을 작성하면 내용을 먼저 보여주고 PR을 올릴지 여부를 반드시 물어본다.(사용자가 승인하지 않으면 PR을 올리지 않는다.)
+2. Pull Request 내용은 현재 브랜치에서 작업한 내용을 기준으로 작성한다.
+3. 현재 브랜치 명에 따라서 타겟 브랜치는 아래와 같다.
+   - 브랜치명: `feature/issue-(이슈번호)/...`, `bug/issue-(이슈번호)/...`, `docs/issue-(이슈번호)/...`
+     - 타겟 브랜치: `dev-v(버전명)`(기본)
+     - 만약 `dev-v(버전명)`가 아닌 다른 이슈의 브랜치로 가야되는 경우 사용자가 알려준 이슈번호 브랜치로 설정
+   - 브랜치명: `dev-v(버전명)`
+     - 타겟 브랜치: `master`
+   - 브랜치명: `master`
+     - 타겟 브랜치: `release`
+4. Pull Request 제목 및 내용 템플릿은 아래와 같다
+   - Merge 경로: 이슈 브랜치(`feature/issue-(이슈번호)/...`, `bug/issue-(이슈번호)/...`, `docs/issue-(이슈번호)/...`) -> 이슈 브랜치(`feature/issue-(이슈번호)/...`, `bug/issue-(이슈번호)/...`, `docs/issue-(이슈번호)/...`)
+     - 제목: `{현재 브랜치에 연결된 이슈와 동일한 제목}`
+     - 내용 템플릿
 
-```md
-## 이슈번호
+       ```md
+       ## Issue Numbers
 
-- #{issue number}
+       - #{이슈번호}
 
-## Description
+       ## Description
 
-// description of the issue
-// Import the "description" part of the linked issue as it is.
+       // 연결된 이슈 상세 내용에서 "description" 영역 내용을 그대로 작성할것
 
-- {changes}
-```
+       ## Changes
 
-# 3. Pull Request Rules(to dev)
+       - {변경사항 작성(커밋 기준, 커밋 메세지 내 이슈 번호 첨부 삭제)}
+       ```
 
-## Merge Dir
+   - Merge 경로: 이슈 브랜치(`feature/issue-(이슈번호)/...`, `bug/issue-(이슈번호)/...`, `docs/issue-(이슈번호)/...`) -> `dev-v(버전명)`
+     - 제목: `{현재 브랜치에 연결된 이슈와 동일한 제목}`
+     - 내용 템플릿
 
-- `{issue branch}` -> `{devlop branch}`
-  - ex)
-    - `feature/issue-31/test-issue` -> `dev-v1.2.0`
-    - `bug/issue-32/test-issue` -> `dev-v1.2.0`
-    - `docs/issue-33/test-issue` -> `dev-v1.2.0`
+       ```md
+       ## Issue Numbers
 
-## title
+       - #{이슈번호}
 
-- `{Same as the title of the issue}`
-  - ex) title of issue: `[FEAT] Test Issue title (v1.2.0)`  
-     => title of PR: `[FEAT] Test Issue title (v1.2.0)`
+       ## Description
 
-# 4. Pull Request Rules(from child issue to parent issue)
+       // 연결된 이슈 상세 내용에서 "description" 영역 내용을 그대로 작성할것
 
-## Merge Dir
+       ## Changes
 
-- `{Child issue branch}` -> `{Parent issue branch}`
-  - ex)
-    - `docs/issue-31/child-test-issue` -> `docs/issue-30/parent-test-issue`
-    - `feature/issue-31/child-test-issue` -> `feature/issue-30/parent-test-issue`
-    - `bug/issue-31/child-test-issue` -> `bug/issue-30/parent-test-issue`
-    - `docs/issue-31/child-test-issue` -> `feature/issue-30/parent-test-issue`
-    - `docs/issue-31/child-test-issue` -> `bug/issue-30/parent-test-issue`
-    - `feature/issue-31/child-test-issue` -> `docs/issue-30/parent-test-issue`
-    - `feature/issue-31/child-test-issue` -> `bug/issue-30/parent-test-issue`
-    - `bug/issue-31/child-test-issue` -> `docs/issue-30/parent-test-issue`
-    - `bug/issue-31/child-test-issue` -> `feature/issue-30/parent-test-issue`
+       - {변경사항 작성(커밋 기준, , 커밋 메세지 내 이슈 번호 첨부 삭제)}
+       ```
 
-## Title
+   - Merge 경로: `dev-v(버전명)` -> `master`
+     - 제목: `Merge of v{버전명}`
+       - 이때 제목의 버전명은 `package/react`의 `package.json` 파일내에 선언된 버전명으로 작성할것
+       - 베타버전(ex, 브랜치명 `2.0.0-beta.6`)일수도 있기 때문
+     - 내용 템플릿
 
-- title: `{Same as the title of the issue}`
-  - ex) title of issue: `[FEAT] Test Issue title (v1.2.0)`  
-     => title of PR: `[FEAT] Test Issue title (v1.2.0)`
+       ```md
+       ## Changes(issue)
 
-# 5. Pull Request Rules(to master)
+       // 현재 브랜치 이름의 버전이 제목에 작성되있는 이슈들의 번호를 작성할것
+       // cursor 룰셋 내용 수정 및 GitHub Actions 파이프라인 수정에 대한 이슈는 제외할 것.
+       // 이미 master 브랜치에 merge된 이슈들은 제외할 것.
+       // ex)
+       // - #{이슈번호}
+       ```
 
-## Merge Dir
+   - Merge 경로: `master` -> `release`
+     - 제목: `Release of v{버전명}`
+       - 이때 제목의 버전명은 `package/react`의 `package.json` 파일내에 선언된 버전명으로 작성할것
+     - 내용 템플릿
 
-- `{dev branch}` -> `master`
-  - ex)
-    - `dev-v1.2.0` -> `master`
-    - `dev-v1.3.0` -> `master`
+       ```md
+       # Release of v{버전명}
 
-- refer to current branch
+       Released at {배포날짜(ex, 2025-10-20)}
 
-## Title
+       ## Changes
 
-- title: `Merge of v{target version}`
-  - ex: current branch name: `dev-v1.2.0`  
-    => title: `Merge of v1.2.0`
-
-## description
-
-```md
-## Changes(issue)
-
-// Bring up all the titles of the issues associated with the branch.
-// target version: at the end of title of issue.
-
-- {changes}
-```
+       // master 브랜치와 release 브랜치를 비교해서 변경된 내용(이슈)을 작성할 것
+       // ex)
+       // - #{이슈번호}
+       ```

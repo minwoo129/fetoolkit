@@ -167,50 +167,10 @@ const {
 
 ### 5-1. Types
 
-- ValidatorType  
-  Object for grouping validation logic to be written by the user
-  ```tsx
-  type ValidatorType<K extends string> = {
-    [key in K]: ValidatorActionType;
-  };
-  ```
-- ValidatorActionType  
-  Value object for each key in ValidatorType
-  ```tsx
-  type ValidatorActionType = {
-    validator: (value: string) => boolean;
-    errorStatus: {
-      errorCode: string;
-      errorMessage: string;
-    };
-  };
-  ```
-  | name                     | type                       | description                                                           |
-  | :----------------------- | :------------------------- | :-------------------------------------------------------------------- |
-  | validator                | (value: string) => boolean | Validation logic to execute                                           |
-  | errorStatus.errorCode    | string                     | Error code when validation fails<br>(in the format the user wants)    |
-  | errorStatus.errorMessage | string                     | Error message when validation fails<br>(in the format the user wants) |
-- ValidationStatusType  
-  Object type returned after the user executes validation
-  ```tsx
-  type ValidationStatusType = {
-    isPassed: boolean;
-    errorCode?: string;
-    errorMessage?: string;
-  };
-  ```
-  | name         | type                | description                                                                  |
-  | :----------- | :------------------ | :--------------------------------------------------------------------------- |
-  | isPassed     | boolean             | Whether validation passed                                                    |
-  | errorCode    | string \| undefined | Error code when validation fails<br>(only returned when validation fails)    |
-  | errorMessage | string \| undefined | Error message when validation fails<br>(only returned when validation fails) |
-- UseValidateCheckInputType  
-  Return type of useValidateCheckInput hook. Can be used when creating custom hooks as shown in the easier usage documentation above.
-  ```tsx
-  UseValidateCheckInputType<ValidatorType<string>>;
-  ```
-- UseValidationCheckType  
-  Return type of useValidationCheck hook. Can be used when creating custom hooks as shown in the easier usage documentation above.
-  ```tsx
-  UseValidationCheckType<ValidatorType<string>>;
-  ```
+| name                      | Desctiption                                                    | Docs                                            |
+| :------------------------ | :------------------------------------------------------------- | :---------------------------------------------- |
+| ValidatorType             | Object for grouping validation logic to be written by the user | [Document](./type_validatortype.md)             |
+| ValidatorActionType       | Value object for each key in ValidatorType                     | [Document](./type_validatoractiontype.md)       |
+| ValidationStatusType      | Object type returned after the user executes validation        | [Document](./type_validationstatustype.md)      |
+| UseValidateCheckInputType | Return type of useValidateCheckInput hook.                     | [Document](./type_usevalidatecheckinputtype.md) |
+| UseValidationCheckType    | Return type of useValidationCheck hook.                        | [Document](./type_usevalidationchecktype.md)    |

@@ -1,0 +1,43 @@
+---
+globs: packages/react/docs/*/*.md
+alwaysApply: false
+---
+
+# 종합기능 README 문서작성
+
+## Rules
+
+1. 파일이 추가된 폴더명을 참고해서 해당 언어에 따라 문서를 작성한다.
+2. 파일명에 `component_*.md`, `hoc_*.md`, `hook_*.md`와 같이 언더바(\_)가 붙어있는 문서에는 적용하지 않는다.
+3. 한글문서를 먼저 작성하고 작성된 한글문서를 바탕으로 영문문서를 작성한다.
+4. 문서 상단의 링크는 다른 언어로 작성된 종합기능 문서로 이동하기 위한 링크이며 상대경로로 작성한다.
+5. 한글문서의 템플릿은 아래와 같다.
+
+   ```md
+   # {제목}
+
+   [English]({상대경로}) | 한국어
+
+   // 간단 설명 작성 영역
+   // 내용을 작성하지 말것(사용자가 직접 작성할 예정)
+
+   ## 1. 기능 // 영문문서에서는 "Features"
+
+   // 해당 기능과 관련한 모든 기능들을 보여주고 이를 링크로 연결한다.
+   // ex)
+
+   // ### [useValidationCheck(Hook)](./hook_usevalidationcheck.md)
+   // ### [useValidateCheckInput(Hook)](./hook_usevalidatecheckinput.md)
+
+   ## 2. 사전 연결 방법 // 영문문서에서는 "Getting Started"
+
+   // 별도로 내용을 작성하지 말것(사용자가 직접 작성할 예정)
+
+   ## 3. 사용 방법 // 영문문서에서는 "Instructions"
+
+   // 별도로 내용을 작성하지 말것(사용자가 직접 작성할 예정)
+
+   ## 4. API 문서 // 영문문서에서는 "API Documentation"
+
+   // 별도로 내용을 작성하지 말것(사용자가 직접 작성할 예정)
+   ```
