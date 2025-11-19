@@ -98,6 +98,14 @@ export interface AgentBrowserInfo {
    * Edge 브라우저 여부
    */
   isEdgeBrowser: boolean;
+  /**
+   * JavaScript engine name
+   *
+   * -----------------------
+   *
+   * JavaScript 엔진 이름
+   */
+  jsEngine: JavaScriptEngine;
 }
 
 export interface AgentOSInfo {
@@ -139,3 +147,11 @@ export interface PresetResult {
   preset: PresetInfo | null;
   version: string;
 }
+
+export type JavaScriptEngine =
+  | 'v8'
+  | 'spidermonkey'
+  | 'javascriptcore'
+  | 'rhino'
+  | 'chakra'
+  | 'unknown';

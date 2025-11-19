@@ -13,7 +13,7 @@ FEToolkit은 Frontend 개발 시 유용하게 사용할 수 있는 기능들을 
 > - V2 버전 업데이트를 통해 대규모 업데이트를 진행하였습니다.
 >   - ContextMenu 기능은 [`@fetoolkit/context-menu-react`](../context-menu-react/)로 이전하였습니다.(이 패키지에서 제공하던 관련 기능은 deprecated 처리하였습니다.)
 >   - 해당 패키지에서 제공하고 있던 모든 유틸리티 함수는 deprecated 처리하였습니다.
->     - userAgent 기능은 `@fetoolkit/user-agent`로 이전하였습니다.
+>     - userAgent 기능은 [`@fetoolkit/user-agent`](../user-agent/)로 이전하였습니다.
 >     - 그 외 다른 함수들은 [`@fetoolkit/utils`](../utils/)에서 제공하고 있습니다.
 
 ## 1. 호환성

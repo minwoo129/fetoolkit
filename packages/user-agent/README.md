@@ -9,9 +9,19 @@ FEToolkit User-Agent is a utility library that accurately parses and analyzes br
 
 ## 1. Compatibility
 
-|  Framework   | enabled | version |
-| :----------: | :-----: | :-----: |
-| All Browsers |   ✅    | ES2015+ |
+|                   Browser                   | enabled |
+| :-----------------------------------------: | :-----: |
+|           chromium based browsers           |         |
+|  [Google Chrome](https://buly.kr/C0AmRVv)   |   ✅    |
+|   [Naver Whale](https://buly.kr/3COtOjy)    |   ✅    |
+|      [Opera](https://buly.kr/4xYTCu5)       |   ✅    |
+|  [MicroSoft Edge](https://buly.kr/9MRPjIr)  |   ✅    |
+|   [OpenAI Atlas](https://buly.kr/FWTw3uH)   |   ✅    |
+| [Samsung Internet](https://buly.kr/8IwrqUu) |   ✅    |
+|            webkit based browsers            |         |
+|      [Safari](https://buly.kr/CWv3NyP)      |   ✅    |
+|                     etc                     |         |
+|     [Firefox](https://buly.kr/C0AmRWL)      |   ✅    |
 
 ## 2. Getting Started
 
@@ -54,7 +64,8 @@ console.log(agentInfo);
 //     chromium: true,
 //     chromiumVersion: '120.0.6099.109',
 //     webview: false,
-//     isEdgeBrowser: false
+//     isEdgeBrowser: false,
+//     jsEngine: 'v8
 //   },
 //   os: {
 //     name: 'window',
@@ -64,6 +75,11 @@ console.log(agentInfo);
 //   isMobile: false
 // }
 ```
+
+> #### Notice
+>
+> - in [OpenAI Atlas](https://openai.com/ko-KR/index/introducing-chatgpt-atlas/), browser name will be return as 'chrome'(Nov 2025)
+>   - Atlas's own UA Brand Information is not registered yet.
 
 ### Return Data Structure
 
@@ -90,6 +106,7 @@ interface AgentBrowserInfo {
   chromiumVersion: string; // Chromium version
   webview: boolean; // Whether it's a WebView environment
   isEdgeBrowser: boolean; // Whether it's Edge browser
+  jsEngine: JavaScriptEngine; // JavaScript Engine of Browser
 }
 ```
 
@@ -103,15 +120,19 @@ interface AgentOSInfo {
 }
 ```
 
-## Supported Browsers
+#### JavaScriptEngine
 
-- **Chrome/Chromium-based browsers**: Chrome, Edge, Opera, etc.
-- **Firefox**: All versions
-- **Safari**: All versions
-- **Internet Explorer**: All versions
-- **Mobile browsers**: iOS Safari, Android Chrome, Samsung Internet, etc.
-- **Other browsers**: Whale (Naver Whale), MIUI Browser, PhantomJS, etc.
-- **WebView**: In-app webview environments
+```typescript
+// Supported browsers: Google Chrome, MS Edge, Opera, Naver Whale, Firefox, Apple Safari, OpenAI Atlas
+// OpenAI Atlas is a Chromium-based browser that uses v8.
+type JavaScriptEngine =
+  | 'v8'
+  | 'spidermonkey'
+  | 'javascriptcore'
+  | 'rhino'
+  | 'chakra'
+  | 'unknown';
+```
 
 ## Supported Operating Systems
 

@@ -1,0 +1,46 @@
+---
+globs: packages/utils/docs/*/*.md,packages/admin-react/docs/*/util_*.md
+alwaysApply: false
+---
+
+# 유틸리티 함수 README 문서 작성
+
+## Rules
+
+1. 파일이 추가된 폴더명을 참고해서 해당 언어에 따라 문서를 작성한다.
+2. 만약 동일경로 상에
+3. 유틸리티 함수의 이름은 작성하는 파일명과 동일하다.(파일은 사용자가 직접 추가할 것이다.)
+4. 한글문서를 먼저 작성하고 작성된 한글문서를 바탕으로 영문문서를 작성한다.
+5. 문서 상단의 링크는 다른 언어로 작성된 유틸리티 함수 문서로 이동하기 위한 링크이며 상대경로로 작성한다.
+6. 한글문서의 템플릿은 아래와 같다.
+
+   ````md
+   // ex) Array(chunk)
+
+   # {함수명}
+
+   [English]({상대경로}) | 한국어
+
+   // 유틸리티 함수 설명
+
+   ```tsx
+   // 코드는 작성하지 말고 블록만 추가할 것(코드는 사용자가 작성할 예정)
+   ```
+
+   ## 기본 사용 예시 // 영문문서에서는 "Example"
+
+   ```tsx
+   // 코드는 작성하지 말고 블록만 추가할 것(코드는 사용자가 작성할 예정)
+   ```
+
+   ## API 문서 // 영문문서에서는 "API Reference"
+
+   // 만약 input값 또는 output 값이 제네릭 타입인 경우
+   // ex)
+   // - input
+   // |name|type|required|description|
+   // |:---:|:---|:---|:---:|
+   // |array|T[]|true|Array to search|
+   // |size|number|true|Size to chunk <br>(Returns an error if not a natural number)|
+   // - output(type): T[][]
+   ````

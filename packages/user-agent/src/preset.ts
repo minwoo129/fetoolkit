@@ -49,6 +49,10 @@ export const BROWSER_PRESETS: PresetInfo[] = [
     id: 'safari',
     versionTest: 'version',
   },
+  {
+    test: 'opera|opr',
+    id: 'opera',
+  },
 ];
 
 // chromium's engine(blink) is based on applewebkit 537.36.
