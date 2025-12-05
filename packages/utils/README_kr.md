@@ -82,8 +82,9 @@ FEToolkit utils는 기능 개발 중 사용할 수 있는 유틸리티 함수를
 
 ### 2-5. Utility Types
 
-| 이름         | 설명                                       |                  공식문서                  |
-| :----------- | :----------------------------------------- | :----------------------------------------: |
-| PartialPath  | 특정 경로상의 프로퍼티를 optional로 처리   | [공식문서](./docs/ko/type_partialpath.md)  |
-| RequiredPath | 특정 경로상의 프로퍼티를 optional로 처리   | [공식문서](./docs/ko/type_requiredpath.md) |
-| Path         | 객체타입의 key 값들을 리터럴 타입으로 변환 |     [공식문서](./docs/ko/type_path.md)     |
+| 이름           | 설명                                       |                   공식문서                   |
+| :------------- | :----------------------------------------- | :------------------------------------------: |
+| PartialPath    | 특정 경로상의 프로퍼티를 optional로 처리   |  [공식문서](./docs/ko/type_partialpath.md)   |
+| RequiredPath   | 특정 경로상의 프로퍼티를 optional로 처리   |  [공식문서](./docs/ko/type_requiredpath.md)  |
+| Path           | 객체타입의 key 값들을 리터럴 타입으로 변환 |      [공식문서](./docs/ko/type_path.md)      |
+| TypeOfProperty | 객체타입의 특정 프로퍼티의 타입을 반환     | [공식문서](./docs/ko/type_typeofproperty.md) |
