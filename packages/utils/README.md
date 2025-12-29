@@ -82,8 +82,9 @@ FEToolkit utils is a library that provides utility functions that can be used du
 
 ### 2-5. Utility Types
 
-| Name         | Description                               |                    Docs                    |
-| :----------- | :---------------------------------------- | :----------------------------------------: |
-| PartialPath  | Make specific properties optional         | [Document](./docs/en/type_partialpath.md)  |
-| RequiredPath | Make specific properties required         | [Document](./docs/en/type_requiredpath.md) |
-| Path         | Convert object type keys to literal types |     [Document](./docs/en/type_path.md)     |
+| Name           | Description                                              |                     Docs                     |
+| :------------- | :------------------------------------------------------- | :------------------------------------------: |
+| PartialPath    | Make specific properties optional                        |  [Document](./docs/en/type_partialpath.md)   |
+| RequiredPath   | Make specific properties required                        |  [Document](./docs/en/type_requiredpath.md)  |
+| Path           | Convert object type keys to literal types                |      [Document](./docs/en/type_path.md)      |
+| TypeOfProperty | Return the type of a specific property in an object type | [Document](./docs/en/type_typeofproperty.md) |
