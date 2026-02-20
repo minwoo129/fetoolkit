@@ -9,31 +9,18 @@ export const dateBoardOfMonth = (date: dayjs.Dayjs) => {
   const dateBoard: DateBoardItem[][] = [];
 
   // 주별 날짜 보드 생성
-  function getWeekDateBoard(
-    currentDate: dayjs.Dayjs,
-    currentBoard: DateBoardItem[],
-  ) {
-    if (currentBoard.length === 7) {
-      dateBoard.push(currentBoard);
-      return;
+  for (let i = startDate; i.isBefore(endDate); i = i.add(1, 'week')) {
+    const week: DateBoardItem[] = [];
+    for (let j = 0; j < 7; j++) {
+      const current = i.add(j, 'day');
+      week.push({
+        date: current.format('YYYY-MM-DD'),
+        day: getDayOfDate(current),
+        week: { idx: j },
+        isCurrentMonth: current.isSame(date, 'month'),
+      });
     }
-
-    currentBoard.push({
-      date: currentDate.format('YYYY-MM-DD'),
-      day: getDayOfDate(currentDate),
-      week: {
-        idx: currentBoard.length,
-      },
-      isCurrentMonth: currentDate.isSame(date, 'month'),
-    });
-
-    const nextDate = currentDate.add(1, 'day');
-
-    getWeekDateBoard(nextDate, currentBoard);
-  }
-
-  for (let i = startDate; i <= endDate; i = i.add(1, 'week')) {
-    getWeekDateBoard(i, []);
+    dateBoard.push(week);
   }
 
   return dateBoard;
