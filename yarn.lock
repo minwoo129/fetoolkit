@@ -999,8 +999,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fetoolkit/dayjs@workspace:packages/dayjs"
   dependencies:
+    dayjs: "npm:^1.11.19"
     vite: "npm:^7.3.1"
     vite-plugin-dts: "npm:^4.5.4"
+  peerDependencies:
+    dayjs: "*"
   languageName: unknown
   linkType: soft
 
@@ -4052,6 +4055,13 @@ __metadata:
   version: 3.0.3
   resolution: "dateformat@npm:3.0.3"
   checksum: 10c0/2effb8bef52ff912f87a05e4adbeacff46353e91313ad1ea9ed31412db26849f5a0fcc7e3ce36dbfb84fc6c881a986d5694f84838ad0da7000d5150693e78678
+  languageName: node
+  linkType: hard
+
+"dayjs@npm:^1.11.19":
+  version: 1.11.19
+  resolution: "dayjs@npm:1.11.19"
+  checksum: 10c0/7d8a6074a343f821f81ea284d700bd34ea6c7abbe8d93bce7aba818948957c1b7f56131702e5e890a5622cdfc05dcebe8aed0b8313bdc6838a594d7846b0b000
   languageName: node
   linkType: hard
 
