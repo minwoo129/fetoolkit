@@ -38,6 +38,7 @@
     "tests:admin-react:e2e": "cd apps/admin-react-test && yarn playwright install --with-deps && yarn test:e2e",
     "tests:context-menu-react:e2e": "cd apps/context-menu-react-test && yarn playwright install --with-deps && yarn test:e2e",
     "tests:user-agent:e2e": "cd apps/user-agent-test && yarn playwright install --with-deps && yarn test:e2e",
+    "tests:dayjs:unit": "cd packages/dayjs && yarn test:unit",
     "apps:react": "yarn workspace react-test",
     "apps:react:auto-install": "yarn build && yarn apps:react install",
     "apps:admin-react": "yarn workspace admin-react-test",
