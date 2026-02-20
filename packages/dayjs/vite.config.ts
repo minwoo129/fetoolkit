@@ -19,6 +19,14 @@ export default defineConfig({
       fileName: 'index',
       formats: ['es', 'umd'],
     },
+    rollupOptions: {
+      external: ['dayjs', /^dayjs\//],
+      output: {
+        globals: {
+          dayjs: 'dayjs',
+        },
+      },
+    },
   },
   esbuild: {
     jsx: 'automatic',
