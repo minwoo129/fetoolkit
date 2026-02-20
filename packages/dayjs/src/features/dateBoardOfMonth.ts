@@ -7,6 +7,7 @@ export const dateBoardOfMonth = (date: dayjs.Dayjs) => {
   const { startDate, endDate } = startAndEndDateOfMonth(date);
 
   const dateBoard: DateBoardItem[][] = [];
+  let weekIdx = 0;
 
   // 주별 날짜 보드 생성
   for (let i = startDate; i.isBefore(endDate); i = i.add(1, 'week')) {
@@ -16,11 +17,12 @@ export const dateBoardOfMonth = (date: dayjs.Dayjs) => {
       week.push({
         date: current.format('YYYY-MM-DD'),
         day: getDayOfDate(current),
-        week: { idx: j },
+        week: { idx: weekIdx },
         isCurrentMonth: current.isSame(date, 'month'),
       });
     }
     dateBoard.push(week);
+    weekIdx++;
   }
 
   return dateBoard;

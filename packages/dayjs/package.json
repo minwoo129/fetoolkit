@@ -3,7 +3,8 @@
   "version": "2.0.2",
   "author": "minwoo129 <key0129mw@naver.com>",
   "scripts": {
-    "build": "tsc && vite build"
+    "build": "tsc && vite build",
+    "test:unit": "vitest"
   },
   "devDependencies": {
     "dayjs": "^1.11.19",
