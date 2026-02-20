@@ -1,0 +1,12 @@
+{
+  "name": "@fetoolkit/dayjs",
+  "version": "2.0.2",
+  "author": "minwoo129 <key0129mw@naver.com>",
+  "scripts": {
+    "build": "tsc && vite build"
+  },
+  "devDependencies": {
+    "vite": "^7.3.1",
+    "vite-plugin-dts": "^4.5.4"
+  }
+}
