@@ -1,7 +1,26 @@
 {
   "name": "@fetoolkit/dayjs",
   "version": "2.0.2",
+  "type": "module",
   "author": "minwoo129 <key0129mw@naver.com>",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "homepage": "https://github.com/minwoo129/fetoolkit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/minwoo129/fetoolkit.git",
+    "directory": "packages/dayjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "dayjs",
+    "dayjs-toolkit"
+  ],
+  "exports": "./dist/index.js",
   "scripts": {
     "build": "tsc && vite build",
     "test:unit": "vitest"
