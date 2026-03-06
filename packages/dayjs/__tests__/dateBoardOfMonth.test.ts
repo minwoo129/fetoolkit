@@ -648,9 +648,7 @@ describe('dateBoardOfMonth', () => {
     for (let i = 0; i < result.length; i++) {
       for (let j = 0; j < result[i].length; j++) {
         it(`날짜: ${result[i][j].date}`, () =>
-          expect(JSON.stringify(result[i][j])).toBe(
-            JSON.stringify(testCase1.expected[i][j]),
-          ));
+          expect(result[i][j]).toEqual(testCase1.expected[i][j]));
       }
     }
   });
@@ -660,9 +658,7 @@ describe('dateBoardOfMonth', () => {
     for (let i = 0; i < result.length; i++) {
       for (let j = 0; j < result[i].length; j++) {
         it(`날짜: ${result[i][j].date}`, () =>
-          expect(JSON.stringify(result[i][j])).toBe(
-            JSON.stringify(testCase2.expected[i][j]),
-          ));
+          expect(result[i][j]).toEqual(testCase2.expected[i][j]));
       }
     }
   });
@@ -672,9 +668,7 @@ describe('dateBoardOfMonth', () => {
     for (let i = 0; i < result.length; i++) {
       for (let j = 0; j < result[i].length; j++) {
         it(`날짜: ${result[i][j].date}`, () =>
-          expect(JSON.stringify(result[i][j])).toBe(
-            JSON.stringify(testCase3.expected[i][j]),
-          ));
+          expect(result[i][j]).toEqual(testCase3.expected[i][j]));
       }
     }
   });
