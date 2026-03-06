@@ -58,7 +58,6 @@ It helps you write cleaner calendar data logic by offering functions for generat
 
 ### 3-2. Types
 
-| Name          | Description                                               |                    Docs                     |
-| :------------ | :-------------------------------------------------------- | :-----------------------------------------: |
-| DateBoardItem | Data type for each date board cell                        | [Document](./docs/en/type_dateboarditem.md) |
-| DayType       | Type containing day index, Korean, and English day labels |           [Document](./docs/en/)            |
+| Name          | Description                        |                    Docs                     |
+| :------------ | :--------------------------------- | :-----------------------------------------: |
+| DateBoardItem | Data type for each date board cell | [Document](./docs/en/type_dateboarditem.md) |
