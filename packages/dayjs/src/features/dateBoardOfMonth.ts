@@ -4,6 +4,7 @@ import { getDayOfDate } from '../utils/getDayOfDate';
 import { startAndEndDateOfMonth } from '../utils/startAndEndDateOfMonth';
 
 export const dateBoardOfMonth = (date: dayjs.Dayjs) => {
+  dayjs();
   const { startDate, endDate } = startAndEndDateOfMonth(date);
 
   const dateBoard: DateBoardItem[][] = [];

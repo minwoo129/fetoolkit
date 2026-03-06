@@ -51,14 +51,14 @@ It helps you write cleaner calendar data logic by offering functions for generat
 
 ### 3-1. Integrated Features
 
-| Name             | Description                                                                    |   Docs   |
-| :--------------- | :----------------------------------------------------------------------------- | :------: |
-| dateBoardOfMonth | Returns a 2D date board including the first and last weeks of the target month | Document |
-| weekOfMonth      | Returns how many weeks the target month spans                                  | Document |
+| Name             | Description                                                                    |                      Docs                      |
+| :--------------- | :----------------------------------------------------------------------------- | :--------------------------------------------: |
+| dateBoardOfMonth | Returns a 2D date board including the first and last weeks of the target month | [Document](./docs/en/func_dateBoardOfMonth.md) |
+| weekOfMonth      | Returns how many weeks the target month spans                                  |             [Document](./docs/en/)             |
 
 ### 3-2. Types
 
-| Name          | Description                                               |   Docs   |
-| :------------ | :-------------------------------------------------------- | :------: |
-| DateBoardItem | Data type for each date board cell                        | Document |
-| DayType       | Type containing day index, Korean, and English day labels | Document |
+| Name          | Description                                               |          Docs          |
+| :------------ | :-------------------------------------------------------- | :--------------------: |
+| DateBoardItem | Data type for each date board cell                        | [Document](./docs/en/) |
+| DayType       | Type containing day index, Korean, and English day labels | [Document](./docs/en/) |
