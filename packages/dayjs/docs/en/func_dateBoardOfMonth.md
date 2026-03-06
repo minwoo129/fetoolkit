@@ -1,6 +1,6 @@
 # dateBoardOfMonth
 
-[English](../en/func_dateBoardOfMonth.md) | [한국어](../ko/func_dateBoardOfMonth.md)
+English | [한국어](../ko/func_dateBoardOfMonth.md)
 
 - Returns a 2D date board for calendar UIs based on the month of the given date.
 - Since it includes both the first and last weeks of the month, dates from the previous/next month can also be included.

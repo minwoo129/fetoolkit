@@ -54,7 +54,7 @@ It helps you write cleaner calendar data logic by offering functions for generat
 | Name             | Description                                                                    |                      Docs                      |
 | :--------------- | :----------------------------------------------------------------------------- | :--------------------------------------------: |
 | dateBoardOfMonth | Returns a 2D date board including the first and last weeks of the target month | [Document](./docs/en/func_dateBoardOfMonth.md) |
-| weekOfMonth      | Returns how many weeks the target month spans                                  |             [Document](./docs/en/)             |
+| weekOfMonth      | Returns how many weeks the target month spans                                  |   [Document](./docs/en/func_weekOfMonth.md)    |
 
 ### 3-2. Types
 
