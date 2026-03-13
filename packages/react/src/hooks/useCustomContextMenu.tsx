@@ -1,4 +1,4 @@
-import { useContext, useMemo } from 'react';
+import { useContext } from 'react';
 import ContextMenuContext from '../contexts/ContextMenuContext';
 
 /**
@@ -13,12 +13,9 @@ export const useCustomContextMenu = () => {
 
   const { buttonDatas, locate, onClickedContextMenuItem } = context;
 
-  return useMemo(
-    () => ({
-      buttonDatas,
-      locate,
-      onClickedContextMenuItem,
-    }),
-    [buttonDatas, locate, onClickedContextMenuItem],
-  );
+  return {
+    buttonDatas,
+    locate,
+    onClickedContextMenuItem,
+  };
 };

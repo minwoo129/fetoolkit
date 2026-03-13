@@ -1,5 +1,6 @@
+'use client';
 /* eslint-disable no-unused-vars */
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 /**
  * ======================= useCountdown Hook =======================
@@ -52,31 +53,25 @@ export function useCountdown({
     return () => clearInterval(timer);
   }, [leftTime, isCountdownRunning]);
 
-  const handleCountdown = useCallback(
-    (mode: 'start' | 'stop' | 'pauseOrRestart') => {
-      if (mode === 'start') {
-        setLeftTime(minute * 60 + second);
-        setCountdownRunning(true);
-        return;
-      }
+  const handleCountdown = (mode: 'start' | 'stop' | 'pauseOrRestart') => {
+    if (mode === 'start') {
+      setLeftTime(minute * 60 + second);
+      setCountdownRunning(true);
+      return;
+    }
 
-      if (mode === 'stop') {
-        setLeftTime(0);
-        setCountdownRunning(false);
-        return;
-      }
+    if (mode === 'stop') {
+      setLeftTime(0);
+      setCountdownRunning(false);
+      return;
+    }
 
-      setCountdownRunning((prev) => !prev);
-    },
-    [minute, second, setCountdownRunning],
-  );
+    setCountdownRunning((prev) => !prev);
+  };
 
-  return useMemo(
-    () => ({
-      leftTime,
-      isCountdownRunning,
-      handleCountdown,
-    }),
-    [leftTime, isCountdownRunning, handleCountdown],
-  );
+  return {
+    leftTime,
+    isCountdownRunning,
+    handleCountdown,
+  };
 }

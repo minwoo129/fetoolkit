@@ -1,4 +1,5 @@
-import { useCallback, useContext, useMemo, useState } from 'react';
+'use client';
+import { useContext, useState } from 'react';
 import type {
   ValidationStatusType,
   ValidatorType,
@@ -26,38 +27,32 @@ export const useValidateCheckInput = <V extends ValidatorType<string>>(
   const [validationStatus, setValidationStatus] =
     useState<ValidationStatusType>({ isPassed: false });
 
-  const handleChange = useCallback(
-    (value: string) => {
-      setValue(value);
+  const handleChange = (value: string) => {
+    setValue(value);
 
-      for (const key of validateKeys) {
-        const { validator, errorStatus } = appValidators[key];
-        const isPassed = validator(value);
-        if (isPassed) {
-          continue;
-        }
-
-        setValidationStatus({
-          isPassed,
-          errorCode: errorStatus.errorCode,
-          errorMessage: errorStatus.errorMessage,
-        });
-
-        return;
+    for (const key of validateKeys) {
+      const { validator, errorStatus } = appValidators[key];
+      const isPassed = validator(value);
+      if (isPassed) {
+        continue;
       }
 
       setValidationStatus({
-        isPassed: true,
+        isPassed,
+        errorCode: errorStatus.errorCode,
+        errorMessage: errorStatus.errorMessage,
       });
-    },
-    [appValidators, validateKeys],
-  );
 
-  return useMemo(
-    () => ({
-      input: [value, handleChange],
-      validation: [validationStatus, setValidationStatus],
-    }),
-    [value, handleChange, validationStatus, setValidationStatus],
-  );
+      return;
+    }
+
+    setValidationStatus({
+      isPassed: true,
+    });
+  };
+
+  return {
+    input: [value, handleChange],
+    validation: [validationStatus, setValidationStatus],
+  };
 };

@@ -1,5 +1,6 @@
+'use client';
 /* eslint-disable no-unused-vars */
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 /**
  * ======================= useAsyncLoading Hook =======================
@@ -29,25 +30,19 @@ export function useAsyncLoading(): [
   const [isLoading, setLoading] = useState(false);
   const ref = useIsComponentMounted();
 
-  const startTransition = useCallback(
-    async <T,>(promiseReq: Promise<T>) => {
-      try {
-        setLoading(true);
-        const result = await promiseReq;
-        return result;
-      } finally {
-        if (ref.isMounted) {
-          setLoading(false);
-        }
+  const startTransition = async <T,>(promiseReq: Promise<T>) => {
+    try {
+      setLoading(true);
+      const result = await promiseReq;
+      return result;
+    } finally {
+      if (ref.isMounted) {
+        setLoading(false);
       }
-    },
-    [ref.isMounted],
-  );
+    }
+  };
 
-  return useMemo(
-    () => [isLoading, startTransition],
-    [isLoading, startTransition],
-  );
+  return [isLoading, startTransition];
 }
 
 function useIsComponentMounted() {

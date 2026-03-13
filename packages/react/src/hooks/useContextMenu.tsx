@@ -1,4 +1,4 @@
-import { useCallback, useContext, useMemo } from 'react';
+import { useContext } from 'react';
 import type { ContextMenuItemType } from '../components';
 import ContextMenuContext from '../contexts/ContextMenuContext';
 
@@ -19,24 +19,23 @@ export const useContextMenu = () => {
 
   const { showContextMenu, lastClickedData } = context;
 
-  const contextMenuHandler = useCallback(
-    <T extends HTMLElement>(args: ContextMenuHandlerArgs<T>) => {
-      const { elementId, buttonDatas, event } = args;
-      event.preventDefault();
-      const { clientX, clientY } = event;
-      showContextMenu({
-        elementId,
-        buttonDatas,
-        locate: {
-          x: clientX.toString(),
-          y: clientY.toString(),
-        },
-      });
-    },
-    [showContextMenu],
-  );
+  const contextMenuHandler = <T extends HTMLElement>(
+    args: ContextMenuHandlerArgs<T>,
+  ) => {
+    const { elementId, buttonDatas, event } = args;
+    event.preventDefault();
+    const { clientX, clientY } = event;
+    showContextMenu({
+      elementId,
+      buttonDatas,
+      locate: {
+        x: clientX.toString(),
+        y: clientY.toString(),
+      },
+    });
+  };
 
-  const onClickedContextMenuItem = useCallback(
+  const onClickedContextMenuItem =
     // eslint-disable-next-line no-unused-vars
     (callback: (data: typeof lastClickedData) => void) => {
       if (lastClickedData) {
@@ -44,15 +43,10 @@ export const useContextMenu = () => {
       }
 
       return () => {};
-    },
-    [lastClickedData],
-  );
+    };
 
-  return useMemo(
-    () => ({
-      contextMenuHandler,
-      onClickedContextMenuItem,
-    }),
-    [contextMenuHandler, onClickedContextMenuItem],
-  );
+  return {
+    contextMenuHandler,
+    onClickedContextMenuItem,
+  };
 };

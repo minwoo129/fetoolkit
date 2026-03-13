@@ -1,5 +1,6 @@
+'use client';
 import type { RefObject } from 'react';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type Size = {
   width: number;
@@ -37,5 +38,5 @@ export function useResizeElement<T extends HTMLElement>(
     });
   }, [elementRef]);
 
-  return useMemo(() => [size.width, size.height], [size]);
+  return [size.width, size.height];
 }
