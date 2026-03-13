@@ -1,5 +1,5 @@
+'use client';
 /* eslint-disable no-unused-vars */
-import { useCallback, useMemo } from 'react';
 
 type ReturnType = [
   <T>(key: string) => T | null,
@@ -30,23 +30,23 @@ type ReturnType = [
  *    ```
  */
 export function useLocalStorage(): ReturnType {
-  const get = useCallback(<T,>(key: string) => {
+  const get = <T,>(key: string) => {
     const response = localStorage.getItem(key);
 
     return response ? (JSON.parse(response) as T) : null;
-  }, []);
+  };
 
-  const set = useCallback(<T,>(key: string, data: T) => {
+  const set = <T,>(key: string, data: T) => {
     localStorage.setItem(key, JSON.stringify(data));
-  }, []);
+  };
 
-  const remove = useCallback((key: string) => {
+  const remove = (key: string) => {
     localStorage.removeItem(key);
-  }, []);
+  };
 
-  const clear = useCallback(() => {
+  const clear = () => {
     localStorage.clear();
-  }, []);
+  };
 
-  return useMemo(() => [get, set, remove, clear], [get, set, remove, clear]);
+  return [get, set, remove, clear];
 }

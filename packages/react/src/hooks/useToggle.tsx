@@ -1,4 +1,5 @@
-import { useCallback, useMemo, useState } from 'react';
+'use client';
+import { useState } from 'react';
 
 /**
  * ======================= useToggle Hook =======================
@@ -20,9 +21,9 @@ export function useToggle(
 ): [boolean, () => void] {
   const [value, setValue] = useState(initialValue);
 
-  const handleToggleValue = useCallback(() => {
+  const handleToggleValue = () => {
     setValue((prevValue) => !prevValue);
-  }, []);
+  };
 
-  return useMemo(() => [value, handleToggleValue], [value, handleToggleValue]);
+  return [value, handleToggleValue];
 }

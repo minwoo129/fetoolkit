@@ -49,6 +49,19 @@ export default tseslint.config([
     },
     rules: {
       'react/react-in-jsx-scope': 'off',
+      'no-restricted-syntax': [
+        'error',
+        {
+          selector: "CallExpression[callee.name='useMemo']",
+          message:
+            'useMemo는 권장되지 않습니다. React Compiler가 자동 최적화를 적용합니다.',
+        },
+        {
+          selector: "CallExpression[callee.name='useCallback']",
+          message:
+            'useCallback은 권장되지 않습니다. 특별한 이유가 없다면 일반 함수로 작성하세요.',
+        },
+      ],
     },
   },
 ]);

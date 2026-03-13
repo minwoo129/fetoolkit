@@ -1,7 +1,6 @@
 import classNames from 'classnames';
 import React, {
   useEffect,
-  useMemo,
   useRef,
   useState,
   type AriaAttributes,
@@ -82,24 +81,20 @@ const Grid = ({
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const { nx, ny } = useMemo(() => {
-    const cx = Number(x);
-    const cy = Number(y);
-    const { ew, eh } = elementSize;
-    const { vw, vh } = viewportSize;
-    let nx = cx;
-    let ny = cy;
+  const cx = Number(x);
+  const cy = Number(y);
+  const { ew, eh } = elementSize;
+  const { vw, vh } = viewportSize;
+  let nx = cx;
+  let ny = cy;
 
-    if (vw < ew + cx - 10) {
-      nx = vw - ew - 10;
-    }
+  if (vw < ew + cx - 10) {
+    nx = vw - ew - 10;
+  }
 
-    if (vh < eh + cy - 10) {
-      ny = vh - eh - 10;
-    }
-
-    return { nx, ny };
-  }, [x, y, elementSize, viewportSize]);
+  if (vh < eh + cy - 10) {
+    ny = vh - eh - 10;
+  }
 
   return (
     <div

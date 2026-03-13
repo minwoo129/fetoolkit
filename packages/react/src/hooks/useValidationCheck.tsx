@@ -1,4 +1,5 @@
-import { useCallback, useContext, useMemo } from 'react';
+'use client';
+import { useContext } from 'react';
 import ValidationContexts, {
   type ValidationStatusType,
   type ValidatorType,
@@ -12,27 +13,26 @@ export const useValidationCheck = <T extends ValidatorType<string>>() => {
     appValidators: T;
   };
 
-  const check = useCallback(
-    (key: keyof T, value: string) => {
-      const { validator, errorStatus } = appValidators[key];
-      const isPassed = validator(value);
+  const check = (key: keyof T, value: string) => {
+    const { validator, errorStatus } = appValidators[key];
+    const isPassed = validator(value);
 
-      let result: ValidationStatusType = {
+    let result: ValidationStatusType = {
+      isPassed,
+    };
+
+    if (!isPassed) {
+      result = {
         isPassed,
+        errorCode: errorStatus.errorCode,
+        errorMessage: errorStatus.errorMessage,
       };
+    }
 
-      if (!isPassed) {
-        result = {
-          isPassed,
-          errorCode: errorStatus.errorCode,
-          errorMessage: errorStatus.errorMessage,
-        };
-      }
+    return result;
+  };
 
-      return result;
-    },
-    [appValidators],
-  );
-
-  return useMemo(() => ({ check }), [check]);
+  return {
+    check,
+  };
 };

@@ -1,4 +1,5 @@
-import { useEffect, useMemo, useState } from 'react';
+'use client';
+import { useEffect, useState } from 'react';
 
 type Size = {
   width: number;
@@ -44,5 +45,5 @@ export function useResizeWindow() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  return useMemo(() => [size.width, size.height], [size]);
+  return [size.width, size.height];
 }
