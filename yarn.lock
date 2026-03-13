@@ -973,6 +973,7 @@ __metadata:
     "@types/react-dom": "npm:^19.1.9"
     "@types/throttle-debounce": "npm:^5"
     "@vitejs/plugin-react": "npm:^5.0.2"
+    babel-plugin-react-compiler: "npm:^1.0.0"
     classnames: "npm:^2.5.1"
     jsdom: "npm:^26.1.0"
     react: "npm:^19.1.0"
