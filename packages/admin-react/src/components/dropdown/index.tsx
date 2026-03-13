@@ -1,6 +1,6 @@
 'use client';
 import classNames from 'classnames';
-import React, { useCallback, useState, type CSSProperties } from 'react';
+import React, { useState, type CSSProperties } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import '../../css/dropdown.css';
 
@@ -47,9 +47,9 @@ export const AdminDropdown = ({
 }: Props) => {
   const [isOpen, setOpen] = useState(false);
 
-  const closeDropdown = useCallback(() => {
+  const closeDropdown = () => {
     setOpen(false);
-  }, []);
+  };
   return (
     <div
       className={classNames('dropdown-container', className)}
