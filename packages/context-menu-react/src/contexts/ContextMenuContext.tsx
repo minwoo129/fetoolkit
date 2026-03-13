@@ -1,4 +1,4 @@
-import React, { createContext, useMemo, type ReactNode } from 'react';
+import React, { createContext, type ReactNode } from 'react';
 import '../css/provider.css';
 import type { ContextMenuButtonDatas } from '../types';
 
@@ -19,9 +19,7 @@ export const ContextMenuProvider = ({
   buttonDatas,
   children,
 }: ContextMenuProviderProps) => {
-  const appButtonDatas = useMemo(() => {
-    return buttonDatas;
-  }, [buttonDatas]);
+  const appButtonDatas = buttonDatas;
 
   return (
     <ContextMenuContext.Provider value={{ appButtonDatas }}>

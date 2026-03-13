@@ -1,4 +1,4 @@
-import { useContext, useMemo } from 'react';
+import { useContext } from 'react';
 import PageLayoutContext from '../contexts/PageLayoutContext';
 
 export const useCustomContextMenu = () => {
@@ -10,12 +10,9 @@ export const useCustomContextMenu = () => {
 
   const { location, buttonDatas, menuId } = context;
 
-  return useMemo(
-    () => ({
-      location,
-      buttonDatas,
-      menuId,
-    }),
-    [location, buttonDatas, menuId],
-  );
+  return {
+    location,
+    buttonDatas,
+    menuId,
+  };
 };

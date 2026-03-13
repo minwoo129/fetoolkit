@@ -1,4 +1,4 @@
-import { useCallback, useContext, useEffect, useMemo, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import PageLayoutContext from '../contexts/PageLayoutContext';
 
 type LastClickedDataType = {
@@ -39,22 +39,18 @@ export const useContextMenu = () => {
     };
   }, []);
 
-  const onClickedContextMenuItem = useCallback(
+  const onClickedContextMenuItem = (
     // eslint-disable-next-line no-unused-vars
-    (callback: (data: typeof lastClickedData) => void) => {
-      if (lastClickedData) {
-        callback(lastClickedData);
-      }
+    callback: (data: typeof lastClickedData) => void,
+  ) => {
+    if (lastClickedData) {
+      callback(lastClickedData);
+    }
 
-      return () => {};
-    },
-    [lastClickedData],
-  );
+    return () => {};
+  };
 
-  return useMemo(
-    () => ({
-      onClickedContextMenuItem,
-    }),
-    [onClickedContextMenuItem],
-  );
+  return {
+    onClickedContextMenuItem,
+  };
 };
