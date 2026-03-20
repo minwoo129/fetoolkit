@@ -20,7 +20,7 @@ description: 신규 패키지 생성을 위한 스킬입니다. 프로젝트 실
 ```
 yarn create:project {project name}
 // ex project name = test_proj
-// yarn create:project test_proj
+// yarn create:project test_proj --yes
 ```
 
 - 명령어 실행 후 npm init 할때처럼 package.json에 입력할 사항을 CLI에서 입력하라고 나오면 아무것도 입력하지 말고 그냥 넘어갈것!!!!
@@ -256,3 +256,12 @@ yarn packages:{project name} add -D @testing-library/dom @testing-library/jest-d
      "include": ["src/**/*", "src/**/*.tsx", "src/**/*.ts", "src/**/*.css"]
    }
    ```
+
+## 8-5. vite-env.d.ts 파일 추가(선택)
+
+(이 단계는 일반 유틸리티 기반 프로젝트인 경우에만 실행한다.)
+새로 생성된 src 폴더 내에 `vite-env.d.ts` 파일을 추가하고 아래와 같이 작성한다.
+
+```ts
+/// <reference types="vite/client" />
+```
