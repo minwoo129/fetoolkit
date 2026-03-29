@@ -35,5 +35,5 @@ description: 각 기능 별 문서 작성을 위한 스킬입니다. rules를 �
 
 문서 작성 시 필요한 언어별 템플릿은 아래의 참고자료를 참고할 것
 
-- [영어버전 문서](../../references/feature-doc-eng.md)
-- [한국어버전 문서](../../references/feature-doc-kor.md)
+- [영어버전 문서](./references/feature-doc-eng.md)
+- [한국어버전 문서](./references/feature-doc-kor.md)

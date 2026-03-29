@@ -28,5 +28,5 @@ description: 새로운 프로젝트의 README 문서를 작성할 때 사용하�
 
 # 3. 참고 자료
 
-- [영어버전 문서](../../references/readme-eng.md)
-- [한국어버전 문서](../../references/readme-kor.md)
+- [영어버전 문서](./references/readme-eng.md)
+- [한국어버전 문서](./references/readme-kor.md)
