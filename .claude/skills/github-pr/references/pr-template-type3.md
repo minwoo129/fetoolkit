@@ -1,6 +1,8 @@
-# GitHub PR 본문 템플릿
+# GitHub PR 본문 형식
 
-- 해당 템플릿은 `master` 브랜치에서 `release` 브랜치로 향하는 PR 본문 템플릿
+- 해당 파일에 적혀있는 PR 형식은 다음과 같은 조건일 때 사용된다.
+  - head 브랜치: `master`
+  - base 브랜치: `release`
 
 ## PR 제목
 

@@ -1,6 +1,6 @@
 ---
 name: github-pr
-description: GitHub에 올라갈 PR 작성시 사용할 스킬입니다. base 브랜치에 따라서 PR 본문의 구조가 달라지며, base 브랜치에 대한 정보는 프롬프트 실행시 변수로 제공됩니다.(0번 인덱스는 필수로 적용되)
+description: GitHub에 올라갈 PR 작성시 사용할 스킬입니다. base 브랜치에 따라서 PR 본문의 구조가 달라지며, base 브랜치에 대한 정보는 프롬프트 실행시 변수로 제공됩니다.
 argument-hint: [dev|master|release|issue] [issue-number]
 ---
 
@@ -33,6 +33,8 @@ argument-hint: [dev|master|release|issue] [issue-number]
 
 ## 2-2. PR 본문 작성
 
+아래의 조건에 따라 연결된 링크를 타고 들어가 PR 제목과 본문을 작성한다.
+
 - $0 == issue | dev
   - PR 형식: [링크](./references/pr-template-type1.md)
 - $0 == master
@@ -42,11 +44,20 @@ argument-hint: [dev|master|release|issue] [issue-number]
 
 ## 2-3. 작성 내용 확인
 
-내용 작성이 완료되면 아래와 같은 형식으로 작성한 내용을 보여준다.
+작성이 완료되면 작성한 내용을 아래와 같은 구조로 프롬프트에서 보여준다.
 
-- PR 제목
-- {Head 브랜치} → {base 브랜치}
-- PR 본문(프롬프트 창 내에서 하단에 마크다운 형식으로 제공, 별도의 마크다운 파일 생성 금지)
+<references>
+
+<h2>PR 제목</h2>
+{작성된 PR 제목}
+
+<h2>Merge 방향</h2>
+{head 브랜치} → {base 브랜치}
+
+<h2>PR 본문<h2>
+{프롬프트 창 내에서 하단에 마크다운 블록으로 제공}
+
+</references>
 
 내용을 보여주고 사용자에게 PR 업로드 여부를 물어보고 프롬프트 실행을 종료한다.
 (사용자가 업로드를 승인할 시 PR을 업로드한다.)

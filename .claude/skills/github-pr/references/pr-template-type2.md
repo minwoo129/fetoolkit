@@ -1,10 +1,12 @@
-# GitHub PR 본문 템플릿
+# GitHub PR 본문 형식
 
-- 해당 템플릿은 개발 브랜치(`dev-v(버전명)`)에서 `master` 브랜치로 향하는 PR 본문 템플릿
+- 해당 파일에 적혀있는 PR 형식은 다음과 같은 조건일 때 사용된다.
+  - head 브랜치(패턴): `dev-v(버전명)`
+  - base 브랜치: `master`
 
 ## PR 제목
 
-- 제목: `Merge of v(버전명)`
+- 제목형식: `Merge of v(버전명)`
   - `package/react` 프로젝트의 `package.json` 파일을 조회하여 그 안에 적용된 버전 정보를 사용할 것.
   - 베타버전일 가능성이 있기 때문
 
