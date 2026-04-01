@@ -59,7 +59,7 @@ yarn create:project $0 --yes
 }
 ```
 
-# 5. ESLint 적용 범위 설정($1 == react 인 경우에만 실행)
+# 5. ESLint 적용 범위 설정($1 == `react` 인 경우에만 실행)
 
 루트 경로의 `eslint.config.mjs` 파일에 ESLint 적용을 위한 코드를 추가해야 한다.
 `eslint.config.mjs` 파일에 들어가면 react 기반 프로젝트에만 적용할 lint 속성 블록이 있다. 그 블록에 `files` 프로퍼티에 새로 추가한 프로젝트의 경로를 설정해준다.
@@ -96,18 +96,18 @@ yarn packages:$0 add -D ...
 
 패키지들은 모두 `devDependencies` 로 설치하며, 설치할 패키지들은 다음과 같다.
 
-- `vite` ($1 == react | util, 공통설치)
-- `vite-plugin-dts` ($1 == react | util, 공통설치)
-- `@testing-library/dom` ($1 == react인 경우에만)
-- `@testing-library/jest-dom` ($1 == react인 경우에만)
-- `@testing-library/react` ($1 == react인 경우에만)
-- `@types/react` ($1 == react인 경우에만)
-- `@types/react-dom` ($1 == react인 경우에만)
-- `@vitejs/plugin-react` ($1 == react인 경우에만)
-- `babel-plugin-react-compiler` ($1 == react인 경우에만)
-- `react` ($1 == react인 경우에만)
-- `react-dom` ($1 == react인 경우에만)
-- `vite-plugin-lib-inject-css` ($1 == react인 경우에만)
+- `vite` ($1 == `react` | `util`, 공통설치)
+- `vite-plugin-dts` ($1 == `react` | `util`, 공통설치)
+- `@testing-library/dom` ($1 == `react`인 경우에만)
+- `@testing-library/jest-dom` ($1 == `react`인 경우에만)
+- `@testing-library/react` ($1 == `react`인 경우에만)
+- `@types/react` ($1 == `react`인 경우에만)
+- `@types/react-dom` ($1 == `react`인 경우에만)
+- `@vitejs/plugin-react` ($1 == `react`인 경우에만)
+- `babel-plugin-react-compiler` ($1 == `react`인 경우에만)
+- `react` ($1 == `react`인 경우에만)
+- `react-dom` ($1 == `react`인 경우에만)
+- `vite-plugin-lib-inject-css` ($1 == `react`인 경우에만)
 
 # 8. 프로젝트 워크스페이스 최종 설정
 
@@ -123,7 +123,7 @@ yarn packages:$0 add -D ...
 
 새로 생성된 워크스페이스 내에 `vite.config.ts` 파일을 생성한다. 파일을 생성하면 아래와 같이 작성한다.
 
-1. $1 == util인 경우
+1. $1 == `util`인 경우
 
    ```ts
    /// <reference types="vite/client" />
@@ -154,7 +154,7 @@ yarn packages:$0 add -D ...
    });
    ```
 
-2. $1 == react인 경우
+2. $1 == `react`인 경우
 
    ```ts
    import react from '@vitejs/plugin-react';
@@ -206,7 +206,7 @@ yarn packages:$0 add -D ...
 
 새로 생성된 워크스페이스 내에 `tsconifg.json` 파일을 생성한다. 파일을 생성하면 아래와 같이 작성한다.
 
-1. $1 == util인 경우
+1. $1 == `util`인 경우
 
    ```json
    {
@@ -236,7 +236,7 @@ yarn packages:$0 add -D ...
    }
    ```
 
-2. $1 == react인 경우
+2. $1 == `react`인 경우
 
    ```json
    {
@@ -268,7 +268,7 @@ yarn packages:$0 add -D ...
    }
    ```
 
-## 8-5. vite-env.d.ts 파일 추가($1 == util 인 경우에만 실행)
+## 8-5. vite-env.d.ts 파일 추가($1 == `util` 인 경우에만 실행)
 
 새로 생성된 src 폴더 내에 `vite-env.d.ts` 파일을 추가하고 아래와 같이 작성한다.
 
