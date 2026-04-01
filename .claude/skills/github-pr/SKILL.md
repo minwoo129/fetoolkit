@@ -24,22 +24,22 @@ argument-hint: [dev|master|release|issue] [issue-number]
 프롬프트 실행시 입력한 변수에 따라 base 브랜치의 패턴은 다음과 같다.  
 `git branch -a` 명령어를 실행하여 아래의 패턴과 일치하는 브랜치명을 찾는다. 참고로 `master`, `release`의 경우 상시 존재하는 브랜치로 브랜치명이 바뀔 가능성은 없다.
 
-- $0 == master | release
+- $0 == `master` | `release`
   - base 브랜치 패턴 = $0
-- $0 == dev
+- $0 == `dev`
   - base 브랜치 패턴 = `dev-v(버전명)`
-- $0 == issue
+- $0 == `issue`
   - base 브랜치 패턴 = `{feature,bug,docs}/issue-$1/...`
 
 ## 2-2. PR 본문 작성
 
 아래의 조건에 따라 연결된 링크를 타고 들어가 PR 제목과 본문을 작성한다.
 
-- $0 == issue | dev
+- $0 == `issue` | `dev`
   - PR 형식: [링크](./references/pr-template-type1.md)
-- $0 == master
+- $0 == `master`
   - PR 형식: [링크](./references/pr-template-type2.md)
-- $0 == release
+- $0 == `release`
   - PR 형식: [링크](./references/pr-template-type3.md)
 
 ## 2-3. 작성 내용 확인
