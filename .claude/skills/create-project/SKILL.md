@@ -1,6 +1,7 @@
 ---
 name: create-project
 description: 신규 패키지 생성을 위한 스킬입니다. 프로젝트 실행 요청 시 아래와 같은 절차로 실행합니다.
+argument-hint: [project name] [react|util]
 ---
 
 # 참고사항
@@ -18,9 +19,7 @@ description: 신규 패키지 생성을 위한 스킬입니다. 프로젝트 실
 프로젝트 생성시 아래의 명령어로 생성한다.
 
 ```
-yarn create:project {project name}
-// ex project name = test_proj
-// yarn create:project test_proj --yes
+yarn create:project $0 --yes
 ```
 
 - 명령어 실행 후 npm init 할때처럼 package.json에 입력할 사항을 CLI에서 입력하라고 나오면 아무것도 입력하지 말고 그냥 넘어갈것!!!!
@@ -31,17 +30,13 @@ yarn create:project {project name}
 
 ```json
 {
-  "name": "@fetoolkit/{project name}",
+  "name": "@fetoolkit/$0",
   "version": "{version}", // 이 버전 정보는 프로젝트 생성될 때 버전정보를 그대로 적용할 것
   "type": "module",
   "author": "minwoo129 <key0129mw@naver.com>",
   "license": "MIT",
   "scripts": {
     "build": "tsc && vite build"
-  },
-  "devDependencies": {
-    "vite": "^7.3.1",
-    "vite-plugin-dts": "^4.5.4"
   }
 }
 ```
@@ -56,14 +51,16 @@ yarn create:project {project name}
   ...
 
   "scripts": {
-    "packages:{project name}": "yarn workspace @fetoolkit/{project name}",
+    "packages:$0": "yarn workspace @fetoolkit/$0",
+    "packages:$0:build": "cd packages/$0 && yarn build",
+    "packages:$0:publish": "cd packages/$0 && npm publish --access=public",
+    "packages:$0:publish:beta": "cd packages/$0 && npm publish --tag beta",
   },
 }
 ```
 
-# 5. ESLint 적용 범위 설정(선택)
+# 5. ESLint 적용 범위 설정($1 == `react` 인 경우에만 실행)
 
-(이 단계는 react 기반 프로젝트인 경우에만 실행한다.)
 루트 경로의 `eslint.config.mjs` 파일에 ESLint 적용을 위한 코드를 추가해야 한다.
 `eslint.config.mjs` 파일에 들어가면 react 기반 프로젝트에만 적용할 lint 속성 블록이 있다. 그 블록에 `files` 프로퍼티에 새로 추가한 프로젝트의 경로를 설정해준다.
 
@@ -76,7 +73,7 @@ export default tseslint.config([
   {
     files: [
       ...
-      'packages/{project name}/**/*.{ts,tsx}' // 이 코드
+      'packages/$0/**/*.{ts,tsx}' // 이 코드
     ],
     ...
   },
@@ -86,17 +83,31 @@ export default tseslint.config([
 # 6. yarn install 실행
 
 ```
-yarn packages:{project name} install
+yarn packages:$0 install
 ```
 
-# 7. 필수 패키지 설치(선택)
+# 7. 필수 패키지 설치
 
-(이 단계는 react 기반 프로젝트인 경우에만 실행한다.)
-react 기반 프로젝트의 경우 필수적으로 설치해야 하는 패키지들이 추가적으로 있다. 그 패키지들을 설치한다.
+아래와 같이 CLI 명령어를 실행해 패키지들을 설치한다.
 
 ```
-yarn packages:{project name} add -D @testing-library/dom @testing-library/jest-dom @testing-library/react @types/react @types/react-dom @vitejs/plugin-react babel-plugin-react-compiler react react-dom vite-plugin-lib-inject-css
+yarn packages:$0 add -D ...
 ```
+
+패키지들은 모두 `devDependencies` 로 설치하며, 설치할 패키지들은 다음과 같다.
+
+- `vite` ($1 == `react` | `util`, 공통설치)
+- `vite-plugin-dts` ($1 == `react` | `util`, 공통설치)
+- `@testing-library/dom` ($1 == `react`인 경우에만)
+- `@testing-library/jest-dom` ($1 == `react`인 경우에만)
+- `@testing-library/react` ($1 == `react`인 경우에만)
+- `@types/react` ($1 == `react`인 경우에만)
+- `@types/react-dom` ($1 == `react`인 경우에만)
+- `@vitejs/plugin-react` ($1 == `react`인 경우에만)
+- `babel-plugin-react-compiler` ($1 == `react`인 경우에만)
+- `react` ($1 == `react`인 경우에만)
+- `react-dom` ($1 == `react`인 경우에만)
+- `vite-plugin-lib-inject-css` ($1 == `react`인 경우에만)
 
 # 8. 프로젝트 워크스페이스 최종 설정
 
@@ -112,7 +123,7 @@ yarn packages:{project name} add -D @testing-library/dom @testing-library/jest-d
 
 새로 생성된 워크스페이스 내에 `vite.config.ts` 파일을 생성한다. 파일을 생성하면 아래와 같이 작성한다.
 
-1. 일반 유틸리티 패키지인 경우
+1. $1 == `util`인 경우
 
    ```ts
    /// <reference types="vite/client" />
@@ -132,7 +143,7 @@ yarn packages:{project name} add -D @testing-library/dom @testing-library/jest-d
          entry: {
            index: path.resolve(__dirname, 'index.ts'),
          },
-         name: '@fetoolkit/{project name}',
+         name: '@fetoolkit/$0',
          fileName: 'index',
          formats: ['es', 'umd'],
        },
@@ -143,7 +154,7 @@ yarn packages:{project name} add -D @testing-library/dom @testing-library/jest-d
    });
    ```
 
-2. react 기반 프로젝트인 경우
+2. $1 == `react`인 경우
 
    ```ts
    import react from '@vitejs/plugin-react';
@@ -171,7 +182,7 @@ yarn packages:{project name} add -D @testing-library/dom @testing-library/jest-d
          entry: {
            index: path.resolve(__dirname, 'index.ts'),
          },
-         name: '@fetoolkit/{project name}',
+         name: '@fetoolkit/$0',
          fileName: 'index',
          formats: ['es', 'umd'],
          cssFileName: 'index.css',
@@ -195,7 +206,7 @@ yarn packages:{project name} add -D @testing-library/dom @testing-library/jest-d
 
 새로 생성된 워크스페이스 내에 `tsconifg.json` 파일을 생성한다. 파일을 생성하면 아래와 같이 작성한다.
 
-1. 일반 유틸리티 패키지인 경우
+1. $1 == `util`인 경우
 
    ```json
    {
@@ -225,7 +236,7 @@ yarn packages:{project name} add -D @testing-library/dom @testing-library/jest-d
    }
    ```
 
-2. react 기반 프로젝트인 경우
+2. $1 == `react`인 경우
 
    ```json
    {
@@ -257,11 +268,19 @@ yarn packages:{project name} add -D @testing-library/dom @testing-library/jest-d
    }
    ```
 
-## 8-5. vite-env.d.ts 파일 추가(선택)
+## 8-5. vite-env.d.ts 파일 추가($1 == `util` 인 경우에만 실행)
 
-(이 단계는 일반 유틸리티 기반 프로젝트인 경우에만 실행한다.)
 새로 생성된 src 폴더 내에 `vite-env.d.ts` 파일을 추가하고 아래와 같이 작성한다.
 
 ```ts
 /// <reference types="vite/client" />
+```
+
+# 9. CI/CD 파이프라인 업데이트(자동배포)
+
+`.github/workflows/publish.yml`에서 `jobs > publish-to-npm > steps` 맨 하단에 다음 코드를 추가할 것
+
+```yaml
+- name: publish(fetoolkit/$0)
+  run: yarn packages:$0:publish
 ```
