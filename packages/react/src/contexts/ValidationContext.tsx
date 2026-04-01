@@ -1,4 +1,4 @@
-import React, { createContext, useMemo } from 'react';
+import React, { createContext } from 'react';
 
 export type ValidatorType<K extends string = string> = Record<
   K,
@@ -51,9 +51,7 @@ export const ValidationContextsProvider = <
   validators,
   children,
 }: ProviderArgs<T>) => {
-  const appValidators = useMemo(() => {
-    return validators;
-  }, [validators]);
+  const appValidators = validators;
 
   return (
     <ValidationContexts.Provider value={{ appValidators }}>

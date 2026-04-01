@@ -11,7 +11,11 @@ export default defineConfig({
       include: ['src/**/*', 'index.ts'],
       tsconfigPath: 'tsconfig.json',
     }),
-    react(),
+    react({
+      babel: {
+        plugins: ['babel-plugin-react-compiler'],
+      },
+    }),
     libInjectCss(),
   ],
   build: {

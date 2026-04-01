@@ -1,7 +1,7 @@
 'use client';
 import classNames from 'classnames';
 import type { CSSProperties, ForwardedRef } from 'react';
-import React, { useCallback, useImperativeHandle, useState } from 'react';
+import React, { useImperativeHandle, useState } from 'react';
 import '../../css/table.css';
 import TableBody from './TableBody';
 import TableHead from './TableHead';
@@ -39,16 +39,16 @@ export const AdminTable = <T extends Record<string, unknown>>({
 }: Props<T>) => {
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
 
-  const onClickCheckboxOfAll = useCallback(() => {
+  const onClickCheckboxOfAll = () => {
     if (selectedIds.length === datas.length) {
       setSelectedIds([]);
       return;
     }
 
     setSelectedIds(datas.map((item) => item.key));
-  }, [datas, selectedIds]);
+  };
 
-  const onClickCheckboxOfItem = useCallback((id: string) => {
+  const onClickCheckboxOfItem = (id: string) => {
     setSelectedIds((prev) => {
       if (prev.includes(id)) {
         return [...prev].filter((item) => item !== id);
@@ -56,7 +56,7 @@ export const AdminTable = <T extends Record<string, unknown>>({
 
       return [...prev, id];
     });
-  }, []);
+  };
 
   useImperativeHandle(
     ref,
