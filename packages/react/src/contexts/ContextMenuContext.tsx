@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import React, { createContext, useCallback, useMemo, useState } from 'react';
+import React, { createContext, useState } from 'react';
 import {
   DefaultContextMenu,
   type ContextMenuItemType,
@@ -141,50 +141,35 @@ export const ContextMenuProvider = ({
   const [lastClickedData, setLastClickedData] =
     useState<LastClickedDataType | null>(null);
 
-  const showContextMenu = useCallback(
-    ({
-      locate,
-      buttonDatas,
+  const showContextMenu = ({
+    locate,
+    buttonDatas,
+    elementId,
+  }: {
+    elementId: string | number | null;
+    buttonDatas: ContextMenuItemType[];
+    locate: { x: string; y: string };
+  }) => {
+    setLocate(locate);
+    setElementId(elementId);
+    setButtonDatas(buttonDatas);
+    setVisible(true);
+  };
+
+  const onClickedContextMenuItem = (value: string) => {
+    setLastClickedData({
       elementId,
-    }: {
-      elementId: string | number | null;
-      buttonDatas: ContextMenuItemType[];
-      locate: { x: string; y: string };
-    }) => {
-      setLocate(locate);
-      setElementId(elementId);
-      setButtonDatas(buttonDatas);
-      setVisible(true);
-    },
-    [],
-  );
+      value,
+    });
+  };
 
-  const onClickedContextMenuItem = useCallback(
-    (value: string) => {
-      setLastClickedData({
-        elementId,
-        value,
-      });
-    },
-    [elementId],
-  );
-
-  const context: ContextMenuContextType = useMemo(
-    () => ({
-      showContextMenu,
-      lastClickedData,
-      locate,
-      buttonDatas,
-      onClickedContextMenuItem,
-    }),
-    [
-      showContextMenu,
-      lastClickedData,
-      locate,
-      buttonDatas,
-      onClickedContextMenuItem,
-    ],
-  );
+  const context: ContextMenuContextType = {
+    showContextMenu,
+    lastClickedData,
+    locate,
+    buttonDatas,
+    onClickedContextMenuItem,
+  };
 
   return (
     <ContextMenuContext.Provider value={context}>

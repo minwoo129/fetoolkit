@@ -1,5 +1,5 @@
 ---
-globs: packages/utils/docs/*/*.md,packages/admin-react/docs/*/util_*.md
+globs: packages/utils/docs/*/*.md,packages/admin-react/docs/*/util_*.md,packages/dayjs/docs/*/func_*.md
 alwaysApply: false
 ---
 

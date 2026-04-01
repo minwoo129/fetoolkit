@@ -1,5 +1,6 @@
+'use client';
 import type { RefObject } from 'react';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type ScrollPosition = {
   /** 수직 스크롤 기준 현재 위치 */
@@ -43,19 +44,23 @@ export function useScroll<T extends HTMLElement>(
     scrollX: 0,
   });
 
-  const handleScroll = useCallback(() => {
+  const scrollToTop = () => {
     const el = elementRef.current;
     if (el) {
-      setPosition({
-        scrollY: el.scrollTop,
-        scrollX: el.scrollLeft,
-      });
+      el.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     }
-  }, [elementRef]);
+  };
 
   useEffect(() => {
     const el = elementRef.current;
     if (!el) return;
+
+    const handleScroll = () => {
+      setPosition({
+        scrollY: el.scrollTop,
+        scrollX: el.scrollLeft,
+      });
+    };
 
     // 초기값 세팅
     handleScroll();
@@ -65,21 +70,11 @@ export function useScroll<T extends HTMLElement>(
     return () => {
       el.removeEventListener('scroll', handleScroll);
     };
-  }, [elementRef, handleScroll]);
-
-  const scrollToTop = useCallback(() => {
-    const el = elementRef.current;
-    if (el) {
-      el.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-    }
   }, [elementRef]);
 
-  return useMemo(
-    () => ({
-      scrollY: position.scrollY,
-      scrollX: position.scrollX,
-      scrollToTop,
-    }),
-    [position, scrollToTop],
-  );
+  return {
+    scrollY: position.scrollY,
+    scrollX: position.scrollX,
+    scrollToTop,
+  };
 }

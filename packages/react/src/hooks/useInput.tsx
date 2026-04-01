@@ -1,5 +1,6 @@
+'use client';
 /* eslint-disable no-unused-vars */
-import { useCallback, useMemo, useState } from 'react';
+import { useState } from 'react';
 
 /**
  * ======================= useInput Hook =======================
@@ -20,9 +21,9 @@ import { useCallback, useMemo, useState } from 'react';
 export function useInput<T>(initialValue: T): [T, (value: T) => void] {
   const [value, setValue] = useState<T>(initialValue);
 
-  const handleChangeValue = useCallback((value: T) => {
+  const handleChangeValue = (value: T) => {
     setValue(value);
-  }, []);
+  };
 
-  return useMemo(() => [value, handleChangeValue], [value, handleChangeValue]);
+  return [value, handleChangeValue];
 }

@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
-import React, { forwardRef, useImperativeHandle, useRef } from 'react';
 import type {
-  ErrorInfo,
-  ReactNode,
   ComponentProps,
-  PropsWithChildren,
   ComponentType,
+  ErrorInfo,
+  PropsWithChildren,
+  ReactNode,
 } from 'react';
+import React, { useImperativeHandle, useRef } from 'react';
 
 type RenderFallbackProps<ErrorType extends Error = Error> = {
   error: ErrorType;
@@ -39,6 +39,14 @@ type Props<ErrorType extends Error = Error> = {
    *     ```
    */
   ignoreError?: (error: ErrorType) => boolean;
+};
+
+type ErrorBoundaryRef = {
+  reset(): void;
+};
+
+type ErrorBoundaryProps = ComponentProps<typeof BaseErrorBoundary> & {
+  ref?: React.Ref<ErrorBoundaryRef>;
 };
 
 interface State<ErrorType extends Error = Error> {
@@ -97,10 +105,10 @@ class BaseErrorBoundary extends React.Component<
   }
 }
 
-export const ErrorBoundary = forwardRef<
-  { reset(): void },
-  ComponentProps<typeof BaseErrorBoundary>
->((props, resetRef) => {
+export const ErrorBoundary = ({
+  ref: resetRef,
+  ...props
+}: ErrorBoundaryProps) => {
   const ref = useRef<BaseErrorBoundary>(null);
 
   useImperativeHandle(resetRef, () => ({
@@ -108,7 +116,7 @@ export const ErrorBoundary = forwardRef<
   }));
 
   return <BaseErrorBoundary ref={ref} {...props} />;
-});
+};
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const withErrorBoundary = <

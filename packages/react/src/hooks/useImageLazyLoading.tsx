@@ -1,4 +1,5 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+'use client';
+import React, { useEffect, useRef, useState } from 'react';
 
 /**
  * ======================= useImageLazyLoading Hook =======================
@@ -44,9 +45,9 @@ export function useImageLazyLoading({
     return () => observer.disconnect();
   }, [options]);
 
-  const realSrc = useMemo(() => {
+  const realSrc = () => {
     return loaded ? src : '';
-  }, [loaded, src]);
+  };
 
-  return useMemo(() => [imgRef, realSrc], [imgRef, realSrc]);
+  return [imgRef, realSrc()];
 }

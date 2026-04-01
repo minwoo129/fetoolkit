@@ -1,5 +1,5 @@
 'use client';
-import React, { useMemo } from 'react';
+import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import type { MenuItemType } from '.';
 import '../../css/menuTemplate.css';
@@ -80,7 +80,7 @@ export const DropdownMenu = ({
   handleDropdownToggle,
   dataTestId,
 }: DropdownMenuProps) => {
-  const isOpen = useMemo(() => openDropdown === title, [openDropdown, title]);
+  const isOpen = openDropdown === title;
   return (
     <li className="menu-item-wrapper" data-testid={dataTestId}>
       <DropdownButton
