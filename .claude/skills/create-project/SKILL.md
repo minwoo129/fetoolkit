@@ -4,12 +4,6 @@ description: 신규 패키지 생성을 위한 스킬입니다. 프로젝트 실
 argument-hint: [project name] [react|util]
 ---
 
-# 참고사항
-
-- 신규 패키지 생성 시 react 기반 프로젝트일 때와 일반 유틸리티 기반 프로젝트일 때와 설정법이 다르다.
-- react 기반인지, 일반 유틸리티 기반인지는 사용자가 프롬프트 실행시 명확하게 알려줄 것이다.
-  (만약 프롬프트에서 사용자가 알려주지 않았으면 사용자에게 물어보고 명확한 답을 받은 후에 실행한다.)
-
 # 1. 사용할 패키지 매니저
 
 패키지 매니저는 `yarn`을 사용한다.
@@ -21,8 +15,6 @@ argument-hint: [project name] [react|util]
 ```
 yarn create:project $0 --yes
 ```
-
-- 명령어 실행 후 npm init 할때처럼 package.json에 입력할 사항을 CLI에서 입력하라고 나오면 아무것도 입력하지 말고 그냥 넘어갈것!!!!
 
 # 3. 프로젝트 package.json 수정
 
@@ -61,8 +53,7 @@ yarn create:project $0 --yes
 
 # 5. ESLint 적용 범위 설정($1 == `react` 인 경우에만 실행)
 
-루트 경로의 `eslint.config.mjs` 파일에 ESLint 적용을 위한 코드를 추가해야 한다.
-`eslint.config.mjs` 파일에 들어가면 react 기반 프로젝트에만 적용할 lint 속성 블록이 있다. 그 블록에 `files` 프로퍼티에 새로 추가한 프로젝트의 경로를 설정해준다.
+`eslint.config.mjs` 파일 내 "react 기반 프로젝트에만 적용할 설정" 주석 하단 블록에 files 블록에 다음과 같이 코드를 추가한다.
 
 ```js
 ...
@@ -70,6 +61,7 @@ yarn create:project $0 --yes
 export default tseslint.config([
   globalIgnores(['dist']),
   ...
+  // react 기반 프로젝트에만 적용할 설정
   {
     files: [
       ...
@@ -96,177 +88,46 @@ yarn packages:$0 add -D ...
 
 패키지들은 모두 `devDependencies` 로 설치하며, 설치할 패키지들은 다음과 같다.
 
-- `vite` ($1 == `react` | `util`, 공통설치)
-- `vite-plugin-dts` ($1 == `react` | `util`, 공통설치)
-- `@testing-library/dom` ($1 == `react`인 경우에만)
-- `@testing-library/jest-dom` ($1 == `react`인 경우에만)
-- `@testing-library/react` ($1 == `react`인 경우에만)
-- `@types/react` ($1 == `react`인 경우에만)
-- `@types/react-dom` ($1 == `react`인 경우에만)
-- `@vitejs/plugin-react` ($1 == `react`인 경우에만)
-- `babel-plugin-react-compiler` ($1 == `react`인 경우에만)
-- `react` ($1 == `react`인 경우에만)
-- `react-dom` ($1 == `react`인 경우에만)
-- `vite-plugin-lib-inject-css` ($1 == `react`인 경우에만)
+- ($1 == `react` | `util`, 공통설치)
+  - `vite`
+  - `vite-plugin-dts`
+- ($1 == `react`인 경우에만 설치)
+  - `@testing-library/dom`
+  - `@testing-library/jest-dom`
+  - `@testing-library/react`
+  - `@types/react`
+  - `@types/react-dom`
+  - `@vitejs/plugin-react`
+  - `babel-plugin-react-compiler`
+  - `react`
+  - `react-dom`
+  - `vite-plugin-lib-inject-css`
 
-# 8. 프로젝트 워크스페이스 최종 설정
+# 8. 프로젝트 워크스페이스 내부 설정
 
 ## 8-1. 불필요 폴더(디렉토리) 삭제
 
-새로 생성된 워크스페이스 내에 있는 요소들 중에서 폴더(디렉토리)들만 모두 삭제하고, 그 안에 `src` 폴더만 생성한다.(`src` 폴더 안에는 `.gitkeep` 파일만 생성해둔다.)
+- 기존 폴더(디렉토리)들은 모두 삭제하고, 그 안에 `src` 폴더만 생성한다.(`src` 폴더 안에는 `.gitkeep` 파일만 생성해둔다.)
 
 ## 8-2. index.ts 파일 생성
 
-새로 생성된 워크스페이스 내에 `index.ts` 파일을 생성한다. (파일 생성 후 별도의 코드 작성은 하지 않고 놔둘 것)
+(파일 생성 후 별도의 코드 작성은 하지 않고 놔둘 것)
 
-## 8-3. vite.config.ts 파일 생성
+## 8-3. vite.config.ts 파일 생성 및 작성
 
-새로 생성된 워크스페이스 내에 `vite.config.ts` 파일을 생성한다. 파일을 생성하면 아래와 같이 작성한다.
+1. $1 == `util`인 경우  
+   => [템플릿(링크)](./references/vite-config-util-ref.md)
 
-1. $1 == `util`인 경우
+2. $1 == `react`인 경우  
+   => [템플릿(링크)](./references/vite-config-react-ref.md)
 
-   ```ts
-   /// <reference types="vite/client" />
-   import path from 'path';
-   import { defineConfig } from 'vite';
-   import dts from 'vite-plugin-dts';
+## 8-4. tsconfig.json 파일 생성 및 작성
 
-   export default defineConfig({
-     plugins: [
-       dts({
-         insertTypesEntry: true,
-         include: ['src/**/*', 'index.ts'],
-       }),
-     ],
-     build: {
-       lib: {
-         entry: {
-           index: path.resolve(__dirname, 'index.ts'),
-         },
-         name: '@fetoolkit/$0',
-         fileName: 'index',
-         formats: ['es', 'umd'],
-       },
-     },
-     esbuild: {
-       jsx: 'automatic',
-     },
-   });
-   ```
+1. $1 == `util`인 경우  
+   => [템플릿(링크)](./references/tsconfig-util-ref.md)
 
-2. $1 == `react`인 경우
-
-   ```ts
-   import react from '@vitejs/plugin-react';
-   import path from 'path';
-   import { defineConfig } from 'vite';
-   import dts from 'vite-plugin-dts';
-   import { libInjectCss } from 'vite-plugin-lib-inject-css';
-
-   export default defineConfig({
-     plugins: [
-       dts({
-         insertTypesEntry: true,
-         include: ['src/**/*', 'index.ts'],
-         tsconfigPath: 'tsconfig.json',
-       }),
-       react({
-         babel: {
-           plugins: ['babel-plugin-react-compiler'],
-         },
-       }),
-       libInjectCss(),
-     ],
-     build: {
-       lib: {
-         entry: {
-           index: path.resolve(__dirname, 'index.ts'),
-         },
-         name: '@fetoolkit/$0',
-         fileName: 'index',
-         formats: ['es', 'umd'],
-         cssFileName: 'index.css',
-       },
-       rollupOptions: {
-         external: ['react', 'react-dom'],
-         output: {
-           globals: { react: 'React', 'react-dom': 'ReactDOM' },
-           chunkFileNames: 'chunks/[name].[hash].js',
-           assetFileNames: 'assets/[name][extname]',
-           entryFileNames: '[name].[format].js',
-         },
-       },
-       // 하나의 CSS만 내보내고 싶다면 false
-       cssCodeSplit: false,
-     },
-   });
-   ```
-
-## 8-4. tsconfig.json 파일 추가
-
-새로 생성된 워크스페이스 내에 `tsconifg.json` 파일을 생성한다. 파일을 생성하면 아래와 같이 작성한다.
-
-1. $1 == `util`인 경우
-
-   ```json
-   {
-     "compilerOptions": {
-       "target": "ES2022",
-       "useDefineForClassFields": true,
-       "module": "ESNext",
-       "lib": ["ES2022", "DOM", "DOM.Iterable"],
-       "skipLibCheck": true,
-
-       /* Bundler mode */
-       "moduleResolution": "bundler",
-       "allowImportingTsExtensions": true,
-       "verbatimModuleSyntax": true,
-       "moduleDetection": "force",
-       "noEmit": true,
-
-       /* Linting */
-       "strict": true,
-       "noUnusedLocals": true,
-       "noUnusedParameters": true,
-       "erasableSyntaxOnly": true,
-       "noFallthroughCasesInSwitch": true,
-       "noUncheckedSideEffectImports": true
-     },
-     "include": ["src"]
-   }
-   ```
-
-2. $1 == `react`인 경우
-
-   ```json
-   {
-     "compilerOptions": {
-       "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-       "target": "ES2022",
-       "useDefineForClassFields": true,
-       "lib": ["ES2022", "DOM", "DOM.Iterable"],
-       "module": "ESNext",
-       "skipLibCheck": true,
-
-       /* Bundler mode */
-       "moduleResolution": "bundler",
-       "allowImportingTsExtensions": true,
-       "verbatimModuleSyntax": true,
-       "moduleDetection": "force",
-       "noEmit": true,
-       "jsx": "react",
-
-       /* Linting */
-       "strict": true,
-       "noUnusedLocals": true,
-       "noUnusedParameters": true,
-       "erasableSyntaxOnly": true,
-       "noFallthroughCasesInSwitch": true,
-       "noUncheckedSideEffectImports": true
-     },
-     "include": ["src/**/*", "src/**/*.tsx", "src/**/*.ts", "src/**/*.css"]
-   }
-   ```
+2. $1 == `react`인 경우  
+   => [템플릿(링크)](./references/tsconfig-react-ref.md)
 
 ## 8-5. vite-env.d.ts 파일 추가($1 == `util` 인 경우에만 실행)
 

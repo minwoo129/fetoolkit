@@ -34,6 +34,7 @@ export default tseslint.config([
       'no-var': 'error',
     },
   },
+  // react 기반 프로젝트에만 적용할 설정
   {
     files: [
       'packages/react/**/*.{ts,tsx}',
