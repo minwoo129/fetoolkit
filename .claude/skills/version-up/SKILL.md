@@ -1,6 +1,7 @@
 ---
 name: version-up
 description: 전체 패키지의 버전을 일괄 업데이트하는 스킬입니다. 업데이트할 버전의 정보는 프롬프트 실행시 변수로 제공됩니다.
+argument-hint: [version name]
 ---
 
 # 1. 버전 업데이트 명령어 실행

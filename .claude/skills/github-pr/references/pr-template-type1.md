@@ -6,8 +6,10 @@
 
 > ### 참고
 >
-> - 아래 제목 형식 및 템플릿에서 사용되는 이슈번호는 head 브랜치명에서 가져온다.
->   - ex) 브랜치명이 "feature/issue-123/test"인 경우 이슈번호는 123번
+> - `git branch --show-current`를 통해 head 브랜치 이름에서 이슈 번호를 조회한다.
+>   - `{feature,bug,docs}/issue-(이슈번호)/...`
+> - GitHub MCP의 'issue_read' 툴을 사용해서 이슈의 세부정보를 조회한다.
+>   - 만약 호출 중 오류가 발생할 경우 `curl -s "https://api.github.com/repos/minwoo129/fetoolkit/issues/(이슈번호)"` 명령어를 통해 조회한다.
 
 ## PR 제목
 

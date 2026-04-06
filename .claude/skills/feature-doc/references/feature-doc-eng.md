@@ -7,7 +7,7 @@
 ````md
 # {기능 명}
 
-English | [한국어](../ko/{feature}.md) // {feature}에는 현재 파일명을 그대로 적용하면 됨.
+English | [한국어](../ko/{doc-file}.md)
 
 - 기능 설명
 - 개조식으로 작성
@@ -49,3 +49,4 @@ English | [한국어](../ko/{feature}.md) // {feature}에는 현재 파일명을
 - [유틸리티 함수 문서](../examples/utility-function-docs-eng.md)
 - [Hook 문서](../examples/hook-docs-eng.md)
 - [유틸리티 타입 문서](../examples/utility-type-docs-eng.md)
+- [HOC 문서](../examples/hoc-docs-eng.md)
