@@ -27,6 +27,17 @@ argument-hint: [dev|master|release|issue] [issue-number]
 - $0 == `issue`
   - base 브랜치 패턴 = `{feature,bug,docs}/issue-$1/...`
 
+### 2-1-1. 에러 핸들링 프로세스
+
+- 경고 메세지 출력 후 프롬프트 실행 종료
+  - $0 == `issue`일 때
+    - 이슈번호($1)가 작성되지 않은 경우
+    - 이슈번호($1)가 작성 됬지만 이슈번호($1)와 일치하는 브랜치명이 존재하지 않는 경우
+  - `git branch -a` 실행 결과 조건에 맞는 브랜치명이 존재하지 않는 경우
+- 프롬프트 실행 중단 없이 계속 실행
+  - $0 == `master` | `release` | `dev`일 때, 이슈번호($1)가 작성된 경우  
+    => 입력된 **이슈번호($1)는 무시**하고 **$0만으로 판단**하여 프롬프트 실행
+
 ## 2-2. PR 본문 작성
 
 아래의 조건에 따라 연결된 링크를 타고 들어가 PR 제목과 본문을 작성한다.
@@ -42,8 +53,7 @@ argument-hint: [dev|master|release|issue] [issue-number]
 
 작성이 완료되면 작성한 내용을 아래와 같은 구조로 프롬프트에서 보여준다.
 
-<references>
-
+```
 <h2>PR 제목</h2>
 {작성된 PR 제목}
 
@@ -53,7 +63,7 @@ argument-hint: [dev|master|release|issue] [issue-number]
 <h2>PR 본문<h2>
 {프롬프트 창 내에서 하단에 마크다운 블록으로 제공}
 
-</references>
+```
 
 내용을 보여주고 사용자에게 PR 업로드 여부를 물어보고 프롬프트 실행을 종료한다.
 (사용자가 업로드를 승인할 시 PR을 업로드한다.)
