@@ -1,7 +1,7 @@
 ---
 name: create-project
 description: 신규 패키지 생성을 위한 스킬입니다. 프로젝트 실행 요청 시 아래와 같은 절차로 실행합니다.
-argument-hint: [project name] [react|util]
+argument-hint: [project name] [select(react,util)]
 ---
 
 # 1. 사용할 패키지 매니저

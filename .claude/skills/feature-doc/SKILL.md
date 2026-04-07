@@ -1,7 +1,7 @@
 ---
 name: feature-doc
 description: 각 기능 별 문서 작성을 위한 스킬입니다. rules를 사용할 때보다 조금더 엄격한 룰을 적용하기 위해 적용하였습니다.
-argument-hint: [component|hook|hoc|util_func|util_type] [project name] [filename]
+argument-hint: [select(component,hook,hoc,util_func,util_type)] [project name] [filename]
 ---
 
 # 1. 문서 파일명

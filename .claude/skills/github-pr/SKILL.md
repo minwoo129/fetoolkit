@@ -1,7 +1,7 @@
 ---
 name: github-pr
 description: GitHub에 올라갈 PR 작성시 사용할 스킬입니다. base 브랜치에 따라서 PR 본문의 구조가 달라지며, base 브랜치에 대한 정보는 프롬프트 실행시 변수로 제공됩니다.
-argument-hint: [dev|master|release|issue] [issue-number]
+argument-hint: [select(dev,master,release,issue)] [issue-number]
 ---
 
 # 1. 참고사항
