@@ -16,6 +16,7 @@
 - TS 함수: 화살표 함수 표현식으로 작성
 - CSS: `src/css` 폴더 내에 각 컴포넌트 별 css 파일을 작성하고 컴포넌트 파일에서 import해서 사용
 - react 컴포넌트 내에선 `useCallback` 및 `useMemo`를 사용하지 않는다.
+- Component, hook, 함수 등 모든 기능 단위의 파일 상단에는 필수적으로 `'use client'` 수식어를 추가한다.
 
 ## 명령어
 
